@@ -1,0 +1,33 @@
+[
+  {
+    "route_id": "dream_school_route",
+    "name": "梦校风路线",
+    "description": "适合第一次来复旦、想感受校园氛围和拍照打卡的用户。",
+    "duration_minutes": 30,
+    "distance_meters": 1200,
+    "tags": ["高中生", "访客", "拍照", "校园生活"],
+    "suitable_for": ["高中生", "访客", "家长"],
+    "interests": ["校园生活", "拍照", "校史"],
+    "style": "轻松",
+    "start_spot_id": "main_gate",
+    "stops": [
+      {
+        "spot_id": "main_gate",
+        "order": 1,
+        "estimated_stay_minutes": 5,
+        "trigger_radius_meters": 60,
+        "guide_script_id": "main_gate_dream_school",
+        "reason": "作为进入校园的第一印象，适合建立来到复旦的仪式感。"
+      },
+      {
+        "spot_id": "xianghui_hall",
+        "order": 2,
+        "estimated_stay_minutes": 8,
+        "trigger_radius_meters": 60,
+        "guide_script_id": "xianghui_hall_dream_school",
+        "reason": "适合讲校园公共空间、仪式感和拍照记忆。"
+      }
+    ],
+    "ending_message": "这条路线适合快速建立对复旦校园的第一印象。"
+  }
+]

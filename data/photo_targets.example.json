@@ -1,0 +1,20 @@
+[
+  {
+    "target_id": "xianghui_hall_front",
+    "spot_id": "xianghui_hall",
+    "name": "相辉堂正立面",
+    "aliases": ["相辉堂正门", "相辉堂外立面", "礼堂正面"],
+    "visual_features": [
+      "建筑正立面",
+      "入口台阶",
+      "门头或牌匾",
+      "开阔前场"
+    ],
+    "likely_questions": [
+      "这是什么建筑？",
+      "这里有什么历史？",
+      "这里适合拍照吗？"
+    ],
+    "related_chunk_types": ["intro", "history", "architecture", "photo"]
+  }
+]

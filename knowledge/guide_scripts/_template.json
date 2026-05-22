@@ -1,0 +1,19 @@
+[
+  {
+    "guide_script_id": "xianghui_hall_dream_school",
+    "spot_id": "xianghui_hall",
+    "route_id": "dream_school_route",
+    "agent_id": "student_guide",
+    "audience": "高中生",
+    "style": "轻松",
+    "language": "zh",
+    "duration_seconds": 60,
+    "title": "相辉堂：复旦校园里的仪式感",
+    "content": "现在你看到的是相辉堂。对很多第一次来复旦的人来说，这里很容易成为一个有记忆点的地方。你可以先观察它和周围开阔空间之间的关系，再留意建筑入口、立面和周边人流。",
+    "follow_up_suggestions": [
+      "这里有什么历史？",
+      "适合在哪里拍照？",
+      "附近还有什么值得看？"
+    ]
+  }
+]

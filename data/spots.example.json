@@ -1,0 +1,15 @@
+[
+  {
+    "spot_id": "xianghui_hall",
+    "name": "相辉堂",
+    "aliases": ["相辉堂", "复旦相辉堂"],
+    "campus": "邯郸校区",
+    "type": "校史建筑",
+    "lat": 31.000000,
+    "lng": 121.000000,
+    "default_trigger_radius_meters": 60,
+    "map_icon": "hall",
+    "summary": "复旦校园中具有代表性的公共建筑和仪式空间。",
+    "available": true
+  }
+]
