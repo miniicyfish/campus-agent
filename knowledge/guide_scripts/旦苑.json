@@ -1,0 +1,85 @@
+[
+  {
+    "guide_script_id": "danyuan_restaurant_dream_school_60s",
+    "spot_id": "danyuan_restaurant",
+    "route_id": "dream_school_route",
+    "agent_id": "student_guide",
+    "audience": "高中生",
+    "style": "轻松",
+    "language": "zh",
+    "duration_seconds": 60,
+    "title": "旦苑餐厅：复旦人的美食记忆",
+    "content": "现在你眼前这栋人来人往的建筑，就是复旦邯郸校区的本部食堂——旦苑餐厅。它的名字取自校名出处“日月光华，旦复旦兮”，是离光华楼和东区学生宿舍最近的食堂，也是大部分复旦学生最常来的“干饭”根据地[citation:1]。旦苑一共三层，一楼有大众菜和西餐厅，二楼有清真窗口和自选餐，三楼是教授餐厅和点菜包间。你可以往里面走几步，感受一下中午十一点半那种人声鼎沸、饭菜飘香的氛围。特别提醒你留意一楼点心部——那里的双皮奶是复旦学子代代相传的“口碑之王”，厚厚一层奶皮，被校友们称作毕业后最想念的味道[citation:4]。如果你对复旦人的日常生活感兴趣，待会儿可以问我这里什么窗口最值得排队，或者双皮奶到底有多好吃。",
+    "follow_up_suggestions": [
+      "旦苑有什么必吃的美食？",
+      "这里什么时候人最多？",
+      "复旦还有其他食堂吗？"
+    ]
+  },
+  {
+    "guide_script_id": "danyuan_restaurant_dream_school_30s",
+    "spot_id": "danyuan_restaurant",
+    "route_id": "dream_school_route",
+    "agent_id": "student_guide",
+    "audience": "高中生",
+    "style": "轻松",
+    "language": "zh",
+    "duration_seconds": 30,
+    "title": "旦苑餐厅速览",
+    "content": "这里是复旦本部使用率最高的食堂——旦苑餐厅。它紧邻光华楼，一共三层，从大众菜、麻辣烫到西餐、清真窗口应有尽有[citation:9]。最出名的是点心部卖的双皮奶，被一届届复旦人评为“旦苑之光”[citation:4]。你想尝尝看吗？可以问我怎么点单～",
+    "follow_up_suggestions": [
+      "双皮奶在哪个窗口买？",
+      "还有什么推荐菜吗？"
+    ]
+  },
+  {
+    "guide_script_id": "danyuan_restaurant_dream_school_120s",
+    "spot_id": "danyuan_restaurant",
+    "route_id": "dream_school_route",
+    "agent_id": "student_guide",
+    "audience": "高中生",
+    "style": "轻松",
+    "language": "zh",
+    "duration_seconds": 120,
+    "title": "旦苑餐厅：烟火气里的复旦生活",
+    "content": "欢迎来到旦苑餐厅，这里是复旦邯郸校区最核心、人流量最大的食堂[citation:4]。它坐落在光华楼东侧，离二教、三教这些主要教学楼都很近，对住在东区宿舍的同学来说尤其方便，下了课溜达着就过来了[citation:9]。“旦苑”这个名字源自复旦校训的出处“日月光华，旦复旦兮”，带着浓浓的书卷气[citation:1]。你眼前这栋楼一共三层：一楼大厅有大众快餐、面食、麻辣烫，还有2019年前后翻新过的西餐厅，可以吃到焗饭、意面甚至部队火锅[citation:4][citation:9]；二楼有自选窗口、清真餐厅和铁板烧[citation:9]；三楼则是教授餐厅，环境更好一些，可以点菜宴请。最有意思的是，每年秋天学校会举办“大厨进复旦”美食交流活动，北大、川大等高校的厨师团队会带着招牌菜来这里设窗口，冰糖葫芦、坛肉等地道风味常常让学生排起长队[citation:5]。当然，来旦苑绝对不能错过的，是点心部的双皮奶——奶皮厚实、甜而不腻，被复旦人戏称为“旦苑唯一的光”，很多人毕业多年后还念念不忘[citation:4]。你可以透过玻璃看看里面热腾腾的蒸汽，想象一下自己成为复旦学生后，中午和室友端着餐盘在这里找座位的场景——这就是最真实的大学日常。",
+    "follow_up_suggestions": [
+      "双皮奶怎么买？多少钱一份？",
+      "旦苑和北区食堂哪个更好吃？",
+      "这里可以刷手机支付吗？"
+    ]
+  },
+  {
+    "guide_script_id": "danyuan_restaurant_followup_1",
+    "spot_id": "danyuan_restaurant",
+    "route_id": "dream_school_route",
+    "agent_id": "student_guide",
+    "audience": "高中生",
+    "style": "轻松",
+    "language": "zh",
+    "title": "追问回复：旦苑有什么必吃推荐？",
+    "content": "说到必吃，排第一的肯定是点心部的双皮奶！奶皮特别厚，口感醇厚不甜腻，据说用的是好牛奶慢炖出来的，一杯几块钱就能收获满满幸福感[citation:4]。馄饨窗口的蟹黄小馄饨、荠菜鲜肉大馄饨也超级推荐，是阿姨现包的，汤鲜料足，不过饭点可能要等十来分钟。二楼清真的牛肉拉面、冬季限定小火锅，还有翻新后的西餐厅部队火锅和烤鱼，都是复旦人慰劳自己的好选择[citation:4][citation:9]。"
+  },
+  {
+    "guide_script_id": "danyuan_restaurant_followup_2",
+    "spot_id": "danyuan_restaurant",
+    "route_id": "dream_school_route",
+    "agent_id": "student_guide",
+    "audience": "高中生",
+    "style": "轻松",
+    "language": "zh",
+    "title": "追问回复：旦苑为什么叫“旦苑”？",
+    "content": "“旦苑”这个名字取自复旦校训“日月光华，旦复旦兮”[citation:1]。有趣的是，复旦食堂的名字都带着“复旦基因”——南区的食堂叫“南苑”，北区的叫“北苑”，本部的叫“旦苑”。这几个食堂的名字形成了一套“苑”字辈体系，很有仪式感。据老校友回忆，1990年代旦苑改名前叫“本食”（本部食堂），后来2000年前后随着校园发展才正式定名“旦苑餐厅”[citation:7]。"
+  },
+  {
+    "guide_script_id": "danyuan_restaurant_followup_3",
+    "spot_id": "danyuan_restaurant",
+    "route_id": "dream_school_route",
+    "agent_id": "student_guide",
+    "audience": "高中生",
+    "style": "轻松",
+    "language": "zh",
+    "title": "追问回复：复旦哪个食堂最好吃？",
+    "content": "这是复旦人之间最容易引发“辩论”的话题！公认排名第一的通常是北区食堂，种类丰富、环境也好，还曾因“高端”“豪华”的江湖称号火出圈[citation:4]。但旦苑也有不可替代的优势：首先是地理位置，它离光华楼和教学楼最近，对东区同学来说是“命根子”级别的存在；其次是实惠，被同学们盖章认定“便宜”“方便”[citation:4]；再就是双皮奶这种独占的明星单品。简单来说，想吃品质和环境去北区，想方便省时来旦苑，各有所爱～"
+  }
+]
