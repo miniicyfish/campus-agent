@@ -1,0 +1,85 @@
+[
+  {
+    "guide_script_id": "mao_statue_dream_school_60",
+    "spot_id": "mao_statue",
+    "route_id": "dream_school_route",
+    "agent_id": "student_guide",
+    "audience": "高中生",
+    "style": "轻松",
+    "language": "zh",
+    "duration_seconds": 60,
+    "title": "毛主席像：进校门第一眼的震撼",
+    "content": "现在你看到的，就是复旦大学最具标志性的地标——毛泽东像。它矗立在正校门内的中轴线上，进校门第一眼就会被它的气势震撼。\n\n你可以先观察它的姿态：和全国大多数毛主席像“挥手”的样子不同，复旦这座是罕见的背手造型，双手背在身后、昂首远眺[citation:2]。这背后其实有个有趣的原因——1967年学生建造时技术有限，做不出承重的举手设计，就巧妙改成了背手，反倒成了独一无二的特色[citation:2]。\n\n再留意一下它的高度：像高7.1米，底座5.16米，加起来正好12.26米，对应毛主席12月26日的生日，设计很精妙[citation:5][citation:6]。\n\n从这里往正前方看，就是复旦的中轴线，远处可以看到光华楼。你现在站的位置，是几乎每位新生报到、毕业生合影的必到之地[citation:8]。",
+    "follow_up_suggestions": [
+      "这座像是谁建造的？",
+      "为什么底座上的题字改过？",
+      "站在这里怎么拍最好看？"
+    ]
+  },
+  {
+    "guide_script_id": "mao_statue_dream_school_30",
+    "spot_id": "mao_statue",
+    "route_id": "dream_school_route",
+    "agent_id": "student_guide",
+    "audience": "高中生",
+    "style": "轻松",
+    "language": "zh",
+    "duration_seconds": 30,
+    "title": "复旦中轴线上的精神地标",
+    "content": "你眼前这座毛泽东像，是复旦最核心的精神地标[citation:8]。它高12.26米，这个数字正好是毛主席的生日，设计很有心思[citation:5][citation:6]。\n\n和别处不同，它是背手远眺的姿态——当年学生建造时技术不够，做不了举手造型，干脆改成背手，反而成了独家特色[citation:2]。\n\n它立在正门中轴线上，迎送了一届又一届复旦人，是新生报到和毕业留影的必打卡点[citation:8]。",
+    "follow_up_suggestions": [
+      "为什么是学生建的？",
+      "它有多高？"
+    ]
+  },
+  {
+    "guide_script_id": "mao_statue_dream_school_120",
+    "spot_id": "mao_statue",
+    "route_id": "dream_school_route",
+    "agent_id": "student_guide",
+    "audience": "高中生",
+    "style": "轻松",
+    "language": "zh",
+    "duration_seconds": 120,
+    "title": "毛主席像：一代代复旦人的精神守望者",
+    "content": "你现在看到的毛泽东像，是复旦校园里最核心、最显著的地标，没有之一[citation:8]。它位于正校门内中轴线上，进校第一眼就会被它的气势震撼。\n\n这座像建于1967年，至今已守望校园近60年[citation:2]。它的高度设计很有讲究：像高7.1米，象征七一建党日；底座高5.16米，对应“五一六通知”；加起来12.26米，正好是毛主席的生日。这套“三数模式”是复旦首创，后来被全国很多地方效仿[citation:5][citation:6]。\n\n最有意思的是它的姿态。你去别处看毛主席像，大多是右手高举、寓意“挥手前进”的造型。但复旦这座是双手背在身后的“背手像”，全国独一份。原因很实在：当年建造雕像的是一群学生，既没有建筑系背景，也不懂雕塑技术，做不出能支撑手臂重量的结构，干脆巧妙改成了背手。没想到这一“技术妥协”反而别出心裁，无损领袖风采[citation:2]。\n\n底座上的题字也有一段变迁：最初刻的是林彪手书“四个伟大”，文革结束后被刮掉；1988年由复旦艺术系一位青年教师用颜体重写了“毛泽东”三个字，保留至今[citation:2]。\n\n从正门进来，经过这座像，你的正前方就是复旦的主轴，远处光华楼清晰可见。这里是新生入学的第一站，也是毕业生离校的最后一站，更是几十年来无数复旦人拍集体照的固定机位[citation:8]。",
+    "follow_up_suggestions": [
+      "能讲讲学生建像的故事吗？",
+      "底座题字改过几次？",
+      "附近还有什么值得看？"
+    ]
+  },
+  {
+    "guide_script_id": "mao_statue_followup_1",
+    "spot_id": "mao_statue",
+    "route_id": "dream_school_route",
+    "agent_id": "student_guide",
+    "audience": "高中生",
+    "style": "轻松",
+    "language": "zh",
+    "title": "追问回复：学生建像的故事",
+    "content": "1967年5月，清华大学竖起了全国第一座毛主席像，全国高校纷纷跟风[citation:2]。复旦也不甘落后，而且要“最快、最好地做出来”[citation:2]。\n\n当时负责建造的是一群学生，带头的是喻蘅和陶凤岗。他们一没建筑系，二没雕塑专家，就跑去北京“取经”，又请了上海油画雕塑创作社帮忙[citation:2]。从策划到竣工不到3个月，几个“门外汉”硬是把大型毛主席像造出来了[citation:2]。\n\n陶凤岗后来回忆时笑着说：“一群血气方刚的‘门外汉’造出大型毛主席雕塑。”[citation:2]"
+  },
+  {
+    "guide_script_id": "mao_statue_followup_2",
+    "spot_id": "mao_statue",
+    "route_id": "dream_school_route",
+    "agent_id": "student_guide",
+    "audience": "高中生",
+    "style": "轻松",
+    "language": "zh",
+    "title": "追问回复：为什么是背手姿态",
+    "content": "其实原因很简单——技术不过关[citation:2]。\n\n当时设计团队想做挥手造型，但手臂举起来需要内部有能承重的结构，这是连建筑系强校都头疼的难题。复旦既没有建筑系也没有雕塑专家，只好“迂回”处理成背手状，既解决了难题，又无损风采，反倒成了全国独一无二的设计[citation:2]。\n\n参与设计的陶凤岗教授笑言：别的学校都是“主席挥手，我前进”，我们是“主席背手，沉思远方”。"
+  },
+  {
+    "guide_script_id": "mao_statue_followup_3",
+    "spot_id": "mao_statue",
+    "route_id": "dream_school_route",
+    "agent_id": "student_guide",
+    "audience": "高中生",
+    "style": "轻松",
+    "language": "zh",
+    "title": "追问回复：底座题字的历史变迁",
+    "content": "底座上的字经历了好几个阶段[citation:2]。\n\n最初刻的是林彪手书“四个伟大”——“伟大的领袖、伟大的统帅、伟大的舵手、伟大的导师”[citation:2]。文革结束后，学校刮掉了林彪的题字，但保留了雕像本身[citation:2]。\n\n到了1988年，有老师提议刻上“毛泽东”三个字。学校找到当时刚留校的青年教师晏海林，因为他字写得好。晏海林试了多种字体后选了颜体，一笔挥就。他说当时没想太多，只觉得字应当“沉着厚重些”[citation:2]。现在你蹲下来仔细看，还能看到颜体的笔锋。"
+  }
+]

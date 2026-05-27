@@ -1,0 +1,97 @@
+[
+  {
+    "guide_script_id": "fourth_teaching_building_dream_school",
+    "spot_id": "fourth_teaching_building",
+    "route_id": "dream_school_route",
+    "agent_id": "student_guide",
+    "audience": "高中生",
+    "style": "轻松",
+    "language": "zh",
+    "duration_seconds": 60,
+    "title": "第四教学楼：复古红墙里的智慧未来",
+    "content": "你眼前这座带着复古红墙的建筑，就是复旦最新潮的教学楼——第四教学楼，大家习惯叫它“四教”。它始建于上世纪80年代，但刚刚完成了一次脱胎换骨的全面修缮[citation:1][citation:7]。你可以先看看它的外观：底部保留着记忆中的红砖墙面，上部则换成了更安全的灰色涂料，深咖色的玻璃窗配上“复旦红”的窗框，既有年代感，又很现代[citation:1]。走进楼里，你会发现每层楼都有一种主题色，从一楼的橙色到五楼的蓝色，像一条垂直的“知识光谱”[citation:1]。它不只是好看，更是复旦“AI大课”的智慧教学实验场，藏着全息投影的AI助手和能跨校区互动的未来教室[citation:3]。这里离北区学生宿舍很近，是很多同学自习的首选[citation:3]。",
+    "follow_up_suggestions": [
+      "四教有哪些厉害的黑科技？",
+      "这里的自习环境怎么样？",
+      "四教的名字有什么故事吗？"
+    ]
+  },
+  {
+    "guide_script_id": "fourth_teaching_building_dream_school_30s",
+    "spot_id": "fourth_teaching_building",
+    "route_id": "dream_school_route",
+    "agent_id": "student_guide",
+    "audience": "高中生",
+    "style": "轻松",
+    "language": "zh",
+    "duration_seconds": 30,
+    "title": "第四教学楼：复古与未来的碰撞",
+    "content": "这座红色建筑是复旦的第四教学楼，大家都叫它“四教”。它建于上世纪80年代，但不久前刚完成全面升级[citation:1][citation:7]。红砖外墙和深咖色玻璃让它既有历史感又很现代[citation:1]。现在它是复旦最智慧的教学楼，教室里藏着各种黑科技，比如能跨校区互动的智慧大屏，还有全息投影的AI助手[citation:3]。每层楼都是一种主题色，很适合参观完光华楼之后顺路来感受一下复旦未来的课堂长什么样。",
+    "follow_up_suggestions": [
+      "四教有哪些黑科技？",
+      "四教是什么时候建的？"
+    ]
+  },
+  {
+    "guide_script_id": "fourth_teaching_building_dream_school_120s",
+    "spot_id": "fourth_teaching_building",
+    "route_id": "dream_school_route",
+    "agent_id": "student_guide",
+    "audience": "高中生",
+    "style": "轻松",
+    "language": "zh",
+    "duration_seconds": 120,
+    "title": "第四教学楼：从80年代老楼到AI教育新地标",
+    "content": "你现在看到的是复旦邯郸校区的第四教学楼，大家都亲切地叫它“四教”。这座楼始建于上世纪80年代，总面积将近5000平方米，是几代复旦人上课、自习的共同记忆[citation:1][citation:8]。就在今年，它刚刚完成了一次耗资巨大的全面修缮，带着全新的设计理念和满满的黑科技重新亮相[citation:1][citation:8]。它现在被看作是复旦教育的“新地标”[citation:3]。\n\n你可以走近一点看它的外观。修缮时设计师特意保留了底部的原有红砖肌理，上部的灰色墙面用整面涂料替代，既安全又现代。深咖色的玻璃窗配上“复旦红”的窗框，和整个校园的建筑群特别协调[citation:1]。\n\n但你一定要走进楼里看看。楼道里保留了原来的水磨石地坪，经济耐用又有历史感[citation:1]。整栋楼最亮眼的设计是它的“垂直光谱”色彩系统：一层是热情的橙色，二层是创造力的粉色，三层是哲思的紫色，四层是自然的绿色，五层是理性的蓝色。每层的教室门牌、墙面、课桌椅甚至屏幕界面都用了对应的主题色，像在用色彩书写知识的层次[citation:1]。\n\n四教还是复旦AI教学的前沿阵地。四楼的共创空间里，你能看到复旦自研的大模型MOSS以全息投影的形象出现[citation:3]。4208和4308教室是智慧教学的旗舰空间，支持AI语音控屏、跨校区互动教学，桌椅还能根据课堂需求灵活重组[citation:3]。每排座位都配了电源插座，讲台可以一键升降，天花板上的阵列麦克风让教室任何角落都能无感扩声[citation:3]。\n\n四教靠近北区学生宿舍，对住在北区的同学来说来自习特别方便[citation:3]。每层都有公共休息区，靠窗的位置绿意盎然，是课间休憩的好地方。电子大屏实时更新教室课表，方便你灵活找自习教室[citation:3]。\n\n如果沿着校园中轴线参观，四教就在光华楼西北方向不远处，步行几分钟就到。看完光华楼的大气，再来四教感受一下复旦课堂的“未来感”，是很不错的路线安排。",
+    "follow_up_suggestions": [
+      "四教有哪些厉害的黑科技？",
+      "这里的自习环境怎么样？",
+      "四教平时能进去参观吗？"
+    ]
+  },
+  {
+    "guide_script_id": "fourth_teaching_building_followup_1",
+    "spot_id": "fourth_teaching_building",
+    "route_id": "dream_school_route",
+    "agent_id": "student_guide",
+    "audience": "高中生",
+    "style": "轻松",
+    "language": "zh",
+    "title": "追问回复：四教藏着哪些黑科技？",
+    "content": "四教的黑科技真不少！最酷的是四楼的全息投影——复旦自研的大模型MOSS会以立体影像的形式和你打招呼[citation:3]。4208和4308教室是智慧教学的旗舰空间，支持AI语音控屏，喊一声就能控制教室设备；数字化板书能同步录屏，跨校区互动教学也不在话下，比如可以和枫林校区的同学同上一堂课[citation:3]。每排座位都有电源插座，再也不用担心电脑没电。天花板上的阵列麦克风让老师走到教室任何角落都能清晰扩声，讲台还能一键升降[citation:3]。总之，这就是复旦“未来教室”的样子。",
+    "follow_up_suggestions": [
+      "MOSS是什么？",
+      "非复旦的学生能体验这些教室吗？"
+    ]
+  },
+  {
+    "guide_script_id": "fourth_teaching_building_followup_2",
+    "spot_id": "fourth_teaching_building",
+    "route_id": "dream_school_route",
+    "agent_id": "student_guide",
+    "audience": "高中生",
+    "style": "轻松",
+    "language": "zh",
+    "title": "追问回复：四教的自习环境怎么样？",
+    "content": "四教现在是自习的好去处！每层都有公共休息区，靠窗的位置绿意盎然，光线好、氛围安静[citation:3]。最方便的是每间教室沿墙和课桌都布设了电源插座，再也不用抢充电口了[citation:1][citation:3]。走廊里的电子大屏实时显示每间教室的课表和空闲状态，一眼就能找到可以自习的空教室[citation:3]。公告栏上还贴满了最新的讲座和活动海报，学习累了可以看看校园动态。因为靠近北区宿舍，住在北区的同学来这儿自习尤其方便[citation:3]。",
+    "follow_up_suggestions": [
+      "北区宿舍离这儿多远？",
+      "四教周末也开放自习吗？"
+    ]
+  },
+  {
+    "guide_script_id": "fourth_teaching_building_followup_3",
+    "spot_id": "fourth_teaching_building",
+    "route_id": "dream_school_route",
+    "agent_id": "student_guide",
+    "audience": "高中生",
+    "style": "轻松",
+    "language": "zh",
+    "title": "追问回复：四教平时能进去参观吗？",
+    "content": "教学楼在白天教学时段通常是开放的，可以自由进出。你可以在一楼大厅感受它的设计风格，或者到四楼看看AI共创空间[citation:3]。不过要提醒一下，教室在上课期间请不要推门打扰哦。建议参观时保持安静，毕竟这里是同学们日常学习的场所。如果时间充裕，每层楼走一走，感受一下从橙色到蓝色的“垂直光谱”色彩设计，也是很棒的体验[citation:1]。",
+    "follow_up_suggestions": [
+      "光华楼离这儿远吗？",
+      "四教附近还有什么值得看的？"
+    ]
+  }
+]
