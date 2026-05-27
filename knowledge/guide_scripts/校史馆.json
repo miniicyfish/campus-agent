@@ -1,0 +1,85 @@
+[
+  {
+    "guide_script_id": "fudan_archive_hall_60s",
+    "spot_id": "fudan_archive_hall",
+    "route_id": "dream_school_route",
+    "agent_id": "student_guide",
+    "audience": "高中生",
+    "style": "轻松",
+    "language": "zh",
+    "duration_seconds": 60,
+    "title": "校史馆：一座楼读懂复旦两甲子",
+    "content": "现在你面前这座白墙青瓦、飞檐翘角的中西合璧建筑，就是复旦校史馆。它原名奕住堂，1921年由华侨黄奕住捐建，是复旦现存外观保持原貌的最早建筑[citation:4][citation:10]。你可以先观察它四面歇山、八角飞檐的中式屋顶，再留意西式墙面与花格窗的组合——这种设计出自美国建筑师亨利·墨菲之手，用混凝土仿木柱、铁件制花窗，是民国时期中西建筑融合的代表作[citation:1][citation:4]。馆内陈列着1000余件文物，包括存世最早的复旦文凭、毛主席题写的校名手迹、五四运动上海第一钟等[citation:2]。沿着这条路线往前，就是相辉堂草坪，校史馆所在的“复旦源”区域正是复旦江湾校址的发源地[citation:8]。",
+    "follow_up_suggestions": [
+      "馆里最值得看的文物是什么？",
+      "为什么这座楼叫奕住堂？",
+      "校史馆什么时候开放参观？"
+    ]
+  },
+  {
+    "guide_script_id": "fudan_archive_hall_30s",
+    "spot_id": "fudan_archive_hall",
+    "route_id": "dream_school_route",
+    "agent_id": "student_guide",
+    "audience": "高中生",
+    "style": "轻松",
+    "language": "zh",
+    "duration_seconds": 30,
+    "title": "校史馆：复旦最老的楼",
+    "content": "这座飞檐翘角的建筑就是复旦校史馆，是校园里现存外观保持原貌的最早建筑，建于1921年[citation:4]。白墙青瓦的中式屋顶配上西式墙面，是民国建筑中西合璧的经典设计[citation:1]。馆里藏着1000多件文物，毛主席题写的校名手迹、五四运动上海第一钟都是镇馆之宝[citation:2]。",
+    "follow_up_suggestions": [
+      "里面有什么值得看的？",
+      "这栋楼以前是干什么的？"
+    ]
+  },
+  {
+    "guide_script_id": "fudan_archive_hall_120s",
+    "spot_id": "fudan_archive_hall",
+    "route_id": "dream_school_route",
+    "agent_id": "student_guide",
+    "audience": "高中生",
+    "style": "轻松",
+    "language": "zh",
+    "duration_seconds": 120,
+    "title": "校史馆：复旦精神的溯源地",
+    "content": "现在你看到的是复旦大学校史馆，这座建筑本身就是一件值得细看的历史文物。它原名奕住堂，1921年由南洋华侨银行家黄奕住捐资1万多元兴建，是复旦江湾校园最早落成的三幢建筑之一，也是如今校园里外观保持原貌的最古老的建筑[citation:10][citation:4]。\n\n从外观上看，它的造型非常特别——四面歇山、八角飞檐的中式大屋顶，搭配混凝土仿木柱和铁件制成的花格窗，是美国建筑师亨利·墨菲中西合璧设计的代表作[citation:1][citation:4]。这栋楼先后当过办公楼、图书馆，还做过中文系和经济系的系楼[citation:10]。2005年百年校庆时，修葺一新的老楼正式作为校史馆对外开放[citation:4]。\n\n走进馆内，你会看到八个展区、上千件文物，按时间线完整讲述复旦120年历史[citation:1][citation:2]。值得细看的“镇馆之宝”有好几件：宣统元年（1909年）颁发的存世最早复旦文凭，上面盖着教务长李登辉的私印；毛主席亲笔题写的“復旦大學”手迹，现在校门上横排的四个字就来源于此；还有一口1916年铸造的老校钟，1919年五四运动时复旦师生正是敲响它，拉开了上海五四运动的序幕[citation:2]。\n\n你现在站的位置，属于“复旦源”区域——1922年李登辉校长筹资建设的江湾校址核心地带[citation:1][citation:8]。以相辉堂草坪为中心，校史馆与博物馆、艺术馆等组成“一源六馆”，是了解复旦精神最集中的地方[citation:8]。往前走到相辉堂，你会更直观感受到这片百年校园的历史纵深。",
+    "follow_up_suggestions": [
+      "校史馆的镇馆之宝是什么？",
+      "为什么叫“奕住堂”？",
+      "复旦源一源六馆指的是什么？"
+    ]
+  },
+  {
+    "guide_script_id": "fudan_archive_hall_followup_1",
+    "spot_id": "fudan_archive_hall",
+    "route_id": "dream_school_route",
+    "agent_id": "student_guide",
+    "audience": "高中生",
+    "style": "轻松",
+    "language": "zh",
+    "title": "追问回复：校史馆的镇馆之宝",
+    "content": "新校史馆里有三件特别值得看的“镇馆之宝”[citation:2]。第一件是1916年铸造的老校钟——1919年五四运动在北京爆发后，复旦师生就是敲响这口钟，拉开了五四运动在上海的序幕，钟声唤醒了整个校园[citation:2]。第二件是存世最早的复旦文凭，颁发于宣统元年（1909年），证书上四角印着“复旦公学”字样，还盖有李登辉老校长的私印，2005年由校友、斯坦福终身教授张首晟在百年校庆前捐赠母校[citation:2]。第三件是毛主席1951年亲笔题写的“復旦大學”手迹，写在巴掌大的白宣纸上，现在校门上的横排校名就是从这幅字来的[citation:2]。"
+  },
+  {
+    "guide_script_id": "fudan_archive_hall_followup_2",
+    "spot_id": "fudan_archive_hall",
+    "route_id": "dream_school_route",
+    "agent_id": "student_guide",
+    "audience": "高中生",
+    "style": "轻松",
+    "language": "zh",
+    "title": "追问回复：为什么叫“奕住堂”",
+    "content": "这座楼的名字来源于捐资人黄奕住[citation:10]。黄奕住是南洋华侨，也是当时印度尼西亚有名的糖王和银行家[citation:10]。1921年，复旦在江湾建设新校园，经费非常困难，校长李登辉利用自己的华侨身份在南洋募捐[citation:10]。黄奕住与李登辉同为福建同安人，又有同乡社团的交情，他慷慨捐出1万多元用于建造这座办公楼[citation:10]。1922年春天大楼落成，学校便以他的名字命名为“奕住堂”[citation:10]。后来它当过图书馆、系办公楼，2005年成为校史馆[citation:4][citation:10]。"
+  },
+  {
+    "guide_script_id": "fudan_archive_hall_followup_3",
+    "spot_id": "fudan_archive_hall",
+    "route_id": "dream_school_route",
+    "agent_id": "student_guide",
+    "audience": "高中生",
+    "style": "轻松",
+    "language": "zh",
+    "title": "追问回复：校史馆什么时候能进去看",
+    "content": "根据校园游览信息，校史馆的开放时间是上午8点半到11点、下午1点半到4点半，周日和法定节假日闭馆[citation:9]。建议你规划好时间，预留一小时左右慢慢看，八个展区按时间线展开，从1905年创校一直讲到现在[citation:1]。如果时间紧张，重点看几件镇馆之宝就好。附近还有复旦博物馆（蔡冠深人文馆），上午9点到11点半、下午1点半到4点半开放，周一闭馆，可以一起安排[citation:9]。"
+  }
+]

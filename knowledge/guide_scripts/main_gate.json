@@ -1,0 +1,85 @@
+[
+  {
+    "guide_script_id": "fudan_main_gate_60s",
+    "spot_id": "fudan_main_gate",
+    "route_id": "dream_school_route",
+    "agent_id": "student_guide",
+    "audience": "高中生",
+    "style": "轻松",
+    "language": "zh",
+    "duration_seconds": 60,
+    "title": "复旦正门：第一眼的复旦印象",
+    "content": "现在你看到的就是复旦大学的标志性正门，邯郸路220号校门。很多人的复旦记忆，就是从这道门开始的。抬头看门楣上“复旦大学”四个紫铜色大字，这是1951年毛泽东主席亲笔题写的，笔力遒劲、气势豪迈[citation:1][citation:2]。这道门1965年建成，但当时建校门预算两万多，学校只能拿出一万，最后是陈望道老校长自掏腰包，捐了一万多元稿费才顺利完工[citation:1][citation:8]。进门后你面对的是毛泽东塑像，再往前就是光华楼，这条中轴线是复旦邯郸校区最核心的景观带。你可以站在校门正中拍张全景，然后沿着中轴线继续往前探索。",
+    "follow_up_suggestions": [
+      "毛主席题写校名有什么故事？",
+      "老校门在哪里，和正门什么关系？",
+      "陈望道是谁，为什么值得记住？"
+    ]
+  },
+  {
+    "guide_script_id": "fudan_main_gate_30s",
+    "spot_id": "fudan_main_gate",
+    "route_id": "dream_school_route",
+    "agent_id": "student_guide",
+    "audience": "高中生",
+    "style": "轻松",
+    "language": "zh",
+    "duration_seconds": 30,
+    "title": "复旦正门速览",
+    "content": "你现在看到的是复旦正门，门楣上“复旦大学”四个字是毛泽东主席1951年亲笔题写的[citation:2]。这道门1965年启用，由陈望道校长捐出1万多元稿费建成[citation:1][citation:8]。进门后正对毛泽东塑像和光华楼，这条中轴线是复旦最核心的景观带。你可以站在门口拍张照，然后沿中轴线往校园深处走。",
+    "follow_up_suggestions": [
+      "这校门有什么历史故事？",
+      "老校门在哪儿？"
+    ]
+  },
+  {
+    "guide_script_id": "fudan_main_gate_120s",
+    "spot_id": "fudan_main_gate",
+    "route_id": "dream_school_route",
+    "agent_id": "student_guide",
+    "audience": "高中生",
+    "style": "轻松",
+    "language": "zh",
+    "duration_seconds": 120,
+    "title": "复旦正门详解：一道门看复旦百年",
+    "content": "你现在看到的是复旦大学邯郸路220号正校门，复旦最具标志性的入口。门楣上横书的“复旦大学”四个紫铜色大字，出自毛泽东主席亲笔题写。这段题名背后有一段曲折的故事：1950年，时任校务委员会副主任的陈望道致信毛主席请求题写校名，久未回复；1951年又托人转达，终于在年底收到毛主席写在白宣纸上的“复旦大学”四字，从此这四个字印在了校门、校徽、毕业证书上，成为复旦最深入人心的符号[citation:1][citation:2]。\n\n这道门1965年国庆节启用，是复旦第三代校门。此前复旦的校门经历了几次搬迁——第一代是1921年李登辉校长建的古典牌楼式校门，1949年解放军正是从那道门进校接管复旦；第二代在国权路方向，极其简陋[citation:1]。1960年代筹建新校门时，预算需两万余元，学校只能拿出一万，陈望道校长二话不说捐出积攒的一万多元稿费，工程才顺利进行[citation:1][citation:8]。\n\n现在你站在校门前，可以仔细观察它的造型：简约挺拔，既有传统牌坊韵味，又充满现代感。进门后正对的是毛泽东塑像，底座刻有“1950年捐赠”字样，再往前远眺就是光华楼。这条“校门—毛像—光华楼”的中轴线，是复旦邯郸校区最核心的景观带。拍照建议站在邯郸路南侧人行道拍校门全景，或站在校门内侧拍中轴线纵深。从这里出发，你的左边是“卿云轩”文创店，沿着中轴线往北，就是复旦最精华的校园核心区。",
+    "follow_up_suggestions": [
+      "陈望道校长还做过哪些贡献？",
+      "复旦的第一代老校门在哪里？",
+      "光华楼为什么是复旦新地标？"
+    ]
+  },
+  {
+    "guide_script_id": "fudan_main_gate_followup_1",
+    "spot_id": "fudan_main_gate",
+    "route_id": "dream_school_route",
+    "agent_id": "student_guide",
+    "audience": "高中生",
+    "style": "轻松",
+    "language": "zh",
+    "title": "追问回复：毛主席题写校名的故事",
+    "content": "这段故事挺曲折的。1950年，复旦要换校门匾额，陈望道先生代表全校师生给毛主席写信请题校名，但一直没收到回复[citation:1][citation:2]。1951年，学校又托人帮忙转达，辗转几次后，终于收到了毛主席亲笔题写在白宣纸上的“复旦大学”四个字，没有落款日期，据推测是1951年底写的[citation:2]。\n\n更有意思的是，在等到主席亲笔之前，复旦还临时从毛主席写给周谷城教授的信封上辑取了“复旦大学”四个字，先制成匾挂了上去[citation:1][citation:2]。现在你看到的校门上这四个字，原件已上交中央办公厅，复旦保存的是复制件[citation:2]。这四个字后来还被印在信封、信笺、校徽和毕业证书上，成为复旦最核心的视觉符号。"
+  },
+  {
+    "guide_script_id": "fudan_main_gate_followup_2",
+    "spot_id": "fudan_main_gate",
+    "route_id": "dream_school_route",
+    "agent_id": "student_guide",
+    "audience": "高中生",
+    "style": "轻松",
+    "language": "zh",
+    "title": "追问回复：陈望道老校长是谁",
+    "content": "陈望道是复旦历史上非常重要的一位校长，也是中国著名的教育家、语言学家。他最有名的事迹之一，是在1920年翻译了《共产党宣言》第一个中文全译本。\n\n在复旦，他做过很多实实在在的事：1950年他代表师生写信请毛主席题写校名[citation:2]；1960年代建这座校门时，他自掏腰包捐了一万多元稿费[citation:1][citation:8]；他还建议把5月27日上海解放纪念日定为复旦校庆日，一直沿用至今[citation:8]。现在校园里还有他的塑像和纪念空间，如果你感兴趣，可以去相辉堂附近看看。"
+  },
+  {
+    "guide_script_id": "fudan_main_gate_followup_3",
+    "spot_id": "fudan_main_gate",
+    "route_id": "dream_school_route",
+    "agent_id": "student_guide",
+    "audience": "高中生",
+    "style": "轻松",
+    "language": "zh",
+    "title": "追问回复：老校门和正门什么关系",
+    "content": "简单来说，老校门是复旦的“第一代”，正门是“第三代”，两者相隔约500米，代表了不同历史阶段[citation:1]。\n\n第一代老校门1921年由李登辉校长建成，是古典牌楼式建筑，1949年解放军从那里进校接管复旦[citation:1][citation:7]。1952年因校园东扩被拆除。现在燕园西侧那座青瓦白墙的牌楼，是2004年百年校庆时复建的纪念景观，你的录取通知书信封上印的就是它[citation:1][citation:3]。\n\n正门1965年启用，由陈望道校长主持建设，现在是人车通行的主入口[citation:1]。如果你从正门出发，沿校园主路往西走几分钟就能到复建老校门，两道门串起来就是复旦百年的缩影。"
+  }
+]
