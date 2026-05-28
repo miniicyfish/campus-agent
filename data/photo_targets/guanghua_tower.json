@@ -1,0 +1,78 @@
+[
+  {
+    "target_id": "guanghua_towers_full",
+    "spot_id": "guanghua_building",
+    "name": "光华楼双塔整体",
+    "aliases": ["光华楼全貌", "光华楼正面", "双子楼外观", "复旦最高楼"],
+    "visual_features": [
+      "东西两座对称的30层塔楼",
+      "中部连接体的现代化玻璃幕墙",
+      "高达142米的校园制高点",
+      "主楼前开阔的广场和台阶",
+      "裙楼环绕的弧形布局"
+    ],
+    "likely_questions": [
+      "这是什么建筑？",
+      "光华楼有多高？",
+      "这栋楼是什么风格？"
+    ],
+    "related_chunk_types": ["intro", "architecture", "history", "photo"]
+  },
+  {
+    "target_id": "guanghua_main_entrance",
+    "spot_id": "guanghua_building",
+    "name": "光华楼主入口及门厅",
+    "aliases": ["光华楼正门", "光华楼大门", "主楼入口", "玻璃门厅"],
+    "visual_features": [
+      "中部连接体底层的主入口",
+      "高大的玻璃幕墙门厅",
+      "入口上方的“光华楼”铭牌",
+      "入口前的宽阔台阶和平台",
+      "进出的人流与门禁闸机"
+    ],
+    "likely_questions": [
+      "光华楼可以进去吗？",
+      "门厅里面有什么？",
+      "入口的牌匾在哪儿？"
+    ],
+    "related_chunk_types": ["intro", "architecture", "photo", "access"]
+  },
+  {
+    "target_id": "guanghua_front_plaza",
+    "spot_id": "guanghua_building",
+    "name": "光华楼前广场与草坪",
+    "aliases": ["光草", "光华楼草坪", "前广场", "光华大道"],
+    "visual_features": [
+      "光华楼正前方的大片草坪",
+      "草坪上休闲、讨论、弹唱的人群",
+      "草坪两侧的银杏或樱花树",
+      "广场与光华楼的中轴对称关系",
+      "贯穿校园的光华大道"
+    ],
+    "likely_questions": [
+      "这片草坪叫什么？",
+      "为什么大家都躺在这里？",
+      "光草适合拍照吗？"
+    ],
+    "related_chunk_types": ["intro", "surroundings", "photo", "culture"]
+  },
+  {
+    "target_id": "guanghua_east_west_tower",
+    "spot_id": "guanghua_building",
+    "name": "光华楼东西塔楼特写",
+    "aliases": ["光华楼双塔", "东主楼", "西主楼", "塔楼仰拍"],
+    "visual_features": [
+      "仰拍视角下高耸的双塔楼",
+      "玻璃幕墙与金属构件的现代质感",
+      "东塔为文科楼、西塔为理科楼的布局",
+      "塔楼顶部与天空的对比",
+      "裙楼屋顶花园与塔楼的层次关系"
+    ],
+    "likely_questions": [
+      "东西两栋楼有什么区别？",
+      "塔楼里是做什么的？",
+      "顶楼能上去吗？"
+    ],
+    "related_chunk_types": ["architecture", "function", "photo", "detail"]
+  }
+]

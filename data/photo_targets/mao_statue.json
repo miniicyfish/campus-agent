@@ -1,0 +1,78 @@
+[
+  {
+    "target_id": "mao_statue_full",
+    "spot_id": "mao_statue",
+    "name": "毛泽东像正面全景",
+    "aliases": ["毛主席像", "毛像正面", "毛泽东塑像", "复旦毛像"],
+    "visual_features": [
+      "身穿军大衣的大型全身立像",
+      "双手后背、不戴帽的独特姿态",
+      "微抬头凝视前方的神情",
+      "站立于花坛与绿树环绕的基座之上",
+      "像高7.1米、总高12.26米的巨形尺度"
+    ],
+    "likely_questions": [
+      "这是什么雕塑？",
+      "这座毛主席像有多高？",
+      "为什么复旦的毛像是背手而不是挥手的？"
+    ],
+    "related_chunk_types": ["intro", "history", "sculpture", "photo"]
+  },
+  {
+    "target_id": "mao_statue_base",
+    "spot_id": "mao_statue",
+    "name": "毛泽东像基座与题字",
+    "aliases": ["毛像底座", "毛泽东题刻", "基座铭文", "底座刻字"],
+    "visual_features": [
+      "底座正面镌刻“毛泽东”三个大字",
+      "底座背面刻有落成时间与敬立单位",
+      "基座高5.16米的厚重体量",
+      "石质底座的材质纹理",
+      "基座周围的花坛与绿植环绕"
+    ],
+    "likely_questions": [
+      "底座上的字是谁写的？",
+      "为什么底座高度是5.16米？",
+      "这座雕像是什么时候建的？"
+    ],
+    "related_chunk_types": ["history", "calligraphy", "detail", "photo"]
+  },
+  {
+    "target_id": "mao_statue_plaza",
+    "spot_id": "mao_statue",
+    "name": "毛泽东像前广场",
+    "aliases": ["毛像前广场", "正门广场", "毛像花坛", "入口中轴线"],
+    "visual_features": [
+      "塑像前开阔的广场空间",
+      "三面绿树环绕的景观环境",
+      "花坛与塑像的正面视觉关系",
+      "广场上游人拍照打卡的场景",
+      "通向复旦正门的笔直通道"
+    ],
+    "likely_questions": [
+      "这里适合拍照吗？",
+      "毛像在校园的什么位置？",
+      "毛像周围还有什么可看的？"
+    ],
+    "related_chunk_types": ["intro", "surroundings", "photo", "layout"]
+  },
+  {
+    "target_id": "mao_statue_gate_view",
+    "spot_id": "mao_statue",
+    "name": "校门与毛泽东像同框视角",
+    "aliases": ["正门望毛像", "复旦门与毛像", "最佳合影点", "入口经典视角"],
+    "visual_features": [
+      "从正门入口向北望去的纵深视角",
+      "毛像与校门牌楼在同一画面中",
+      "牌楼门楣上“復旦大学”四字可见",
+      "清水红砖墙的老校门建筑风格",
+      "门与像之间的中轴透视关系"
+    ],
+    "likely_questions": [
+      "从正门怎么拍毛像最好看？",
+      "毛像和校门有什么关系？",
+      "为什么一进门就能看到毛像？"
+    ],
+    "related_chunk_types": ["photo", "layout", "intro", "architecture"]
+  }
+]

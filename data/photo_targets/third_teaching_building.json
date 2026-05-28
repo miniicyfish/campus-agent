@@ -1,0 +1,75 @@
+[
+  {
+    "target_id": "third_teaching_building_exterior",
+    "spot_id": "third_teaching_building",
+    "name": "第三教学楼外观",
+    "aliases": ["三教外观", "三教全貌", "第三教学楼外立面"],
+    "visual_features": [
+      "L形建筑外观，与第二教学楼围合出口字形小院[citation:5]",
+      "灰色墙面与整齐排列的窗户",
+      "楼体四层，紧邻望道路与光华大道",
+      "周围绿树环绕，正门入口开阔"
+    ],
+    "likely_questions": [
+      "这是什么楼？",
+      "三教是干什么的？",
+      "三教为什么叫第三教学楼？"
+    ],
+    "related_chunk_types": ["intro", "architecture", "photo"]
+  },
+  {
+    "target_id": "third_teaching_building_entrance",
+    "spot_id": "third_teaching_building",
+    "name": "第三教学楼入口门头",
+    "aliases": ["三教入口", "三教正门", "第三教学楼门牌"],
+    "visual_features": [
+      "教学楼正门上方悬挂的楼号标识牌",
+      "入口处的课表展示栏与海报栏[citation:1]",
+      "一楼入口通道可通往内部教室",
+      "正门与第二教学楼隔小院相望"
+    ],
+    "likely_questions": [
+      "三教的门牌在哪儿？",
+      "从这里可以进入三教吗？",
+      "公示栏上有什么信息？"
+    ],
+    "related_chunk_types": ["intro", "photo"]
+  },
+  {
+    "target_id": "third_teaching_building_3108",
+    "spot_id": "third_teaching_building",
+    "name": "3108教室",
+    "aliases": ["3108", "三教阶梯教室", "复旦最著名教室", "通宵自习室"],
+    "visual_features": [
+      "一楼大型平面教室，可容纳200余人[citation:4]",
+      "前门后窗回旋余地大，紧邻楼梯[citation:4]",
+      "教室后方便是光华大道（南京路）[citation:4]",
+      "教室内木质固定座位，简洁整齐[citation:4]",
+      "墙上可能贴有讲座海报或课程表"
+    ],
+    "likely_questions": [
+      "3108教室有什么特别的？",
+      "为什么3108在复旦这么出名？",
+      "里根总统真的在这里演讲过吗？"
+    ],
+    "related_chunk_types": ["intro", "history", "photo", "culture"]
+  },
+  {
+    "target_id": "third_teaching_building_courtyard",
+    "spot_id": "third_teaching_building",
+    "name": "二三教合围小院",
+    "aliases": ["三教小院", "二三教中庭", "教学楼间庭院"],
+    "visual_features": [
+      "第二教学楼与第三教学楼L形合抱围成的口字形院落[citation:5]",
+      "小院内有绿植和通行步道",
+      "四周被教学楼环绕，形成半封闭空间",
+      "课间时分有大量学生穿行其中"
+    ],
+    "likely_questions": [
+      "三教和二教是什么关系？",
+      "这个小院子是用来做什么的？",
+      "这里适合拍校园风照片吗？"
+    ],
+    "related_chunk_types": ["intro", "surroundings", "photo", "layout"]
+  }
+]

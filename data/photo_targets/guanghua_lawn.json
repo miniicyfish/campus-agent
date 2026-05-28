@@ -1,0 +1,78 @@
+[
+  {
+    "target_id": "guanghua_lawn_full",
+    "spot_id": "guanghua_lawn",
+    "name": "光草全景",
+    "aliases": ["光华楼前草坪", "光草全貌", "光华草坪", "复旦大草坪"],
+    "visual_features": [
+      "大片开阔的绿色草坪",
+      "背后高耸的光华楼双子塔",
+      "草坪微微倾斜的坡面",
+      "草坪上散坐、躺卧、活动的师生",
+      "四周樱花树、银杏等四季植被环绕"
+    ],
+    "likely_questions": [
+      "这片草坪叫什么？",
+      "光华楼前这片草坪能上去吗？",
+      "为什么这里总是这么多人？"
+    ],
+    "related_chunk_types": ["intro", "landscape", "photo", "campus_life"]
+  },
+  {
+    "target_id": "guanghua_lawn_with_building",
+    "spot_id": "guanghua_lawn",
+    "name": "光草与光华楼同框",
+    "aliases": ["草坪望光华楼", "光草与双子楼", "草坪打卡点", "最佳合影角度"],
+    "visual_features": [
+      "以草坪为前景、光华楼为背景的经典构图",
+      "142米高的现代风格双子塔建筑",
+      "楼体玻璃幕墙与草坪绿色的色彩对比",
+      "草坪边缘樱花树与光华楼同框的春天景致",
+      "中轴对称的校园中轴线视角"
+    ],
+    "likely_questions": [
+      "哪里拍光华楼最好看？",
+      "光草和光华楼是什么关系？",
+      "光华楼有多高？"
+    ],
+    "related_chunk_types": ["photo", "architecture", "intro", "landscape"]
+  },
+  {
+    "target_id": "guanghua_lawn_activities",
+    "spot_id": "guanghua_lawn",
+    "name": "光草上的校园生活场景",
+    "aliases": ["草坪活动", "光草日常", "复旦休闲草坪", "草坪聚会"],
+    "visual_features": [
+      "围坐讨论或阅读的学生小组",
+      "弹吉他、唱歌的文艺青年",
+      "晒太阳、午睡的身影",
+      "奔跑嬉戏的儿童或宠物",
+      "社团招新或小型活动的热闹场面"
+    ],
+    "likely_questions": [
+      "大家在草坪上干什么？",
+      "这里允许搭帐篷吗？",
+      "光草上可以野餐吗？"
+    ],
+    "related_chunk_types": ["campus_life", "intro", "photo", "culture"]
+  },
+  {
+    "target_id": "guanghua_lawn_cat",
+    "spot_id": "guanghua_lawn",
+    "name": "光草上的校猫",
+    "aliases": ["草坪猫咪", "复旦校猫", "光草晒太阳的猫", "校园猫"],
+    "visual_features": [
+      "在草坪上晒太阳或打盹的猫",
+      "猫与光草、光华楼的同框画面",
+      "师生围观或逗猫的互动场景",
+      "樱花树下或草坪边缘的猫影",
+      "慵懒、自在的校园生态写照"
+    ],
+    "likely_questions": [
+      "这些猫是复旦养的吗？",
+      "复旦有多少只校猫？",
+      "可以喂猫吗？"
+    ],
+    "related_chunk_types": ["campus_life", "photo", "culture", "intro"]
+  }
+]

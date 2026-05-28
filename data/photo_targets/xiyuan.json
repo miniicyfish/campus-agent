@@ -1,0 +1,78 @@
+[
+  {
+    "target_id": "xiyuan_pavilion",
+    "spot_id": "xiyuan",
+    "name": "曦园卿云亭",
+    "aliases": ["曦园亭子", "卿云亭", "曦园山顶亭", "园中亭"],
+    "visual_features": [
+      "位于假山顶部的四角凉亭",
+      "费孝通题写的“卿云亭”匾额",
+      "亭柱上苏步青的七律诗刻",
+      "假山石阶蜿蜒通向亭子",
+      "被绿树浓荫掩映的幽静环境"
+    ],
+    "likely_questions": [
+      "这个亭子叫什么名字？",
+      "亭子上的字是谁题的？",
+      "为什么叫卿云亭？"
+    ],
+    "related_chunk_types": ["intro", "architecture", "calligraphy", "photo"]
+  },
+  {
+    "target_id": "xiyuan_pond",
+    "spot_id": "xiyuan",
+    "name": "曦园池塘与小桥",
+    "aliases": ["曦园水景", "园中池塘", "小石桥", "睡莲池"],
+    "visual_features": [
+      "一湾碧绿的池塘水面",
+      "池中种植的睡莲或荷花",
+      "横跨池塘的小石桥",
+      "池畔垂柳与太湖石点缀",
+      "池中锦鲤游动的生动场景"
+    ],
+    "likely_questions": [
+      "池塘里有鱼吗？",
+      "这里适合拍照吗？",
+      "曦园的水景有什么讲究？"
+    ],
+    "related_chunk_types": ["intro", "landscape", "photo"]
+  },
+  {
+    "target_id": "xiyuan_stele",
+    "spot_id": "xiyuan",
+    "name": "曦园读书亭与石碑",
+    "aliases": ["读书亭", "曦园石碑", "园中碑刻", "曦园石刻"],
+    "visual_features": [
+      "池塘边的中式读书亭",
+      "亭旁立有石碑或石刻",
+      "亭内可供休憩阅读的石凳石桌",
+      "亭子与池塘、假山的呼应关系",
+      "四周竹林或花木环绕"
+    ],
+    "likely_questions": [
+      "这个石碑上刻了什么？",
+      "曦园为什么叫曦园？",
+      "这里可以坐下来看书吗？"
+    ],
+    "related_chunk_types": ["intro", "history", "calligraphy", "photo"]
+  },
+  {
+    "target_id": "xiyuan_entrance",
+    "spot_id": "xiyuan",
+    "name": "曦园入口与园门",
+    "aliases": ["曦园正门", "曦园园门", "中式月洞门", "曦园入口"],
+    "visual_features": [
+      "中式园林风格的园门或月洞门",
+      "门楣上“曦园”二字题刻",
+      "门框两侧的楹联或石刻装饰",
+      "透过园门可见园内假山或绿植的框景效果",
+      "入口与物理楼或周边建筑的位置关系"
+    ],
+    "likely_questions": [
+      "曦园的名字有什么含义？",
+      "这个园子是什么时候建的？",
+      "曦园在复旦的什么地方？"
+    ],
+    "related_chunk_types": ["intro", "history", "architecture", "photo"]
+  }
+]

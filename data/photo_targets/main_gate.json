@@ -1,0 +1,78 @@
+[
+  {
+    "target_id": "fudan_gate_overall",
+    "spot_id": "fudan_main_gate",
+    "name": "复旦正门建筑整体",
+    "aliases": ["复旦正门", "邯郸路220号校门", "复旦正门全景", "复旦大门"],
+    "visual_features": [
+      "牌坊式现代建筑造型，兼具古典风韵与现代活力",
+      "门楣上方横书毛主席题写的“复旦大学”四个大字",
+      "简约挺拔的门柱结构",
+      "校门与后方中轴线景观的纵深关系",
+      "门前常有拍照打卡的游客与师生"
+    ],
+    "likely_questions": [
+      "这是什么建筑？",
+      "复旦正门上的字是谁写的？",
+      "这座校门是什么时候建的？"
+    ],
+    "related_chunk_types": ["intro", "architecture", "history", "photo"]
+  },
+  {
+    "target_id": "fudan_gate_inscription",
+    "spot_id": "fudan_main_gate",
+    "name": "复旦正门校名题字",
+    "aliases": ["毛主席题字", "复旦大学匾额", "校名题刻", "正门牌匾"],
+    "visual_features": [
+      "门楣上方横书的“复旦大学”四个大字",
+      "笔力遒劲、气势豪迈的毛体书法风格",
+      "紫铜色或描金字体（不同时期颜色有所变化）",
+      "题字与牌坊式门楣的协调关系",
+      "题字在阳光下呈现的金属光泽"
+    ],
+    "likely_questions": [
+      "校门上的字是谁题的？",
+      "毛主席什么时候为复旦题写校名的？",
+      "为什么校名的颜色变过？"
+    ],
+    "related_chunk_types": ["history", "calligraphy", "detail", "photo"]
+  },
+  {
+    "target_id": "fudan_gate_axis",
+    "spot_id": "fudan_main_gate",
+    "name": "正门中轴线景观",
+    "aliases": ["校门中轴线", "正门往里看", "入口纵深视角", "正门通向毛像"],
+    "visual_features": [
+      "从正门外向校园内部拍摄的纵深视角",
+      "穿过校门可以看到远处的毛泽东像",
+      "两侧理科图书馆、教学楼等建筑拱卫",
+      "构成“校门—毛像—光华楼”的中轴线关系",
+      "门框作为前景的自然取景效果"
+    ],
+    "likely_questions": [
+      "进校门后能看到什么？",
+      "校门和毛泽东像有什么关系？",
+      "从正门怎么拍最好看？"
+    ],
+    "related_chunk_types": ["photo", "layout", "surroundings", "intro"]
+  },
+  {
+    "target_id": "fudan_gate_memorial_shop",
+    "spot_id": "fudan_main_gate",
+    "name": "正门旁文创店“卿云轩”",
+    "aliases": ["卿云轩", "校门口文创店", "复旦纪念品店", "正门左侧商店"],
+    "visual_features": [
+      "正门左侧的学校联名文创商店",
+      "店铺外观与校门建筑风格的协调",
+      "橱窗内陈列的复旦文创纪念品",
+      "店名“卿云轩”标识",
+      "游客进出选购的热闹场景"
+    ],
+    "likely_questions": [
+      "哪里可以买复旦纪念品？",
+      "卿云轩有什么值得买的？",
+      "卿云轩的名字有什么含义？"
+    ],
+    "related_chunk_types": ["surroundings", "service", "intro"]
+  }
+]

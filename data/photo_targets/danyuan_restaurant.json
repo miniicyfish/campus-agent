@@ -1,0 +1,78 @@
+[
+  {
+    "target_id": "danyuan_restaurant_building",
+    "spot_id": "danyuan_restaurant",
+    "name": "旦苑餐厅建筑整体",
+    "aliases": ["旦苑食堂", "旦苑全貌", "本部食堂外观", "旦苑餐厅"],
+    "visual_features": [
+      "三层楼高的现代校园餐饮建筑",
+      "位于光华楼东辅楼附近的便利位置",
+      "餐厅主入口及上方醒目的“旦苑餐厅”标识",
+      "建筑外观简洁大方，玻璃窗明净",
+      "周边人来人往、饭点排队的校园烟火气"
+    ],
+    "likely_questions": [
+      "这是什么食堂？",
+      "旦苑餐厅有几层？",
+      "这里离光华楼远吗？"
+    ],
+    "related_chunk_types": ["intro", "architecture", "surroundings", "photo"]
+  },
+  {
+    "target_id": "danyuan_restaurant_first_floor",
+    "spot_id": "danyuan_restaurant",
+    "name": "旦苑餐厅一楼大厅及窗口",
+    "aliases": ["旦苑一楼", "大众菜窗口", "本帮风味窗口", "旦苑点心部"],
+    "visual_features": [
+      "一楼大厅宽敞明亮的就餐区",
+      "大众菜、卤肉饭、烤鸭饭等丰富档口",
+      "西餐厅入口及西式简餐供应区",
+      "点心部招牌双皮奶、面包、饮品柜台",
+      "本帮风味窗口的地道上海早餐陈列"
+    ],
+    "likely_questions": [
+      "旦苑什么菜最好吃？",
+      "双皮奶在哪个窗口？",
+      "一楼有哪些特色窗口？"
+    ],
+    "related_chunk_types": ["food", "intro", "recommendation", "photo"]
+  },
+  {
+    "target_id": "danyuan_restaurant_second_floor",
+    "spot_id": "danyuan_restaurant",
+    "name": "旦苑餐厅二楼及清真餐厅",
+    "aliases": ["旦苑二楼", "自选菜窗口", "清真食堂", "铁板烧档口"],
+    "visual_features": [
+      "二楼自选菜窗口（类似快餐店选餐模式）",
+      "铁板烧档口的现场烹饪场景",
+      "卤味小吃、白斩鸡等招牌菜品陈列",
+      "侧厅清真餐厅的拉面、盖浇面供应",
+      "用餐高峰期学生端着餐盘穿梭的热闹画面"
+    ],
+    "likely_questions": [
+      "二楼有什么特色？",
+      "清真餐厅在哪里？",
+      "自选菜怎么收费？"
+    ],
+    "related_chunk_types": ["food", "intro", "detail", "photo"]
+  },
+  {
+    "target_id": "danyuan_restaurant_surroundings",
+    "spot_id": "danyuan_restaurant",
+    "name": "旦苑餐厅与光华楼同框视角",
+    "aliases": ["旦苑光华楼合影", "食堂周边环境", "餐厅与光华楼", "最佳打卡角度"],
+    "visual_features": [
+      "从旦苑餐厅外向光华楼东辅楼方向拍摄",
+      "餐厅建筑与光华楼同框的视觉关系",
+      "位于校园核心区域、毗邻教学楼的便利区位",
+      "通往光华楼草坪方向的步行路径",
+      "周边绿树成荫的校园环境"
+    ],
+    "likely_questions": [
+      "旦苑餐厅在校园的什么位置？",
+      "从光华楼怎么走到旦苑？",
+      "附近还有什么可逛的？"
+    ],
+    "related_chunk_types": ["surroundings", "layout", "photo", "intro"]
+  }
+]

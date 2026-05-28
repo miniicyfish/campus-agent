@@ -1,0 +1,78 @@
+[
+  {
+    "target_id": "history_museum_building",
+    "spot_id": "history_museum",
+    "name": "校史馆建筑整体",
+    "aliases": ["校史馆全貌", "校史馆新馆", "复旦校史馆外观", "中华文明资源中心A栋"],
+    "visual_features": [
+      "白墙青砖黑瓦红窗的民国风格建筑",
+      "中式屋顶与西式墙体结合",
+      "古色古香的二层砖木结构楼房",
+      "门前两尊石狮子守护",
+      ""复旦大学校史馆"牌匾高悬"
+    ],
+    "likely_questions": [
+      "这是什么建筑？",
+      "校史馆是什么时候建的？",
+      "校史馆的建筑有什么风格特点？"
+    ],
+    "related_chunk_types": ["intro", "architecture", "history", "photo"]
+  },
+  {
+    "target_id": "history_museum_entrance",
+    "spot_id": "history_museum",
+    "name": "校史馆入口及牌匾",
+    "aliases": ["校史馆正门", "校史馆门头", "校史馆牌匾", "石狮子入口"],
+    "visual_features": [
+      ""复旦大学校史馆"七个金灿灿的大字牌匾",
+      "门口两尊威严的石狮子",
+      "红色木质门窗与黑色窗框",
+      "入口拱门与校徽装饰",
+      "门楣线条利落、灰砖墙面"
+    ],
+    "likely_questions": [
+      "校史馆门口的狮子有什么来历？",
+      "校史馆的牌匾是谁题写的？",
+      "校史馆需要预约吗？"
+    ],
+    "related_chunk_types": ["intro", "detail", "photo"]
+  },
+  {
+    "target_id": "history_museum_lawn_view",
+    "spot_id": "history_museum",
+    "name": "校史馆与相辉堂草坪合影视角",
+    "aliases": ["校史馆草坪视角", "校史馆远景", "复旦源建筑群", "相辉堂草坪南望"],
+    "visual_features": [
+      "校史馆与相辉堂草坪的南北对望关系",
+      "以草坪为前景、校史馆为背景的开阔画面",
+      "周边环绕的博物馆、艺术馆等建筑群",
+      ""复旦源"历史文化功能区的整体氛围",
+      "草坪上活动的师生与游人"
+    ],
+    "likely_questions": [
+      "校史馆在校园的什么位置？",
+      "校史馆周边还有什么可看的？",
+      "这里适合拍照打卡吗？"
+    ],
+    "related_chunk_types": ["intro", "surroundings", "photo", "layout"]
+  },
+  {
+    "target_id": "history_museum_exhibit_hall",
+    "spot_id": "history_museum",
+    "name": "校史馆展厅内景",
+    "aliases": ["校史馆展厅", "校史陈列", "镇馆之宝", "校史馆内部"],
+    "visual_features": [
+      "展陈面积达2150平方米的宽敞展厅",
+      "五四上海第一钟等镇馆之宝",
+      "毛泽东主席亲笔题写的"复旦大学"手迹",
+      "1909年颁发的存世最早复旦毕业文凭",
+      "马相伯、李登辉、陈望道等老校长的遗物与肖像"
+    ],
+    "likely_questions": [
+      "校史馆里有什么值得看的？",
+      "校史馆的镇馆之宝是什么？",
+      "毛主席题写的校名在哪里？"
+    ],
+    "related_chunk_types": ["intro", "exhibit", "history", "photo"]
+  }
+]

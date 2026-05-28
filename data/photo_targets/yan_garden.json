@@ -1,0 +1,113 @@
+[
+  {
+    "target_id": "yan_garden_entrance",
+    "spot_id": "yan_garden",
+    "name": "燕园入口",
+    "aliases": ["燕园正门", "燕园门头", "燕园入口拱门", "燕园题字"],
+    "visual_features": [
+      "青瓦白墙的中式庭院入口",
+      "门头或入口处\"燕园\"题字（朱东润先生题写）",
+      "掩映在绿树中的古典门洞造型",
+      "入口小径通向幽深园林的纵深感"
+    ],
+    "likely_questions": [
+      "这是什么地方？",
+      "\"燕园\"的名字有什么由来？",
+      "这里进去是什么？"
+    ],
+    "related_chunk_types": ["intro", "history", "architecture", "photo"]
+  },
+  {
+    "target_id": "yan_garden_pavilion_bell",
+    "spot_id": "yan_garden",
+    "name": "世纪钟亭与红漆六角亭",
+    "aliases": ["世纪钟", "钟亭", "六角亭", "红亭子"],
+    "visual_features": [
+      "假山上的红漆六角亭",
+      "亭内悬挂\"世纪钟\"（1999年铸造）",
+      "亭子掩映在竹林与树木之间",
+      "中式飞檐与红色立柱的古典园林风格"
+    ],
+    "likely_questions": [
+      "这个亭子里有什么？",
+      "这口钟是做什么的？",
+      "这里适合拍照吗？"
+    ],
+    "related_chunk_types": ["intro", "history", "photo", "sculpture"]
+  },
+  {
+    "target_id": "yan_garden_waterfall_bridge",
+    "spot_id": "yan_garden",
+    "name": "瀑布与小桥",
+    "aliases": ["燕园瀑布", "石桥流水", "假山瀑布", "小瀑布石桥"],
+    "visual_features": [
+      "人工瀑布从假山倾泻而下的水景",
+      "瀑布旁的石拱桥",
+      "桥下流水与锦鲤",
+      "下午光线穿过水雾形成光影效果",
+      "周边竹林绿树环绕的幽静氛围"
+    ],
+    "likely_questions": [
+      "这个瀑布是天然的吗？",
+      "这里有什么鱼？",
+      "哪里拍照最好看？"
+    ],
+    "related_chunk_types": ["intro", "photo", "surroundings"]
+  },
+  {
+    "target_id": "yan_garden_cornerstone",
+    "spot_id": "yan_garden",
+    "name": "1920年奠基石",
+    "aliases": ["复旦奠基石", "江湾校区奠基石", "历史石碑", "建校奠基石"],
+    "visual_features": [
+      "刻有年份文字的历史石碑",
+      "石质表面有岁月风化痕迹",
+      "镶嵌或放置于园内草坪或路径旁",
+      "碑文记载复旦大学江湾校区建设起始"
+    ],
+    "likely_questions": [
+      "这块石碑是什么？",
+      "奠基石有什么历史意义？",
+      "燕园里还有什么历史遗迹？"
+    ],
+    "related_chunk_types": ["history", "detail", "intro"]
+  },
+  {
+    "target_id": "yan_garden_pond",
+    "spot_id": "yan_garden",
+    "name": "小桥流水与锦鲤池",
+    "aliases": ["燕园池塘", "锦鲤池", "彩林倒影池", "水景庭院"],
+    "visual_features": [
+      "中心池塘与周边绿树倒影",
+      "成群彩色锦鲤游动",
+      "池边石阶与观景平台",
+      "小桥横跨水面的江南园林意境",
+      "秋季银杏金黄倒映水中的画面感"
+    ],
+    "likely_questions": [
+      "池子里有什么鱼？",
+      "这里什么时候最美？",
+      "可以在池边坐着休息吗？"
+    ],
+    "related_chunk_types": ["intro", "photo", "surroundings"]
+  },
+  {
+    "target_id": "yan_garden_lawn_history",
+    "spot_id": "yan_garden",
+    "name": "民主广场旧址草坪",
+    "aliases": ["燕园草坪", "民主广场", "新闻馆旧址", "历史集会广场"],
+    "visual_features": [
+      "园内开阔草坪区域",
+      "草坪与周围小别墅建筑的空间关系",
+      "绿树环绕的静谧休憩空间",
+      "复旦大学新闻馆遗址所在地",
+      "进步师生集会演讲的历史场地风貌"
+    ],
+    "likely_questions": [
+      "这里为什么叫民主广场？",
+      "这片草坪有什么历史？",
+      "燕园和复旦新闻系有什么关系？"
+    ],
+    "related_chunk_types": ["history", "intro", "surroundings"]
+  }
+]

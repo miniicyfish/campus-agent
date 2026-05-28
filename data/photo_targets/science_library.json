@@ -1,0 +1,78 @@
+[
+  {
+    "target_id": "science_library_building",
+    "spot_id": "science_library",
+    "name": "理科图书馆建筑整体",
+    "aliases": ["理科图书馆全貌", "理科馆外观", "理科图书馆正面", "老图书馆"],
+    "visual_features": [
+      "1958年建成的近现代风格建筑",
+      "对称的建筑正立面",
+      "总面积约6440平方米的体量感[citation:3]",
+      "位于中央草坪西侧的望道路上[citation:3]",
+      "建筑前树木茂盛、芳草如茵的绿化环境[citation:3]"
+    ],
+    "likely_questions": [
+      "这是什么建筑？",
+      "理科图书馆是哪一年建的？",
+      "理科图书馆和文科图书馆有什么区别？"
+    ],
+    "related_chunk_types": ["intro", "architecture", "history", "photo"]
+  },
+  {
+    "target_id": "science_library_entrance",
+    "spot_id": "science_library",
+    "name": "理科图书馆入口",
+    "aliases": ["理科馆正门", "图书馆大门", "理科图书馆门头"],
+    "visual_features": [
+      "图书馆主入口大门",
+      "门头馆名牌匾或标识",
+      "入口处进出馆的师生人流",
+      "大门两侧的绿化景观",
+      "门口可能的开放时间告示牌"
+    ],
+    "likely_questions": [
+      "校外人员可以进去吗？",
+      "理科图书馆的开放时间是什么？",
+      "入口处的牌子写了什么？"
+    ],
+    "related_chunk_types": ["intro", "photo", "detail"]
+  },
+  {
+    "target_id": "chen_wangdao_statue",
+    "spot_id": "science_library",
+    "name": "陈望道雕像",
+    "aliases": ["陈望道像", "望道雕塑", "校长雕像", "陈望道铜像"],
+    "visual_features": [
+      "陈望道先生半身或全身塑像",
+      "雕像位于理科图书馆前或附近[citation:2]",
+      "雕像基座可能有生平铭文",
+      "与理科图书馆形成呼应关系",
+      "周边常有献花或拍照的师生"
+    ],
+    "likely_questions": [
+      "这是谁的雕像？",
+      "陈望道和复旦有什么关系？",
+      "为什么他的雕像放在理科图书馆前？"
+    ],
+    "related_chunk_types": ["intro", "history", "figure", "photo"]
+  },
+  {
+    "target_id": "science_library_lawn_view",
+    "spot_id": "science_library",
+    "name": "中央草坪与理科图书馆同框视角",
+    "aliases": ["草坪望图书馆", "中央草坪视角", "图书馆远景", "最佳拍摄点"],
+    "visual_features": [
+      "从中央草坪东侧向西拍摄的视角",
+      "前景为大草坪，背景为理科图书馆建筑",
+      "草坪与建筑的中轴对称关系",
+      "三月海棠、五月樱花等季相景观[citation:3]",
+      "草坪上活动的师生与图书馆的呼应"
+    ],
+    "likely_questions": [
+      "哪里拍理科图书馆最好看？",
+      "图书馆前的草坪能上去吗？",
+      "这里和相辉堂草坪有什么不同？"
+    ],
+    "related_chunk_types": ["photo", "surroundings", "intro"]
+  }
+]
