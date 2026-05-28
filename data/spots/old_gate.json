@@ -1,0 +1,14 @@
+{
+  "spot_id": "fudan_old_gate",
+  "name": "老校门",
+  "aliases": ["老校门", "复旦老校门", "复建校门", "燕园老校门"],
+  "campus": "邯郸校区",
+  "type": "校史建筑",
+  "lat": 31.301645,
+  "lng": 121.507493,
+  "default_trigger_radius_meters": 50,
+  "map_icon": "gate",
+  "summary": "复建于2004年的仿古牌楼式校门，是复旦初创时期第一代校门的重现，见证了百年复旦的沧桑历史。",
+  "available": true,
+  "source_status": "待核验"
+}

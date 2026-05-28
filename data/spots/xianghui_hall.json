@@ -1,0 +1,13 @@
+{
+  "spot_id": "xianghui_hall",
+  "name": "相辉堂",
+  "aliases": ["相辉堂", "复旦相辉堂", "登辉堂"],
+  "campus": "邯郸校区",
+  "type": "校史建筑",
+  "lat": 31.303171,
+  "lng": 121.506025,
+  "default_trigger_radius_meters": 80,
+  "map_icon": "hall",
+  "summary": "复旦校园中最具历史意义的礼堂建筑，见证复旦精神传承的精神地标。",
+  "available": true
+}

@@ -1,0 +1,14 @@
+{
+    "spot_id": "fudan_guanghua_tower",
+    "name": "光华楼",
+    "aliases": ["光华楼", "复旦光华楼", "双子塔楼"],
+    "campus": "邯郸校区",
+    "type": "综合教学楼",
+    "lat": 31.305661,
+    "lng": 121.511814,
+    "default_trigger_radius_meters": 80,
+    "map_icon": "building",
+    "summary": "复旦邯郸校区标志性建筑，百年校庆时落成，是集教学、科研、办公于一体的综合大楼。",
+    "available": true,
+    "source_status": "待核验"
+}

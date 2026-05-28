@@ -1,0 +1,18 @@
+{
+  "spot_id": "fudan_main_gate",
+  "name": "复旦大学正校门",
+  "aliases": [
+    "复旦正门",
+    "邯郸路220号校门",
+    "东南2门",
+    "正校门"
+  ],
+  "campus": "邯郸校区",
+  "type": "校史建筑",
+  "lat": 31.302389,
+  "lng": 121.510520,
+  "default_trigger_radius_meters": 60,
+  "map_icon": "gate",
+  "summary": "复旦最具标志性的入口，毛泽东主席亲笔题写校名，1965年由陈望道校长捐稿费建成。",
+  "available": true
+}
