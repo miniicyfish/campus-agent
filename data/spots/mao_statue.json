@@ -1,0 +1,21 @@
+{
+  "spot_id": "mao_statue",
+  "name": "毛泽东像",
+  "aliases": [
+    "毛泽东像",
+    "毛主席像",
+    "主席像",
+    "毛像",
+    "毛泽东塑像",
+    "毛主席雕像"
+  ],
+  "campus": "邯郸校区",
+  "type": "纪念性雕塑",
+  "lat": 31.303207,
+  "lng": 121.510125,
+  "default_trigger_radius_meters": 80,
+  "map_icon": "statue",
+  "summary": "邯郸路220号正门内侧、校园中轴线上的毛泽东主席塑像，是复旦最显著的地标和精神象征。",
+  "available": true,
+  "source_status": "待核验"
+}

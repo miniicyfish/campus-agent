@@ -1,0 +1,19 @@
+{
+  "spot_id": "fudan_history_museum",
+  "name": "复旦大学校史馆",
+  "aliases": [
+    "校史馆",
+    "复旦校史馆",
+    "奕柱堂",
+    "新校史馆"
+  ],
+  "campus": "邯郸校区",
+  "type": "校史建筑",
+  "lat": 31.302405,
+  "lng": 121.505733,
+  "default_trigger_radius_meters": 60,
+  "map_icon": "museum",
+  "summary": "位于复旦源核心区，前身为1921年建成的奕柱堂，现为展示复旦百廿年历史的新校史馆。",
+  "available": true,
+  "source_status": "待核验"
+}

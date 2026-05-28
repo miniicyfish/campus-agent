@@ -1,0 +1,13 @@
+{
+  "spot_id": "guanghua_lawn",
+  "name": "光华楼前草坪（光草）",
+  "aliases": ["光草", "光华楼前草坪", "光华草坪", "光华大草坪"],
+  "campus": "邯郸校区",
+  "type": "户外空间",
+  "lat": 31.304837,
+  "lng": 121.512201,
+  "default_trigger_radius_meters": 100,
+  "map_icon": "lawn",
+  "summary": "光华楼南侧的大草坪，复旦最具活力的户外公共空间，被誉为“复旦人的客厅”。",
+  "available": true
+}

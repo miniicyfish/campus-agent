@@ -1,0 +1,14 @@
+{
+  "spot_id": "fudan_zibin_hall",
+  "name": "子彬院",
+  "aliases": ["子彬院", "小白宫", "吕志和楼", "复旦子彬院"],
+  "campus": "邯郸校区",
+  "type": "校史建筑",
+  "lat": 31.303139,
+  "lng": 121.506905,
+  "default_trigger_radius_meters": 60,
+  "map_icon": "hall",
+  "summary": "复旦校园内被称为“小白宫”的历史建筑，中西合璧，曾是远东第一心理学院和中国南方数学研究重镇。",
+  "available": true,
+  "source_status": "待核验"
+}

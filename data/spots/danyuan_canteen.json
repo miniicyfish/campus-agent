@@ -1,0 +1,13 @@
+{
+  "spot_id": "danyuan_canteen",
+  "name": "旦苑餐厅",
+  "aliases": ["旦苑", "旦苑食堂", "旦苑餐厅", "复旦旦苑", "本部食堂"],
+  "campus": "邯郸校区",
+  "type": "餐饮",
+  "lat": 31.306747,
+  "lng": 121.513160,
+  "default_trigger_radius_meters": 60,
+  "map_icon": "restaurant",
+  "summary": "复旦大学邯郸校区的本部食堂，距离光华楼最近、规模最大的学生餐厅。",
+  "available": true
+}

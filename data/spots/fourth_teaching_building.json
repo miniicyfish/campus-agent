@@ -1,0 +1,13 @@
+{
+  "spot_id": "fourth_teaching_building",
+  "name": "第四教学楼",
+  "aliases": ["第四教学楼", "四教", "复旦四教"],
+  "campus": "邯郸校区",
+  "type": "教学楼",
+  "lat": 31.304224,
+  "lng": 121.508241,
+  "default_trigger_radius_meters": 60,
+  "map_icon": "building",
+  "summary": "始建于上世纪80年代，2025年完成全面修缮的智慧教学楼，是复旦AI教育新地标。",
+  "available": true
+}
