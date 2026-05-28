@@ -1,5 +1,5 @@
 ---
-spot_id: fudan_teaching_building_4
+spot_id: fourth_teaching_building
 name: 复旦大学第四教学楼
 aliases:
   - 四教
