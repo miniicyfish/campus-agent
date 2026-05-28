@@ -1,5 +1,5 @@
 ---
-spot_id: fudan_guangcao
+spot_id: guanghua_lawn
 name: 光草（光华楼前大草坪）
 aliases:
   - 光草
