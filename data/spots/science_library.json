@@ -1,0 +1,14 @@
+{
+    "spot_id": "fudan_science_library",
+    "name": "理科图书馆",
+    "aliases": ["理科图书馆", "理科馆", "复旦理科图书馆"],
+    "campus": "邯郸校区",
+    "type": "图书馆",
+    "lat": 31.303062,
+    "lng": 121.509319,
+    "default_trigger_radius_meters": 60,
+    "map_icon": "library",
+    "summary": "复旦大学邯郸校区主要理工科图书馆，位于校园西南侧中央草坪西边，馆藏超370万册。",
+    "available": true,
+    "source_status": "待核验"
+}

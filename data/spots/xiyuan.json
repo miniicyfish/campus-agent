@@ -1,0 +1,13 @@
+{
+  "spot_id": "fudan_xiyuan",
+  "name": "曦园",
+  "aliases": ["曦园", "复旦曦园", "曦园晨读"],
+  "campus": "邯郸校区",
+  "type": "园林景观",
+  "lat": 31.302832,
+  "lng": 121.511565,
+  "default_trigger_radius_meters": 60,
+  "map_icon": "park",
+  "summary": "正门东侧的江南园林，以晨读闻名，内有卿云亭、荷花池、苏步青题诗等景观。",
+  "available": true
+}

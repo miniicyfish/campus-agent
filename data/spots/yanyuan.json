@@ -1,0 +1,14 @@
+{
+  "spot_id": "fudan_yanyuan",
+  "name": "燕园",
+  "aliases": ["燕园", "复旦燕园", "南轩"],
+  "campus": "邯郸校区",
+  "type": "园林景观",
+  "lat": 31.301837,
+  "lng": 121.507464,
+  "default_trigger_radius_meters": 80,
+  "map_icon": "garden",
+  "summary": "复旦邯郸校区西南角一座小桥流水的江南私家园林，也是复旦进步师生爱国民主运动的纪念地。",
+  "available": true,
+  "source_status": "待核验"
+}
