@@ -1,1 +1,136 @@
-[]
+[
+  {
+    "route_id": "academic_route_30min",
+    "name": "学术风路线（精华版）",
+    "description": "聚焦复旦最具历史底蕴的经典建筑与思想启蒙空间，适合时间紧凑的访客快速感受复旦精神。",
+    "duration_minutes": 30,
+    "distance_meters": 800,
+    "tags": ["校史", "学术", "历史", "人文"],
+    "suitable_for": ["校友", "访客", "学者", "历史爱好者"],
+    "interests": ["校史", "建筑", "人文"],
+    "style": "严谨",
+    "start_spot_id": "fudan_main_gate",
+    "stops": [
+      {
+        "spot_id": "fudan_main_gate",
+        "order": 1,
+        "estimated_stay_minutes": 3,
+        "trigger_radius_meters": 60,
+        "guide_script_id": "main_gate_academic",
+        "reason": "作为复旦的标志性入口与历史变迁的见证者，适合作为严肃历史叙事的起点。"
+      },
+      {
+        "spot_id": "mao_statue",
+        "order": 2,
+        "estimated_stay_minutes": 3,
+        "trigger_radius_meters": 60,
+        "guide_script_id": "mao_statue_academic",
+        "reason": "探讨特定历史时期的校园政治与文化遗存，观察其独特的‘三数模式’与建筑技法。"
+      },
+      {
+        "spot_id": "fudan_third_teaching_building",
+        "order": 3,
+        "estimated_stay_minutes": 5,
+        "trigger_radius_meters": 60,
+        "guide_script_id": "third_teaching_building_academic",
+        "reason": "途径‘精神高地’3108教室，回顾80年代思想解放浪潮与复旦自由开放的学术氛围。"
+      },
+      {
+        "spot_id": "fudan_zibin_hall",
+        "order": 4,
+        "estimated_stay_minutes": 5,
+        "trigger_radius_meters": 60,
+        "guide_script_id": "zibin_hall_academic",
+        "reason": "考察复旦早期学科建设的辉煌，从‘远东第一心理学院’到中国南方数学重镇的空间演变。"
+      },
+      {
+        "spot_id": "xianghui_hall",
+        "order": 5,
+        "estimated_stay_minutes": 6,
+        "trigger_radius_meters": 60,
+        "guide_script_id": "xianghui_hall_academic",
+        "reason": "追寻‘团结、服务、牺牲’复旦精神的凝结点，感受核心仪式空间的厚重历史。"
+      },
+      {
+        "spot_id": "fudan_old_gate",
+        "order": 6,
+        "estimated_stay_minutes": 3,
+        "trigger_radius_meters": 60,
+        "guide_script_id": "old_gate_academic",
+        "reason": "追溯1921年江湾办学的起点，为整条历史轴线的巡礼进行物理空间上的收束。"
+      }
+    ],
+    "ending_message": "短途学术寻访到此结束，希望这半小时的履迹让您切身感受到了复旦深厚的历史与学术底蕴。"
+  },
+  {
+    "route_id": "academic_route_60min",
+    "name": "学术风路线（深度版）",
+    "description": "深度寻访复旦百年校史与学术重镇，探寻珍贵历史文献与建筑印记，适合对校史底蕴有深究需求的用户。",
+    "duration_minutes": 60,
+    "distance_meters": 1500,
+    "tags": ["校史", "学术", "历史", "深度游", "文保建筑"],
+    "suitable_for": ["校友", "访客", "学者", "历史深度爱好者"],
+    "interests": ["校史", "建筑", "人文"],
+    "style": "严谨",
+    "start_spot_id": "fudan_main_gate",
+    "stops": [
+      {
+        "spot_id": "fudan_main_gate",
+        "order": 1,
+        "estimated_stay_minutes": 3,
+        "trigger_radius_meters": 60,
+        "guide_script_id": "main_gate_academic",
+        "reason": "解读毛泽东题字与陈望道捐资建门的史料档案，确立整条路线的宏观历史基调。"
+      },
+      {
+        "spot_id": "mao_statue",
+        "order": 2,
+        "estimated_stay_minutes": 3,
+        "trigger_radius_meters": 60,
+        "guide_script_id": "mao_statue_academic",
+        "reason": "作为中轴线的重要节点，客观审视复旦师生在特殊年代留下的雕塑遗存。"
+      },
+      {
+        "spot_id": "fudan_science_library",
+        "order": 3,
+        "estimated_stay_minutes": 7,
+        "trigger_radius_meters": 60,
+        "guide_script_id": "science_library_academic",
+        "reason": "溯源百年阅读史，重温‘四千人搬书’的时代记忆与破除借书陈规的质朴学风。"
+      },
+      {
+        "spot_id": "fudan_zibin_hall",
+        "order": 4,
+        "estimated_stay_minutes": 7,
+        "trigger_radius_meters": 60,
+        "guide_script_id": "zibin_hall_academic",
+        "reason": "深入剖析‘小白宫’的建筑形制与结构巧思，梳理其在复旦理科发展史上的奠基地位。"
+      },
+      {
+        "spot_id": "xianghui_hall",
+        "order": 5,
+        "estimated_stay_minutes": 10,
+        "trigger_radius_meters": 60,
+        "guide_script_id": "xianghui_hall_academic",
+        "reason": "全面考证登辉堂的建设始末，以及其作为校园精神殿堂在历次重大历史事件中的作用。"
+      },
+      {
+        "spot_id": "fudan_history_museum",
+        "order": 6,
+        "estimated_stay_minutes": 20,
+        "trigger_radius_meters": 60,
+        "guide_script_id": "history_museum_academic",
+        "reason": "参观复旦现存最早原貌建筑，深度研读馆内文献资料、实物档案与建校先贤的奋斗历程。"
+      },
+      {
+        "spot_id": "fudan_old_gate",
+        "order": 7,
+        "estimated_stay_minutes": 5,
+        "trigger_radius_meters": 60,
+        "guide_script_id": "old_gate_academic",
+        "reason": "以1921年初代校门复建景观作为路线终点，呼应首站，完成跨越百年的时空对话。"
+      }
+    ],
+    "ending_message": "深度学术寻访到此结束，百廿复旦的星火与厚重，期待能在您的记忆中留下深刻的学术印记。"
+  }
+]
