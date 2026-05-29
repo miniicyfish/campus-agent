@@ -1,1 +1,26 @@
-[]
+[
+  {
+    "rule_id": "academic_history_30min",
+    "priority": 100,
+    "conditions": {
+      "identities": ["访客", "校友", "学者", "历史爱好者"],
+      "interests_any": ["校史", "建筑", "人文"],
+      "duration_minutes_max": 30,
+      "styles_any": ["严谨", "客观", "专业"]
+    },
+    "route_id": "academic_route_30min",
+    "reason": "针对时间较紧凑但对复旦历史底蕴有较高要求的用户，优先推荐串联核心史迹的30分钟学术路线。"
+  },
+  {
+    "rule_id": "academic_history_60min",
+    "priority": 100,
+    "conditions": {
+      "identities": ["访客", "校友", "学者", "历史深度爱好者"],
+      "interests_any": ["校史", "建筑", "人文", "文献"],
+      "duration_minutes_max": 60,
+      "styles_any": ["严谨", "客观", "专业"]
+    },
+    "route_id": "academic_route_60min",
+    "reason": "针对时间充裕且期望深入探究建校历史与文献档案的用户，分配包含校史馆的60分钟深度学术考察路线。"
+  }
+]
