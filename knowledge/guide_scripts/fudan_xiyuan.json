@@ -1,0 +1,35 @@
+[
+  {
+    "guide_script_id": "xiyuan_park_30s",
+    "spot_id": "fudan_xiyuan",
+    "route_id": "park_route_30min",
+    "agent_id": "littleredbook_curator",
+    "audience": "访客",
+    "style": "亲切",
+    "language": "zh",
+    "duration_seconds": 30,
+    "title": "曦园：江南水乡般的收尾",
+    "content": "我们这趟游园的最后一站是曦园。这里是一处非常精致的古典小园林。大家可以漫步在回廊和假山之间，看看池塘里的波纹，体验一下移步换景的园林趣味。逛完这里，刚好可以从旁边的侧门离开校园，结束我们今天的轻松旅程啦。",
+    "follow_up_suggestions": [
+      "曦园里有什么特别的植物吗？",
+      "这个园林是哪一年建的？"
+    ]
+  },
+  {
+    "guide_script_id": "xiyuan_park_60s",
+    "spot_id": "fudan_xiyuan",
+    "route_id": "park_route_60min",
+    "agent_id": "littleredbook_curator",
+    "audience": "访客",
+    "style": "亲切",
+    "language": "zh",
+    "duration_seconds": 60,
+    "title": "曦园：园林中的岁月静好",
+    "content": "慢慢走到我们今天漫步的最后一站——曦园。走进这里，就像是步入了一幅传统的江南水墨画。你可以沿着小巧的假山和蜿蜒的回廊慢慢走，听听风吹过树梢和池沼水面泛起的细微白噪音。不妨在长廊的木椅上坐一会儿，回味一下刚刚走过的那些风景。这座小小的园林把自然的美浓缩在了方寸之间，希望这最后一段舒缓的时光，能让你彻底卸下疲惫，收获内心的平静。休息好了之后，从旁边的侧门就能很方便地离开校园了哦。",
+    "follow_up_suggestions": [
+      "曦园的设计有什么传统园林的讲究？",
+      "园子里的长廊有什么名字吗？",
+      "这里的池塘有连接外面的水系吗？"
+    ]
+  }
+]
