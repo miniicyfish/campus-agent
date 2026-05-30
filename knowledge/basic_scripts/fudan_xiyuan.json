@@ -1,6 +1,6 @@
 {
-    "basic_script_id": "xiyuan_basic",
-    "spot_id": "xiyuan",
+    "basic_script_id": "fudan_xiyuan_basic",
+    "spot_id": "fudan_xiyuan",
     "language": "zh",
     "duration_seconds": 60,
     "title": "曦园基础介绍",
