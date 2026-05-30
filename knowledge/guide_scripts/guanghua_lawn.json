@@ -32,4 +32,37 @@
       "平时除了晒太阳，同学们在光草还干什么？"
     ]
   }
+  {
+    "guide_script_id": "guanghua_lawn_park_30s",
+    "spot_id": "guanghua_lawn",
+    "route_id": "park_route_30min",
+    "agent_id": "littleredbook_curator",
+    "audience": "访客",
+    "style": "亲切",
+    "language": "zh",
+    "duration_seconds": 30,
+    "title": "光草：拥抱大片绿意",
+    "content": "穿过小径，我们就来到了校园里视野最开阔的地方——光华楼前的大草坪，大家简称它为‘光草’。大片的绿色总能让人瞬间放松下来。你可以找块干净的草地坐下，抬头看看天空和周围的树木，感受一下校园里这种无拘无束、自然清新的氛围。",
+    "follow_up_suggestions": [
+      "这片草坪平时对外开放吗？",
+      "草坪两边种的是什么树？"
+    ]
+  },
+  {
+    "guide_script_id": "guanghua_lawn_park_60s",
+    "spot_id": "guanghua_lawn",
+    "route_id": "park_route_60min",
+    "agent_id": "littleredbook_curator",
+    "audience": "访客",
+    "style": "亲切",
+    "language": "zh",
+    "duration_seconds": 60,
+    "title": "光草：在云端下自然充电",
+    "content": "穿过林荫道，眼前这片开阔的双子草坪就是光草了。对于我们这场疗愈之旅来说，这里是最好的核心休憩地。天气好的时候，我非常建议你直接在草坪上坐下来，甚至躺一会儿。闭上眼睛，感受微风拂过脸颊，闻一闻泥土和青草的味道。你可以抬头看看天上慢慢飘过的白云，把生活里那些紧绷的情绪都释放在这片柔软的草地上。什么都不用想，就在这片校园的绿洲里，让大自然帮你重新充满电吧。",
+    "follow_up_suggestions": [
+      "光草周围能看到哪些主要建筑？",
+      "一年中什么季节来光草最舒服？",
+      "草坪的设计有什么特殊的讲究吗？"
+    ]
+  }
 ]
