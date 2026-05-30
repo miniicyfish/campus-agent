@@ -1,7 +1,7 @@
 [
   {
-    "target_id": "third_teaching_building_exterior",
-    "spot_id": "third_teaching_building",
+    "target_id": "fudan_third_teaching_building_exterior",
+    "spot_id": "fudan_third_teaching_building",
     "name": "第三教学楼外观",
     "aliases": ["三教外观", "三教全貌", "第三教学楼外立面"],
     "visual_features": [
@@ -18,8 +18,8 @@
     "related_chunk_types": ["intro", "architecture", "photo"]
   },
   {
-    "target_id": "third_teaching_building_entrance",
-    "spot_id": "third_teaching_building",
+    "target_id": "fudan_third_teaching_building_entrance",
+    "spot_id": "fudan_third_teaching_building",
     "name": "第三教学楼入口门头",
     "aliases": ["三教入口", "三教正门", "第三教学楼门牌"],
     "visual_features": [
@@ -36,8 +36,8 @@
     "related_chunk_types": ["intro", "photo"]
   },
   {
-    "target_id": "third_teaching_building_3108",
-    "spot_id": "third_teaching_building",
+    "target_id": "fudan_third_teaching_building_3108",
+    "spot_id": "fudan_third_teaching_building",
     "name": "3108教室",
     "aliases": ["3108", "三教阶梯教室", "复旦最著名教室", "通宵自习室"],
     "visual_features": [
@@ -55,8 +55,8 @@
     "related_chunk_types": ["intro", "history", "photo", "culture"]
   },
   {
-    "target_id": "third_teaching_building_courtyard",
-    "spot_id": "third_teaching_building",
+    "target_id": "fudan_third_teaching_building_courtyard",
+    "spot_id": "fudan_third_teaching_building",
     "name": "二三教合围小院",
     "aliases": ["三教小院", "二三教中庭", "教学楼间庭院"],
     "visual_features": [
