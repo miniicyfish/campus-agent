@@ -1,7 +1,7 @@
 [
   {
-    "target_id": "guanghua_towers_full",
-    "spot_id": "guanghua_building",
+    "target_id": "fudan_guanghua_tower_full",
+    "spot_id": "fudan_guanghua_tower",
     "name": "光华楼双塔整体",
     "aliases": ["光华楼全貌", "光华楼正面", "双子楼外观", "复旦最高楼"],
     "visual_features": [
@@ -19,8 +19,8 @@
     "related_chunk_types": ["intro", "architecture", "history", "photo"]
   },
   {
-    "target_id": "guanghua_main_entrance",
-    "spot_id": "guanghua_building",
+    "target_id": "fudan_guanghua_tower_main_entrance",
+    "spot_id": "fudan_guanghua_tower",
     "name": "光华楼主入口及门厅",
     "aliases": ["光华楼正门", "光华楼大门", "主楼入口", "玻璃门厅"],
     "visual_features": [
@@ -38,8 +38,8 @@
     "related_chunk_types": ["intro", "architecture", "photo", "access"]
   },
   {
-    "target_id": "guanghua_front_plaza",
-    "spot_id": "guanghua_building",
+    "target_id": "fudan_guanghua_tower_front_plaza",
+    "spot_id": "fudan_guanghua_tower",
     "name": "光华楼前广场与草坪",
     "aliases": ["光草", "光华楼草坪", "前广场", "光华大道"],
     "visual_features": [
@@ -57,8 +57,8 @@
     "related_chunk_types": ["intro", "surroundings", "photo", "culture"]
   },
   {
-    "target_id": "guanghua_east_west_tower",
-    "spot_id": "guanghua_building",
+    "target_id": "fudan_guanghua_tower_east_west_tower",
+    "spot_id": "fudan_guanghua_tower",
     "name": "光华楼东西塔楼特写",
     "aliases": ["光华楼双塔", "东主楼", "西主楼", "塔楼仰拍"],
     "visual_features": [
