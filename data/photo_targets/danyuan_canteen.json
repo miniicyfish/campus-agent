@@ -1,7 +1,7 @@
 [
   {
-    "target_id": "danyuan_restaurant_building",
-    "spot_id": "danyuan_restaurant",
+    "target_id": "danyuan_canteen_building",
+    "spot_id": "danyuan_canteen",
     "name": "旦苑餐厅建筑整体",
     "aliases": ["旦苑食堂", "旦苑全貌", "本部食堂外观", "旦苑餐厅"],
     "visual_features": [
@@ -19,8 +19,8 @@
     "related_chunk_types": ["intro", "architecture", "surroundings", "photo"]
   },
   {
-    "target_id": "danyuan_restaurant_first_floor",
-    "spot_id": "danyuan_restaurant",
+    "target_id": "danyuan_canteen_first_floor",
+    "spot_id": "danyuan_canteen",
     "name": "旦苑餐厅一楼大厅及窗口",
     "aliases": ["旦苑一楼", "大众菜窗口", "本帮风味窗口", "旦苑点心部"],
     "visual_features": [
@@ -38,8 +38,8 @@
     "related_chunk_types": ["food", "intro", "recommendation", "photo"]
   },
   {
-    "target_id": "danyuan_restaurant_second_floor",
-    "spot_id": "danyuan_restaurant",
+    "target_id": "danyuan_canteen_second_floor",
+    "spot_id": "danyuan_canteen",
     "name": "旦苑餐厅二楼及清真餐厅",
     "aliases": ["旦苑二楼", "自选菜窗口", "清真食堂", "铁板烧档口"],
     "visual_features": [
@@ -57,7 +57,7 @@
     "related_chunk_types": ["food", "intro", "detail", "photo"]
   },
   {
-    "target_id": "danyuan_restaurant_surroundings",
+    "target_id": "danyuan_canteen_surroundings",
     "spot_id": "danyuan_restaurant",
     "name": "旦苑餐厅与光华楼同框视角",
     "aliases": ["旦苑光华楼合影", "食堂周边环境", "餐厅与光华楼", "最佳打卡角度"],
