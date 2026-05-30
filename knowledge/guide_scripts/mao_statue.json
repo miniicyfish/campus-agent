@@ -31,4 +31,37 @@
       "1980年中央发出清理领袖塑像指示后，这座雕像为何得以保留？"
     ]
   }
+  {
+    "guide_script_id": "mao_statue_dream_school_30s",
+    "spot_id": "mao_statue",
+    "route_id": "dream_school_30min",
+    "agent_id": "student_guide",
+    "audience": "高中生",
+    "style": "轻松",
+    "language": "zh",
+    "duration_seconds": 30,
+    "title": "毛泽东像：校园碰头地",
+    "content": "一进校门，最先看到的就是这座毛主席像。在复旦，这里可是最经典的“社交宇宙中心”，平时社团集合、同学面基，大家最爱说的一句话就是“毛像下面见”。这座塑像是1967年落成的，总高刚好是12.26米，也就是毛主席的诞辰。平时这里也是看升国旗的地方，非常有校园仪式感。",
+    "follow_up_suggestions": [
+      "雕像的高度有什么特殊含义吗？",
+      "底座上的字是谁写的？"
+    ]
+  },
+  {
+    "guide_script_id": "mao_statue_dream_school_60s",
+    "spot_id": "mao_statue",
+    "route_id": "dream_school_60min",
+    "agent_id": "student_guide",
+    "audience": "高中生",
+    "style": "轻松",
+    "language": "zh",
+    "duration_seconds": 60,
+    "title": "毛泽东像：复旦人的社交中心",
+    "content": "大家看眼前这座塑像，在复旦人的日常里，这里绝对是“出场率”最高的地标之一。平时不管是约同学拿快递、社团集合去团建，还是新生刚来找不到路，大家最默契的接头暗号就是“毛像下面见”。这座雕像是1967年由咱们复旦师生参与建起来的。你仔细看主席的造型，是把手背在身后的，这其实是个“理工科”的巧思：当年因为技术限制，如果把手举起来，悬空的受力很难解决，所以才设计成了背手的稳固造型。它总高12.26米，雕像高7.1米，底座5.16米，这套特殊的数字密码后来还被很多地方效仿呢。",
+    "follow_up_suggestions": [
+      "背手造型是为了解决什么问题？",
+      "总高12.26米代表什么？",
+      "这座雕像是什么材质的？"
+    ]
+  }
 ]
