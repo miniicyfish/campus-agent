@@ -1,0 +1,19 @@
+[
+  {
+    "guide_script_id": "fourth_teaching_building_dream_school_60s",
+    "spot_id": "fourth_teaching_building",
+    "route_id": "dream_school_60min",
+    "agent_id": "student_guide",
+    "audience": "高中生",
+    "style": "轻松",
+    "language": "zh",
+    "duration_seconds": 60,
+    "title": "四教：摩登智慧的现代课堂",
+    "content": "接下来带你们去看看复旦最新潮的上课地点——第四教学楼。如果你对大学课堂的印象还停留在排排坐的老教室，那四教一定会让你眼前一亮！这里经过了全面的现代化修缮，里面配备了很多可以自由组合桌椅的智慧教室，非常适合大学里经常需要做的小组展示和讨论。更有意思的是它的内部设计，从一楼到五楼，楼层指示使用了色彩导视系统，非常青春活泼。想象一下，每天早上端着咖啡，走进这样现代明亮的教室里上早八专业课，是不是很有电视剧里大学生的感觉了？",
+    "follow_up_suggestions": [
+      "四教的智慧教室平时用来上什么类型的课？",
+      "楼层指示的色彩导视具体是怎么分布的？",
+      "这栋楼修缮完成大概是什么时候的事？"
+    ]
+  }
+]
