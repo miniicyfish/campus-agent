@@ -98,7 +98,7 @@
     "expected_spot_ids": ["xianghui_hall"],
     "expected_chunk_types": ["history"],
     "notes": "应指出其换上空调，成为全国高校首个有空调的礼堂。"
-  }
+  },
   {
     "id": "q_mao_statue_standard_001",
     "question": "这是什么地方？",
@@ -208,7 +208,7 @@
     "expected_spot_ids": ["mao_statue"],
     "expected_chunk_types": ["architecture", "faq"],
     "notes": "需完整解释总高12.26米（毛泽东诞辰日）、像高7.1米（七一建党日）、底座5.16米（五一六通知）的对应关系。"
-  }
+  },
   {
     "id": "q_guanghua_lawn_standard_001",
     "question": "这是什么地方？",
@@ -348,7 +348,7 @@
     "expected_spot_ids": ["guanghua_lawn"],
     "expected_chunk_types": ["architecture", "history"],
     "notes": "应阐明其作为百年校庆核心景观的定位，以及与光华楼、光华大道共同构成邯郸校区最具代表性景观中轴线的设计逻辑。"
-  }
+  },
   {
     "id": "q_zibin_hall_standard_001",
     "question": "这是什么地方？",
@@ -478,7 +478,7 @@
     "expected_spot_ids": ["fudan_zibin_hall"],
     "expected_chunk_types": ["architecture", "anecdote"],
     "notes": "需基于客观史料综合召回‘白墙黛瓦’，以及罗马柱、台阶所用的石材等信息。"
-  }
+  },
   {
     "id": "q_yanyuan_standard_001",
     "question": "这是什么地方？",
@@ -568,7 +568,7 @@
     "expected_spot_ids": ["fudan_yanyuan"],
     "expected_chunk_types": ["photo", "campus_life"],
     "notes": "需召回春季樱花盛开堪称封神级别、春夏之交绿意盎然，以及深秋时节色彩最为丰富/秋季红叶的客观景观对比描述。"
-  }
+  },
   {
     "id": "q_xiyuan_standard_001",
     "question": "这是什么地方？",
@@ -668,7 +668,7 @@
     "expected_spot_ids": ["fudan_xiyuan"],
     "expected_chunk_types": ["architecture"],
     "notes": "重点防幻觉测试：知识库中完全未提及该池塘与外部水系的连接情况。系统必须诚实反馈‘资料缺失’或‘无法确认’，严禁尝试推理。"
-  }
+  },
   {
     "id": "q_third_teaching_building_standard_001",
     "question": "这是什么地方？",
@@ -788,7 +788,7 @@
     "expected_spot_ids": ["fudan_third_teaching_building"],
     "expected_chunk_types": ["history", "intro"],
     "notes": "应精确匹配1984年4月30日里根总统到访并演讲的3108教室。"
-  }
+  },
   {
     "id": "q_science_library_standard_001",
     "question": "这是什么地方？",
@@ -888,7 +888,7 @@
     "expected_spot_ids": ["fudan_science_library"],
     "expected_chunk_types": ["campus_life"],
     "notes": "应结合原文‘上自习、借阅图书的重要场所’及‘进阅览室自习是许多学生的日常’的描述，说明其同时具备借阅与自习功能。"
-  }
+  },
   {
     "id": "q_old_gate_standard_001",
     "question": "这是什么地方？",
@@ -1008,7 +1008,7 @@
     "expected_spot_ids": ["fudan_old_gate"],
     "expected_chunk_types": ["history"],
     "notes": "应准确提取‘走马塘桥下（今邯郸路桥堍）’这一历史地理坐标。"
-  }
+  },
   {
     "id": "q_main_gate_standard_001",
     "question": "这是什么地方？",
@@ -1128,7 +1128,7 @@
     "expected_spot_ids": ["fudan_main_gate"],
     "expected_chunk_types": ["history"],
     "notes": "确认为毛泽东主席。"
-  }
+  },
   {
     "id": "q_history_museum_standard_001",
     "question": "这是什么地方？",
@@ -1228,7 +1228,7 @@
     "expected_spot_ids": ["fudan_history_museum"],
     "expected_chunk_types": ["architecture", "history"],
     "notes": "必须精确匹配由毕业于耶鲁大学的美国建筑师亨利·墨菲设计，并准确描述其‘平面呈工字型’、‘仿中国古典宫殿式大屋顶歇山顶’及‘混凝土模仿木柱’等中西合璧的建筑形制。"
-  }
+  },
   {
     "id": "q_guanghua_tower_standard_001",
     "question": "这是什么地方？",
@@ -1328,7 +1328,7 @@
     "expected_spot_ids": ["fudan_guanghua_tower"],
     "expected_chunk_types": ["anecdote"],
     "notes": "重点防幻觉测试：知识库仅提及30层‘曾有一个观景平台’及‘充满都市传说’，未说明当前是否对外开放参观。系统需基于原文审慎回答，严禁凭空承诺开放状态。"
-  }
+  },
   {
     "id": "q_fourth_teaching_building_standard_001",
     "question": "这是什么地方？",
@@ -1418,7 +1418,7 @@
     "expected_spot_ids": ["fourth_teaching_building"],
     "expected_chunk_types": ["anecdote", "architecture"],
     "notes": "需召回其“既经济耐用又防滑易清洁”的物理特性，并提取其承载老复旦人记忆、让校友感叹“脚感和三十年前一模一样”的情感价值档案。"
-  }
+  },
   {
     "id": "q_danyuan_canteen_standard_001",
     "question": "这是什么地方？",
