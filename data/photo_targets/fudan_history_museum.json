@@ -1,7 +1,7 @@
 [
   {
-    "target_id": "history_museum_building",
-    "spot_id": "history_museum",
+    "target_id": "fudan_history_museum_building",
+    "spot_id": "fudan_history_museum",
     "name": "校史馆建筑整体",
     "aliases": ["校史馆全貌", "校史馆新馆", "复旦校史馆外观", "中华文明资源中心A栋"],
     "visual_features": [
@@ -19,8 +19,8 @@
     "related_chunk_types": ["intro", "architecture", "history", "photo"]
   },
   {
-    "target_id": "history_museum_entrance",
-    "spot_id": "history_museum",
+    "target_id": "fudan_history_museum_entrance",
+    "spot_id": "fudan_history_museum",
     "name": "校史馆入口及牌匾",
     "aliases": ["校史馆正门", "校史馆门头", "校史馆牌匾", "石狮子入口"],
     "visual_features": [
@@ -38,8 +38,8 @@
     "related_chunk_types": ["intro", "detail", "photo"]
   },
   {
-    "target_id": "history_museum_lawn_view",
-    "spot_id": "history_museum",
+    "target_id": "fudan_history_museum_lawn_view",
+    "spot_id": "fudan_history_museum",
     "name": "校史馆与相辉堂草坪合影视角",
     "aliases": ["校史馆草坪视角", "校史馆远景", "复旦源建筑群", "相辉堂草坪南望"],
     "visual_features": [
@@ -57,8 +57,8 @@
     "related_chunk_types": ["intro", "surroundings", "photo", "layout"]
   },
   {
-    "target_id": "history_museum_exhibit_hall",
-    "spot_id": "history_museum",
+    "target_id": "fudan_history_museum_exhibit_hall",
+    "spot_id": "fudan_history_museum",
     "name": "校史馆展厅内景",
     "aliases": ["校史馆展厅", "校史陈列", "镇馆之宝", "校史馆内部"],
     "visual_features": [
