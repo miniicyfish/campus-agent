@@ -1,0 +1,35 @@
+[
+  {
+    "guide_script_id": "yanyuan_park_30s",
+    "spot_id": "fudan_yanyuan",
+    "route_id": "park_route_30min",
+    "agent_id": "littleredbook_curator",
+    "audience": "访客",
+    "style": "亲切",
+    "language": "zh",
+    "duration_seconds": 30,
+    "title": "燕园：绿意盎然的古典园林",
+    "content": "哈喽，我们这场校园漫步的第一站，是复旦非常有名的古典园林——燕园。这里的绿植非常茂密，沿着这条小径往里走，你能看到一座很有年代感的世纪钟亭。这里的空气很清新，光影透过树叶打下来的时候视觉效果特别好，很适合作为我们放松心情、开启游园之旅的起点。",
+    "follow_up_suggestions": [
+      "世纪钟亭是在什么背景下建的？",
+      "燕园里主要种植了哪些植物？"
+    ]
+  },
+  {
+    "guide_script_id": "yanyuan_park_60s",
+    "spot_id": "fudan_yanyuan",
+    "route_id": "park_route_60min",
+    "agent_id": "littleredbook_curator",
+    "audience": "访客",
+    "style": "亲切",
+    "language": "zh",
+    "duration_seconds": 60,
+    "title": "燕园：在植物的呼吸间放慢脚步",
+    "content": "哈喽，欢迎开启这场不被时间追赶的复旦疗愈之旅。我们的第一站是燕园。既然今天时间充裕，我特别建议你在这里把脚步完全放慢。你可以往林子的深处走一走，去看看那座藏在绿意里的世纪钟亭。站在这里，试着闭上眼睛，深呼吸，去感受周围草木散发出的那种湿润、清新的植物香气，听听风吹过树叶的白噪音。这座古典园林就像是一个天然的隔音层，把校门外的车水马龙都挡在了外面。不用急着去赶下一个点位，先让自己的身心在这里彻底松弛下来吧。",
+    "follow_up_suggestions": [
+      "世纪钟亭有什么特殊的历史意义？",
+      "燕园这个名字是怎么来的？",
+      "这里一年四季的景观有什么不同？"
+    ]
+  }
+]
