@@ -1,6 +1,6 @@
 {
-    "basic_script_id": "old_gate_basic",
-    "spot_id": "old_gate",
+    "basic_script_id": "fudan_old_gate_basic",
+    "spot_id": "fudan_old_gate",
     "language": "zh",
     "duration_seconds": 60,
     "title": "复旦老校门基础介绍",
