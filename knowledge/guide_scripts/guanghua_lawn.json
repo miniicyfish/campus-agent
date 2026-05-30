@@ -1,0 +1,35 @@
+[
+  {
+    "guide_script_id": "guanghua_lawn_dream_school_30s",
+    "spot_id": "guanghua_lawn",
+    "route_id": "dream_school_30min",
+    "agent_id": "student_guide",
+    "audience": "高中生",
+    "style": "轻松",
+    "language": "zh",
+    "duration_seconds": 30,
+    "title": "光草：校园里的精神绿洲",
+    "content": "这里就是大名鼎鼎的“光草”啦！这两片大草坪位于光华楼正南面，是我们在校园里最爱的精神避难所。下午没课的时候，很多人会来这里晒太阳、看书，晚上还有各种吉他弹唱，气氛超级放松，绝对是你想象中最浪漫的大学生活模样。",
+    "follow_up_suggestions": [
+      "光草晚上一般会有什么活动？",
+      "这片草坪有多大？"
+    ]
+  },
+  {
+    "guide_script_id": "guanghua_lawn_dream_school_60s",
+    "spot_id": "guanghua_lawn",
+    "route_id": "dream_school_60min",
+    "agent_id": "student_guide",
+    "audience": "高中生",
+    "style": "轻松",
+    "language": "zh",
+    "duration_seconds": 60,
+    "title": "光草：体验复旦式的自由松弛",
+    "content": "现在我们踩着的就是光华楼前的双子草坪，复旦人亲切地叫它“光草”。如果要选一个最能代表复旦人自由松弛感的地方，那绝对是这里。上完一天的课，大家最喜欢买杯饮料来草坪上坐着。白天这里能看到大家看书、发呆、晒太阳；到了傍晚，就会变成大型露天文艺现场，弹吉他的、玩飞盘的、练声乐的都有。平时搞校庆或者大型活动，光草也是天然的观众席。在复旦，光草不仅仅是一片草坪，更是大家释放课业压力、感受青春活力的“充电宝”。",
+    "follow_up_suggestions": [
+      "光草周围能看到什么建筑？",
+      "这里的双子草坪是完全对称的吗？",
+      "平时除了晒太阳，同学们在光草还干什么？"
+    ]
+  }
+]
