@@ -1,6 +1,6 @@
 {
-    "basic_script_id": "yanyuan_basic",
-    "spot_id": "yanyuan",
+    "basic_script_id": "fudan_yanyuan_basic",
+    "spot_id": "fudan_yanyuan",
     "language": "zh",
     "duration_seconds": 60,
     "title": "燕园基础介绍",
