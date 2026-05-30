@@ -275,4 +275,114 @@
     ],
     "ending_message": "复旦十二时辰的体验卡到此到期。希望这充实的一圈，能让你对未来的大学生活有了最具体的期待！"
   }
+  {
+    "route_id": "park_route_30min",
+    "name": "公园风路线（精华版）",
+    "description": "串联复旦最具代表性的古典园林与开阔绿地，适合快速感受校园的自然之美与轻松氛围。",
+    "duration_minutes": 30,
+    "distance_meters": 1200,
+    "tags": ["休闲", "访客", "自然景观", "打卡", "散步"],
+    "suitable_for": ["访客", "家长", "摄影爱好者"],
+    "interests": ["自然景观", "校园漫步", "打卡出片"],
+    "style": "亲切",
+    "start_spot_id": "fudan_yanyuan",
+    "stops": [
+      {
+        "spot_id": "fudan_yanyuan",
+        "order": 1,
+        "estimated_stay_minutes": 4,
+        "trigger_radius_meters": 60,
+        "guide_script_id": "yanyuan_park_30s",
+        "reason": "作为游园起点，快速感受复旦最早的园林景观与古典气息。"
+      },
+      {
+        "spot_id": "fudan_old_gate",
+        "order": 2,
+        "estimated_stay_minutes": 4,
+        "trigger_radius_meters": 60,
+        "guide_script_id": "old_gate_park_30s",
+        "reason": "欣赏古典牌楼的飞檐翘角，完成经典地标的视觉打卡。"
+      },
+      {
+        "spot_id": "fudan_zibin_hall",
+        "order": 3,
+        "estimated_stay_minutes": 5,
+        "trigger_radius_meters": 60,
+        "guide_script_id": "zibin_hall_park_30s",
+        "reason": "途径‘小白宫’，欣赏欧式罗马柱与弧形阳台的建筑美学。"
+      },
+      {
+        "spot_id": "guanghua_lawn",
+        "order": 4,
+        "estimated_stay_minutes": 10,
+        "trigger_radius_meters": 60,
+        "guide_script_id": "guanghua_lawn_park_30s",
+        "reason": "在校园最大的公共绿地稍作停留，感受开阔的视觉与松弛的氛围。"
+      },
+      {
+        "spot_id": "fudan_xiyuan",
+        "order": 5,
+        "estimated_stay_minutes": 7,
+        "trigger_radius_meters": 60,
+        "guide_script_id": "xiyuan_park_30s",
+        "reason": "以幽静的假山池沼收尾，并方便就近从侧门离开校园。"
+      }
+    ],
+    "ending_message": "这场短暂的校园漫步到此结束，希望复旦的风景能给你带来一天的好心情。"
+  },
+  {
+    "route_id": "park_route_60min",
+    "name": "公园风路线（深度沉浸版）",
+    "description": "放慢脚步，深度沉浸于复旦的园林、草坪与经典建筑之间，享受不被时间追赶的校园疗愈之旅。",
+    "duration_minutes": 60,
+    "distance_meters": 1200,
+    "tags": ["休闲", "访客", "自然景观", "深度游", "散步"],
+    "suitable_for": ["访客", "家长", "散步爱好者"],
+    "interests": ["自然景观", "校园漫步", "放松疗愈"],
+    "style": "亲切",
+    "start_spot_id": "fudan_yanyuan",
+    "stops": [
+      {
+        "spot_id": "fudan_yanyuan",
+        "order": 1,
+        "estimated_stay_minutes": 10,
+        "trigger_radius_meters": 60,
+        "guide_script_id": "yanyuan_park_60s",
+        "reason": "留出充裕时间在世纪钟亭与密林间驻足，开启放松感官的旅程。"
+      },
+      {
+        "spot_id": "fudan_old_gate",
+        "order": 2,
+        "estimated_stay_minutes": 8,
+        "trigger_radius_meters": 60,
+        "guide_script_id": "old_gate_park_60s",
+        "reason": "仔细端详古典牌楼的雕花与脊饰，体会建筑带来的宁静。"
+      },
+      {
+        "spot_id": "fudan_zibin_hall",
+        "order": 3,
+        "estimated_stay_minutes": 10,
+        "trigger_radius_meters": 60,
+        "guide_script_id": "zibin_hall_park_60s",
+        "reason": "在草坪前漫步，沉浸感受这座异国风情建筑与周围植物的光影互动。"
+      },
+      {
+        "spot_id": "guanghua_lawn",
+        "order": 4,
+        "estimated_stay_minutes": 20,
+        "trigger_radius_meters": 60,
+        "guide_script_id": "guanghua_lawn_park_60s",
+        "reason": "路线的核心休憩点，鼓励用户坐下或躺平，静享校园微风与白云。"
+      },
+      {
+        "spot_id": "fudan_xiyuan",
+        "order": 5,
+        "estimated_stay_minutes": 12,
+        "trigger_radius_meters": 60,
+        "guide_script_id": "xiyuan_park_60s",
+        "reason": "在园林的假山与回廊中慢慢游走，为这段疗愈之旅画上舒缓的句号。"
+      }
+    ],
+    "ending_message": "这场一小时的校园慢游到这里就告一段落了，愿这份来自复旦的松弛感能伴随你更久。"
+  }
 ]
