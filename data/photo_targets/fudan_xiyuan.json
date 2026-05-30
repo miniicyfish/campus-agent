@@ -1,7 +1,7 @@
 [
   {
-    "target_id": "xiyuan_pavilion",
-    "spot_id": "xiyuan",
+    "target_id": "fudan_xiyuan_pavilion",
+    "spot_id": "fudan_xiyuan",
     "name": "曦园卿云亭",
     "aliases": ["曦园亭子", "卿云亭", "曦园山顶亭", "园中亭"],
     "visual_features": [
@@ -19,8 +19,8 @@
     "related_chunk_types": ["intro", "architecture", "calligraphy", "photo"]
   },
   {
-    "target_id": "xiyuan_pond",
-    "spot_id": "xiyuan",
+    "target_id": "fudan_xiyuan_pond",
+    "spot_id": "fudan_xiyuan",
     "name": "曦园池塘与小桥",
     "aliases": ["曦园水景", "园中池塘", "小石桥", "睡莲池"],
     "visual_features": [
@@ -38,8 +38,8 @@
     "related_chunk_types": ["intro", "landscape", "photo"]
   },
   {
-    "target_id": "xiyuan_stele",
-    "spot_id": "xiyuan",
+    "target_id": "fudan_xiyuan_stele",
+    "spot_id": "fudan_xiyuan",
     "name": "曦园读书亭与石碑",
     "aliases": ["读书亭", "曦园石碑", "园中碑刻", "曦园石刻"],
     "visual_features": [
@@ -57,8 +57,8 @@
     "related_chunk_types": ["intro", "history", "calligraphy", "photo"]
   },
   {
-    "target_id": "xiyuan_entrance",
-    "spot_id": "xiyuan",
+    "target_id": "fudan_xiyuan_entrance",
+    "spot_id": "fudan_xiyuan",
     "name": "曦园入口与园门",
     "aliases": ["曦园正门", "曦园园门", "中式月洞门", "曦园入口"],
     "visual_features": [
