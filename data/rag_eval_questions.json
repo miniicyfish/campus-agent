@@ -1,1 +1,1522 @@
-[]
+[
+  {
+    "id": "q_xianghui_hall_standard_001",
+    "question": "这是什么地方？",
+    "mode": "guided",
+    "current_spot_id": "xianghui_hall",
+    "nearby_spot_ids": ["xianghui_hall", "fudan_history_museum"],
+    "expected_spot_ids": ["xianghui_hall"],
+    "expected_chunk_types": ["intro", "faq"],
+    "notes": "应准确提取相辉堂作为“复旦人的精神殿堂”及核心仪式空间的定位。"
+  },
+  {
+    "id": "q_xianghui_hall_standard_002",
+    "question": "这里有什么历史？",
+    "mode": "guided",
+    "current_spot_id": "xianghui_hall",
+    "nearby_spot_ids": ["xianghui_hall", "fudan_old_gate"],
+    "expected_spot_ids": ["xianghui_hall"],
+    "expected_chunk_types": ["history", "faq", "anecdote"],
+    "notes": "应召回第一学生宿舍遭轰炸沦为废墟，以及校友募捐三十两黄金修建登辉堂的建堂史实。"
+  },
+  {
+    "id": "q_xianghui_hall_standard_003",
+    "question": "这里最值得看什么？",
+    "mode": "guided",
+    "current_spot_id": "xianghui_hall",
+    "nearby_spot_ids": ["xianghui_hall", "fudan_history_museum"],
+    "expected_spot_ids": ["xianghui_hall"],
+    "expected_chunk_types": ["faq", "architecture"],
+    "notes": "应指出承载“复旦精神”的建筑本身，以及南北两堂融合历史与现代的格局。"
+  },
+  {
+    "id": "q_xianghui_hall_standard_004",
+    "question": "这里适合拍照吗？",
+    "mode": "guided",
+    "current_spot_id": "xianghui_hall",
+    "nearby_spot_ids": ["xianghui_hall", "guanghua_lawn"],
+    "expected_spot_ids": ["xianghui_hall"],
+    "expected_chunk_types": ["photo", "faq"],
+    "notes": "应提供正前方草坪全景机位，以及拍摄红墙、红色窗格与周谷城题写匾额的建议。"
+  },
+  {
+    "id": "q_xianghui_hall_standard_005",
+    "question": "附近还有什么值得看？",
+    "mode": "guided",
+    "current_spot_id": "xianghui_hall",
+    "nearby_spot_ids": ["xianghui_hall", "fudan_old_gate", "fudan_history_museum"],
+    "expected_spot_ids": ["xianghui_hall"],
+    "expected_chunk_types": ["architecture", "intro"],
+    "notes": "应召回建筑周边2021年建成的复旦烈士纪念雕塑及纪念广场，或提及中轴线上遥相呼应的老校门与校史馆。"
+  },
+  {
+    "id": "q_xianghui_hall_followup_001",
+    "question": "1985年更名相辉堂的匾额是由谁题写的？",
+    "mode": "guided",
+    "current_spot_id": "xianghui_hall",
+    "nearby_spot_ids": ["xianghui_hall", "fudan_history_museum"],
+    "expected_spot_ids": ["xianghui_hall"],
+    "expected_chunk_types": ["history", "photo"],
+    "notes": "必须精准提取历史学家周谷城的名字。"
+  },
+  {
+    "id": "q_xianghui_hall_followup_002",
+    "question": "2018年修缮后形成了怎样的新格局？",
+    "mode": "guided",
+    "current_spot_id": "xianghui_hall",
+    "nearby_spot_ids": ["xianghui_hall", "fudan_history_museum"],
+    "expected_spot_ids": ["xianghui_hall"],
+    "expected_chunk_types": ["history", "architecture"],
+    "notes": "应详细说明南堂（保留历史风貌）与北堂（现代多功能剧场）并立的格局。"
+  },
+  {
+    "id": "q_xianghui_hall_followup_003",
+    "question": "被称为‘陈堂主’的陈菊弟管理员有哪些严格的讲原则故事？",
+    "mode": "guided",
+    "current_spot_id": "xianghui_hall",
+    "nearby_spot_ids": ["xianghui_hall", "fudan_history_museum"],
+    "expected_spot_ids": ["xianghui_hall"],
+    "expected_chunk_types": ["anecdote"],
+    "notes": "应检索出其将乱弹珍贵三角钢琴的外校学生请出去的史料轶事。"
+  },
+  {
+    "id": "q_xianghui_hall_followup_004",
+    "question": "七八十年代相辉堂作为校园电影院曾首映过哪部张艺谋的电影？",
+    "mode": "guided",
+    "current_spot_id": "xianghui_hall",
+    "nearby_spot_ids": ["xianghui_hall", "fudan_history_museum"],
+    "expected_spot_ids": ["xianghui_hall"],
+    "expected_chunk_types": ["campus_life"],
+    "notes": "需准确匹配张艺谋导演的《红高粱》。"
+  },
+  {
+    "id": "q_xianghui_hall_followup_005",
+    "question": "1984年翻修时该礼堂在全国高校后勤中取得了什么突破性地位？",
+    "mode": "guided",
+    "current_spot_id": "xianghui_hall",
+    "nearby_spot_ids": ["xianghui_hall", "fudan_history_museum"],
+    "expected_spot_ids": ["xianghui_hall"],
+    "expected_chunk_types": ["history"],
+    "notes": "应指出其换上空调，成为全国高校首个有空调的礼堂。"
+  }
+  {
+    "id": "q_mao_statue_standard_001",
+    "question": "这是什么地方？",
+    "mode": "guided",
+    "current_spot_id": "mao_statue",
+    "nearby_spot_ids": ["mao_statue", "fudan_main_gate"],
+    "expected_spot_ids": ["mao_statue"],
+    "expected_chunk_types": ["intro", "campus_life"],
+    "notes": "应准确提取毛泽东像作为校园最具标志性的精神地标及复旦人“集合地点第一选择”的定位。"
+  },
+  {
+    "id": "q_mao_statue_standard_002",
+    "question": "这里有什么历史？",
+    "mode": "guided",
+    "current_spot_id": "mao_statue",
+    "nearby_spot_ids": ["mao_statue", "fudan_main_gate"],
+    "expected_spot_ids": ["mao_statue"],
+    "expected_chunk_types": ["history", "faq"],
+    "notes": "应召回1967年由复旦师生自行建造落成、首创“三数模式”及历经多次历史时期保存至今的客观史实。"
+  },
+  {
+    "id": "q_mao_statue_standard_003",
+    "question": "这里最值得看什么？",
+    "mode": "guided",
+    "current_spot_id": "mao_statue",
+    "nearby_spot_ids": ["mao_statue", "fudan_main_gate"],
+    "expected_spot_ids": ["mao_statue"],
+    "expected_chunk_types": ["architecture", "faq"],
+    "notes": "应指出独特的“背手”造型、具有特殊寓意的“三数模式”尺寸，以及底座上的颜体题字。"
+  },
+  {
+    "id": "q_mao_statue_standard_004",
+    "question": "这里适合拍照吗？",
+    "mode": "guided",
+    "current_spot_id": "mao_statue",
+    "nearby_spot_ids": ["mao_statue", "fudan_main_gate"],
+    "expected_spot_ids": ["mao_statue"],
+    "expected_chunk_types": ["photo", "faq"],
+    "notes": "应提供正面花坛全景机位，以及利用春秋两季樱花、银杏作为背景和使用长焦捕捉大衣褶皱等细节的建议。"
+  },
+  {
+    "id": "q_mao_statue_standard_005",
+    "question": "附近还有什么值得看？",
+    "mode": "guided",
+    "current_spot_id": "mao_statue",
+    "nearby_spot_ids": ["mao_statue", "fudan_main_gate", "fudan_guanghua_tower"],
+    "expected_spot_ids": ["mao_statue"],
+    "expected_chunk_types": ["intro", "campus_life"],
+    "notes": "应提及向南正对的复旦正门，以及周边四季皆景的大草坪自然景观。"
+  },
+  {
+    "id": "q_mao_statue_followup_001",
+    "question": "背手的设计是为了解决什么工程技术难题？",
+    "mode": "guided",
+    "current_spot_id": "mao_statue",
+    "nearby_spot_ids": ["mao_statue", "fudan_main_gate"],
+    "expected_spot_ids": ["mao_statue"],
+    "expected_chunk_types": ["history", "anecdote"],
+    "notes": "必须准确召回为了解决“举手状悬臂梁根部弯矩极大”的技术难题这一史料。"
+  },
+  {
+    "id": "q_mao_statue_followup_002",
+    "question": "底座‘毛泽东’三字是谁在什么时候题写的？",
+    "mode": "guided",
+    "current_spot_id": "mao_statue",
+    "nearby_spot_ids": ["mao_statue", "fudan_main_gate"],
+    "expected_spot_ids": ["mao_statue"],
+    "expected_chunk_types": ["history", "architecture"],
+    "notes": "应精确提取1988年前后由青年教师晏海林以颜体风格题写的史实档案。"
+  },
+  {
+    "id": "q_mao_statue_followup_003",
+    "question": "当时为底座题字贴金时有什么特殊的提货档案？",
+    "mode": "guided",
+    "current_spot_id": "mao_statue",
+    "nearby_spot_ids": ["mao_statue", "fudan_main_gate"],
+    "expected_spot_ids": ["mao_statue"],
+    "expected_chunk_types": ["anecdote"],
+    "notes": "需检索出师生乘坐校领导轿车前往外滩人民银行地下室提取一两黄金金箔的轶事记录。"
+  },
+  {
+    "id": "q_mao_statue_followup_004",
+    "question": "1980年中央发出清理领袖塑像指示后，这座雕像为何得以保留？",
+    "mode": "guided",
+    "current_spot_id": "mao_statue",
+    "nearby_spot_ids": ["mao_statue", "fudan_main_gate"],
+    "expected_spot_ids": ["mao_statue"],
+    "expected_chunk_types": ["history", "anecdote"],
+    "notes": "应说明复旦仅刮除底座原有的林彪题字而保留塑像本源，安然度过清理的相关记录。"
+  },
+  {
+    "id": "q_mao_statue_followup_005",
+    "question": "这座雕像是什么材质的？",
+    "mode": "guided",
+    "current_spot_id": "mao_statue",
+    "nearby_spot_ids": ["mao_statue", "fudan_main_gate"],
+    "expected_spot_ids": ["mao_statue"],
+    "expected_chunk_types": ["architecture"],
+    "notes": "应召回采用白水泥、白石子、石英石与矿物颜料配比浇注，呈现微红偏暖仿花岗石质感的技术细节。"
+  },
+  {
+    "id": "q_mao_statue_followup_006",
+    "question": "雕像的高度有什么特殊含义吗？",
+    "mode": "guided",
+    "current_spot_id": "mao_statue",
+    "nearby_spot_ids": ["mao_statue", "fudan_main_gate"],
+    "expected_spot_ids": ["mao_statue"],
+    "expected_chunk_types": ["architecture", "faq"],
+    "notes": "需完整解释总高12.26米（毛泽东诞辰日）、像高7.1米（七一建党日）、底座5.16米（五一六通知）的对应关系。"
+  }
+  {
+    "id": "q_guanghua_lawn_standard_001",
+    "question": "这是什么地方？",
+    "mode": "guided",
+    "current_spot_id": "guanghua_lawn",
+    "nearby_spot_ids": ["guanghua_lawn", "fudan_guanghua_tower"],
+    "expected_spot_ids": ["guanghua_lawn"],
+    "expected_chunk_types": ["intro", "faq"],
+    "notes": "应准确提取光草作为复旦校园最开放的公共空间、‘精神避难所’与‘充电站’的核心定位。"
+  },
+  {
+    "id": "q_guanghua_lawn_standard_002",
+    "question": "这里有什么历史？",
+    "mode": "guided",
+    "current_spot_id": "guanghua_lawn",
+    "nearby_spot_ids": ["guanghua_lawn", "fudan_guanghua_tower"],
+    "expected_spot_ids": ["guanghua_lawn"],
+    "expected_chunk_types": ["history", "faq"],
+    "notes": "应召回其与光华楼一同诞生于2005年百年校庆之际，并陪伴复旦人近二十年的历史脉络。"
+  },
+  {
+    "id": "q_guanghua_lawn_standard_003",
+    "question": "这里最值得看什么？",
+    "mode": "guided",
+    "current_spot_id": "guanghua_lawn",
+    "nearby_spot_ids": ["guanghua_lawn", "fudan_guanghua_tower"],
+    "expected_spot_ids": ["guanghua_lawn"],
+    "expected_chunk_types": ["faq", "intro"],
+    "notes": "需指出最值得体验的是其自由治愈的氛围，以及仰望光华楼的独特视角。"
+  },
+  {
+    "id": "q_guanghua_lawn_standard_004",
+    "question": "这里适合拍照吗？",
+    "mode": "guided",
+    "current_spot_id": "guanghua_lawn",
+    "nearby_spot_ids": ["guanghua_lawn", "fudan_guanghua_tower"],
+    "expected_spot_ids": ["guanghua_lawn"],
+    "expected_chunk_types": ["photo", "faq"],
+    "notes": "应提供东南角/西南角的经典全景机位，以及坐躺低角度仰拍和捕捉傍晚夕阳的建议。"
+  },
+  {
+    "id": "q_guanghua_lawn_standard_005",
+    "question": "附近还有什么值得看？",
+    "mode": "guided",
+    "current_spot_id": "guanghua_lawn",
+    "nearby_spot_ids": ["guanghua_lawn", "fudan_guanghua_tower", "fudan_third_teaching_building"],
+    "expected_spot_ids": ["guanghua_lawn"],
+    "expected_chunk_types": ["architecture", "history"],
+    "notes": "需召回北面正对的光华楼（142米高）、光阶、紫藤架以及构成景观中轴线的光华大道。"
+  },
+  {
+    "id": "q_guanghua_lawn_followup_001",
+    "question": "光草晚上一般会有什么活动？",
+    "mode": "guided",
+    "current_spot_id": "guanghua_lawn",
+    "nearby_spot_ids": ["guanghua_lawn", "fudan_guanghua_tower"],
+    "expected_spot_ids": ["guanghua_lawn"],
+    "expected_chunk_types": ["campus_life", "anecdote"],
+    "notes": "应检索出聚会唱歌、吉他弹唱、中秋灯会（大月亮）等常态化与节日夜间活动。"
+  },
+  {
+    "id": "q_guanghua_lawn_followup_002",
+    "question": "这片草坪有多大？",
+    "mode": "guided",
+    "current_spot_id": "guanghua_lawn",
+    "nearby_spot_ids": ["guanghua_lawn", "fudan_guanghua_tower"],
+    "expected_spot_ids": ["guanghua_lawn"],
+    "expected_chunk_types": ["architecture", "intro"],
+    "notes": "重点质检项：原文仅提及‘大片草坪’、‘开阔平坦’，未给出具体面积数据。应测试系统是否会诚实反馈‘资料缺失’，严禁幻觉捏造具体平米数。"
+  },
+  {
+    "id": "q_guanghua_lawn_followup_003",
+    "question": "光草周围能看到哪些主要建筑？",
+    "mode": "guided",
+    "current_spot_id": "guanghua_lawn",
+    "nearby_spot_ids": ["guanghua_lawn", "fudan_guanghua_tower"],
+    "expected_spot_ids": ["guanghua_lawn"],
+    "expected_chunk_types": ["architecture"],
+    "notes": "应准确提取正北面巍峨耸立的142米高光华楼。"
+  },
+  {
+    "id": "q_guanghua_lawn_followup_004",
+    "question": "这里的双子草坪是完全对称的吗？",
+    "mode": "guided",
+    "current_spot_id": "guanghua_lawn",
+    "nearby_spot_ids": ["guanghua_lawn", "fudan_guanghua_tower"],
+    "expected_spot_ids": ["guanghua_lawn"],
+    "expected_chunk_types": ["architecture"],
+    "notes": "应基于‘东西两侧各有成排的梧桐’、‘东西两侧台阶被称为光阶’提取其沿中轴线分布的对称性特征，但需注意用词客观，不作过度绝对化的延伸。"
+  },
+  {
+    "id": "q_guanghua_lawn_followup_005",
+    "question": "平时除了晒太阳，同学们在光草还干什么？",
+    "mode": "guided",
+    "current_spot_id": "guanghua_lawn",
+    "nearby_spot_ids": ["guanghua_lawn", "fudan_guanghua_tower"],
+    "expected_spot_ids": ["guanghua_lawn"],
+    "expected_chunk_types": ["campus_life", "anecdote"],
+    "notes": "需召回聊天、弹吉他、草坪音乐会、新生破冰、留学生国际交流以及放空解压等多元场景。"
+  },
+  {
+    "id": "q_guanghua_lawn_followup_006",
+    "question": "这片草坪平时对外开放吗？",
+    "mode": "guided",
+    "current_spot_id": "guanghua_lawn",
+    "nearby_spot_ids": ["guanghua_lawn", "fudan_guanghua_tower"],
+    "expected_spot_ids": ["guanghua_lawn"],
+    "expected_chunk_types": ["intro", "anecdote", "history"],
+    "notes": "应结合‘地铁18号线开通后成为游客第一道风景’及‘没有门槛的国际交流广场’，论证其开放与包容的空间属性。"
+  },
+  {
+    "id": "q_guanghua_lawn_followup_007",
+    "question": "草坪两边种的是什么树？",
+    "mode": "guided",
+    "current_spot_id": "guanghua_lawn",
+    "nearby_spot_ids": ["guanghua_lawn", "fudan_guanghua_tower"],
+    "expected_spot_ids": ["guanghua_lawn"],
+    "expected_chunk_types": ["architecture", "photo"],
+    "notes": "必须精准提取‘成排的高大梧桐’。"
+  },
+  {
+    "id": "q_guanghua_lawn_followup_008",
+    "question": "一年中什么季节来光草最舒服？",
+    "mode": "guided",
+    "current_spot_id": "guanghua_lawn",
+    "nearby_spot_ids": ["guanghua_lawn", "fudan_guanghua_tower"],
+    "expected_spot_ids": ["guanghua_lawn"],
+    "expected_chunk_types": ["architecture", "photo"],
+    "notes": "应结合‘春夏季枝繁叶茂提供天然荫蔽’及拍摄建议中的‘当季花卉（樱花、紫藤）’进行合理召回。"
+  },
+  {
+    "id": "q_guanghua_lawn_followup_009",
+    "question": "草坪的设计有什么特殊的讲究吗？",
+    "mode": "guided",
+    "current_spot_id": "guanghua_lawn",
+    "nearby_spot_ids": ["guanghua_lawn", "fudan_guanghua_tower"],
+    "expected_spot_ids": ["guanghua_lawn"],
+    "expected_chunk_types": ["architecture", "history"],
+    "notes": "应阐明其作为百年校庆核心景观的定位，以及与光华楼、光华大道共同构成邯郸校区最具代表性景观中轴线的设计逻辑。"
+  }
+  {
+    "id": "q_zibin_hall_standard_001",
+    "question": "这是什么地方？",
+    "mode": "guided",
+    "current_spot_id": "fudan_zibin_hall",
+    "nearby_spot_ids": ["fudan_zibin_hall", "xianghui_hall"],
+    "expected_spot_ids": ["fudan_zibin_hall"],
+    "expected_chunk_types": ["intro", "faq"],
+    "notes": "应准确提取子彬院作为原心理学院、后数学研究重镇的定位，以及其‘小白宫’的别称。"
+  },
+  {
+    "id": "q_zibin_hall_standard_002",
+    "question": "这里有什么历史？",
+    "mode": "guided",
+    "current_spot_id": "fudan_zibin_hall",
+    "nearby_spot_ids": ["fudan_zibin_hall", "xianghui_hall"],
+    "expected_spot_ids": ["fudan_zibin_hall"],
+    "expected_chunk_types": ["history", "faq"],
+    "notes": "应召回1925年郭任远募资建立心理学院，1952年后苏步青、陈建功等建设为数学中心，及2011年修缮为吕志和楼的历史脉络。"
+  },
+  {
+    "id": "q_zibin_hall_standard_003",
+    "question": "这里最值得看什么？",
+    "mode": "guided",
+    "current_spot_id": "fudan_zibin_hall",
+    "nearby_spot_ids": ["fudan_zibin_hall", "xianghui_hall"],
+    "expected_spot_ids": ["fudan_zibin_hall"],
+    "expected_chunk_types": ["faq", "architecture", "intro"],
+    "notes": "需指出南面入口的罗马柱围拱门庭、楼前的苏步青塑像以及草坪上的莫比乌斯环雕塑。"
+  },
+  {
+    "id": "q_zibin_hall_standard_004",
+    "question": "这里适合拍照吗？",
+    "mode": "guided",
+    "current_spot_id": "fudan_zibin_hall",
+    "nearby_spot_ids": ["fudan_zibin_hall", "xianghui_hall"],
+    "expected_spot_ids": ["fudan_zibin_hall"],
+    "expected_chunk_types": ["photo", "faq", "campus_life"],
+    "notes": "应提及此处为‘婚纱摄影首选地’，并提供南面草坪正中、苏步青塑像旁以及从相辉堂方向侧拍的具体机位建议。"
+  },
+  {
+    "id": "q_zibin_hall_standard_005",
+    "question": "附近还有什么值得看？",
+    "mode": "guided",
+    "current_spot_id": "fudan_zibin_hall",
+    "nearby_spot_ids": ["fudan_zibin_hall", "xianghui_hall", "fudan_yanyuan"],
+    "expected_spot_ids": ["fudan_zibin_hall"],
+    "expected_chunk_types": ["architecture", "location"],
+    "notes": "需明确召回其东侧紧邻的相辉堂，以及西侧连接的燕园小径。"
+  },
+  {
+    "id": "q_zibin_hall_followup_001",
+    "question": "郭任远在建楼初期提出了什么号称？",
+    "mode": "guided",
+    "current_spot_id": "fudan_zibin_hall",
+    "nearby_spot_ids": ["fudan_zibin_hall", "xianghui_hall"],
+    "expected_spot_ids": ["fudan_zibin_hall"],
+    "expected_chunk_types": ["history"],
+    "notes": "必须精确匹配当时汇聚八位博士学者而号称的‘一院八博士’，以及‘远东第一心理学院’的称呼。"
+  },
+  {
+    "id": "q_zibin_hall_followup_002",
+    "question": "建筑正面是什么艺术形制风格？",
+    "mode": "guided",
+    "current_spot_id": "fudan_zibin_hall",
+    "nearby_spot_ids": ["fudan_zibin_hall", "xianghui_hall"],
+    "expected_spot_ids": ["fudan_zibin_hall"],
+    "expected_chunk_types": ["architecture"],
+    "notes": "应召回以罗马柱支撑围拱门庭、圆弧形阳台配以西洋雕饰、三角尖顶等特征鲜明的西式/欧式建筑轮廓。"
+  },
+  {
+    "id": "q_zibin_hall_followup_003",
+    "question": "郭任远在子彬院所做的‘猫鼠同笼’实验的具体科学结论是什么？",
+    "mode": "guided",
+    "current_spot_id": "fudan_zibin_hall",
+    "nearby_spot_ids": ["fudan_zibin_hall", "xianghui_hall"],
+    "expected_spot_ids": ["fudan_zibin_hall"],
+    "expected_chunk_types": ["anecdote"],
+    "notes": "需提取出‘证明猫捉老鼠不是天生的本能’这一核心实验结论档案。"
+  },
+  {
+    "id": "q_zibin_hall_followup_004",
+    "question": "1978年苏步青校长用哪一本德文杂志说服了德国外宾？",
+    "mode": "guided",
+    "current_spot_id": "fudan_zibin_hall",
+    "nearby_spot_ids": ["fudan_zibin_hall", "xianghui_hall"],
+    "expected_spot_ids": ["fudan_zibin_hall"],
+    "expected_chunk_types": ["anecdote"],
+    "notes": "应准确匹配出创办于1826年的德国《纯粹与应用数学》杂志。"
+  },
+  {
+    "id": "q_zibin_hall_followup_005",
+    "question": "2000年代修缮时遇到了哪些传统技艺失传的建筑难题？",
+    "mode": "guided",
+    "current_spot_id": "fudan_zibin_hall",
+    "nearby_spot_ids": ["fudan_zibin_hall", "xianghui_hall"],
+    "expected_spot_ids": ["fudan_zibin_hall"],
+    "expected_chunk_types": ["anecdote", "history"],
+    "notes": "需阐明罗马柱和台阶石材的加工技艺失传，以及屋顶手工瓦片制作技艺失传的具体修缮细节。"
+  },
+  {
+    "id": "q_zibin_hall_followup_006",
+    "question": "楼前的塑像是谁呀？草坪上的雕像有什么故事？",
+    "mode": "guided",
+    "current_spot_id": "fudan_zibin_hall",
+    "nearby_spot_ids": ["fudan_zibin_hall", "xianghui_hall"],
+    "expected_spot_ids": ["fudan_zibin_hall"],
+    "expected_chunk_types": ["intro", "faq", "architecture"],
+    "notes": "应结合文本说明该塑像为苏步青校长，代表了子彬院作为中国南方数学研究重镇的历史传奇。"
+  },
+  {
+    "id": "q_zibin_hall_followup_007",
+    "question": "子彬院内部还有保留原来的建筑结构吗？",
+    "mode": "guided",
+    "current_spot_id": "fudan_zibin_hall",
+    "nearby_spot_ids": ["fudan_zibin_hall", "xianghui_hall"],
+    "expected_spot_ids": ["fudan_zibin_hall"],
+    "expected_chunk_types": ["architecture"],
+    "notes": "需检索出‘屋梁用十多米长的完整横木搭成，木梁之间设有剪刀撑’的内部构造巧思。"
+  },
+  {
+    "id": "q_zibin_hall_followup_008",
+    "question": "建筑外立面用的是什么材质？",
+    "mode": "guided",
+    "current_spot_id": "fudan_zibin_hall",
+    "nearby_spot_ids": ["fudan_zibin_hall", "xianghui_hall"],
+    "expected_spot_ids": ["fudan_zibin_hall"],
+    "expected_chunk_types": ["architecture", "anecdote"],
+    "notes": "需基于客观史料综合召回‘白墙黛瓦’，以及罗马柱、台阶所用的石材等信息。"
+  }
+  {
+    "id": "q_yanyuan_standard_001",
+    "question": "这是什么地方？",
+    "mode": "guided",
+    "current_spot_id": "fudan_yanyuan",
+    "nearby_spot_ids": ["fudan_yanyuan", "fudan_old_gate"],
+    "expected_spot_ids": ["fudan_yanyuan"],
+    "expected_chunk_types": ["intro", "faq"],
+    "notes": "应准确提取燕园作为复旦邯郸校区内独具江南韵味的古典园林，以及其前身为私人宅邸的定位。"
+  },
+  {
+    "id": "q_yanyuan_standard_002",
+    "question": "这里有什么历史？",
+    "mode": "guided",
+    "current_spot_id": "fudan_yanyuan",
+    "nearby_spot_ids": ["fudan_yanyuan", "fudan_old_gate"],
+    "expected_spot_ids": ["fudan_yanyuan"],
+    "expected_chunk_types": ["history", "faq"],
+    "notes": "应召回1935年李登辉校长举债购得私园、更名“南轩”纪念吴南轩、作为陈望道领导的新闻系所在地以及“民主广场”的史实脉络。"
+  },
+  {
+    "id": "q_yanyuan_standard_003",
+    "question": "这里最值得看什么？",
+    "mode": "guided",
+    "current_spot_id": "fudan_yanyuan",
+    "nearby_spot_ids": ["fudan_yanyuan", "fudan_old_gate"],
+    "expected_spot_ids": ["fudan_yanyuan"],
+    "expected_chunk_types": ["faq", "architecture", "intro"],
+    "notes": "需指出“小桥流水，一步一景”的江南园林景致、“南轩”二层小楼、刻有“燕园”二字的石碑以及世纪钟亭等核心景观。"
+  },
+  {
+    "id": "q_yanyuan_standard_004",
+    "question": "这里适合拍照吗？",
+    "mode": "guided",
+    "current_spot_id": "fudan_yanyuan",
+    "nearby_spot_ids": ["fudan_yanyuan", "fudan_old_gate"],
+    "expected_spot_ids": ["fudan_yanyuan"],
+    "expected_chunk_types": ["photo", "faq", "campus_life"],
+    "notes": "应提供入口石碑、石桥俯拍等机位，并提及适合汉服、旗袍装束，以及春季樱花、秋季红叶作为背景的建议。"
+  },
+  {
+    "id": "q_yanyuan_standard_005",
+    "question": "附近还有什么值得看？",
+    "mode": "guided",
+    "current_spot_id": "fudan_yanyuan",
+    "nearby_spot_ids": ["fudan_yanyuan", "fudan_old_gate", "fudan_xiyuan"],
+    "expected_spot_ids": ["fudan_yanyuan"],
+    "expected_chunk_types": ["architecture", "intro"],
+    "notes": "需明确召回与其相邻的北侧学生宿舍区、西侧排球场，以及在校园中轴线上遥相呼应的曦园。"
+  },
+  {
+    "id": "q_yanyuan_followup_001",
+    "question": "燕园这个名字是怎么来的？",
+    "mode": "guided",
+    "current_spot_id": "fudan_yanyuan",
+    "nearby_spot_ids": ["fudan_yanyuan", "fudan_old_gate"],
+    "expected_spot_ids": ["fudan_yanyuan"],
+    "expected_chunk_types": ["intro"],
+    "notes": "必须精准提取取自唐代诗人刘禹锡‘旧时王谢堂前燕，飞入寻常百姓家’的诗句，且说明其暗合曾属王、谢两姓人家的历史。"
+  },
+  {
+    "id": "q_yanyuan_followup_002",
+    "question": "世纪钟亭是在什么背景下建的？世纪钟亭有什么特殊的历史意义？",
+    "mode": "guided",
+    "current_spot_id": "fudan_yanyuan",
+    "nearby_spot_ids": ["fudan_yanyuan", "fudan_old_gate"],
+    "expected_spot_ids": ["fudan_yanyuan"],
+    "expected_chunk_types": ["architecture"],
+    "notes": "应提取‘在世纪之交，燕园经历过扩建改造，增设了假山瀑布、世纪钟亭等新景观’的史实。如果问及更深层的历史意义，应测试系统是否会诚实反馈资料缺失，严禁幻觉捏造。"
+  },
+  {
+    "id": "q_yanyuan_followup_003",
+    "question": "燕园里主要种植了哪些植物？",
+    "mode": "guided",
+    "current_spot_id": "fudan_yanyuan",
+    "nearby_spot_ids": ["fudan_yanyuan", "fudan_old_gate"],
+    "expected_spot_ids": ["fudan_yanyuan"],
+    "expected_chunk_types": ["campus_life", "photo", "architecture"],
+    "notes": "应基于原文客观召回‘古树’、‘樱花’、‘红叶’，测试系统严格锚定原文的能力，严禁使用通用园林常识编造未提及的植物种类。"
+  },
+  {
+    "id": "q_yanyuan_followup_004",
+    "question": "这里一年四季的景观有什么不同？",
+    "mode": "guided",
+    "current_spot_id": "fudan_yanyuan",
+    "nearby_spot_ids": ["fudan_yanyuan", "fudan_old_gate"],
+    "expected_spot_ids": ["fudan_yanyuan"],
+    "expected_chunk_types": ["photo", "campus_life"],
+    "notes": "需召回春季樱花盛开堪称封神级别、春夏之交绿意盎然，以及深秋时节色彩最为丰富/秋季红叶的客观景观对比描述。"
+  }
+  {
+    "id": "q_xiyuan_standard_001",
+    "question": "这是什么地方？",
+    "mode": "guided",
+    "current_spot_id": "fudan_xiyuan",
+    "nearby_spot_ids": ["fudan_xiyuan", "fudan_main_gate"],
+    "expected_spot_ids": ["fudan_xiyuan"],
+    "expected_chunk_types": ["intro", "faq"],
+    "notes": "应准确提取曦园作为复旦邯郸校区正门东侧的江南风格园林，以及其‘天然氧吧’和晨读首选之地的核心定位。"
+  },
+  {
+    "id": "q_xiyuan_standard_002",
+    "question": "这里有什么历史？",
+    "mode": "guided",
+    "current_spot_id": "fudan_xiyuan",
+    "nearby_spot_ids": ["fudan_xiyuan", "fudan_main_gate"],
+    "expected_spot_ids": ["fudan_xiyuan"],
+    "expected_chunk_types": ["history", "faq"],
+    "notes": "应召回其建于早期校园规划时期，并提取周谷城题写园名、苏步青在改革开放初期题诗、以及2000年前后种植‘䇹政竹’等历史脉络。"
+  },
+  {
+    "id": "q_xiyuan_standard_003",
+    "question": "这里最值得看什么？",
+    "mode": "guided",
+    "current_spot_id": "fudan_xiyuan",
+    "nearby_spot_ids": ["fudan_xiyuan", "fudan_main_gate"],
+    "expected_spot_ids": ["fudan_xiyuan"],
+    "expected_chunk_types": ["faq", "architecture", "intro"],
+    "notes": "需指出园内的人文题刻（周谷城、苏步青、朱东润）以及假山、小湖、竹林构成的江南景致，特别强调四月盛开的樱花。"
+  },
+  {
+    "id": "q_xiyuan_standard_004",
+    "question": "这里适合拍照吗？",
+    "mode": "guided",
+    "current_spot_id": "fudan_xiyuan",
+    "nearby_spot_ids": ["fudan_xiyuan", "fudan_main_gate"],
+    "expected_spot_ids": ["fudan_xiyuan"],
+    "expected_chunk_types": ["photo", "faq", "campus_life"],
+    "notes": "应提供面向假山和小阁、在亭内向园中取景框景以及园门石碑的具体机位建议，并推荐清晨或四月樱花季进行拍摄。"
+  },
+  {
+    "id": "q_xiyuan_standard_005",
+    "question": "附近还有什么值得看？",
+    "mode": "guided",
+    "current_spot_id": "fudan_xiyuan",
+    "nearby_spot_ids": ["fudan_xiyuan", "fudan_main_gate", "fudan_yanyuan"],
+    "expected_spot_ids": ["fudan_xiyuan"],
+    "expected_chunk_types": ["architecture", "intro"],
+    "notes": "需明确召回紧邻的复旦正门（邯郸路），以及在校园西部与之东西呼应的燕园。"
+  },
+  {
+    "id": "q_xiyuan_followup_001",
+    "question": "曦园里有什么特别的植物吗？",
+    "mode": "guided",
+    "current_spot_id": "fudan_xiyuan",
+    "nearby_spot_ids": ["fudan_xiyuan", "fudan_main_gate"],
+    "expected_spot_ids": ["fudan_xiyuan"],
+    "expected_chunk_types": ["history", "architecture", "campus_life"],
+    "notes": "必须精确匹配与本科生学术研究计划相呼应的‘䇹政竹’，同时可召回水杉、樱花等客观存在的园林植物。"
+  },
+  {
+    "id": "q_xiyuan_followup_002",
+    "question": "这个园林是哪一年建的？",
+    "mode": "guided",
+    "current_spot_id": "fudan_xiyuan",
+    "nearby_spot_ids": ["fudan_xiyuan", "fudan_main_gate"],
+    "expected_spot_ids": ["fudan_xiyuan"],
+    "expected_chunk_types": ["history"],
+    "notes": "重点质检项：原文明确记载‘具体建造年代现有资料未明确记载’，应测试系统是否严格锚定此信息并承认资料缺失，严禁通过外部常识脑补具体年份。"
+  },
+  {
+    "id": "q_xiyuan_followup_003",
+    "question": "曦园的设计有什么传统园林的讲究？",
+    "mode": "guided",
+    "current_spot_id": "fudan_xiyuan",
+    "nearby_spot_ids": ["fudan_xiyuan", "fudan_main_gate"],
+    "expected_spot_ids": ["fudan_xiyuan"],
+    "expected_chunk_types": ["architecture", "intro"],
+    "notes": "应召回其以江南古典园林风格为基调，面积虽小却‘一步一景’，以及假山流水、亭台竹林错落有致的布局特点。"
+  },
+  {
+    "id": "q_xiyuan_followup_004",
+    "question": "园子里的长廊有什么名字吗？",
+    "mode": "guided",
+    "current_spot_id": "fudan_xiyuan",
+    "nearby_spot_ids": ["fudan_xiyuan", "fudan_main_gate"],
+    "expected_spot_ids": ["fudan_xiyuan"],
+    "expected_chunk_types": ["architecture"],
+    "notes": "重点排查项：原文仅记载了‘卿云亭’、‘读书亭’等休憩建筑，并未直接给出长廊的特定名字。系统需如实反馈，避免为了迎合提问而虚构长廊名。"
+  },
+  {
+    "id": "q_xiyuan_followup_005",
+    "question": "这里的池塘有连接外面的水系吗？",
+    "mode": "guided",
+    "current_spot_id": "fudan_xiyuan",
+    "nearby_spot_ids": ["fudan_xiyuan", "fudan_main_gate"],
+    "expected_spot_ids": ["fudan_xiyuan"],
+    "expected_chunk_types": ["architecture"],
+    "notes": "重点防幻觉测试：知识库中完全未提及该池塘与外部水系的连接情况。系统必须诚实反馈‘资料缺失’或‘无法确认’，严禁尝试推理。"
+  }
+  {
+    "id": "q_third_teaching_building_standard_001",
+    "question": "这是什么地方？",
+    "mode": "guided",
+    "current_spot_id": "fudan_third_teaching_building",
+    "nearby_spot_ids": ["fudan_third_teaching_building", "mao_statue"],
+    "expected_spot_ids": ["fudan_third_teaching_building"],
+    "expected_chunk_types": ["intro", "faq"],
+    "notes": "应准确提取三教作为邯郸校区最核心、最具传奇色彩的教学建筑，以及内含‘复旦精神高地’3108教室的定位。"
+  },
+  {
+    "id": "q_third_teaching_building_standard_002",
+    "question": "这里有什么历史？",
+    "mode": "guided",
+    "current_spot_id": "fudan_third_teaching_building",
+    "nearby_spot_ids": ["fudan_third_teaching_building", "mao_statue"],
+    "expected_spot_ids": ["fudan_third_teaching_building"],
+    "expected_chunk_types": ["history", "faq"],
+    "notes": "应召回其于1980年前后在生物系实验田上竣工的背景，并提取1984年里根总统演讲及80年代思想解放浪潮讲座中心等史实。"
+  },
+  {
+    "id": "q_third_teaching_building_standard_003",
+    "question": "这里最值得看什么？",
+    "mode": "guided",
+    "current_spot_id": "fudan_third_teaching_building",
+    "nearby_spot_ids": ["fudan_third_teaching_building", "mao_statue"],
+    "expected_spot_ids": ["fudan_third_teaching_building"],
+    "expected_chunk_types": ["faq", "intro", "architecture"],
+    "notes": "需重点指出承载了无数思想盛宴的3108教室及其人文气场，以及楼前的‘硕果’雕塑。"
+  },
+  {
+    "id": "q_third_teaching_building_standard_004",
+    "question": "这里适合拍照吗？",
+    "mode": "guided",
+    "current_spot_id": "fudan_third_teaching_building",
+    "nearby_spot_ids": ["fudan_third_teaching_building", "guanghua_lawn"],
+    "expected_spot_ids": ["fudan_third_teaching_building"],
+    "expected_chunk_types": ["photo", "faq"],
+    "notes": "应提供3108教室铭牌、老旧木桌椅特写、东侧爬山虎外墙等拍摄元素，并推荐下午4点到5点光影最佳。"
+  },
+  {
+    "id": "q_third_teaching_building_standard_005",
+    "question": "附近还有什么值得看？",
+    "mode": "guided",
+    "current_spot_id": "fudan_third_teaching_building",
+    "nearby_spot_ids": ["fudan_third_teaching_building", "mao_statue", "fudan_main_gate"],
+    "expected_spot_ids": ["fudan_third_teaching_building"],
+    "expected_chunk_types": ["architecture", "location"],
+    "notes": "应依据建筑特征中‘沿主干道经过毛主席像后坐落在校园中心地带’的描述，召回主干道轴线上的毛泽东像及正门。"
+  },
+  {
+    "id": "q_third_teaching_building_followup_001",
+    "question": "里根总统在3108教室和学生的问答中有什么意外的小插曲？3108教室里发生过什么有趣的事？",
+    "mode": "guided",
+    "current_spot_id": "fudan_third_teaching_building",
+    "nearby_spot_ids": ["fudan_third_teaching_building", "mao_statue"],
+    "expected_spot_ids": ["fudan_third_teaching_building"],
+    "expected_chunk_types": ["anecdote"],
+    "notes": "必须准确提取里根在冷场时讲了密特朗的笑话，而学生未哄堂大笑而是报以热烈掌声的完整轶事。"
+  },
+  {
+    "id": "q_third_teaching_building_followup_002",
+    "question": "80年代‘思想春运’期间讲座的火爆盛况有何记录？",
+    "mode": "guided",
+    "current_spot_id": "fudan_third_teaching_building",
+    "nearby_spot_ids": ["fudan_third_teaching_building", "mao_statue"],
+    "expected_spot_ids": ["fudan_third_teaching_building"],
+    "expected_chunk_types": ["anecdote", "history"],
+    "notes": "需召回用书包饭盆占座、窗外台阶挤满人、甚至教室玻璃被挤碎的历史细节记录。"
+  },
+  {
+    "id": "q_third_teaching_building_followup_003",
+    "question": "教学楼三层墙面上的悬空任意门真实用途是什么？",
+    "mode": "guided",
+    "current_spot_id": "fudan_third_teaching_building",
+    "nearby_spot_ids": ["fudan_third_teaching_building", "mao_statue"],
+    "expected_spot_ids": ["fudan_third_teaching_building"],
+    "expected_chunk_types": ["anecdote"],
+    "notes": "应准确说明其为留给物业师傅检修楼顶平台空调的检修通道。"
+  },
+  {
+    "id": "q_third_teaching_building_followup_004",
+    "question": "三教是什么时候建的？",
+    "mode": "guided",
+    "current_spot_id": "fudan_third_teaching_building",
+    "nearby_spot_ids": ["fudan_third_teaching_building", "mao_statue"],
+    "expected_spot_ids": ["fudan_third_teaching_building"],
+    "expected_chunk_types": ["history"],
+    "notes": "需提取1980年前后竣工，且背景为恢复高考后学生人数增加的史实档案。"
+  },
+  {
+    "id": "q_third_teaching_building_followup_005",
+    "question": "期末季的三教是什么样的？",
+    "mode": "guided",
+    "current_spot_id": "fudan_third_teaching_building",
+    "nearby_spot_ids": ["fudan_third_teaching_building", "mao_statue"],
+    "expected_spot_ids": ["fudan_third_teaching_building"],
+    "expected_chunk_types": ["campus_life"],
+    "notes": "应召回常年开放通宵自习室产生的‘三教久留’谐音梗，以及期末一座难求、堆满书本和咖啡杯的真实生活场景。"
+  },
+  {
+    "id": "q_third_teaching_building_followup_006",
+    "question": "外面的金属雕塑叫什么名字？",
+    "mode": "guided",
+    "current_spot_id": "fudan_third_teaching_building",
+    "nearby_spot_ids": ["fudan_third_teaching_building", "mao_statue"],
+    "expected_spot_ids": ["fudan_third_teaching_building"],
+    "expected_chunk_types": ["architecture", "photo"],
+    "notes": "必须精确匹配名为‘硕果’且可手动推动旋转的金属雕塑。"
+  },
+  {
+    "id": "q_third_teaching_building_followup_007",
+    "question": "里根总统当年是在哪个教室演讲的？",
+    "mode": "guided",
+    "current_spot_id": "fudan_third_teaching_building",
+    "nearby_spot_ids": ["fudan_third_teaching_building", "mao_statue"],
+    "expected_spot_ids": ["fudan_third_teaching_building"],
+    "expected_chunk_types": ["history", "intro"],
+    "notes": "应精确匹配1984年4月30日里根总统到访并演讲的3108教室。"
+  }
+  {
+    "id": "q_science_library_standard_001",
+    "question": "这是什么地方？",
+    "mode": "guided",
+    "current_spot_id": "fudan_science_library",
+    "nearby_spot_ids": ["fudan_science_library", "fudan_history_museum"],
+    "expected_spot_ids": ["fudan_science_library"],
+    "expected_chunk_types": ["intro", "faq"],
+    "notes": "应准确提取理科图书馆作为复旦历史最悠久的图书馆及感受大学质朴学风最佳场所的定位。"
+  },
+  {
+    "id": "q_science_library_standard_002",
+    "question": "这里有什么历史？",
+    "mode": "guided",
+    "current_spot_id": "fudan_science_library",
+    "nearby_spot_ids": ["fudan_science_library", "fudan_history_museum"],
+    "expected_spot_ids": ["fudan_science_library"],
+    "expected_chunk_types": ["history", "faq"],
+    "notes": "应召回1918年戊午阅书社、1922年建馆（现校史馆处）、1930年仙舟图书馆，至1958年现馆落成及1985年更名为理科图书馆的完整脉络。"
+  },
+  {
+    "id": "q_science_library_standard_003",
+    "question": "这里最值得看什么？",
+    "mode": "guided",
+    "current_spot_id": "fudan_science_library",
+    "nearby_spot_ids": ["fudan_science_library", "fudan_history_museum"],
+    "expected_spot_ids": ["fudan_science_library"],
+    "expected_chunk_types": ["faq", "intro", "architecture"],
+    "notes": "需指出红砖E字形建筑本身、承载的百年阅读传统，以及旁边的《共产党宣言》首译者陈望道雕像。"
+  },
+  {
+    "id": "q_science_library_standard_004",
+    "question": "这里适合拍照吗？",
+    "mode": "guided",
+    "current_spot_id": "fudan_science_library",
+    "nearby_spot_ids": ["fudan_science_library", "fudan_main_gate"],
+    "expected_spot_ids": ["fudan_science_library"],
+    "expected_chunk_types": ["photo", "faq"],
+    "notes": "应提供望道路正面全景及草坪边缘仰拍的机位，并推荐三月中下旬白玉兰盛开或秋冬银杏季进行拍摄。"
+  },
+  {
+    "id": "q_science_library_standard_005",
+    "question": "附近还有什么值得看？",
+    "mode": "guided",
+    "current_spot_id": "fudan_science_library",
+    "nearby_spot_ids": ["fudan_science_library", "fudan_main_gate", "mao_statue"],
+    "expected_spot_ids": ["fudan_science_library"],
+    "expected_chunk_types": ["architecture", "campus_life"],
+    "notes": "需明确召回一街之隔的文科图书馆、平行的化学楼，以及连成一线的正校门和毛泽东像。"
+  },
+  {
+    "id": "q_science_library_followup_001",
+    "question": "1985年文科图书馆建成前该馆在编号体制中被称为几号楼？",
+    "mode": "guided",
+    "current_spot_id": "fudan_science_library",
+    "nearby_spot_ids": ["fudan_science_library", "fudan_history_museum"],
+    "expected_spot_ids": ["fudan_science_library"],
+    "expected_chunk_types": ["history"],
+    "notes": "应精准提取1950年全校废除旧名改用编号时，旧馆（仙舟馆）被编为700号的档案细节。"
+  },
+  {
+    "id": "q_science_library_followup_002",
+    "question": "当年四千人搬书的具体经过是怎样的？",
+    "mode": "guided",
+    "current_spot_id": "fudan_science_library",
+    "nearby_spot_ids": ["fudan_science_library", "fudan_history_museum"],
+    "expected_spot_ids": ["fudan_science_library"],
+    "expected_chunk_types": ["anecdote", "history"],
+    "notes": "需详细召回1958年8月18日晚由陈望道亲自指挥，四千余名师生家属组成两条人力‘传送带’不到半天搬运约一百万册图书的史实盛况。"
+  },
+  {
+    "id": "q_science_library_followup_003",
+    "question": "理科图书馆在防日晒和空间布局上有哪些建筑设计考量？理科图书馆的建筑结构为什么是E字型？",
+    "mode": "guided",
+    "current_spot_id": "fudan_science_library",
+    "nearby_spot_ids": ["fudan_science_library", "fudan_main_gate"],
+    "expected_spot_ids": ["fudan_science_library"],
+    "expected_chunk_types": ["architecture"],
+    "notes": "必须准确提取‘馆舍主体面南、书库面北以避免藏书受阳光直射’，以及‘东西两翼延伸既与化学楼平行又不靠拢南面马路’的建筑设计逻辑。"
+  },
+  {
+    "id": "q_science_library_followup_004",
+    "question": "1977级校友吴晓明对80年代该馆的阅读风气有何回忆？",
+    "mode": "guided",
+    "current_spot_id": "fudan_science_library",
+    "nearby_spot_ids": ["fudan_science_library", "fudan_history_museum"],
+    "expected_spot_ids": ["fudan_science_library"],
+    "expected_chunk_types": ["anecdote"],
+    "notes": "应匹配出‘不是在去图书馆的路上，就是刚从图书馆回来’，以及当时各专业学生广泛阅读哲学和文艺类书籍的场景回忆。"
+  },
+  {
+    "id": "q_science_library_followup_005",
+    "question": "现在的同学们在里面主要是借书还是自习？",
+    "mode": "guided",
+    "current_spot_id": "fudan_science_library",
+    "nearby_spot_ids": ["fudan_science_library", "fudan_main_gate"],
+    "expected_spot_ids": ["fudan_science_library"],
+    "expected_chunk_types": ["campus_life"],
+    "notes": "应结合原文‘上自习、借阅图书的重要场所’及‘进阅览室自习是许多学生的日常’的描述，说明其同时具备借阅与自习功能。"
+  }
+  {
+    "id": "q_old_gate_standard_001",
+    "question": "这是什么地方？",
+    "mode": "guided",
+    "current_spot_id": "fudan_old_gate",
+    "nearby_spot_ids": ["fudan_old_gate", "fudan_yanyuan", "xianghui_hall"],
+    "expected_spot_ids": ["fudan_old_gate"],
+    "expected_chunk_types": ["intro", "faq"],
+    "notes": "应准确提取其作为复建于2004年的仿古牌楼式建筑、不再承担通行功能而作为校内纪念景观的定位。"
+  },
+  {
+    "id": "q_old_gate_standard_002",
+    "question": "这里有什么历史？",
+    "mode": "guided",
+    "current_spot_id": "fudan_old_gate",
+    "nearby_spot_ids": ["fudan_old_gate", "fudan_yanyuan", "xianghui_hall"],
+    "expected_spot_ids": ["fudan_old_gate"],
+    "expected_chunk_types": ["history", "faq"],
+    "notes": "应召回1921年初代校门落成、1949年解放军入校接管、1952年被拆除以及2004年百年校庆时复建的历史脉络。"
+  },
+  {
+    "id": "q_old_gate_standard_003",
+    "question": "这里最值得看什么？",
+    "mode": "guided",
+    "current_spot_id": "fudan_old_gate",
+    "nearby_spot_ids": ["fudan_old_gate", "fudan_yanyuan"],
+    "expected_spot_ids": ["fudan_old_gate"],
+    "expected_chunk_types": ["faq", "architecture", "intro"],
+    "notes": "需指出牌楼式仿古建筑本身（飞檐翘角、螭吻为饰），正门铜质校徽、毛主席题字匾额，以及背面的‘敬业乐群’匾额。"
+  },
+  {
+    "id": "q_old_gate_standard_004",
+    "question": "这里适合拍照吗？",
+    "mode": "guided",
+    "current_spot_id": "fudan_old_gate",
+    "nearby_spot_ids": ["fudan_old_gate", "fudan_yanyuan"],
+    "expected_spot_ids": ["fudan_old_gate"],
+    "expected_chunk_types": ["photo", "faq", "campus_life"],
+    "notes": "应提供正面全景、西侧半圆形围墙前取景以及透过杉木栏门向外‘框景’的机位，并提及下午光线柔和或下雪天作为最佳拍摄时间。"
+  },
+  {
+    "id": "q_old_gate_standard_005",
+    "question": "附近还有什么值得看？",
+    "mode": "guided",
+    "current_spot_id": "fudan_old_gate",
+    "nearby_spot_ids": ["fudan_old_gate", "fudan_yanyuan", "xianghui_hall"],
+    "expected_spot_ids": ["fudan_old_gate"],
+    "expected_chunk_types": ["architecture", "intro"],
+    "notes": "应准确召回其位于燕园西侧、相辉堂南端的地理位置与周边空间关联。"
+  },
+  {
+    "id": "q_old_gate_followup_001",
+    "question": "第一代老校门是在什么时候因为什么原因被拆除的？",
+    "mode": "guided",
+    "current_spot_id": "fudan_old_gate",
+    "nearby_spot_ids": ["fudan_old_gate", "fudan_yanyuan"],
+    "expected_spot_ids": ["fudan_old_gate"],
+    "expected_chunk_types": ["history", "faq"],
+    "notes": "必须准确提取1952年因校园中心东移、该门位置偏僻不便出入而被拆除的客观史实。"
+  },
+  {
+    "id": "q_old_gate_followup_002",
+    "question": "老校门的建筑构造有什么特定防伪指标？",
+    "mode": "guided",
+    "current_spot_id": "fudan_old_gate",
+    "nearby_spot_ids": ["fudan_old_gate", "fudan_yanyuan"],
+    "expected_spot_ids": ["fudan_old_gate"],
+    "expected_chunk_types": ["architecture"],
+    "notes": "重点防幻觉测试：知识库原文完全未提及任何‘特定防伪指标’。系统必须诚实反馈‘资料缺失’，严禁为了回答而凭空编造建筑参数或推理。"
+  },
+  {
+    "id": "q_old_gate_followup_003",
+    "question": "1921年第一代老校门门楣上最初由哪位1912级毕业生题写了匾额？目前复建的老校门正面匾额沿用了谁的题字？",
+    "mode": "guided",
+    "current_spot_id": "fudan_old_gate",
+    "nearby_spot_ids": ["fudan_old_gate", "fudan_yanyuan"],
+    "expected_spot_ids": ["fudan_old_gate"],
+    "expected_chunk_types": ["history", "architecture"],
+    "notes": "应分别准确提取‘1912年复旦公学毕业生苏莘’以及‘毛泽东主席’的历史文献记录。"
+  },
+  {
+    "id": "q_old_gate_followup_004",
+    "question": "每年寄往全国各地的新生录取通知书信封与该建筑有何关联？",
+    "mode": "guided",
+    "current_spot_id": "fudan_old_gate",
+    "nearby_spot_ids": ["fudan_old_gate", "fudan_yanyuan"],
+    "expected_spot_ids": ["fudan_old_gate"],
+    "expected_chunk_types": ["campus_life", "anecdote"],
+    "notes": "应召回每年新生录取通知书信封上都印着老校门图案的关联细节。"
+  },
+  {
+    "id": "q_old_gate_followup_005",
+    "question": "老校门的屋脊上雕刻的是什么神兽？老校门建筑上的螭吻雕刻有什么寓意？",
+    "mode": "guided",
+    "current_spot_id": "fudan_old_gate",
+    "nearby_spot_ids": ["fudan_old_gate", "fudan_yanyuan"],
+    "expected_spot_ids": ["fudan_old_gate"],
+    "expected_chunk_types": ["architecture", "photo"],
+    "notes": "前问需准确提取‘螭吻（两大两小）’。重点防幻觉测试：后问关于‘寓意’，原文并未记载螭吻的具体文化寓意，系统必须承认资料缺失，严禁引入外部通用百科知识进行脑补补全。"
+  },
+  {
+    "id": "q_old_gate_followup_006",
+    "question": "‘敬业乐群’这四个字是谁题写的？背面‘敬业乐群’的横匾有什么来历？",
+    "mode": "guided",
+    "current_spot_id": "fudan_old_gate",
+    "nearby_spot_ids": ["fudan_old_gate", "fudan_yanyuan"],
+    "expected_spot_ids": ["fudan_old_gate"],
+    "expected_chunk_types": ["history", "architecture"],
+    "notes": "重点防幻觉测试：原文仅记载背面悬挂该横匾及从初代校门传承，并未说明具体由谁题写或有何特定来历。系统必须直言无法确认或资料缺失。"
+  },
+  {
+    "id": "q_old_gate_followup_007",
+    "question": "第一代老校门当年是在哪个位置？",
+    "mode": "guided",
+    "current_spot_id": "fudan_old_gate",
+    "nearby_spot_ids": ["fudan_old_gate", "fudan_yanyuan"],
+    "expected_spot_ids": ["fudan_old_gate"],
+    "expected_chunk_types": ["history"],
+    "notes": "应准确提取‘走马塘桥下（今邯郸路桥堍）’这一历史地理坐标。"
+  }
+  {
+    "id": "q_main_gate_standard_001",
+    "question": "这是什么地方？",
+    "mode": "guided",
+    "current_spot_id": "fudan_main_gate",
+    "nearby_spot_ids": ["fudan_main_gate", "mao_statue", "guanghua_lawn"],
+    "expected_spot_ids": ["fudan_main_gate"],
+    "expected_chunk_types": ["intro", "faq"],
+    "notes": "应准确识别其作为复旦邯郸校区正门、标志性地标及开学报到第一站的定位。"
+  },
+  {
+    "id": "q_main_gate_standard_002",
+    "question": "这里有什么历史？",
+    "mode": "guided",
+    "current_spot_id": "fudan_main_gate",
+    "nearby_spot_ids": ["fudan_main_gate", "mao_statue"],
+    "expected_spot_ids": ["fudan_main_gate"],
+    "expected_chunk_types": ["history", "faq"],
+    "notes": "需召回1965年启用的第三代校门历史、陈望道校长捐稿费建校门的背景，以及校名题写的历史渊源。"
+  },
+  {
+    "id": "q_main_gate_standard_003",
+    "question": "这里最值得看什么？",
+    "mode": "guided",
+    "current_spot_id": "fudan_main_gate",
+    "nearby_spot_ids": ["fudan_main_gate", "mao_statue"],
+    "expected_spot_ids": ["fudan_main_gate"],
+    "expected_chunk_types": ["intro", "architecture", "faq"],
+    "notes": "重点指出毛泽东主席手书校名、校园核心视觉中轴线（校门-毛像-光华楼）的构景。"
+  },
+  {
+    "id": "q_main_gate_standard_004",
+    "question": "这里适合拍照吗？",
+    "mode": "guided",
+    "current_spot_id": "fudan_main_gate",
+    "nearby_spot_ids": ["fudan_main_gate"],
+    "expected_spot_ids": ["fudan_main_gate"],
+    "expected_chunk_types": ["photo", "faq"],
+    "notes": "应提到校门正前方拍摄全景，或作为复旦打卡首站的意义。"
+  },
+  {
+    "id": "q_main_gate_standard_005",
+    "question": "附近还有什么值得看？",
+    "mode": "guided",
+    "current_spot_id": "fudan_main_gate",
+    "nearby_spot_ids": ["fudan_main_gate", "mao_statue", "guanghua_lawn"],
+    "expected_spot_ids": ["fudan_main_gate"],
+    "expected_chunk_types": ["intro", "architecture"],
+    "notes": "需明确指出其位于中轴线南端，向内连接毛泽东像及光华楼。"
+  },
+  {
+    "id": "q_main_gate_followup_001",
+    "question": "当年陈望道校长捐了多少钱？",
+    "mode": "guided",
+    "current_spot_id": "fudan_main_gate",
+    "nearby_spot_ids": ["fudan_main_gate"],
+    "expected_spot_ids": ["fudan_main_gate"],
+    "expected_chunk_types": ["history", "anecdote"],
+    "notes": "应精准提取“一万多元稿费”这一核心历史事实。"
+  },
+  {
+    "id": "q_main_gate_followup_002",
+    "question": "以前的校门也是长这样吗？",
+    "mode": "guided",
+    "current_spot_id": "fudan_main_gate",
+    "nearby_spot_ids": ["fudan_main_gate", "fudan_old_gate"],
+    "expected_spot_ids": ["fudan_main_gate"],
+    "expected_chunk_types": ["history"],
+    "notes": "需明确说明这是第三代校门，与初代（牌楼式）建筑风格不同。"
+  },
+  {
+    "id": "q_main_gate_followup_003",
+    "question": "这条中轴线上还有什么建筑？",
+    "mode": "guided",
+    "current_spot_id": "fudan_main_gate",
+    "nearby_spot_ids": ["fudan_main_gate", "mao_statue", "guanghua_lawn"],
+    "expected_spot_ids": ["fudan_main_gate"],
+    "expected_chunk_types": ["architecture"],
+    "notes": "需指出由南向北依次为：正校门、毛泽东像、光华楼。"
+  },
+  {
+    "id": "q_main_gate_followup_004",
+    "question": "第一代老校门建于何时？第一代和第二代校门分别建于何时何地？",
+    "mode": "guided",
+    "current_spot_id": "fudan_main_gate",
+    "nearby_spot_ids": ["fudan_main_gate", "fudan_old_gate"],
+    "expected_spot_ids": ["fudan_main_gate"],
+    "expected_chunk_types": ["history"],
+    "notes": "防幻觉测试：知识库提及邯郸路220号为第三代，关于一代、二代具体时间地点详细档案内容若文件中未详尽描述，应仅回答已知内容或 admitting 资料缺失。"
+  },
+  {
+    "id": "q_main_gate_followup_005",
+    "question": "毛主席题写校名是通过哪位校要人转托的？毛主席题写校名的具体经过有档案记录吗？",
+    "mode": "guided",
+    "current_spot_id": "fudan_main_gate",
+    "nearby_spot_ids": ["fudan_main_gate"],
+    "expected_spot_ids": ["fudan_main_gate"],
+    "expected_chunk_types": ["history"],
+    "notes": "重点防幻觉测试：原文提及是1950年亲笔题写，未提及转托的具体要人或详细经过档案。严禁补全。"
+  },
+  {
+    "id": "q_main_gate_followup_006",
+    "question": "1949年司徒汉校友在校门前指挥唱歌的事件背景是什么？",
+    "mode": "guided",
+    "current_spot_id": "fudan_main_gate",
+    "nearby_spot_ids": ["fudan_main_gate"],
+    "expected_spot_ids": ["fudan_main_gate"],
+    "expected_chunk_types": ["history", "anecdote"],
+    "notes": "需准确描述1949年5月27日上海解放当天，司徒汉领头在校内欢庆解放的背景。"
+  },
+  {
+    "id": "q_main_gate_followup_007",
+    "question": "校门上面的字是谁题写的？",
+    "mode": "guided",
+    "current_spot_id": "fudan_main_gate",
+    "nearby_spot_ids": ["fudan_main_gate"],
+    "expected_spot_ids": ["fudan_main_gate"],
+    "expected_chunk_types": ["history"],
+    "notes": "确认为毛泽东主席。"
+  }
+  {
+    "id": "q_history_museum_standard_001",
+    "question": "这是什么地方？",
+    "mode": "guided",
+    "current_spot_id": "fudan_history_museum",
+    "nearby_spot_ids": ["fudan_history_museum", "xianghui_hall", "fudan_zibin_hall"],
+    "expected_spot_ids": ["fudan_history_museum"],
+    "expected_chunk_types": ["intro", "faq"],
+    "notes": "应准确提取校史馆前身为1921年建成的奕住堂，是复旦现存最早的保持原貌的建筑，也是了解百年奋斗历程的必访之地。"
+  },
+  {
+    "id": "q_history_museum_standard_002",
+    "question": "这里有什么历史？",
+    "mode": "guided",
+    "current_spot_id": "fudan_history_museum",
+    "nearby_spot_ids": ["fudan_history_museum", "xianghui_hall", "fudan_zibin_hall"],
+    "expected_spot_ids": ["fudan_history_museum"],
+    "expected_chunk_types": ["history", "faq"],
+    "notes": "应召回1921年黄奕住捐资建奕住堂、1929年改为仙舟图书馆、抗战期间被日军击损一角，以及2005年辟为校史馆、2025年焕新升级的历史流变。"
+  },
+  {
+    "id": "q_history_museum_standard_003",
+    "question": "这里最值得看什么？",
+    "mode": "guided",
+    "current_spot_id": "fudan_history_museum",
+    "nearby_spot_ids": ["fudan_history_museum", "xianghui_hall"],
+    "expected_spot_ids": ["fudan_history_museum"],
+    "expected_chunk_types": ["faq", "intro", "architecture"],
+    "notes": "需指出由亨利·墨菲设计的中西合璧建筑本身，孙中山题字及毛泽东手迹等镇馆之宝，以及AI定制互动区。"
+  },
+  {
+    "id": "q_history_museum_standard_004",
+    "question": "这里适合拍照吗？",
+    "mode": "guided",
+    "current_spot_id": "fudan_history_museum",
+    "nearby_spot_ids": ["fudan_history_museum", "xianghui_hall"],
+    "expected_spot_ids": ["fudan_history_museum"],
+    "expected_chunk_types": ["photo", "faq"],
+    "notes": "应提供正面中轴线全景及东西两侧仰拍飞檐的具体机位，并提及青瓦白墙红窗的高出片率配色。"
+  },
+  {
+    "id": "q_history_museum_standard_005",
+    "question": "附近还有什么值得看？",
+    "mode": "guided",
+    "current_spot_id": "fudan_history_museum",
+    "nearby_spot_ids": ["fudan_history_museum", "xianghui_hall", "fudan_zibin_hall"],
+    "expected_spot_ids": ["fudan_history_museum"],
+    "expected_chunk_types": ["architecture", "intro"],
+    "notes": "需明确召回其东邻的相辉堂草坪，以及与相辉堂、子彬院等共同构成的校园核心景观群。"
+  },
+  {
+    "id": "q_history_museum_followup_001",
+    "question": "1958年陈望道校长在此楼（时称700号楼）组织了怎样的人力搬书活动？",
+    "mode": "guided",
+    "current_spot_id": "fudan_history_museum",
+    "nearby_spot_ids": ["fudan_history_museum", "xianghui_hall"],
+    "expected_spot_ids": ["fudan_history_museum"],
+    "expected_chunk_types": ["anecdote", "history"],
+    "notes": "应准确提取1958年8月18日由陈望道亲自指挥，四千余师生家属排成人力传送带将约一百万册图书无损搬迁至新馆的史实档案。"
+  },
+  {
+    "id": "q_history_museum_followup_002",
+    "question": "朱凡校友的经历与京剧《沙家浜》中的阿庆嫂有何具体关联？",
+    "mode": "guided",
+    "current_spot_id": "fudan_history_museum",
+    "nearby_spot_ids": ["fudan_history_museum", "xianghui_hall"],
+    "expected_spot_ids": ["fudan_history_museum"],
+    "expected_chunk_types": ["anecdote"],
+    "notes": "需精准匹配1939届校友朱凡（原名陆惠卿）在沙家浜以小学教师身份掩护斗争，京剧《沙家浜》阿庆嫂智斗情节有三分之一取材于她的考证记录。"
+  },
+  {
+    "id": "q_history_museum_followup_003",
+    "question": "2025年焕新升级后馆内新增了哪些AI定制与数字化互动展区？",
+    "mode": "guided",
+    "current_spot_id": "fudan_history_museum",
+    "nearby_spot_ids": ["fudan_history_museum", "xianghui_hall"],
+    "expected_spot_ids": ["fudan_history_museum"],
+    "expected_chunk_types": ["campus_life", "intro"],
+    "notes": "应完整列举第一展区的AI定制专属明信片、第五展区的触摸屏生成复旦学生卡，以及复旦剧社展区的AI合成个人剧照。"
+  },
+  {
+    "id": "q_history_museum_followup_004",
+    "question": "为什么原来的仙舟图书馆会被学生戏称为‘傻瓜馆’？",
+    "mode": "guided",
+    "current_spot_id": "fudan_history_museum",
+    "nearby_spot_ids": ["fudan_history_museum", "xianghui_hall"],
+    "expected_spot_ids": ["fudan_history_museum"],
+    "expected_chunk_types": ["anecdote", "history"],
+    "notes": "需准确解释书法家于右任题写的匾额中，草书‘仙舟’二字形似‘傻瓜’，以及学生借此明志苦读并留有‘宁去傻瓜馆，不入百乐门’对联的轶事。"
+  },
+  {
+    "id": "q_history_museum_followup_005",
+    "question": "校史馆的建筑风格和设计者是谁？",
+    "mode": "guided",
+    "current_spot_id": "fudan_history_museum",
+    "nearby_spot_ids": ["fudan_history_museum", "xianghui_hall"],
+    "expected_spot_ids": ["fudan_history_museum"],
+    "expected_chunk_types": ["architecture", "history"],
+    "notes": "必须精确匹配由毕业于耶鲁大学的美国建筑师亨利·墨菲设计，并准确描述其‘平面呈工字型’、‘仿中国古典宫殿式大屋顶歇山顶’及‘混凝土模仿木柱’等中西合璧的建筑形制。"
+  }
+  {
+    "id": "q_guanghua_tower_standard_001",
+    "question": "这是什么地方？",
+    "mode": "guided",
+    "current_spot_id": "fudan_guanghua_tower",
+    "nearby_spot_ids": ["fudan_guanghua_tower", "guanghua_lawn"],
+    "expected_spot_ids": ["fudan_guanghua_tower"],
+    "expected_chunk_types": ["intro", "faq"],
+    "notes": "应准确提取光华楼作为复旦新世纪标志性建筑、“中国高校第一楼”以及高达142米宏伟双塔楼的核心定位。"
+  },
+  {
+    "id": "q_guanghua_tower_standard_002",
+    "question": "这里有什么历史？",
+    "mode": "guided",
+    "current_spot_id": "fudan_guanghua_tower",
+    "nearby_spot_ids": ["fudan_guanghua_tower", "guanghua_lawn"],
+    "expected_spot_ids": ["fudan_guanghua_tower"],
+    "expected_chunk_types": ["history", "faq"],
+    "notes": "应召回其建设历程：2000年师生投票规划方案、2002年奠基、2004年封顶，至2005年百年校庆时落成典礼的完整脉络。"
+  },
+  {
+    "id": "q_guanghua_tower_standard_003",
+    "question": "这里最值得看什么？",
+    "mode": "guided",
+    "current_spot_id": "fudan_guanghua_tower",
+    "nearby_spot_ids": ["fudan_guanghua_tower", "guanghua_lawn"],
+    "expected_spot_ids": ["fudan_guanghua_tower"],
+    "expected_chunk_types": ["faq", "architecture", "intro"],
+    "notes": "需指出“双峰日出”外观特征、15楼星空咖啡馆穹顶，以及感受被戏称为复旦校风的“光华妖风”。"
+  },
+  {
+    "id": "q_guanghua_tower_standard_004",
+    "question": "这里适合拍照吗？",
+    "mode": "guided",
+    "current_spot_id": "fudan_guanghua_tower",
+    "nearby_spot_ids": ["fudan_guanghua_tower", "guanghua_lawn"],
+    "expected_spot_ids": ["fudan_guanghua_tower"],
+    "expected_chunk_types": ["photo", "faq", "campus_life"],
+    "notes": "应提供在光草仰视展现“双塔入云”及退至光华大道取纵深感的机位，并提及清晨日出与傍晚华灯初上为最佳时间。"
+  },
+  {
+    "id": "q_guanghua_tower_standard_005",
+    "question": "附近还有什么值得看？",
+    "mode": "guided",
+    "current_spot_id": "fudan_guanghua_tower",
+    "nearby_spot_ids": ["fudan_guanghua_tower", "guanghua_lawn"],
+    "expected_spot_ids": ["fudan_guanghua_tower"],
+    "expected_chunk_types": ["architecture", "location"],
+    "notes": "需明确召回其前方的开阔草坪“光草”，以及大楼后方及两侧形成的通道景观。"
+  },
+  {
+    "id": "q_guanghua_tower_followup_001",
+    "question": "光华楼是哪一年建成的？光华楼是为庆祝什么事件建的？",
+    "mode": "guided",
+    "current_spot_id": "fudan_guanghua_tower",
+    "nearby_spot_ids": ["fudan_guanghua_tower", "guanghua_lawn"],
+    "expected_spot_ids": ["fudan_guanghua_tower"],
+    "expected_chunk_types": ["history", "intro", "faq"],
+    "notes": "必须精准匹配于2005年为庆祝复旦百年校庆而落成的核心历史事实。"
+  },
+  {
+    "id": "q_guanghua_tower_followup_002",
+    "question": "什么是‘光华妖风’？有关于光华楼风口效应的故事吗？",
+    "mode": "guided",
+    "current_spot_id": "fudan_guanghua_tower",
+    "nearby_spot_ids": ["fudan_guanghua_tower", "guanghua_lawn"],
+    "expected_spot_ids": ["fudan_guanghua_tower"],
+    "expected_chunk_types": ["architecture", "anecdote"],
+    "notes": "需解释因楼体高大且周围少遮挡形成的强烈空气对流风口，并提取出其作为“雨伞质量检测仪”的校园轶事。"
+  },
+  {
+    "id": "q_guanghua_tower_followup_003",
+    "question": "双塔楼里面主要是哪些院系？",
+    "mode": "guided",
+    "current_spot_id": "fudan_guanghua_tower",
+    "nearby_spot_ids": ["fudan_guanghua_tower", "guanghua_lawn"],
+    "expected_spot_ids": ["fudan_guanghua_tower"],
+    "expected_chunk_types": ["architecture"],
+    "notes": "应准确分类指出：西主楼为文史哲等文科办公室，东主楼为数学等理科办公室。"
+  },
+  {
+    "id": "q_guanghua_tower_followup_004",
+    "question": "为什么说光华楼里教授的办公室比校长的大？",
+    "mode": "guided",
+    "current_spot_id": "fudan_guanghua_tower",
+    "nearby_spot_ids": ["fudan_guanghua_tower", "guanghua_lawn"],
+    "expected_spot_ids": ["fudan_guanghua_tower"],
+    "expected_chunk_types": ["anecdote"],
+    "notes": "需召回体现“尊重学术与教师”理念的史实：教授独立办公室20多平方米，而当时校长办公室仅10多平方米。"
+  },
+  {
+    "id": "q_guanghua_tower_followup_005",
+    "question": "光华楼顶层可以参观吗？",
+    "mode": "guided",
+    "current_spot_id": "fudan_guanghua_tower",
+    "nearby_spot_ids": ["fudan_guanghua_tower", "guanghua_lawn"],
+    "expected_spot_ids": ["fudan_guanghua_tower"],
+    "expected_chunk_types": ["anecdote"],
+    "notes": "重点防幻觉测试：知识库仅提及30层‘曾有一个观景平台’及‘充满都市传说’，未说明当前是否对外开放参观。系统需基于原文审慎回答，严禁凭空承诺开放状态。"
+  }
+  {
+    "id": "q_fourth_teaching_building_standard_001",
+    "question": "这是什么地方？",
+    "mode": "guided",
+    "current_spot_id": "fourth_teaching_building",
+    "nearby_spot_ids": ["fourth_teaching_building", "fudan_third_teaching_building"],
+    "expected_spot_ids": ["fourth_teaching_building"],
+    "expected_chunk_types": ["intro", "faq"],
+    "notes": "应准确提取第四教学楼（四教）作为复旦最主要的上课、自习场所，以及2025年修缮后兼具传承与创新的教育新地标定位。"
+  },
+  {
+    "id": "q_fourth_teaching_building_standard_002",
+    "question": "这里有什么历史？",
+    "mode": "guided",
+    "current_spot_id": "fourth_teaching_building",
+    "nearby_spot_ids": ["fourth_teaching_building", "fudan_third_teaching_building"],
+    "expected_spot_ids": ["fourth_teaching_building"],
+    "expected_chunk_types": ["history", "faq"],
+    "notes": "应召回其始建于20世纪80年代，并在2025年历经全面修缮，以“新旧共生”理念重新亮相的历史沿革。"
+  },
+  {
+    "id": "q_fourth_teaching_building_standard_003",
+    "question": "这里最值得看什么？",
+    "mode": "guided",
+    "current_spot_id": "fourth_teaching_building",
+    "nearby_spot_ids": ["fourth_teaching_building", "fudan_third_teaching_building"],
+    "expected_spot_ids": ["fourth_teaching_building"],
+    "expected_chunk_types": ["faq", "architecture", "intro"],
+    "notes": "需重点指出内部每层楼不同色彩的“垂直光谱”设计，以及走廊里保留下来的老式水磨石地坪。"
+  },
+  {
+    "id": "q_fourth_teaching_building_standard_004",
+    "question": "这里适合拍照吗？",
+    "mode": "guided",
+    "current_spot_id": "fourth_teaching_building",
+    "nearby_spot_ids": ["fourth_teaching_building", "fudan_third_teaching_building"],
+    "expected_spot_ids": ["fourth_teaching_building"],
+    "expected_chunk_types": ["photo", "faq", "architecture"],
+    "notes": "应提供一层橙色入口导视墙及四层绿色走廊的取景建议，并提醒在清晨或周末前往以避开课间人流高峰。"
+  },
+  {
+    "id": "q_fourth_teaching_building_standard_005",
+    "question": "附近还有什么值得看？",
+    "mode": "guided",
+    "current_spot_id": "fourth_teaching_building",
+    "nearby_spot_ids": ["fourth_teaching_building", "fudan_third_teaching_building"],
+    "expected_spot_ids": ["fourth_teaching_building"],
+    "expected_chunk_types": ["architecture", "location"],
+    "notes": "需准确提取其位于邯郸校区邯郸路以北、临近国顺路一侧的地理位置信息。"
+  },
+  {
+    "id": "q_fourth_teaching_building_followup_001",
+    "question": "四教的智慧教室平时用来上什么类型的课？",
+    "mode": "guided",
+    "current_spot_id": "fourth_teaching_building",
+    "nearby_spot_ids": ["fourth_teaching_building", "fudan_third_teaching_building"],
+    "expected_spot_ids": ["fourth_teaching_building"],
+    "expected_chunk_types": ["campus_life", "architecture"],
+    "notes": "必须精确匹配文中提及的《数学分析AI(H)》和《政治学原理》等大批课程，以及满足本研融通、AI赋能教学的需求。"
+  },
+  {
+    "id": "q_fourth_teaching_building_followup_002",
+    "question": "楼层指示的色彩导视具体是怎么分布的？",
+    "mode": "guided",
+    "current_spot_id": "fourth_teaching_building",
+    "nearby_spot_ids": ["fourth_teaching_building", "fudan_third_teaching_building"],
+    "expected_spot_ids": ["fourth_teaching_building"],
+    "expected_chunk_types": ["architecture", "anecdote"],
+    "notes": "应完整、准确地对应提取出五层楼的色彩与主题：一层橙色（热情开放）、二层粉色（创造包容）、三层紫色（哲学超越）、四层绿色（自然成长）、五层蓝色（理性深邃）。"
+  },
+  {
+    "id": "q_fourth_teaching_building_followup_003",
+    "question": "这栋楼修缮完成大概是什么时候的事？",
+    "mode": "guided",
+    "current_spot_id": "fourth_teaching_building",
+    "nearby_spot_ids": ["fourth_teaching_building", "fudan_third_teaching_building"],
+    "expected_spot_ids": ["fourth_teaching_building"],
+    "expected_chunk_types": ["history"],
+    "notes": "需准确匹配其于2025年完成全面修缮后重新启用的时间节点。"
+  },
+  {
+    "id": "q_fourth_teaching_building_followup_004",
+    "question": "为什么要特意保留原有的水磨石地坪？",
+    "mode": "guided",
+    "current_spot_id": "fourth_teaching_building",
+    "nearby_spot_ids": ["fourth_teaching_building", "fudan_third_teaching_building"],
+    "expected_spot_ids": ["fourth_teaching_building"],
+    "expected_chunk_types": ["anecdote", "architecture"],
+    "notes": "需召回其“既经济耐用又防滑易清洁”的物理特性，并提取其承载老复旦人记忆、让校友感叹“脚感和三十年前一模一样”的情感价值档案。"
+  }
+  {
+    "id": "q_danyuan_canteen_standard_001",
+    "question": "这是什么地方？",
+    "mode": "guided",
+    "current_spot_id": "danyuan_canteen",
+    "nearby_spot_ids": ["danyuan_canteen", "fudan_guanghua_tower"],
+    "expected_spot_ids": ["danyuan_canteen"],
+    "expected_chunk_types": ["intro", "faq"],
+    "notes": "应准确提取旦苑食堂作为复旦邯郸校区本部唯一食堂，以及人流量最大的核心就餐点的定位。"
+  },
+  {
+    "id": "q_danyuan_canteen_standard_002",
+    "question": "这里有什么历史？",
+    "mode": "guided",
+    "current_spot_id": "danyuan_canteen",
+    "nearby_spot_ids": ["danyuan_canteen", "fudan_guanghua_tower"],
+    "expected_spot_ids": ["danyuan_canteen"],
+    "expected_chunk_types": ["history", "faq"],
+    "notes": "应召回其前身为位于今光华楼东辅楼位置的‘中央食堂’，后随校园建设拆除并新建为旦苑，以及名字源于‘旦复旦兮’的历史脉络。"
+  },
+  {
+    "id": "q_danyuan_canteen_standard_003",
+    "question": "这里最值得看什么？",
+    "mode": "guided",
+    "current_spot_id": "danyuan_canteen",
+    "nearby_spot_ids": ["danyuan_canteen", "fudan_guanghua_tower"],
+    "expected_spot_ids": ["danyuan_canteen"],
+    "expected_chunk_types": ["faq", "intro", "campus_life"],
+    "notes": "需指出最值得体验的是被誉为‘复旦特产’的双皮奶，以及午间高峰期人潮涌动的真实校园烟火气。"
+  },
+  {
+    "id": "q_danyuan_canteen_standard_004",
+    "question": "这里适合拍照吗？",
+    "mode": "guided",
+    "current_spot_id": "danyuan_canteen",
+    "nearby_spot_ids": ["danyuan_canteen", "fudan_guanghua_tower"],
+    "expected_spot_ids": ["danyuan_canteen"],
+    "expected_chunk_types": ["photo", "faq"],
+    "notes": "应说明作为食堂本身拍照意义有限，但极适合美食打卡（双皮奶、石锅拌饭等网红菜品），并提供下午茶时段前往及外立面与光华楼同框的机位建议。"
+  },
+  {
+    "id": "q_danyuan_canteen_standard_005",
+    "question": "附近还有什么值得看？",
+    "mode": "guided",
+    "current_spot_id": "danyuan_canteen",
+    "nearby_spot_ids": ["danyuan_canteen", "fudan_guanghua_tower"],
+    "expected_spot_ids": ["danyuan_canteen"],
+    "expected_chunk_types": ["architecture", "intro"],
+    "notes": "需准确提取其坐落于光华楼后方、正对光华大道、靠近国定路校门的地理坐标系。"
+  },
+  {
+    "id": "q_danyuan_canteen_followup_001",
+    "question": "旦苑食堂以前叫什么名字？",
+    "mode": "guided",
+    "current_spot_id": "danyuan_canteen",
+    "nearby_spot_ids": ["danyuan_canteen", "fudan_guanghua_tower"],
+    "expected_spot_ids": ["danyuan_canteen"],
+    "expected_chunk_types": ["history"],
+    "notes": "必须精确提取出‘中央食堂’这一历史命名。"
+  },
+  {
+    "id": "q_danyuan_canteen_followup_002",
+    "question": "点心部除了双皮奶还有什么推荐的？",
+    "mode": "guided",
+    "current_spot_id": "danyuan_canteen",
+    "nearby_spot_ids": ["danyuan_canteen", "fudan_guanghua_tower"],
+    "expected_spot_ids": ["danyuan_canteen"],
+    "expected_chunk_types": ["campus_life"],
+    "notes": "应准确提取出‘芒果奶昔’和‘杨枝甘露’。严禁通过外部经验凭空捏造其他甜品。"
+  },
+  {
+    "id": "q_danyuan_canteen_followup_003",
+    "question": "当年川大厨师来的时候做了什么菜？",
+    "mode": "guided",
+    "current_spot_id": "danyuan_canteen",
+    "nearby_spot_ids": ["danyuan_canteen", "fudan_guanghua_tower"],
+    "expected_spot_ids": ["danyuan_canteen"],
+    "expected_chunk_types": ["anecdote", "campus_life"],
+    "notes": "需精准匹配2017年6月交流活动中的‘回锅肉’、‘水煮肉片’、‘青笋烧兔’等十二道经典川菜记录。"
+  },
+  {
+    "id": "q_danyuan_canteen_followup_004",
+    "question": "去哪里可以买到那款很火的双皮奶？",
+    "mode": "guided",
+    "current_spot_id": "danyuan_canteen",
+    "nearby_spot_ids": ["danyuan_canteen", "fudan_guanghua_tower"],
+    "expected_spot_ids": ["danyuan_canteen"],
+    "expected_chunk_types": ["intro", "campus_life"],
+    "notes": "必须明确指出购买位置在‘一楼点心部’。"
+  },
+  {
+    "id": "q_danyuan_canteen_followup_005",
+    "question": "为什么大家都喜欢来旦苑吃饭？",
+    "mode": "guided",
+    "current_spot_id": "danyuan_canteen",
+    "nearby_spot_ids": ["danyuan_canteen", "fudan_guanghua_tower"],
+    "expected_spot_ids": ["danyuan_canteen"],
+    "expected_chunk_types": ["intro", "campus_life"],
+    "notes": "应综合提炼其‘距离教学楼和东区宿舍最近’的地理优势，以及提供多种餐食和口碑特色美食（如双皮奶）的原因。"
+  }
+]
