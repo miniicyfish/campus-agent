@@ -133,4 +133,146 @@
     ],
     "ending_message": "深度学术寻访到此结束，百廿复旦的星火与厚重，期待能在您的记忆中留下深刻的学术印记。"
   }
+  {
+    "route_id": "dream_school_30min",
+    "name": "梦校风路线（精华版）",
+    "description": "带你快速体验复旦学子最真实的上课与生活日常，感受大学的青春与活力。",
+    "duration_minutes": 30,
+    "distance_meters": 1000,
+    "tags": ["高中生", "访客", "校园生活", "打卡"],
+    "suitable_for": ["高中生", "家长", "访客"],
+    "interests": ["校园生活", "打卡", "升学向往"],
+    "style": "轻松",
+    "start_spot_id": "fudan_main_gate",
+    "stops": [
+      {
+        "spot_id": "fudan_main_gate",
+        "order": 1,
+        "estimated_stay_minutes": 3,
+        "trigger_radius_meters": 60,
+        "guide_script_id": "main_gate_dream_school_30s",
+        "reason": "作为进入校园的第一印象，适合建立来到复旦的入学仪式感。"
+      },
+      {
+        "spot_id": "mao_statue",
+        "order": 2,
+        "estimated_stay_minutes": 3,
+        "trigger_radius_meters": 60,
+        "guide_script_id": "mao_statue_dream_school_30s",
+        "reason": "复旦人最经典的碰头集合点，感受日常的社交属性。"
+      },
+      {
+        "spot_id": "fudan_third_teaching_building",
+        "order": 3,
+        "estimated_stay_minutes": 5,
+        "trigger_radius_meters": 60,
+        "guide_script_id": "third_teaching_building_dream_school_30s",
+        "reason": "步入核心教学区，体验大学真实的课堂与日常自习氛围。"
+      },
+      {
+        "spot_id": "guanghua_lawn",
+        "order": 4,
+        "estimated_stay_minutes": 5,
+        "trigger_radius_meters": 60,
+        "guide_script_id": "guanghua_lawn_dream_school_30s",
+        "reason": "在校园最自由的公共空间，感受课后晒太阳、弹吉他的松弛感。"
+      },
+      {
+        "spot_id": "fudan_guanghua_tower",
+        "order": 5,
+        "estimated_stay_minutes": 6,
+        "trigger_radius_meters": 60,
+        "guide_script_id": "guanghua_tower_dream_school_30s",
+        "reason": "打卡绝对地标，了解大学丰富的讲座资源与现代化的硬件设施。"
+      },
+      {
+        "spot_id": "danyuan_canteen",
+        "order": 6,
+        "estimated_stay_minutes": 8,
+        "trigger_radius_meters": 60,
+        "guide_script_id": "danyuan_canteen_dream_school_30s",
+        "reason": "用一杯双皮奶和食堂的人声鼎沸，完成最接地气的干饭体验收尾。"
+      }
+    ],
+    "ending_message": "这半个小时的复旦日常体验就到这里啦，希望未来能在校园里真正与你相遇！"
+  },
+  {
+    "route_id": "dream_school_60min",
+    "name": "梦校风路线（深度版）",
+    "description": "沉浸式体验‘复旦十二时辰’，从晨读、上课、干饭到夜间自习，全方位感受复旦人的真实一天。",
+    "duration_minutes": 60,
+    "distance_meters": 1800,
+    "tags": ["高中生", "访客", "校园生活", "深度游"],
+    "suitable_for": ["高中生", "家长", "访客"],
+    "interests": ["校园生活", "打卡", "升学向往"],
+    "style": "轻松",
+    "start_spot_id": "fudan_main_gate",
+    "stops": [
+      {
+        "spot_id": "fudan_main_gate",
+        "order": 1,
+        "estimated_stay_minutes": 4,
+        "trigger_radius_meters": 60,
+        "guide_script_id": "main_gate_dream_school_60s",
+        "reason": "开启‘复旦一天’的序幕，迎新仪式感的最佳起点。"
+      },
+      {
+        "spot_id": "mao_statue",
+        "order": 2,
+        "estimated_stay_minutes": 4,
+        "trigger_radius_meters": 60,
+        "guide_script_id": "mao_statue_dream_school_60s",
+        "reason": "在校园宇宙中心碰头，讲述‘毛像下面见’的日常故事。"
+      },
+      {
+        "spot_id": "fudan_science_library",
+        "order": 3,
+        "estimated_stay_minutes": 6,
+        "trigger_radius_meters": 60,
+        "guide_script_id": "science_library_dream_school_60s",
+        "reason": "途径静谧的阅读区，感受大学里专注的自习与学术时光。"
+      },
+      {
+        "spot_id": "fourth_teaching_building",
+        "order": 4,
+        "estimated_stay_minutes": 8,
+        "trigger_radius_meters": 60,
+        "guide_script_id": "fourth_teaching_building_dream_school_60s",
+        "reason": "体验修缮后的智慧教室与色彩导视，满足对现代大学课堂的憧憬。"
+      },
+      {
+        "spot_id": "guanghua_lawn",
+        "order": 5,
+        "estimated_stay_minutes": 8,
+        "trigger_radius_meters": 60,
+        "guide_script_id": "guanghua_lawn_dream_school_60s",
+        "reason": "作为课间放松的缓冲地带，体会大学独有的自由与浪漫。"
+      },
+      {
+        "spot_id": "fudan_guanghua_tower",
+        "order": 6,
+        "estimated_stay_minutes": 10,
+        "trigger_radius_meters": 60,
+        "guide_script_id": "guanghua_tower_dream_school_60s",
+        "reason": "深入第一高楼，仰望学术资源并体验高空咖啡馆的课余社交。"
+      },
+      {
+        "spot_id": "danyuan_canteen",
+        "order": 7,
+        "estimated_stay_minutes": 10,
+        "trigger_radius_meters": 60,
+        "guide_script_id": "danyuan_canteen_dream_school_60s",
+        "reason": "汇入最大的干饭人潮，在烟火气中完成一天的能量补给。"
+      },
+      {
+        "spot_id": "fudan_third_teaching_building",
+        "order": 8,
+        "estimated_stay_minutes": 10,
+        "trigger_radius_meters": 60,
+        "guide_script_id": "third_teaching_building_dream_school_60s",
+        "reason": "以‘三教久留’的通宵灯火作为尾声，并方便就近离开校园。"
+      }
+    ],
+    "ending_message": "复旦十二时辰的体验卡到此到期。希望这充实的一圈，能让你对未来的大学生活有了最具体的期待！"
+  }
 ]
