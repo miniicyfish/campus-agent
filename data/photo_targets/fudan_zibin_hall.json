@@ -1,7 +1,7 @@
 [
   {
-    "target_id": "zibin_hall_building",
-    "spot_id": "zibin_hall",
+    "target_id": "fudan_zibin_hall_building",
+    "spot_id": "fudan_zibin_hall",
     "name": "子彬院建筑整体",
     "aliases": ["子彬院全貌", "小白宫", "数学楼", "吕志和楼", "子彬院全景"],
     "visual_features": [
@@ -19,8 +19,8 @@
     "related_chunk_types": ["intro", "architecture", "history", "photo"]
   },
   {
-    "target_id": "zibin_hall_entrance",
-    "spot_id": "zibin_hall",
+    "target_id": "fudan_zibin_hall_entrance",
+    "spot_id": "fudan_zibin_hall",
     "name": "子彬院门廊入口",
     "aliases": ["子彬院正门", "半圆形门廊", "罗马柱入口", "小白宫门庭"],
     "visual_features": [
@@ -38,8 +38,8 @@
     "related_chunk_types": ["architecture", "detail", "photo", "intro"]
   },
   {
-    "target_id": "zibin_hall_lawn",
-    "spot_id": "zibin_hall",
+    "target_id": "fudan_zibin_hall_lawn",
+    "spot_id": "fudan_zibin_hall",
     "name": "子彬院前草坪与庭院",
     "aliases": ["子彬院草坪", "小白宫草坪", "婚纱摄影草坪", "子彬院前庭"],
     "visual_features": [
@@ -57,8 +57,8 @@
     "related_chunk_types": ["intro", "surroundings", "photo", "campus_life"]
   },
   {
-    "target_id": "zibin_hall_su_sculpture",
-    "spot_id": "zibin_hall",
+    "target_id": "fudan_zibin_hall_su_sculpture",
+    "spot_id": "fudan_zibin_hall",
     "name": "苏步青像与∞雕塑",
     "aliases": ["苏步青雕像", "无穷大雕塑", "数学楼前雕塑", "苏步青铜像"],
     "visual_features": [
