@@ -1,6 +1,6 @@
 [
   {
-    "target_id": "fudan_gate_overall",
+    "target_id": "fudan_main_gate_overall",
     "spot_id": "fudan_main_gate",
     "name": "复旦正门建筑整体",
     "aliases": ["复旦正门", "邯郸路220号校门", "复旦正门全景", "复旦大门"],
@@ -19,7 +19,7 @@
     "related_chunk_types": ["intro", "architecture", "history", "photo"]
   },
   {
-    "target_id": "fudan_gate_inscription",
+    "target_id": "fudan_main_gate_inscription",
     "spot_id": "fudan_main_gate",
     "name": "复旦正门校名题字",
     "aliases": ["毛主席题字", "复旦大学匾额", "校名题刻", "正门牌匾"],
@@ -38,7 +38,7 @@
     "related_chunk_types": ["history", "calligraphy", "detail", "photo"]
   },
   {
-    "target_id": "fudan_gate_axis",
+    "target_id": "fudan_main_gate_axis",
     "spot_id": "fudan_main_gate",
     "name": "正门中轴线景观",
     "aliases": ["校门中轴线", "正门往里看", "入口纵深视角", "正门通向毛像"],
@@ -57,7 +57,7 @@
     "related_chunk_types": ["photo", "layout", "surroundings", "intro"]
   },
   {
-    "target_id": "fudan_gate_memorial_shop",
+    "target_id": "fudan_main_gate_memorial_shop",
     "spot_id": "fudan_main_gate",
     "name": "正门旁文创店“卿云轩”",
     "aliases": ["卿云轩", "校门口文创店", "复旦纪念品店", "正门左侧商店"],
