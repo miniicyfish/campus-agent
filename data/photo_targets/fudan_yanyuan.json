@@ -1,7 +1,7 @@
 [
   {
-    "target_id": "yan_garden_entrance",
-    "spot_id": "yan_garden",
+    "target_id": "fudan_yanyuan_entrance",
+    "spot_id": "fudan_yanyuan",
     "name": "燕园入口",
     "aliases": ["燕园正门", "燕园门头", "燕园入口拱门", "燕园题字"],
     "visual_features": [
@@ -18,8 +18,8 @@
     "related_chunk_types": ["intro", "history", "architecture", "photo"]
   },
   {
-    "target_id": "yan_garden_pavilion_bell",
-    "spot_id": "yan_garden",
+    "target_id": "fudan_yanyuan_pavilion_bell",
+    "spot_id": "fudan_yanyuan",
     "name": "世纪钟亭与红漆六角亭",
     "aliases": ["世纪钟", "钟亭", "六角亭", "红亭子"],
     "visual_features": [
@@ -36,8 +36,8 @@
     "related_chunk_types": ["intro", "history", "photo", "sculpture"]
   },
   {
-    "target_id": "yan_garden_waterfall_bridge",
-    "spot_id": "yan_garden",
+    "target_id": "fudan_yanyuan_waterfall_bridge",
+    "spot_id": "fudan_yanyuan",
     "name": "瀑布与小桥",
     "aliases": ["燕园瀑布", "石桥流水", "假山瀑布", "小瀑布石桥"],
     "visual_features": [
@@ -55,8 +55,8 @@
     "related_chunk_types": ["intro", "photo", "surroundings"]
   },
   {
-    "target_id": "yan_garden_cornerstone",
-    "spot_id": "yan_garden",
+    "target_id": "fudan_yanyuan_cornerstone",
+    "spot_id": "fudan_yanyuan",
     "name": "1920年奠基石",
     "aliases": ["复旦奠基石", "江湾校区奠基石", "历史石碑", "建校奠基石"],
     "visual_features": [
@@ -73,8 +73,8 @@
     "related_chunk_types": ["history", "detail", "intro"]
   },
   {
-    "target_id": "yan_garden_pond",
-    "spot_id": "yan_garden",
+    "target_id": "fudan_yanyuan_pond",
+    "spot_id": "fudan_yanyuan",
     "name": "小桥流水与锦鲤池",
     "aliases": ["燕园池塘", "锦鲤池", "彩林倒影池", "水景庭院"],
     "visual_features": [
@@ -92,8 +92,8 @@
     "related_chunk_types": ["intro", "photo", "surroundings"]
   },
   {
-    "target_id": "yan_garden_lawn_history",
-    "spot_id": "yan_garden",
+    "target_id": "fudan_yanyuan_lawn_history",
+    "spot_id": "fudan_yanyuan",
     "name": "民主广场旧址草坪",
     "aliases": ["燕园草坪", "民主广场", "新闻馆旧址", "历史集会广场"],
     "visual_features": [
