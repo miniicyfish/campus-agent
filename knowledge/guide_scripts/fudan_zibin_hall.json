@@ -32,4 +32,37 @@
       "2000年代修缮时遇到了哪些传统技艺失传的建筑难题？"
     ]
   }
+  {
+    "guide_script_id": "zibin_hall_park_30s",
+    "spot_id": "fudan_zibin_hall",
+    "route_id": "park_route_30min",
+    "agent_id": "littleredbook_curator",
+    "audience": "访客",
+    "style": "亲切",
+    "language": "zh",
+    "duration_seconds": 30,
+    "title": "子彬院：邂逅校园里的‘小白宫’",
+    "content": "继续往前走，我们来到了被大家亲切地称为‘小白宫’的子彬院。这栋灰白色的四层建筑非常有异国情调。大家漫步经过时，可以留意一下它正面的罗马柱和圆弧形的阳台，搭配着楼前平整的草坪，视觉上非常清爽干净，是校园里一道极具古典美学的风景线。",
+    "follow_up_suggestions": [
+      "这栋楼的建筑风格叫什么？",
+      "楼前的塑像是谁呀？"
+    ]
+  },
+  {
+    "guide_script_id": "zibin_hall_park_60s",
+    "spot_id": "fudan_zibin_hall",
+    "route_id": "park_route_60min",
+    "agent_id": "littleredbook_curator",
+    "audience": "访客",
+    "style": "亲切",
+    "language": "zh",
+    "duration_seconds": 60,
+    "title": "子彬院：光影交错的欧式静谧",
+    "content": "顺着道路往前走，视野渐渐开阔，映入眼帘的这栋灰白色建筑就是子彬院了，很多喜爱它的人更愿意叫它‘小白宫’。在这里，你可以找个视野好的树荫停下来。看看阳光是怎样柔和地洒在那些优雅的罗马柱和弧形阳台上的，光影的缓慢变换会让整座建筑显得特别温柔。你可以把视线从建筑的线条延伸到面前这片安静的草坪，感受这种中西合璧的古典美学带来的视觉治愈。不用急着离开，在这里多停留一会儿，享受这份只属于你的静谧时光。",
+    "follow_up_suggestions": [
+      "子彬院内部还有保留原来的建筑结构吗？",
+      "草坪上的雕像有什么故事？",
+      "建筑外立面用的是什么材质？"
+    ]
+  }
 ]
