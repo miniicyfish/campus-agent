@@ -567,8 +567,8 @@ button {
 }
 
 .guide-panel.open {
-  height: 318px;
-  min-height: 318px;
+  height: 56%;
+  min-height: 470px;
   padding: 12px 28px 22px;
   display: flex;
   flex-direction: column;
