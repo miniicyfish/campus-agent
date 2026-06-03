@@ -1,0 +1,621 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Campus Agent Layout Tuner</title>
+    <style>
+      :root {
+        --ink: #3d3a35;
+        --muted: #6c7568;
+        --line: rgba(101, 119, 96, 0.28);
+        --leaf: #a7b79a;
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      body {
+        margin: 0;
+        min-height: 100vh;
+        display: grid;
+        grid-template-columns: minmax(430px, 1fr) 380px;
+        gap: 22px;
+        padding: 22px;
+        color: var(--ink);
+        background: linear-gradient(135deg, #e5edd6, #f4ecd6 55%, #d8e6e6);
+        font-family: "Songti SC", "Noto Serif SC", "STSong", serif;
+      }
+
+      button,
+      input,
+      textarea,
+      select {
+        font: inherit;
+      }
+
+      .stage-wrap {
+        min-height: calc(100vh - 44px);
+        display: grid;
+        place-items: center;
+      }
+
+      .phone {
+        position: relative;
+        width: 390px;
+        height: 844px;
+        overflow: hidden;
+        border: 1px solid rgba(255, 255, 255, 0.75);
+        border-radius: 30px;
+        background: #eef0d7;
+        box-shadow: 0 20px 50px rgba(54, 61, 47, 0.28);
+      }
+
+      .phone.home,
+      .phone.agent {
+        background-image: linear-gradient(rgba(238, 240, 215, 0.04), rgba(238, 240, 215, 0.2)), url("/assets/start-base.png");
+        background-position: center;
+        background-size: cover;
+      }
+
+      .phone.profile,
+      .phone.map {
+        background-image: linear-gradient(rgba(242, 238, 214, 0.06), rgba(242, 238, 214, 0.22)), url("/assets/map-base.png");
+        background-position: center;
+        background-size: auto 100%;
+      }
+
+      .group {
+        position: absolute;
+        left: var(--x);
+        top: var(--y);
+        width: var(--w);
+        cursor: grab;
+        user-select: none;
+        touch-action: none;
+      }
+
+      .group:active {
+        cursor: grabbing;
+      }
+
+      .group::before {
+        content: attr(data-name);
+        position: absolute;
+        left: 0;
+        top: -22px;
+        padding: 2px 8px;
+        border-radius: 999px;
+        background: rgba(77, 90, 70, 0.72);
+        color: white;
+        font: 12px Arial, sans-serif;
+      }
+
+      .hero-copy {
+        text-align: center;
+      }
+
+      .hero-copy p,
+      .hero-copy h1 {
+        margin: 0;
+      }
+
+      .hero-copy p {
+        color: rgba(82, 91, 76, 0.72);
+        font-family: Georgia, "Times New Roman", serif;
+        font-size: 13px;
+        letter-spacing: 0.08em;
+      }
+
+      .hero-copy h1 {
+        margin-top: 8px;
+        font-size: 31px;
+        font-weight: 500;
+        line-height: 1.22;
+      }
+
+      .cards {
+        display: grid;
+        gap: var(--gap);
+        margin-top: var(--stack);
+      }
+
+      .card {
+        display: grid;
+        gap: 8px;
+        min-height: var(--card-h);
+        padding: 18px 20px;
+        border: 1px solid rgba(255, 255, 255, 0.78);
+        border-radius: 8px;
+        background: rgba(255, 255, 255, 0.6);
+        box-shadow: 0 14px 28px rgba(67, 77, 60, 0.12), inset 0 1px 0 rgba(255, 255, 255, 0.76);
+        text-align: left;
+        backdrop-filter: blur(14px);
+      }
+
+      .card.primary {
+        background: rgba(249, 255, 243, 0.76);
+        border-color: rgba(142, 174, 129, 0.55);
+      }
+
+      .card strong {
+        font-size: 24px;
+        font-weight: 500;
+      }
+
+      .card span {
+        color: #60695d;
+        font-size: 15px;
+        line-height: 1.48;
+      }
+
+      .paper {
+        width: 100%;
+        display: grid;
+        gap: 12px;
+        padding: 24px;
+        background:
+          linear-gradient(90deg, transparent 0 12px, rgba(255, 255, 255, 0.92) 12px),
+          repeating-radial-gradient(circle at 6px 30px, transparent 0 13px, rgba(168, 174, 143, 0.32) 14px 16px, transparent 17px 62px),
+          #fffef8;
+        filter: drop-shadow(12px 18px 16px rgba(75, 79, 62, 0.24));
+      }
+
+      .paper .row,
+      .paper label,
+      .paper > div {
+        display: grid;
+        gap: 8px;
+      }
+
+      .paper .first-row {
+        grid-template-columns: 1fr auto auto;
+        align-items: center;
+      }
+
+      .chips {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 8px;
+      }
+
+      .chip,
+      .input,
+      .select {
+        min-height: 34px;
+        padding: 7px 10px;
+        border: 1px solid rgba(123, 134, 111, 0.28);
+        border-radius: 8px;
+        background: rgba(255, 255, 255, 0.65);
+      }
+
+      .chip.selected {
+        border-color: rgba(93, 126, 77, 0.7);
+        background: rgba(178, 202, 153, 0.45);
+      }
+
+      .two-col {
+        grid-template-columns: 1fr 1fr;
+      }
+
+      .note {
+        margin: 12px 0 0;
+        text-align: center;
+        font-size: 18px;
+      }
+
+      .button-row {
+        display: flex;
+        justify-content: center;
+        gap: 12px;
+        margin-top: 16px;
+      }
+
+      .pill {
+        min-height: 52px;
+        min-width: 126px;
+        border: 1px solid rgba(118, 135, 108, 0.24);
+        border-radius: 999px;
+        background: rgba(255, 255, 255, 0.72);
+        font-size: 20px;
+      }
+
+      .pill.primary {
+        min-width: 150px;
+        border-color: rgba(129, 178, 205, 0.55);
+      }
+
+      .agent-preview,
+      .mode-preview {
+        text-align: center;
+      }
+
+      .avatar {
+        width: 86px;
+        height: 86px;
+        object-fit: contain;
+        margin: 16px auto 8px;
+      }
+
+      .route-card {
+        display: grid;
+        gap: 8px;
+        margin-top: 18px;
+        padding: 16px;
+        border: 1px solid rgba(255, 255, 255, 0.76);
+        border-radius: 8px;
+        background: rgba(255, 255, 255, 0.48);
+        text-align: left;
+        backdrop-filter: blur(14px);
+      }
+
+      .map-panel {
+        min-height: 300px;
+        padding: 18px 24px 20px;
+        border: 2px solid rgba(255, 255, 255, 0.78);
+        border-radius: 30px 30px 0 0;
+        background: rgba(255, 255, 255, 0.56);
+        backdrop-filter: blur(18px);
+      }
+
+      .grip {
+        width: 64px;
+        height: 8px;
+        margin: 0 auto 16px;
+        border-radius: 999px;
+        background: rgba(255, 255, 255, 0.82);
+      }
+
+      .guide-title {
+        display: grid;
+        grid-template-columns: 58px 1fr;
+        gap: 12px;
+        align-items: center;
+      }
+
+      .guide-title img {
+        width: 58px;
+      }
+
+      .guide-title h2,
+      .guide-title p {
+        margin: 0;
+      }
+
+      .side {
+        position: sticky;
+        top: 22px;
+        align-self: start;
+        max-height: calc(100vh - 44px);
+        overflow: auto;
+        padding: 18px;
+        border: 1px solid rgba(255, 255, 255, 0.78);
+        border-radius: 12px;
+        background: rgba(255, 255, 255, 0.68);
+        box-shadow: 0 16px 38px rgba(54, 61, 47, 0.16);
+        backdrop-filter: blur(18px);
+        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      }
+
+      .tabs {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 8px;
+      }
+
+      .tabs button,
+      .export-actions button {
+        min-height: 38px;
+        border: 1px solid var(--line);
+        border-radius: 8px;
+        background: rgba(255, 255, 255, 0.75);
+      }
+
+      .tabs button.active {
+        background: #e7f0dc;
+        border-color: #8fa37c;
+      }
+
+      .control {
+        display: grid;
+        gap: 6px;
+        margin-top: 14px;
+      }
+
+      .control label {
+        display: flex;
+        justify-content: space-between;
+        color: #4f584d;
+        font-size: 13px;
+      }
+
+      .control input {
+        width: 100%;
+      }
+
+      .hint {
+        color: #667164;
+        font-size: 13px;
+        line-height: 1.45;
+      }
+
+      textarea {
+        width: 100%;
+        min-height: 220px;
+        margin-top: 12px;
+        padding: 10px;
+        border: 1px solid var(--line);
+        border-radius: 8px;
+        background: rgba(255, 255, 255, 0.76);
+        color: #253026;
+        font: 12px ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+      }
+
+      @media (max-width: 840px) {
+        body {
+          grid-template-columns: 1fr;
+        }
+
+        .side {
+          position: relative;
+          top: 0;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <main class="stage-wrap">
+      <section id="phone" class="phone home">
+        <div id="group" class="group" data-name="content" style="--x: 28px; --y: 268px; --w: 334px; --gap: 14px; --stack: 24px; --card-h: 108px"></div>
+      </section>
+    </main>
+
+    <aside class="side">
+      <h2>页面位置调试</h2>
+      <p class="hint">选择页面后，直接拖动手机里的内容组；也可以用滑杆微调。调完点“导出坐标”，把 JSON 发给我。</p>
+
+      <div class="tabs" id="tabs"></div>
+
+      <div class="control">
+        <label>X <span id="xValue"></span></label>
+        <input id="xRange" type="range" min="-80" max="160" step="1" />
+      </div>
+      <div class="control">
+        <label>Y <span id="yValue"></span></label>
+        <input id="yRange" type="range" min="0" max="760" step="1" />
+      </div>
+      <div class="control">
+        <label>宽度 <span id="wValue"></span></label>
+        <input id="wRange" type="range" min="260" max="390" step="1" />
+      </div>
+      <div class="control">
+        <label>卡片间距 <span id="gapValue"></span></label>
+        <input id="gapRange" type="range" min="4" max="34" step="1" />
+      </div>
+      <div class="control">
+        <label>标题到卡片距离 <span id="stackValue"></span></label>
+        <input id="stackRange" type="range" min="8" max="70" step="1" />
+      </div>
+
+      <div class="export-actions" style="display: grid; grid-template-columns: 1fr 1fr; gap: 8px; margin-top: 16px">
+        <button id="exportBtn">导出坐标</button>
+        <button id="copyBtn">复制</button>
+      </div>
+      <textarea id="output" spellcheck="false"></textarea>
+    </aside>
+
+    <script>
+      const pages = {
+        home: {
+          label: "启动页",
+          phoneClass: "home",
+          x: 28,
+          y: 268,
+          w: 334,
+          gap: 14,
+          stack: 24,
+          cardH: 108,
+          html: `
+            <div class="hero-copy">
+              <p>FUDAN CAMPUS AGENT</p>
+              <h1>今天想怎么逛复旦？</h1>
+            </div>
+            <div class="cards">
+              <div class="card primary"><strong>自由参观</strong><span>不用填写资料，直接进入校园地图。点开任意坐标，就能查看这里的介绍和追问。</span></div>
+              <div class="card"><strong>让小A带路</strong><span>回答几个问题，系统会匹配路线、导览员和讲解风格，适合第一次来或想省心游览。</span></div>
+            </div>`,
+        },
+        profile: {
+          label: "导览问卷",
+          phoneClass: "profile",
+          x: 28,
+          y: 58,
+          w: 334,
+          gap: 12,
+          stack: 16,
+          cardH: 80,
+          html: `
+            <div class="hero-copy"><p>导览模式</p><h1>先让小A了解你一下</h1></div>
+            <div class="paper" style="margin-top: var(--stack)">
+              <div class="first-row"><span>你是第一次来复旦大学吗？</span><span class="chip selected">是的</span><span class="chip">不是</span></div>
+              <label><span>你的年龄</span><span class="input">例如 18 / 32</span></label>
+              <div><span>来复旦校园，你的主要目的是</span><div class="chips"><span class="chip selected">高中生</span><span class="chip">访客</span><span class="chip">校友</span><span class="chip">家长</span><span class="chip">在校生</span></div></div>
+              <div><span>这次想重点看什么</span><div class="chips"><span class="chip">校史</span><span class="chip">建筑</span><span class="chip selected">校园生活</span><span class="chip selected">打卡</span><span class="chip">自然景观</span><span class="chip">人文</span></div></div>
+              <div class="two-col"><span class="select">30 分钟</span><span class="select">轻松</span></div>
+              <label><span>介绍一下你自己吧</span><span class="input" style="height: 62px"></span></label>
+            </div>
+            <p class="note">我们将根据你的输入匹配路线和讲解方式</p>
+            <div class="button-row"><button class="pill">返回首页</button><button class="pill primary">继续 ›</button></div>`,
+        },
+        agent: {
+          label: "导览员",
+          phoneClass: "agent",
+          x: 34,
+          y: 260,
+          w: 322,
+          gap: 14,
+          stack: 20,
+          cardH: 100,
+          html: `
+            <div class="agent-preview">
+              <p>经激烈讨论</p>
+              <h1>本次带你一起逛校园的是：</h1>
+              <img class="avatar" src="/assets/character-little-a.png" alt="" />
+              <h2>复旦同学</h2>
+              <div class="route-card"><strong>梦校风路线（精华版）</strong><span>带你快速体验复旦学子最真实的上课与生活日常。</span><em>30 分钟 · 6 站</em></div>
+              <button class="pill primary" style="margin-top: 22px; min-width: 220px; min-height: 74px">开始游览</button>
+            </div>`,
+        },
+        mode: {
+          label: "路线页",
+          phoneClass: "agent",
+          x: 34,
+          y: 268,
+          w: 322,
+          gap: 14,
+          stack: 28,
+          cardH: 104,
+          html: `
+            <div class="mode-preview">
+              <p>路线已经准备好</p>
+              <h1>梦校风路线（精华版）</h1>
+            </div>
+            <div class="cards">
+              <div class="card primary"><strong>开始导览</strong><span>按推荐路线走，到站后拉起讲解和追问。</span></div>
+              <div class="card"><strong>改为自由参观</strong><span>跳过路线，只看地图，点哪个坐标就打开哪个点位介绍。</span></div>
+            </div>
+            <div class="button-row"><button class="pill">返回</button></div>`,
+        },
+        map: {
+          label: "地图讲解",
+          phoneClass: "map",
+          x: 0,
+          y: 470,
+          w: 390,
+          gap: 12,
+          stack: 16,
+          cardH: 110,
+          html: `
+            <div class="map-panel">
+              <div class="grip"></div>
+              <div class="guide-title"><img src="/assets/character-little-a.png" alt="" /><div><p>1 / 6 站</p><h2>复旦大学正校门</h2></div></div>
+              <div class="route-card"><strong>正校门：复旦初印象</strong><span>欢迎来到复旦！这里就是邯郸路220号的正校门，也是大家未来新生报到的第一站。</span></div>
+              <div class="button-row"><button class="pill">追问</button><button class="pill">拍照</button><button class="pill">下一站</button></div>
+            </div>`,
+        },
+      };
+
+      const phone = document.getElementById("phone");
+      const group = document.getElementById("group");
+      const tabs = document.getElementById("tabs");
+      const output = document.getElementById("output");
+      const ranges = {
+        x: document.getElementById("xRange"),
+        y: document.getElementById("yRange"),
+        w: document.getElementById("wRange"),
+        gap: document.getElementById("gapRange"),
+        stack: document.getElementById("stackRange"),
+      };
+      const values = {
+        x: document.getElementById("xValue"),
+        y: document.getElementById("yValue"),
+        w: document.getElementById("wValue"),
+        gap: document.getElementById("gapValue"),
+        stack: document.getElementById("stackValue"),
+      };
+      let current = "home";
+      let drag = null;
+
+      function renderTabs() {
+        tabs.innerHTML = Object.entries(pages)
+          .map(([key, page]) => `<button data-page="${key}" class="${key === current ? "active" : ""}">${page.label}</button>`)
+          .join("");
+      }
+
+      function applyPage() {
+        const page = pages[current];
+        phone.className = `phone ${page.phoneClass}`;
+        group.innerHTML = page.html;
+        group.dataset.name = page.label;
+        group.style.setProperty("--x", `${page.x}px`);
+        group.style.setProperty("--y", `${page.y}px`);
+        group.style.setProperty("--w", `${page.w}px`);
+        group.style.setProperty("--gap", `${page.gap}px`);
+        group.style.setProperty("--stack", `${page.stack}px`);
+        group.style.setProperty("--card-h", `${page.cardH}px`);
+        for (const key of Object.keys(ranges)) {
+          ranges[key].value = page[key];
+          values[key].textContent = `${page[key]}px`;
+        }
+        renderTabs();
+        updateOutput();
+      }
+
+      function updateValue(key, value) {
+        pages[current][key] = Number(value);
+        applyPage();
+      }
+
+      function exportData() {
+        const data = {};
+        for (const [key, page] of Object.entries(pages)) {
+          data[key] = {
+            label: page.label,
+            x: page.x,
+            y: page.y,
+            width: page.w,
+            cardGap: page.gap,
+            titleToCards: page.stack,
+          };
+        }
+        return data;
+      }
+
+      function updateOutput() {
+        output.value = JSON.stringify(exportData(), null, 2);
+      }
+
+      tabs.addEventListener("click", (event) => {
+        const button = event.target.closest("button[data-page]");
+        if (!button) return;
+        current = button.dataset.page;
+        applyPage();
+      });
+
+      Object.entries(ranges).forEach(([key, input]) => {
+        input.addEventListener("input", () => updateValue(key, input.value));
+      });
+
+      group.addEventListener("pointerdown", (event) => {
+        drag = {
+          startX: event.clientX,
+          startY: event.clientY,
+          x: pages[current].x,
+          y: pages[current].y,
+        };
+        group.setPointerCapture(event.pointerId);
+      });
+
+      group.addEventListener("pointermove", (event) => {
+        if (!drag) return;
+        pages[current].x = Math.round(drag.x + event.clientX - drag.startX);
+        pages[current].y = Math.round(drag.y + event.clientY - drag.startY);
+        applyPage();
+      });
+
+      group.addEventListener("pointerup", (event) => {
+        drag = null;
+        group.releasePointerCapture(event.pointerId);
+      });
+
+      document.getElementById("exportBtn").addEventListener("click", updateOutput);
+      document.getElementById("copyBtn").addEventListener("click", async () => {
+        updateOutput();
+        await navigator.clipboard.writeText(output.value);
+      });
+
+      applyPage();
+    </script>
+  </body>
+</html>

@@ -59,6 +59,7 @@ export default function Home() {
   const [guideSheet, setGuideSheet] = useState<"peek" | "open" | "full">("peek");
   const [mapPan, setMapPan] = useState({ x: 0, y: 0 });
   const [drawerOpen, setDrawerOpen] = useState(false);
+  const [profilePending, setProfilePending] = useState(false);
   const [chatInput, setChatInput] = useState("");
   const [chatPending, setChatPending] = useState(false);
   const [visualContext, setVisualContext] = useState<string | null>(null);
@@ -126,14 +127,24 @@ export default function Home() {
 
   async function submitProfile(event: FormEvent) {
     event.preventDefault();
-    const response = await fetch("/api/match-route", {
-      method: "POST",
-      headers: { "Content-Type": "application/json" },
-      body: JSON.stringify(profile),
-    });
-    const result = (await response.json()) as RouteMatch;
-    setMatch(result);
-    setStep("agent");
+    matchProfile();
+  }
+
+  async function matchProfile() {
+    if (profilePending) return;
+    setProfilePending(true);
+    try {
+      const response = await fetch("/api/match-route", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(profile),
+      });
+      const result = (await response.json()) as RouteMatch;
+      setMatch(result);
+      setStep("agent");
+    } finally {
+      setProfilePending(false);
+    }
   }
 
   async function sendMessage(text = chatInput) {
@@ -404,8 +415,8 @@ export default function Home() {
               <button className="secondary-button" type="button" onClick={returnHome}>
                 返回首页
               </button>
-              <button className="primary-button" type="submit">
-                继续 <ChevronRight size={22} />
+              <button className="primary-button" type="button" disabled={profilePending} onClick={matchProfile}>
+                {profilePending ? "匹配中" : "继续"} <ChevronRight size={22} />
               </button>
             </div>
           </form>
