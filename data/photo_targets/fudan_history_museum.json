@@ -1,0 +1,85 @@
+[
+  {
+    "target_id": "fudan_history_museum_building",
+    "spot_id": "fudan_history_museum",
+    "name": "校史馆建筑整体",
+    "aliases": ["校史馆全貌", "校史馆新馆", "奕住堂", "仙舟图书馆", "中华文明资源中心A栋"],
+    "visual_features": [
+      "青瓦白墙、朱砂红色窗格的二层砖木结构建筑",
+      "四面歇山、八角飞檐的中式大屋顶",
+      "混凝土仿木柱与铁件中式花格窗的中西合璧设计",
+      "沿中轴线对称分布，平面呈工字型",
+      "整体造型简单优美，被认定为校内最具中式风格的建筑"
+    ],
+    "likely_questions": [
+      "这是什么建筑？",
+      "校史馆是什么时候建的？",
+      "校史馆的建筑有什么风格特点？",
+      "校史馆是谁设计的？"
+    ],
+    "related_chunk_types": ["intro", "architecture", "history", "photo"]
+  },
+  {
+    "target_id": "fudan_history_museum_entrance",
+    "spot_id": "fudan_history_museum",
+    "name": "校史馆入口及牌匾",
+    "aliases": ["校史馆正门", "校史馆门头", "校史馆牌匾"],
+    "visual_features": [
+      "入口上方悬挂校史馆匾额",
+      "朱砂红色木质门窗配黑色窗框",
+      "灰砖墙面与门楣线条利落",
+      "铁件制造的中式花格窗点缀其间",
+      "整体延续建校初期的朱砂红色彩基调"
+    ],
+    "likely_questions": [
+      "校史馆的牌匾是谁题写的？",
+      "校史馆需要预约吗？",
+      "校史馆对外开放吗？"
+    ],
+    "related_chunk_types": ["intro", "detail", "photo"]
+  },
+  {
+    "target_id": "fudan_history_museum_lawn_view",
+    "spot_id": "fudan_history_museum",
+    "name": "校史馆与相辉堂草坪合影视角",
+    "aliases": ["校史馆草坪视角", "校史馆远景", "复旦源建筑群", "相辉堂草坪南望"],
+    "visual_features": [
+      "校史馆位于邯郸校区西部、大草坪南端",
+      "与北侧的相辉堂草坪形成南北对望格局",
+      "以草坪为前景、校史馆为背景的开阔画面",
+      "周边环绕博物馆、艺术馆等“一源六馆”建筑群",
+      "草坪上常有师生休憩、校友返校拍照"
+    ],
+    "likely_questions": [
+      "校史馆在校园的什么位置？",
+      "校史馆周边还有什么可看的？",
+      "这里适合拍照打卡吗？",
+      "复旦源是什么？"
+    ],
+    "related_chunk_types": ["intro", "surroundings", "photo", "layout"]
+  },
+  {
+    "target_id": "fudan_history_museum_exhibit_hall",
+    "spot_id": "fudan_history_museum",
+    "name": "校史馆展厅内景",
+    "aliases": ["校史馆展厅", "校史陈列", "镇馆之宝", "校史馆内部"],
+    "visual_features": [
+      "展陈面积达2150平方米的宽敞展厅",
+      "8大展区以时间为线索完整呈现百廿年办学脉络",
+      "五四运动上海第一钟等珍贵文物",
+      "毛泽东主席亲笔题写的『复旦大学』手迹",
+      "1909年颁发的存世最早复旦毕业文凭",
+      "孙中山『天下为公』题词条幅",
+      "马相伯、李登辉、陈望道等老校长的遗物与肖像",
+      "1941年重庆北碚战时办学沙盘模型"
+    ],
+    "likely_questions": [
+      "校史馆里有什么值得看的？",
+      "校史馆的镇馆之宝是什么？",
+      "毛主席题写的校名在哪里？",
+      "最早的复旦毕业证书长什么样？",
+      "校史馆的展区是怎么划分的？"
+    ],
+    "related_chunk_types": ["intro", "exhibit", "history", "photo"]
+  }
+]

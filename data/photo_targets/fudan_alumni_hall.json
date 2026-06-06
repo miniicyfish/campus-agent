@@ -1,0 +1,176 @@
+[
+  {
+    "target_id": "fudan_alumni_hall_building",
+    "spot_id": "fudan_alumni_hall",
+    "name": "校友馆建筑整体",
+    "aliases": ["校友馆全貌", "校友馆外观", "奕住堂全景", "仙舟图书馆旧址", "复旦源建筑群"],
+    "visual_features": [
+      "青瓦白墙红窗的民国风格建筑",
+      "歇山式屋顶、四角飞檐翘起",
+      "屋脊饰有吻兽的宫殿式大屋顶",
+      "清水青砖墙与赭红色窗格搭配",
+      "窗下墙栏板雕刻祥云纹样",
+      "工字形平面布局，两翼小巧玲珑"
+    ],
+    "likely_questions": [
+      "这是什么建筑？",
+      "校友馆是什么时候建的？",
+      "校友馆的建筑有什么风格特点？",
+      "奕住堂的名字是怎么来的？"
+    ],
+    "related_chunk_types": ["intro", "architecture", "history", "photo"]
+  },
+  {
+    "target_id": "fudan_alumni_hall_entrance",
+    "spot_id": "fudan_alumni_hall",
+    "name": "校友馆入口及匾额",
+    "aliases": ["校友馆正门", "校友馆门头", "校友馆匾额", "复旦大学校友馆牌匾"],
+    "visual_features": [
+      "“复旦大学校友馆”七个隶书大字匾额",
+      "隶书字体筋骨挺拔、宽博沉稳",
+      "红色木质门窗与青砖墙面",
+      "入口门楣线条简洁利落",
+      "建筑中轴线对称布局"
+    ],
+    "likely_questions": [
+      "校友馆的匾额是谁题写的？",
+      "校友馆需要预约吗？",
+      "校友馆和校史馆是同一个地方吗？"
+    ],
+    "related_chunk_types": ["intro", "detail", "photo", "faq"]
+  },
+  {
+    "target_id": "fudan_alumni_hall_window_view",
+    "spot_id": "fudan_alumni_hall",
+    "name": "校友馆最美窗景",
+    "aliases": ["复旦最美窗景", "校友馆窗景", "子彬院窗景", "诗一样的窗景", "一楼东侧窗景"],
+    "visual_features": [
+      "窗外子彬院隐没于梧桐树影中",
+      "孟夏草木葱茏的绿意",
+      "建筑老照片与窗外实体建筑的今昔对照",
+      "赭红色窗框与窗外自然景观的框景构图",
+      "微风吹拂、树影摇曳的静谧氛围"
+    ],
+    "likely_questions": [
+      "校友馆最美窗景在哪里？",
+      "为什么说校友馆的窗景最美？",
+      "窗外的建筑是什么？",
+      "这里适合拍照吗？"
+    ],
+    "related_chunk_types": ["architecture", "photo", "intro"]
+  },
+  {
+    "target_id": "fudan_alumni_hall_inscription",
+    "spot_id": "fudan_alumni_hall",
+    "name": "校友馆铭文",
+    "aliases": ["校友馆铭文墙", "一楼铭文", "常煜华铭文", "仿古铭文体"],
+    "visual_features": [
+      "位于一楼楼梯西侧墙面",
+      "仿骈散结合式古代铭文体",
+      "300余字浓缩百年建筑史",
+      "简约温润、富于音韵美的文字",
+      "镶嵌于墙面的铭文石刻"
+    ],
+    "likely_questions": [
+      "校友馆铭文写了什么？",
+      "铭文是谁创作的？",
+      "校友馆的历史变迁是怎样的？"
+    ],
+    "related_chunk_types": ["history", "detail", "story"]
+  },
+  {
+    "target_id": "fudan_alumni_hall_four_photos",
+    "spot_id": "fudan_alumni_hall",
+    "name": "二楼四宫格照片墙",
+    "aliases": ["四宫格照片", "时光对比照", "二楼照片墙", "年代对比图"],
+    "visual_features": [
+      "位于二楼台阶处",
+      "上下两张照片构成不同年代相同主题对比",
+      "图书馆自习、草坪欢聚等校园生活场景",
+      "跨越数十年的画面并置",
+      "「光阴荏苒，物事变迁，不变的是复旦精神」主题"
+    ],
+    "likely_questions": [
+      "四宫格照片有什么特别之处？",
+      "照片对比展示了什么？"
+    ],
+    "related_chunk_types": ["detail", "story", "photo"]
+  },
+  {
+    "target_id": "fudan_alumni_hall_interactive_display",
+    "spot_id": "fudan_alumni_hall",
+    "name": "互动展示空间",
+    "aliases": ["多媒体互动系统", "求学履痕", "爱心印迹", "穿越互动", "一楼东侧大厅"],
+    "visual_features": [
+      "集查询、互动、展示于一体的多媒体设备",
+      "可查询求学档案旧照和毕业合影",
+      "历史照片「飞屏」至投影幕布",
+      "返校照片与求学照片对比显示",
+      "温馨的「欢迎回家」氛围营造"
+    ],
+    "likely_questions": [
+      "在校友馆能查到自己的学籍档案吗？",
+      "互动展示空间有什么功能？",
+      "如何使用多媒体互动设备？"
+    ],
+    "related_chunk_types": ["space", "detail", "faq"]
+  },
+  {
+    "target_id": "fudan_alumni_hall_meeting_rooms",
+    "spot_id": "fudan_alumni_hall",
+    "name": "校友馆聚会空间（会议室）",
+    "aliases": ["切问厅", "近思厅", "博学厅", "笃志厅", "二楼会议室", "校友聚会空间"],
+    "visual_features": [
+      "以校训命名的四间会议室",
+      "切问厅（西侧）：小型会议厅，可容纳12人",
+      "近思厅（西侧）：中型会议厅，可容纳22-44人",
+      "博学厅+笃志厅（东侧）：两厅贯通，可容纳26-50人",
+      "古色古香的装修风格",
+      "适合班级聚会的温馨氛围"
+    ],
+    "likely_questions": [
+      "校友馆的会议室可以预约吗？",
+      "会议室能容纳多少人？",
+      "如何预约校友馆的聚会空间？"
+    ],
+    "related_chunk_types": ["space", "detail", "faq"]
+  },
+  {
+    "target_id": "fudan_alumni_hall_the_press",
+    "spot_id": "fudan_alumni_hall",
+    "name": "THE PRESS咖啡厅",
+    "aliases": ["校友馆咖啡厅", "THE PRESS复旦校友馆店", "一楼咖啡厅", "校友咖啡厅"],
+    "visual_features": [
+      "位于一楼西侧",
+      "由校友开设的温馨咖啡厅",
+      "陈列复旦大学出版社捐赠的校长传记系列书籍",
+      "《复旦人》杂志可供阅读",
+      "复旦元素融入咖啡和空间设计",
+      "复旦人可享专属价格"
+    ],
+    "likely_questions": [
+      "校友馆有咖啡厅吗？",
+      "THE PRESS咖啡厅有什么特色？",
+      "咖啡厅对非校友开放吗？"
+    ],
+    "related_chunk_types": ["space", "detail", "faq"]
+  },
+  {
+    "target_id": "fudan_alumni_hall_magnolia_lamp",
+    "spot_id": "fudan_alumni_hall",
+    "name": "玉兰花造型灯具",
+    "aliases": ["玉兰花吊灯", "玉兰花壁灯", "复旦校花灯具", "玉兰花元素"],
+    "visual_features": [
+      "吊灯取形于玉兰花绽放瞬间的形态",
+      "壁灯同样以玉兰花为设计灵感",
+      "风骨剔透、灵性宛然的造型",
+      "融入复旦校花白玉兰元素",
+      "整体照明与空间氛围的巧妙结合"
+    ],
+    "likely_questions": [
+      "校友馆的灯有什么特别之处？",
+      "为什么用玉兰花造型？"
+    ],
+    "related_chunk_types": ["architecture", "detail"]
+  }
+]
