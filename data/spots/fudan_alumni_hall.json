@@ -1,0 +1,19 @@
+{
+  "spot_id": "fudan_alumni_hall",
+  "name": "复旦大学校友馆",
+  "aliases": [
+    "校友馆",
+    "复旦校友馆",
+    "校友活动中心",
+    "校友之家"
+  ],
+  "campus": "邯郸校区",
+  "type": "校友文化空间",
+  "lat": 31.301918,
+  "lng": 121.506753,
+  "default_trigger_radius_meters": 60,
+  "map_icon": "alumni",
+  "summary": "位于复旦源周边区域，集中展示复旦校友成就与捐赠历史，并作为返校校友接待与活动交流的专门场所。",
+  "available": true,
+  "source_status": "待核验"
+}
