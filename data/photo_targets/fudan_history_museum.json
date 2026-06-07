@@ -1,43 +1,43 @@
 [
-  {
-    "target_id": "fudan_history_museum_building",
-    "spot_id": "fudan_history_museum",
-    "name": "校史馆建筑整体",
-    "aliases": ["校史馆全貌", "校史馆新馆", "奕住堂", "仙舟图书馆", "中华文明资源中心A栋"],
-    "visual_features": [
-      "青瓦白墙、朱砂红色窗格的二层砖木结构建筑",
-      "四面歇山、八角飞檐的中式大屋顶",
-      "混凝土仿木柱与铁件中式花格窗的中西合璧设计",
-      "沿中轴线对称分布，平面呈工字型",
-      "整体造型简单优美，被认定为校内最具中式风格的建筑"
-    ],
-    "likely_questions": [
-      "这是什么建筑？",
-      "校史馆是什么时候建的？",
-      "校史馆的建筑有什么风格特点？",
-      "校史馆是谁设计的？"
-    ],
-    "related_chunk_types": ["intro", "architecture", "history", "photo"]
-  },
-  {
-    "target_id": "fudan_history_museum_entrance",
-    "spot_id": "fudan_history_museum",
-    "name": "校史馆入口及牌匾",
-    "aliases": ["校史馆正门", "校史馆门头", "校史馆牌匾"],
-    "visual_features": [
-      "入口上方悬挂校史馆匾额",
-      "朱砂红色木质门窗配黑色窗框",
-      "灰砖墙面与门楣线条利落",
-      "铁件制造的中式花格窗点缀其间",
-      "整体延续建校初期的朱砂红色彩基调"
-    ],
-    "likely_questions": [
-      "校史馆的牌匾是谁题写的？",
-      "校史馆需要预约吗？",
-      "校史馆对外开放吗？"
-    ],
-    "related_chunk_types": ["intro", "detail", "photo"]
-  },
+ {
+  "target_id": "fudan_history_museum_building",
+  "spot_id": "fudan_history_museum",
+  "name": "校史馆建筑整体",
+  "aliases": ["校史馆全貌", "校史馆新馆", "中华文明资源中心A栋"],
+  "visual_features": [
+    "西式风格的现代建筑，整体呈现灰色调",
+    "外立面简洁利落，采用现代建筑材料",
+    "墙上镶嵌有'复旦大学校史馆'几个大字",
+    "建筑形体规整，线条硬朗",
+    "与周边'复旦源'历史建筑群形成新旧对比"
+  ],
+  "likely_questions": [
+    "这是什么建筑？",
+    "校史馆是什么时候建的？",
+    "校史馆的建筑有什么风格特点？",
+    "校史馆是谁设计的？"
+  ],
+  "related_chunk_types": ["intro", "architecture", "history", "photo"]
+},
+{
+  "target_id": "fudan_history_museum_entrance",
+  "spot_id": "fudan_history_museum",
+  "name": "校史馆入口及墙字",
+  "aliases": ["校史馆正门", "校史馆门头", "校史馆墙字"],
+  "visual_features": [
+    "入口上方或墙面镶嵌'复旦大学校史馆'大字",
+    "灰色调外立面，风格简洁现代",
+    "门厅通透，采用现代玻璃门窗",
+    "整体呈现西式现代建筑的理性气质",
+    "与相辉堂草坪隔路相望，视野开阔"
+  ],
+  "likely_questions": [
+    "校史馆墙上的字是谁题写的？",
+    "校史馆需要预约吗？",
+    "校史馆对外开放吗？"
+  ],
+  "related_chunk_types": ["intro", "detail", "photo"]
+},
   {
     "target_id": "fudan_history_museum_lawn_view",
     "spot_id": "fudan_history_museum",
