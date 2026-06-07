@@ -1130,24 +1130,104 @@
     "notes": "确认为毛泽东主席。"
   },
   {
+    "id": "q_alumni_hall_standard_001",
+    "question": "这是什么地方？",
+    "mode": "guided",
+    "current_spot_id": "fudan_alumni_hall",
+    "nearby_spot_ids": ["fudan_alumni_hall", "fudan_zibin_hall", "xianghui_hall"],
+    "expected_spot_ids": ["fudan_alumni_hall"],
+    "expected_chunk_types": ["intro", "faq"],
+    "notes": "应准确提取校友馆前身为1922年落成的奕住堂，以及2025年焕新后作为全球复旦人“返校大本营”的功能定位。"
+  },
+  {
+    "id": "q_alumni_hall_standard_002",
+    "question": "这里有什么历史？",
+    "mode": "guided",
+    "current_spot_id": "fudan_alumni_hall",
+    "nearby_spot_ids": ["fudan_alumni_hall", "fudan_zibin_hall"],
+    "expected_spot_ids": ["fudan_alumni_hall"],
+    "expected_chunk_types": ["history", "faq"],
+    "notes": "应严格依序召回：1922教学楼(奕住堂) -> 1929仙舟图书馆 -> 2005至2024校史馆 -> 2025年修缮为校友馆的空间变迁史。"
+  },
+  {
+    "id": "q_alumni_hall_standard_003",
+    "question": "这里最值得看什么？",
+    "mode": "guided",
+    "current_spot_id": "fudan_alumni_hall",
+    "nearby_spot_ids": ["fudan_alumni_hall", "fudan_zibin_hall"],
+    "expected_spot_ids": ["fudan_alumni_hall"],
+    "expected_chunk_types": ["intro", "architecture", "faq"],
+    "notes": "需指出由墨菲设计的中西合璧建筑外观、复旦最美窗景，以及互动展示、聚会、THE PRESS咖啡厅三大功能空间。"
+  },
+  {
+    "id": "q_alumni_hall_standard_004",
+    "question": "这里适合拍照吗？",
+    "mode": "guided",
+    "current_spot_id": "fudan_alumni_hall",
+    "nearby_spot_ids": ["fudan_alumni_hall", "fudan_zibin_hall"],
+    "expected_spot_ids": ["fudan_alumni_hall"],
+    "expected_chunk_types": ["photo", "faq"],
+    "notes": "应提供一楼东侧大厅窗边“最美窗景”（推窗可见子彬院），以及正面中轴线拍青瓦飞檐的具体机位。"
+  },
+  {
+    "id": "q_alumni_hall_standard_005",
+    "question": "附近还有什么值得看？",
+    "mode": "guided",
+    "current_spot_id": "fudan_alumni_hall",
+    "nearby_spot_ids": ["fudan_alumni_hall", "fudan_zibin_hall", "xianghui_hall"],
+    "expected_spot_ids": ["fudan_alumni_hall"],
+    "expected_chunk_types": ["architecture", "intro"],
+    "notes": "应准确提取其位于相辉堂草坪南侧，并能推窗看到子彬院的周边空间关联。"
+  },
+  {
+    "id": "q_alumni_hall_followup_001",
+    "question": "这座建筑最初是由谁设计的？建筑外观有什么特征？",
+    "mode": "guided",
+    "current_spot_id": "fudan_alumni_hall",
+    "nearby_spot_ids": ["fudan_alumni_hall", "fudan_zibin_hall"],
+    "expected_spot_ids": ["fudan_alumni_hall"],
+    "expected_chunk_types": ["history", "architecture", "anecdote"],
+    "notes": "必须精确匹配耶鲁大学毕业的美国建筑师亨利·墨菲，并召回其采用混凝土模仿木柱的中西合璧歇山顶设计。"
+  },
+  {
+    "id": "q_alumni_hall_followup_002",
+    "question": "关于这栋楼的捐建有什么感人的故事吗？",
+    "mode": "guided",
+    "current_spot_id": "fudan_alumni_hall",
+    "nearby_spot_ids": ["fudan_alumni_hall", "fudan_zibin_hall"],
+    "expected_spot_ids": ["fudan_alumni_hall"],
+    "expected_chunk_types": ["anecdote", "history"],
+    "notes": "需召回1922年“剃头住”黄奕住捐建，与103年后校友阮伟祥捐资修缮的百年接力故事。"
+  },
+  {
+    "id": "q_alumni_hall_followup_003",
+    "question": "为什么这栋楼曾经被学生戏称为‘傻瓜馆’？",
+    "mode": "guided",
+    "current_spot_id": "fudan_alumni_hall",
+    "nearby_spot_ids": ["fudan_alumni_hall", "fudan_zibin_hall"],
+    "expected_spot_ids": ["fudan_alumni_hall"],
+    "expected_chunk_types": ["anecdote"],
+    "notes": "需准确解释1929年于右任题写的“仙舟”二字草书被误认的轶事。"
+  },
+  {
     "id": "q_history_museum_standard_001",
     "question": "这是什么地方？",
     "mode": "guided",
     "current_spot_id": "fudan_history_museum",
-    "nearby_spot_ids": ["fudan_history_museum", "xianghui_hall", "fudan_zibin_hall"],
+    "nearby_spot_ids": ["fudan_history_museum", "xianghui_hall"],
     "expected_spot_ids": ["fudan_history_museum"],
     "expected_chunk_types": ["intro", "faq"],
-    "notes": "应准确提取校史馆前身为1921年建成的奕住堂，是复旦现存最早的保持原貌的建筑，也是了解百年奋斗历程的必访之地。"
+    "notes": "应准确提取其作为‘复旦源’一源六馆重要组成部分，于2025年百廿校庆前焕新开放的新校史馆定位。"
   },
   {
     "id": "q_history_museum_standard_002",
     "question": "这里有什么历史？",
     "mode": "guided",
     "current_spot_id": "fudan_history_museum",
-    "nearby_spot_ids": ["fudan_history_museum", "xianghui_hall", "fudan_zibin_hall"],
+    "nearby_spot_ids": ["fudan_history_museum", "xianghui_hall"],
     "expected_spot_ids": ["fudan_history_museum"],
     "expected_chunk_types": ["history", "faq"],
-    "notes": "应召回1921年黄奕住捐资建奕住堂、1929年改为仙舟图书馆、抗战期间被日军击损一角，以及2005年辟为校史馆、2025年焕新升级的历史流变。"
+    "notes": "应召回其机构的历史流变：2005年于奕住堂建馆，2024年闭馆搬迁，2025年在新址重新开馆。"
   },
   {
     "id": "q_history_museum_standard_003",
@@ -1156,8 +1236,8 @@
     "current_spot_id": "fudan_history_museum",
     "nearby_spot_ids": ["fudan_history_museum", "xianghui_hall"],
     "expected_spot_ids": ["fudan_history_museum"],
-    "expected_chunk_types": ["faq", "intro", "architecture"],
-    "notes": "需指出由亨利·墨菲设计的中西合璧建筑本身，孙中山题字及毛泽东手迹等镇馆之宝，以及AI定制互动区。"
+    "expected_chunk_types": ["faq", "intro"],
+    "notes": "需指出按时间轴划分的8大展区，以及1909年文凭、孙中山题词、毛主席手迹等镇馆之宝。"
   },
   {
     "id": "q_history_museum_standard_004",
@@ -1167,67 +1247,57 @@
     "nearby_spot_ids": ["fudan_history_museum", "xianghui_hall"],
     "expected_spot_ids": ["fudan_history_museum"],
     "expected_chunk_types": ["photo", "faq"],
-    "notes": "应提供正面中轴线全景及东西两侧仰拍飞檐的具体机位，并提及青瓦白墙红窗的高出片率配色。"
+    "notes": "应提取利用晴天上午光线拍摄灰色现代建筑正面中轴线全貌，以及拍摄馆藏特写的建议。"
   },
   {
     "id": "q_history_museum_standard_005",
     "question": "附近还有什么值得看？",
     "mode": "guided",
     "current_spot_id": "fudan_history_museum",
-    "nearby_spot_ids": ["fudan_history_museum", "xianghui_hall", "fudan_zibin_hall"],
+    "nearby_spot_ids": ["fudan_history_museum", "xianghui_hall"],
     "expected_spot_ids": ["fudan_history_museum"],
     "expected_chunk_types": ["architecture", "intro"],
-    "notes": "需明确召回其东邻的相辉堂草坪，以及与相辉堂、子彬院等共同构成的校园核心景观群。"
+    "notes": "需明确召回其坐落于相辉堂草坪西侧的地理关联。"
   },
   {
     "id": "q_history_museum_followup_001",
-    "question": "1958年陈望道校长在此楼（时称700号楼）组织了怎样的人力搬书活动？",
+    "question": "现在的校史馆大楼是谁设计的？建筑是什么风格？",
     "mode": "guided",
     "current_spot_id": "fudan_history_museum",
     "nearby_spot_ids": ["fudan_history_museum", "xianghui_hall"],
     "expected_spot_ids": ["fudan_history_museum"],
-    "expected_chunk_types": ["anecdote", "history"],
-    "notes": "应准确提取1958年8月18日由陈望道亲自指挥，四千余师生家属排成人力传送带将约一百万册图书无损搬迁至新馆的史实档案。"
+    "expected_chunk_types": ["architecture"],
+    "notes": "【空间防幻觉测试】当前文档记载新馆为‘西式现代灰色建筑’，并未记载设计者。系统必须承认‘设计师资料缺失’，严禁因名称重叠召回原馆建筑师亨利·墨菲或中西合璧风格的错误数据。"
   },
   {
     "id": "q_history_museum_followup_002",
-    "question": "朱凡校友的经历与京剧《沙家浜》中的阿庆嫂有何具体关联？",
-    "mode": "guided",
-    "current_spot_id": "fudan_history_museum",
-    "nearby_spot_ids": ["fudan_history_museum", "xianghui_hall"],
-    "expected_spot_ids": ["fudan_history_museum"],
-    "expected_chunk_types": ["anecdote"],
-    "notes": "需精准匹配1939届校友朱凡（原名陆惠卿）在沙家浜以小学教师身份掩护斗争，京剧《沙家浜》阿庆嫂智斗情节有三分之一取材于她的考证记录。"
-  },
-  {
-    "id": "q_history_museum_followup_003",
-    "question": "2025年焕新升级后馆内新增了哪些AI定制与数字化互动展区？",
-    "mode": "guided",
-    "current_spot_id": "fudan_history_museum",
-    "nearby_spot_ids": ["fudan_history_museum", "xianghui_hall"],
-    "expected_spot_ids": ["fudan_history_museum"],
-    "expected_chunk_types": ["campus_life", "intro"],
-    "notes": "应完整列举第一展区的AI定制专属明信片、第五展区的触摸屏生成复旦学生卡，以及复旦剧社展区的AI合成个人剧照。"
-  },
-  {
-    "id": "q_history_museum_followup_004",
-    "question": "为什么原来的仙舟图书馆会被学生戏称为‘傻瓜馆’？",
+    "question": "馆内存世最早的毕业文凭是谁捐赠的？",
     "mode": "guided",
     "current_spot_id": "fudan_history_museum",
     "nearby_spot_ids": ["fudan_history_museum", "xianghui_hall"],
     "expected_spot_ids": ["fudan_history_museum"],
     "expected_chunk_types": ["anecdote", "history"],
-    "notes": "需准确解释书法家于右任题写的匾额中，草书‘仙舟’二字形似‘傻瓜’，以及学生借此明志苦读并留有‘宁去傻瓜馆，不入百乐门’对联的轶事。"
+    "notes": "需精准匹配知名物理学家张首晟将其祖父张彝于1909年获取的文凭捐赠给母校的故事。"
   },
   {
-    "id": "q_history_museum_followup_005",
-    "question": "校史馆的建筑风格和设计者是谁？",
+    "id": "q_history_museum_followup_003",
+    "question": "为什么以前大家管校史馆叫‘傻瓜馆’？",
     "mode": "guided",
     "current_spot_id": "fudan_history_museum",
     "nearby_spot_ids": ["fudan_history_museum", "xianghui_hall"],
     "expected_spot_ids": ["fudan_history_museum"],
-    "expected_chunk_types": ["architecture", "history"],
-    "notes": "必须精确匹配由毕业于耶鲁大学的美国建筑师亨利·墨菲设计，并准确描述其‘平面呈工字型’、‘仿中国古典宫殿式大屋顶歇山顶’及‘混凝土模仿木柱’等中西合璧的建筑形制。"
+    "expected_chunk_types": ["anecdote", "history"],
+    "notes": "【实体解绑防幻觉测试】新馆文档中已无此数据。系统应识别出“傻瓜馆”属于旧址（奕住堂/现校友馆）的历史，承认当前新馆文档中无此资料，严禁跨文档混答。"
+  },
+  {
+    "id": "q_history_museum_followup_004",
+    "question": "毛主席题写校名的具体经过是怎么样的？",
+    "mode": "guided",
+    "current_spot_id": "fudan_history_museum",
+    "nearby_spot_ids": ["fudan_history_museum", "xianghui_hall"],
+    "expected_spot_ids": ["fudan_history_museum"],
+    "expected_chunk_types": ["anecdote", "history"],
+    "notes": "应准确提取1950年陈望道致信，1951年由张志让、吴溉之转呈，最终收到无落款手迹的曲折经过。"
   },
   {
     "id": "q_guanghua_tower_standard_001",
