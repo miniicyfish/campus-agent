@@ -12,6 +12,11 @@ import type {
 
 const root = process.cwd();
 
+type BasicScriptFile = Omit<GuideScript, "guide_script_id"> & {
+  basic_script_id?: string;
+  guide_script_id?: string;
+};
+
 function readJsonFile<T>(filePath: string): T {
   return JSON.parse(fs.readFileSync(path.join(root, filePath), "utf8")) as T;
 }
@@ -76,6 +81,13 @@ export function getGuideScripts(): GuideScript[] {
   return readJsonDir<GuideScript>("knowledge/guide_scripts");
 }
 
+export function getBasicScripts(): GuideScript[] {
+  return readJsonDir<BasicScriptFile>("knowledge/basic_scripts").map((script) => ({
+    ...script,
+    guide_script_id: script.guide_script_id ?? script.basic_script_id ?? `${script.spot_id}_basic`,
+  }));
+}
+
 export function getPhotoTargets() {
   return readJsonDir<Record<string, unknown>>("data/photo_targets");
 }
@@ -125,6 +137,8 @@ export function matchRoute(profile: Profile): RouteMatch {
         styles_any?: string[];
       };
       route_id: string;
+      agent_id?: string;
+      style?: string;
       reason?: string;
     }>
   >("data/route_matching_rules.json");
@@ -160,6 +174,8 @@ export function matchRoute(profile: Profile): RouteMatch {
 
       return {
         route: routeMap.get(rule.route_id),
+        agent_id: rule.agent_id ?? "student_guide",
+        style: rule.style,
         reason: rule.reason ?? (reasons.join("，") || "根据你的画像选择最接近的预设路线。"),
         score,
       };
@@ -170,6 +186,8 @@ export function matchRoute(profile: Profile): RouteMatch {
   return (
     scored[0] ?? {
       route: routes[0],
+      agent_id: "student_guide",
+      style: routes[0]?.style,
       reason: "没有找到完全匹配的规则，先推荐覆盖核心点位的默认路线。",
       score: 0,
     }
@@ -177,10 +195,16 @@ export function matchRoute(profile: Profile): RouteMatch {
 }
 
 export function findGuideScript(spotId: string, routeId?: string, agentId?: string) {
+  const normalizedRouteId = routeId?.trim();
+  if (!normalizedRouteId) {
+    const basicScript = getBasicScripts().find((script) => script.spot_id === spotId);
+    if (basicScript) return basicScript;
+  }
+
   const scripts = getGuideScripts().filter((script) => script.spot_id === spotId);
   return (
-    scripts.find((script) => script.route_id === routeId && (!agentId || script.agent_id === agentId)) ??
-    scripts.find((script) => script.route_id === routeId) ??
+    scripts.find((script) => script.route_id === normalizedRouteId && (!agentId || script.agent_id === agentId)) ??
+    scripts.find((script) => script.route_id === normalizedRouteId) ??
     scripts[0]
   );
 }

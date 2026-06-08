@@ -9,6 +9,8 @@
       "styles_any": ["严谨", "客观", "专业"]
     },
     "route_id": "academic_route_30min",
+    "agent_id": "history_association",
+    "style": "严谨",
     "reason": "针对时间较紧凑但对复旦历史底蕴有较高要求的用户，优先推荐串联核心史迹的30分钟学术路线。"
   },
   {
@@ -21,6 +23,8 @@
       "styles_any": ["严谨", "客观", "专业"]
     },
     "route_id": "academic_route_60min",
+    "agent_id": "history_association",
+    "style": "严谨",
     "reason": "针对时间充裕且期望深入探究建校历史与文献档案的用户，分配包含校史馆的60分钟深度学术考察路线。"
   },
   {
@@ -33,6 +37,8 @@
       "styles_any": ["轻松", "活泼", "亲切"]
     },
     "route_id": "dream_school_30min",
+    "agent_id": "student_guide",
+    "style": "轻松",
     "reason": "针对期望快速体验校园活力与学习氛围的高中生及家长，推荐主打日常动线的30分钟梦校风路线。"
   },
   {
@@ -45,6 +51,8 @@
       "styles_any": ["轻松", "活泼", "亲切"]
     },
     "route_id": "dream_school_60min",
+    "agent_id": "student_guide",
+    "style": "轻松",
     "reason": "针对期望全面沉浸体验‘复旦十二时辰’的高中生群体，推荐涵盖自习与休闲全景的60分钟深度梦校风路线。"
   },
   {
@@ -52,11 +60,13 @@
     "priority": 100,
     "conditions": {
       "identities": ["访客", "家长", "摄影爱好者", "休闲者"],
-      "interests_any": ["自然景观", "校园漫步", "打卡出片"],
+      "interests_any": ["自然景观", "校园漫步", "打卡", "打卡出片"],
       "duration_minutes_max": 30,
       "styles_any": ["亲切", "轻松", "自然"]
     },
     "route_id": "park_route_30min",
+    "agent_id": "littleredbook_curator",
+    "style": "亲切",
     "reason": "针对时间有限但希望欣赏校园园林美学与出片打卡的用户，推荐高效串联经典景观的30分钟公园风路线。"
   },
   {
@@ -64,11 +74,13 @@
     "priority": 100,
     "conditions": {
       "identities": ["访客", "家长", "散步爱好者", "休闲者"],
-      "interests_any": ["自然景观", "校园漫步", "放松疗愈", "深度游"],
+      "interests_any": ["自然景观", "校园漫步", "打卡", "放松疗愈", "深度游"],
       "duration_minutes_max": 60,
       "styles_any": ["亲切", "轻松", "自然"]
     },
     "route_id": "park_route_60min",
+    "agent_id": "littleredbook_curator",
+    "style": "亲切",
     "reason": "针对时间充裕且主要诉求为放松疗愈的用户，推荐提供深度感官沉浸与漫步体验的60分钟公园风路线。"
   }
 ]

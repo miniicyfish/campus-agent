@@ -71,6 +71,8 @@ export type Agent = {
 
 export type RouteMatch = {
   route: CampusRoute;
+  agent_id: string;
+  style: string | undefined;
   reason: string;
   score: number;
 };

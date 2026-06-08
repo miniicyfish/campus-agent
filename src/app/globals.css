@@ -312,6 +312,12 @@ button {
   font-weight: 500;
 }
 
+.agent-tone {
+  margin-top: 4px;
+  color: #6b785f;
+  font-size: 15px;
+}
+
 .agent-confirm .muted {
   max-width: 310px;
   margin-top: 8px;
@@ -422,9 +428,9 @@ button {
 }
 
 .map-screen {
-  background-image: url("/assets/map-base.png");
-  background-position: center;
-  background-size: auto 100%;
+  background:
+    linear-gradient(rgba(239, 239, 220, 0.5), rgba(230, 236, 210, 0.68)),
+    #eef0d7;
 }
 
 .top-hud {
@@ -485,63 +491,64 @@ button {
 .map-canvas {
   position: absolute;
   inset: 92px 0 104px;
+  overflow: hidden;
   cursor: grab;
   touch-action: none;
-  transition: transform 120ms ease-out;
-  will-change: transform;
 }
 
 .map-canvas:active {
   cursor: grabbing;
 }
 
-.route-path {
+.map-stage {
   position: absolute;
-  left: 16%;
-  top: 53%;
-  width: 58%;
-  height: 140px;
-  border-left: 7px dashed rgba(255, 255, 255, 0.95);
-  border-top: 7px dashed rgba(255, 255, 255, 0.95);
-  transform: rotate(-18deg);
-  opacity: 0.86;
+  left: 50%;
+  top: 0;
+  height: 100%;
+  aspect-ratio: 1704 / 923;
+  transform-origin: center top;
+  will-change: transform;
+}
+
+.campus-map-image {
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: contain;
+  user-select: none;
+  pointer-events: none;
 }
 
 .map-marker {
   position: absolute;
   z-index: 2;
-  width: 70px;
-  min-height: 70px;
+  width: 38px;
+  height: 38px;
+  min-height: 38px;
   padding: 0;
-  border: 0;
-  background: transparent;
+  border: 2px solid rgba(255, 255, 255, 0.92);
+  border-radius: 999px;
+  background: rgba(120, 189, 227, 0.94);
+  box-shadow: 0 7px 16px rgba(48, 64, 72, 0.22);
   transform: translate(-50%, -50%);
-}
-
-.map-marker img {
-  width: 68px;
-  height: 68px;
-  object-fit: contain;
-  filter: drop-shadow(0 8px 8px rgba(56, 64, 51, 0.28));
+  backdrop-filter: blur(3px);
 }
 
 .map-marker span {
-  position: absolute;
-  right: 2px;
-  top: 4px;
   display: grid;
   place-items: center;
-  width: 24px;
-  height: 24px;
-  border-radius: 50%;
-  background: #78bde3;
+  width: 100%;
+  height: 100%;
   color: white;
-  font-size: 14px;
+  font-size: 18px;
   font-family: Georgia, serif;
+  line-height: 1;
 }
 
 .map-marker.active {
-  transform: translate(-50%, -50%) scale(1.18);
+  transform: translate(-50%, -50%) scale(1.14);
+  background: #62b6df;
+  box-shadow: 0 0 0 6px rgba(120, 189, 227, 0.24), 0 12px 22px rgba(48, 64, 72, 0.28);
 }
 
 .guide-panel {
@@ -711,12 +718,22 @@ button {
   font-size: 17px;
 }
 
+.completion-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
 .panel-actions {
   flex: 0 0 auto;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 12px;
   margin-top: 14px;
+}
+
+.panel-actions.completion-actions {
+  grid-template-columns: repeat(2, 1fr);
 }
 
 .panel-actions button {

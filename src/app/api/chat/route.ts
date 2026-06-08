@@ -1,5 +1,5 @@
 import { NextResponse } from "next/server";
-import { findGuideScript, getSpots, retrieveChunks } from "@/lib/content";
+import { findGuideScript, getAgents, getSpots, retrieveChunks } from "@/lib/content";
 import { requestChatCompletion } from "@/lib/model";
 
 export async function POST(request: Request) {
@@ -14,11 +14,13 @@ export async function POST(request: Request) {
   const chunks = retrieveChunks(payload.message, payload.spotId);
   const spot = getSpots().find((item) => item.spot_id === payload.spotId);
   const script = payload.spotId ? findGuideScript(payload.spotId, payload.routeId, payload.agentId) : undefined;
+  const agent = getAgents().find((item) => item.agent_id === payload.agentId);
   const sourceText = chunks
     .map((chunk) => `${chunk.spot_name} - ${chunk.title}：${chunk.content}`)
     .join("\n\n")
     .slice(0, 900);
   const fallback = script?.content ?? spot?.summary ?? "我会结合当前路线和校园知识库回答，但这个问题需要更多上下文。";
+  const agentName = agent?.name ?? "小A";
 
   if (process.env.OPENAI_API_KEY) {
     try {
@@ -27,7 +29,7 @@ export async function POST(request: Request) {
           {
             role: "system",
             content:
-              "你是复旦校园导览 App 的小A，回答要自然、简洁、像现场导览。优先依据提供的校园知识片段和当前点位信息，不确定时说明资料不足，不要编造开放时间、门禁政策或具体个人经历。",
+              `你是复旦校园导览 App 的${agentName}，回答要自然、简洁、像现场导览。优先依据提供的校园知识片段和当前点位信息，不确定时说明资料不足，不要编造开放时间、门禁政策或具体个人经历。\n\n当前匹配导览员设定：\n${agent?.body ?? "使用通用校园导览员语气，亲切、清楚、克制。"}`,
           },
           {
             role: "user",

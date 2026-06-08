@@ -1,7 +1,7 @@
 "use client";
 
 import { Camera, ChevronRight, Home as HomeIcon, Map, MessageCircle, Navigation, Route, Send, Sparkles } from "lucide-react";
-import type { PointerEvent as ReactPointerEvent } from "react";
+import type { PointerEvent as ReactPointerEvent, WheelEvent as ReactWheelEvent } from "react";
 import { FormEvent, useEffect, useMemo, useRef, useState } from "react";
 import type { Agent, CampusRoute, GuideScript, Profile, RouteMatch, Spot } from "@/lib/types";
 
@@ -16,21 +16,41 @@ type ChatMessage = {
   text: string;
 };
 
-const mapPositions: Record<string, { x: number; y: number; icon: string }> = {
-  fudan_main_gate: { x: 48, y: 91, icon: "gate_main.png" },
-  mao_statue: { x: 47, y: 78, icon: "sculpture_mao.png" },
-  fudan_old_gate: { x: 10, y: 74, icon: "gate_old.png" },
-  xianghui_hall: { x: 33, y: 61, icon: "hall_xianghui.png" },
-  fudan_zibin_hall: { x: 30, y: 51, icon: "hall_zibin.png" },
-  fudan_guanghua_tower: { x: 66, y: 46, icon: "teachingbuilding_guanghua.png" },
-  fudan_science_library: { x: 43, y: 42, icon: "liberary_science.png" },
-  fudan_third_teaching_building: { x: 54, y: 54, icon: "teachingbuilding_3.png" },
-  fourth_teaching_building: { x: 78, y: 65, icon: "teachingbuilding_4.png" },
-  fudan_history_museum: { x: 20, y: 28, icon: "hall_history.png" },
-  guanghua_lawn: { x: 60, y: 56, icon: "grass_guang.png" },
-  danyuan_canteen: { x: 82, y: 30, icon: "danyuan_canteen.png" },
-  fudan_xiyuan: { x: 36, y: 85, icon: "paper1.png" },
-  fudan_yanyuan: { x: 8, y: 13, icon: "note1.png" },
+const mapPositions: Record<string, { x: number; y: number }> = {
+  fudan_yanyuan: { x: 7.8, y: 13.2 },
+  fudan_science_library: { x: 11.2, y: 47.4 },
+  fudan_history_museum: { x: 18.1, y: 39.1 },
+  fudan_old_gate: { x: 25.2, y: 88.2 },
+  xianghui_hall: { x: 26.6, y: 55.8 },
+  fudan_third_teaching_building: { x: 39.6, y: 43.2 },
+  fudan_zibin_hall: { x: 47.3, y: 76.5 },
+  fudan_xiyuan: { x: 49.5, y: 87.1 },
+  fudan_main_gate: { x: 55.5, y: 88.4 },
+  mao_statue: { x: 55.8, y: 70.6 },
+  fourth_teaching_building: { x: 62.0, y: 66.5 },
+  fudan_alumni_hall: { x: 62.8, y: 76.4 },
+  fudan_guanghua_tower: { x: 77.5, y: 34.9 },
+  guanghua_lawn: { x: 78.7, y: 51.8 },
+  danyuan_canteen: { x: 90.3, y: 22.4 },
+};
+
+const mapBounds = {
+  aspectRatio: 1704 / 923,
+  maxPanX: 620,
+  minPanY: -420,
+  maxPanY: 90,
+  minScale: 1,
+  maxScale: 2.4,
+};
+
+function clamp(value: number, min: number, max: number) {
+  return Math.max(min, Math.min(max, value));
+}
+
+const agentAssets: Record<string, string> = {
+  student_guide: "/assets/agents/student-guide.png",
+  history_association: "/assets/agents/history-scholar.png",
+  littleredbook_curator: "/assets/agents/aesthetic-curator.png",
 };
 
 const profileOptions = {
@@ -57,7 +77,9 @@ export default function Home() {
   const [activeIndex, setActiveIndex] = useState(0);
   const [activeGuide, setActiveGuide] = useState<GuideScript | null>(null);
   const [guideSheet, setGuideSheet] = useState<"peek" | "open" | "full">("peek");
+  const [routeFinished, setRouteFinished] = useState(false);
   const [mapPan, setMapPan] = useState({ x: 0, y: 0 });
+  const [mapScale, setMapScale] = useState(1);
   const [drawerOpen, setDrawerOpen] = useState(false);
   const [profilePending, setProfilePending] = useState(false);
   const [chatInput, setChatInput] = useState("");
@@ -69,6 +91,9 @@ export default function Home() {
   const fileInputRef = useRef<HTMLInputElement>(null);
   const sheetDragRef = useRef<{ y: number; moved: boolean } | null>(null);
   const mapDragRef = useRef<{ x: number; y: number; startX: number; startY: number; moved: boolean } | null>(null);
+  const mapPointersRef = useRef(new globalThis.Map<number, { x: number; y: number }>());
+  const mapPinchRef = useRef<{ distance: number; startScale: number } | null>(null);
+  const mapFrameRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
     fetch("/api/bootstrap")
@@ -103,8 +128,13 @@ export default function Home() {
       });
   }, [bootstrap, match, profile]);
 
-  const agent = useMemo(() => bootstrap?.agents.find((item) => item.agent_id === "student_guide") ?? bootstrap?.agents[0], [bootstrap]);
   const route = match?.route;
+  const recommendedAgentId = match?.agent_id ?? "student_guide";
+  const agent = useMemo(
+    () => bootstrap?.agents.find((item) => item.agent_id === recommendedAgentId) ?? bootstrap?.agents.find((item) => item.agent_id === "student_guide") ?? bootstrap?.agents[0],
+    [bootstrap?.agents, recommendedAgentId],
+  );
+  const agentAvatar = agentAssets[agent?.agent_id ?? "student_guide"] ?? "/assets/character-little-a.png";
   const guidedSpots = useMemo(
     () =>
       route?.stops
@@ -116,6 +146,7 @@ export default function Home() {
   const visibleSpots = tourMode === "free" ? freeSpots : guidedSpots;
   const activeStop = tourMode === "guided" ? route?.stops[activeIndex] : undefined;
   const activeSpot = visibleSpots[activeIndex] ?? visibleSpots[0];
+  const isFinalGuidedStop = tourMode === "guided" && activeIndex >= visibleSpots.length - 1;
 
   useEffect(() => {
     if (!activeSpot) return;
@@ -124,6 +155,24 @@ export default function Home() {
       .then((response) => response.json())
       .then((payload) => setActiveGuide(payload.script));
   }, [activeSpot, agent?.agent_id, route?.route_id, tourMode]);
+
+  useEffect(() => {
+    if (step !== "map" || !activeSpot) return;
+    const position = mapPositions[activeSpot.spot_id];
+    const frame = mapFrameRef.current;
+    if (!position || !frame) return;
+
+    const stageWidth = frame.clientHeight * mapBounds.aspectRatio;
+    const targetX = (stageWidth * position.x) / 100;
+    const targetY = (frame.clientHeight * position.y) / 100;
+    const desiredY =
+      guideSheet === "peek" ? frame.clientHeight * 0.52 : guideSheet === "full" ? frame.clientHeight * 0.26 : frame.clientHeight * 0.34;
+
+    setMapPan({
+      x: Math.max(-mapBounds.maxPanX, Math.min(mapBounds.maxPanX, stageWidth / 2 - targetX)),
+      y: Math.max(mapBounds.minPanY, Math.min(mapBounds.maxPanY, desiredY - targetY)),
+    });
+  }, [activeSpot, guideSheet, step]);
 
   async function submitProfile(event: FormEvent) {
     event.preventDefault();
@@ -237,36 +286,77 @@ export default function Home() {
     }
   }
 
+  function getPinchDistance() {
+    const points = Array.from(mapPointersRef.current.values());
+    if (points.length < 2) return 0;
+    return Math.hypot(points[0].x - points[1].x, points[0].y - points[1].y);
+  }
+
+  function clampMapPan(nextPan: { x: number; y: number }, scale = mapScale) {
+    return {
+      x: clamp(nextPan.x, -mapBounds.maxPanX * scale, mapBounds.maxPanX * scale),
+      y: clamp(nextPan.y, mapBounds.minPanY * scale, mapBounds.maxPanY * scale),
+    };
+  }
+
   function beginMapDrag(event: ReactPointerEvent<HTMLDivElement>) {
     if ((event.target as HTMLElement).closest(".map-marker")) return;
+    mapPointersRef.current.set(event.pointerId, { x: event.clientX, y: event.clientY });
     mapDragRef.current = { x: event.clientX, y: event.clientY, startX: mapPan.x, startY: mapPan.y, moved: false };
     event.currentTarget.setPointerCapture(event.pointerId);
+
+    if (mapPointersRef.current.size >= 2) {
+      mapPinchRef.current = { distance: getPinchDistance(), startScale: mapScale };
+      mapDragRef.current = null;
+    }
   }
 
   function moveMapDrag(event: ReactPointerEvent<HTMLDivElement>) {
+    if (mapPointersRef.current.has(event.pointerId)) {
+      mapPointersRef.current.set(event.pointerId, { x: event.clientX, y: event.clientY });
+    }
+
+    if (mapPointersRef.current.size >= 2 && mapPinchRef.current) {
+      const distance = getPinchDistance();
+      if (distance > 0 && mapPinchRef.current.distance > 0) {
+        setMapScale(clamp(mapPinchRef.current.startScale * (distance / mapPinchRef.current.distance), mapBounds.minScale, mapBounds.maxScale));
+      }
+      return;
+    }
+
     const drag = mapDragRef.current;
     if (!drag) return;
     const dx = event.clientX - drag.x;
     const dy = event.clientY - drag.y;
     if (Math.abs(dx) + Math.abs(dy) > 8) drag.moved = true;
-    setMapPan({
-      x: Math.max(-90, Math.min(90, drag.startX + dx)),
-      y: Math.max(-140, Math.min(90, drag.startY + dy)),
-    });
+    setMapPan(clampMapPan({ x: drag.startX + dx, y: drag.startY + dy }));
   }
 
   function endMapDrag(event: ReactPointerEvent<HTMLDivElement>) {
-    if (!mapDragRef.current) return;
-    const moved = mapDragRef.current.moved;
+    const drag = mapDragRef.current;
+    mapPointersRef.current.delete(event.pointerId);
+    if (mapPointersRef.current.size < 2) mapPinchRef.current = null;
     mapDragRef.current = null;
-    event.currentTarget.releasePointerCapture(event.pointerId);
+    if (event.currentTarget.hasPointerCapture(event.pointerId)) event.currentTarget.releasePointerCapture(event.pointerId);
+
+    if (!drag) return;
+    const moved = drag.moved;
     if (!moved) collapseGuideSheet();
+  }
+
+  function zoomMapWithWheel(event: ReactWheelEvent<HTMLDivElement>) {
+    event.preventDefault();
+    const nextScale = clamp(mapScale + (event.deltaY > 0 ? -0.12 : 0.12), mapBounds.minScale, mapBounds.maxScale);
+    setMapScale(nextScale);
+    setMapPan((current) => clampMapPan(current, nextScale));
   }
 
   function enterGuidedMode() {
     setTourMode("guided");
     setActiveIndex(0);
+    setRouteFinished(false);
     setMapPan({ x: 0, y: 0 });
+    setMapScale(1);
     setGuideSheet("peek");
     setVisualContext(null);
     setStep("map");
@@ -275,7 +365,9 @@ export default function Home() {
   function enterFreeMode() {
     setTourMode("free");
     setActiveIndex(0);
+    setRouteFinished(false);
     setMapPan({ x: 0, y: 0 });
+    setMapScale(1);
     setGuideSheet("peek");
     setDrawerOpen(false);
     setVisualContext(null);
@@ -285,20 +377,53 @@ export default function Home() {
   function startGuideSetup() {
     setTourMode("guided");
     setActiveIndex(0);
+    setRouteFinished(false);
     setMapPan({ x: 0, y: 0 });
+    setMapScale(1);
     setGuideSheet("peek");
     setDrawerOpen(false);
     setVisualContext(null);
     setStep("profile");
   }
 
+  function openModeSelection() {
+    if (match) {
+      setDrawerOpen(false);
+      setRouteFinished(false);
+      setGuideSheet("peek");
+      setStep("mode");
+      return;
+    }
+
+    startGuideSetup();
+  }
+
   function returnHome() {
     setActiveIndex(0);
+    setRouteFinished(false);
     setMapPan({ x: 0, y: 0 });
+    setMapScale(1);
     setGuideSheet("peek");
     setDrawerOpen(false);
     setVisualContext(null);
     setStep("home");
+  }
+
+  function goToNextStop() {
+    if (tourMode !== "guided") {
+      openModeSelection();
+      return;
+    }
+
+    if (isFinalGuidedStop) {
+      setRouteFinished(true);
+      setGuideSheet("open");
+      return;
+    }
+
+    setRouteFinished(false);
+    setActiveIndex((index) => index + 1);
+    setGuideSheet("open");
   }
 
   if (!bootstrap) {
@@ -320,16 +445,12 @@ export default function Home() {
           <div className="home-entry">
             <div className="home-hero">
               <p>FUDAN CAMPUS AGENT</p>
-              <h1>今天想怎么逛复旦？</h1>
+              <h1>先为你准备一条校园导览</h1>
             </div>
             <div className="home-actions">
-              <button type="button" className="home-card primary" onClick={enterFreeMode}>
-                <strong>自由参观</strong>
-                <span>不用填写资料，直接进入校园地图。点开任意坐标，就能查看这里的介绍和追问。</span>
-              </button>
-              <button type="button" className="home-card" onClick={startGuideSetup}>
-                <strong>让小A带路</strong>
-                <span>回答几个问题，系统会匹配路线、导览员和讲解风格，适合第一次来或想省心游览。</span>
+              <button type="button" className="home-card primary start-card" onClick={startGuideSetup}>
+                <strong>开始匹配</strong>
+                <span>先回答几个问题，小A会为你匹配路线和导览员。之后你可以按推荐路线走，也可以切到自由导览。</span>
               </button>
             </div>
           </div>
@@ -427,13 +548,14 @@ export default function Home() {
             <div className="tower-hero" />
             <p>经激烈讨论</p>
             <h1>本次带你一起逛校园的是：</h1>
-            <img className="avatar-large" src="/assets/character-little-a.png" alt="" />
+            <img className="avatar-large" src={agentAvatar} alt="" />
             <h2>{agent?.name ?? "校史馆小A"}</h2>
+            <p className="agent-tone">{agent?.tone ?? match?.style ?? "校园导览"}</p>
             <p className="muted">{match?.reason}</p>
             <div className="route-card">
               <strong>{route.name}</strong>
               <span>{route.description}</span>
-              <em>{route.duration_minutes} 分钟 · {route.stops.length} 站</em>
+              <em>{route.duration_minutes} 分钟 · {route.stops.length} 站 · {match?.style ?? route.style ?? "自适应"}风格</em>
             </div>
             <button className="primary-button oversized" type="button" onClick={() => setStep("mode")}>
               开始游览
@@ -448,12 +570,12 @@ export default function Home() {
             <h1>{route.name}</h1>
             <div className="mode-options">
               <button type="button" onClick={enterGuidedMode}>
-                <strong>开始导览</strong>
-                <span>按推荐路线走，到站后拉起讲解和追问。</span>
+                <strong>推荐路线导览</strong>
+                <span>按系统匹配的路线走，到站后拉起讲解和追问，适合想省心游览。</span>
               </button>
               <button type="button" onClick={enterFreeMode}>
-                <strong>改为自由参观</strong>
-                <span>跳过路线，只看地图，点哪个坐标就打开哪个点位介绍。</span>
+                <strong>自由导览</strong>
+                <span>不按推荐路线走，直接看地图点选坐标；点位介绍用基础脚本，追问仍由{agent?.name ?? "匹配导览员"}按{match?.style ?? "匹配"}风格回答。</span>
               </button>
             </div>
             <button className="secondary-button" type="button" onClick={() => setStep("agent")}>
@@ -472,46 +594,50 @@ export default function Home() {
               <button
                 type="button"
                 className="hud-action mode-switch"
-                onClick={tourMode === "free" ? startGuideSetup : enterFreeMode}
-                aria-label={tourMode === "free" ? "进入导览模式" : "切换到自由探索"}
+                onClick={tourMode === "free" ? openModeSelection : enterFreeMode}
+                aria-label={tourMode === "free" ? "返回模式选择" : "切换到自由导览"}
               >
                 {tourMode === "free" ? <Route size={17} /> : <Map size={17} />}
-                <span>{tourMode === "free" ? "开启导览" : "自由探索"}</span>
+                <span>{tourMode === "free" ? "选模式" : "切自由"}</span>
               </button>
               <button type="button" className="arrival-pill" onClick={() => setGuideSheet("open")}>
-                {tourMode === "free" ? activeSpot.name : guideSheet !== "peek" ? `${activeIndex + 1}/${visibleSpots.length} 站` : "快到了！"}
+                {tourMode === "free" ? activeSpot.name : `${activeIndex + 1}/${visibleSpots.length} 站`}
               </button>
-              <img src="/assets/character-little-a.png" alt="" />
+              <img src={agentAvatar} alt="" />
             </div>
 
             <div
+              ref={mapFrameRef}
               className="map-canvas"
               onPointerDown={beginMapDrag}
               onPointerMove={moveMapDrag}
               onPointerUp={endMapDrag}
-              style={{ transform: `translate3d(${mapPan.x}px, ${mapPan.y}px, 0)` }}
+              onPointerCancel={endMapDrag}
+              onWheel={zoomMapWithWheel}
             >
-              {visibleSpots.map((spot, index) => {
-                const position = mapPositions[spot.spot_id] ?? { x: 50, y: 50, icon: "note1.png" };
-                return (
-                  <button
-                    key={spot.spot_id}
-                    type="button"
-                    className={`map-marker ${index === activeIndex ? "active" : ""}`}
-                    style={{ left: `${position.x}%`, top: `${position.y}%` }}
-                    onClick={() => {
-                      setActiveIndex(index);
-                      setGuideSheet("open");
-                      setVisualContext(null);
-                    }}
-                    aria-label={spot.name}
-                  >
-                    <img src={`/assets/image_walk/透明图标/${position.icon}`} alt="" />
-                    <span>{index + 1}</span>
-                  </button>
-                );
-              })}
-              {tourMode === "guided" && <div className="route-path" />}
+              <div className="map-stage" style={{ transform: `translate3d(calc(-50% + ${mapPan.x}px), ${mapPan.y}px, 0) scale(${mapScale})` }}>
+                <img className="campus-map-image" src="/assets/map-new.png" alt="复旦大学校园地图" draggable={false} />
+                {visibleSpots.map((spot, index) => {
+                  const position = mapPositions[spot.spot_id] ?? { x: 50, y: 50 };
+                  return (
+                    <button
+                      key={spot.spot_id}
+                      type="button"
+                      className={`map-marker ${index === activeIndex ? "active" : ""}`}
+                      style={{ left: `${position.x}%`, top: `${position.y}%` }}
+                      onClick={() => {
+                        setActiveIndex(index);
+                        setRouteFinished(false);
+                        setGuideSheet("open");
+                        setVisualContext(null);
+                      }}
+                      aria-label={spot.name}
+                    >
+                      <span>{index + 1}</span>
+                    </button>
+                  );
+                })}
+              </div>
             </div>
 
             <section className={`guide-panel ${guideSheet}`}>
@@ -526,49 +652,59 @@ export default function Home() {
 
               {guideSheet === "peek" ? (
                 <div className="peek-content">
-                  <img src="/assets/character-little-a.png" alt="" />
+                  <img src={agentAvatar} alt="" />
                   <button type="button" className="peek-prompt" onClick={() => setDrawerOpen(true)}>
-                    你在{activeSpot.name}附近，有什么想了解的吗？
+                    {tourMode === "guided" ? `你正在${activeSpot.name}附近，想听听这里的故事吗？` : `你在${activeSpot.name}附近，有什么想了解的吗？`}
                   </button>
                 </div>
               ) : (
                 <>
                   <div className="panel-heading">
-                    <img src="/assets/character-little-a.png" alt="" />
+                    <img src={agentAvatar} alt="" />
                     <div>
-                      <p>{tourMode === "free" ? "自由游览" : `${activeIndex + 1} / ${visibleSpots.length} 站`}</p>
-                      <h2>{activeSpot.name}</h2>
-                      <span>{activeSpot.summary}</span>
+                      <p>{routeFinished ? "路线完成" : tourMode === "free" ? "自由游览" : `${activeIndex + 1} / ${visibleSpots.length} 站`}</p>
+                      <h2>{routeFinished ? "导览完成" : activeSpot.name}</h2>
+                      <span>{routeFinished ? route?.name : activeSpot.summary}</span>
                     </div>
                   </div>
                   <div className="progress-track">
                     <span style={{ width: `${tourMode === "free" ? 100 : ((activeIndex + 1) / visibleSpots.length) * 100}%` }} />
                   </div>
-                  <article>
-                    <h3>{activeGuide?.title ?? activeSpot.name}</h3>
-                    <p>{activeGuide?.content ?? activeSpot.summary}</p>
-                  </article>
-                  <div className="panel-actions">
-                    <button type="button" onClick={() => setDrawerOpen(true)}>
-                      <MessageCircle size={18} /> 追问
-                    </button>
-                    <button type="button" onClick={() => fileInputRef.current?.click()}>
-                      <Camera size={18} /> 拍照
-                    </button>
-                    <button
-                      type="button"
-                      onClick={() => {
-                        if (tourMode === "guided") {
-                          setActiveIndex((index) => Math.min(index + 1, visibleSpots.length - 1));
-                          setGuideSheet("open");
-                        } else {
-                          startGuideSetup();
-                        }
-                      }}
-                    >
-                      {tourMode === "guided" ? <Navigation size={18} /> : <Route size={18} />} {tourMode === "guided" ? "下一站" : "开启导览"}
-                    </button>
-                  </div>
+                  {routeFinished ? (
+                    <>
+                      <article className="completion-card">
+                        <h3>{route?.ending_message ? "今天的路线到这里" : "路线已经走完"}</h3>
+                        <p>{route?.ending_message ?? "本次导览已经完成，你可以继续自由参观，或回到首页重新选择路线。"}</p>
+                      </article>
+                      <div className="panel-actions completion-actions">
+                        <button type="button" onClick={returnHome}>
+                          <HomeIcon size={18} /> 返回首页
+                        </button>
+                        <button type="button" onClick={enterFreeMode}>
+                          <Map size={18} /> 自由参观
+                        </button>
+                      </div>
+                    </>
+                  ) : (
+                    <>
+                      <article>
+                        <h3>{activeGuide?.title ?? activeSpot.name}</h3>
+                        <p>{activeGuide?.content ?? activeSpot.summary}</p>
+                      </article>
+                      <div className="panel-actions">
+                        <button type="button" onClick={() => setDrawerOpen(true)}>
+                          <MessageCircle size={18} /> 追问
+                        </button>
+                        <button type="button" onClick={() => fileInputRef.current?.click()}>
+                          <Camera size={18} /> 拍照
+                        </button>
+                        <button type="button" onClick={goToNextStop}>
+                          {tourMode === "guided" ? <Navigation size={18} /> : <Route size={18} />}{" "}
+                          {tourMode === "guided" ? (isFinalGuidedStop ? "完成导览" : "下一站") : "开启导览"}
+                        </button>
+                      </div>
+                    </>
+                  )}
                 </>
               )}
               <input
