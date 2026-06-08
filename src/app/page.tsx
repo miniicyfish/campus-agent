@@ -190,7 +190,15 @@ export default function Home() {
       });
       const result = (await response.json()) as RouteMatch;
       setMatch(result);
-      enterGuidedMode();
+      setTourMode("guided");
+      setActiveIndex(0);
+      setRouteFinished(false);
+      setMapPan({ x: 0, y: 0 });
+      setMapScale(1);
+      setGuideSheet("peek");
+      setDrawerOpen(false);
+      setVisualContext(null);
+      setStep("agent");
     } finally {
       setProfilePending(false);
     }
