@@ -190,7 +190,7 @@ export default function Home() {
       });
       const result = (await response.json()) as RouteMatch;
       setMatch(result);
-      setStep("agent");
+      enterGuidedMode();
     } finally {
       setProfilePending(false);
     }
@@ -445,12 +445,16 @@ export default function Home() {
           <div className="home-entry">
             <div className="home-hero">
               <p>FUDAN CAMPUS AGENT</p>
-              <h1>先为你准备一条校园导览</h1>
+              <h1>今天想怎么逛复旦？</h1>
             </div>
             <div className="home-actions">
-              <button type="button" className="home-card primary start-card" onClick={startGuideSetup}>
-                <strong>开始匹配</strong>
-                <span>先回答几个问题，小A会为你匹配路线和导览员。之后你可以按推荐路线走，也可以切到自由导览。</span>
+              <button type="button" className="home-card primary" onClick={enterFreeMode}>
+                <strong>自由参观</strong>
+                <span>不用填写资料，直接进入校园地图。点开任意坐标，就能查看这里的介绍和追问。</span>
+              </button>
+              <button type="button" className="home-card" onClick={startGuideSetup}>
+                <strong>导览模式</strong>
+                <span>回答几个问题，系统会匹配路线、导览员和讲解风格，适合第一次来或想省心游览。</span>
               </button>
             </div>
           </div>
@@ -557,7 +561,7 @@ export default function Home() {
               <span>{route.description}</span>
               <em>{route.duration_minutes} 分钟 · {route.stops.length} 站 · {match?.style ?? route.style ?? "自适应"}风格</em>
             </div>
-            <button className="primary-button oversized" type="button" onClick={() => setStep("mode")}>
+            <button className="primary-button oversized" type="button" onClick={enterGuidedMode}>
               开始游览
             </button>
           </div>
