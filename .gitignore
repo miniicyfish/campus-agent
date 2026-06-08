@@ -3,3 +3,8 @@ node_modules/
 .next/
 .env
 .env.local
+
+# Local source assets; runtime assets live in public/assets.
+assets/image_agent/
+assets/image_walk/
+assets/image_walk_2/

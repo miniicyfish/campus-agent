@@ -3,7 +3,7 @@
 这个仓库用于准备校园导览 Agent 的内容文件。请先阅读：
 
 ```text
-content-writer-guide.md
+docs/content_writer_guide.md
 ```
 
 内容交付目录：
