@@ -17,21 +17,20 @@ type ChatMessage = {
 };
 
 const mapPositions: Record<string, { x: number; y: number }> = {
-  fudan_yanyuan: { x: 7.8, y: 13.2 },
-  fudan_science_library: { x: 11.2, y: 47.4 },
-  fudan_history_museum: { x: 18.1, y: 39.1 },
-  fudan_old_gate: { x: 25.2, y: 88.2 },
-  xianghui_hall: { x: 26.6, y: 55.8 },
-  fudan_third_teaching_building: { x: 39.6, y: 43.2 },
-  fudan_zibin_hall: { x: 47.3, y: 76.5 },
-  fudan_xiyuan: { x: 49.5, y: 87.1 },
-  fudan_main_gate: { x: 55.5, y: 88.4 },
-  mao_statue: { x: 55.8, y: 70.6 },
-  fourth_teaching_building: { x: 62.0, y: 66.5 },
-  fudan_alumni_hall: { x: 62.8, y: 76.4 },
-  fudan_guanghua_tower: { x: 77.5, y: 34.9 },
-  guanghua_lawn: { x: 78.7, y: 51.8 },
+  fudan_history_museum: { x: 10.6, y: 46.7 },
+  xianghui_hall: { x: 18.7, y: 38.9 },
+  fudan_zibin_hall: { x: 26.5, y: 53.0 },
+  fourth_teaching_building: { x: 39.7, y: 40.7 },
+  fudan_guanghua_tower: { x: 77.2, y: 34.7 },
   danyuan_canteen: { x: 90.3, y: 22.4 },
+  guanghua_lawn: { x: 76.8, y: 50.2 },
+  fudan_third_teaching_building: { x: 62.4, y: 64.4 },
+  mao_statue: { x: 55.2, y: 70.3 },
+  fudan_science_library: { x: 46.8, y: 74.0 },
+  fudan_yanyuan: { x: 35.8, y: 85.9 },
+  fudan_old_gate: { x: 25.8, y: 82.6 },
+  fudan_main_gate: { x: 54.6, y: 87.9 },
+  fudan_xiyuan: { x: 63.7, y: 85.9 },
 };
 
 const mapBounds = {
@@ -144,6 +143,7 @@ export default function Home() {
   );
   const freeSpots = useMemo(() => bootstrap?.spots.filter((spot) => mapPositions[spot.spot_id]) ?? [], [bootstrap?.spots]);
   const visibleSpots = tourMode === "free" ? freeSpots : guidedSpots;
+  const markerSpots = freeSpots;
   const activeStop = tourMode === "guided" ? route?.stops[activeIndex] : undefined;
   const activeSpot = visibleSpots[activeIndex] ?? visibleSpots[0];
   const isFinalGuidedStop = tourMode === "guided" && activeIndex >= visibleSpots.length - 1;
@@ -380,6 +380,22 @@ export default function Home() {
     setDrawerOpen(false);
     setVisualContext(null);
     setStep("map");
+  }
+
+  function selectMapSpot(spot: Spot) {
+    const guidedIndex = guidedSpots.findIndex((item) => item.spot_id === spot.spot_id);
+
+    if (tourMode === "guided" && guidedIndex >= 0) {
+      setActiveIndex(guidedIndex);
+    } else {
+      const freeIndex = freeSpots.findIndex((item) => item.spot_id === spot.spot_id);
+      setTourMode("free");
+      setActiveIndex(Math.max(0, freeIndex));
+    }
+
+    setRouteFinished(false);
+    setGuideSheet("open");
+    setVisualContext(null);
   }
 
   function startGuideSetup() {
@@ -629,23 +645,20 @@ export default function Home() {
             >
               <div className="map-stage" style={{ transform: `translate3d(calc(-50% + ${mapPan.x}px), ${mapPan.y}px, 0) scale(${mapScale})` }}>
                 <img className="campus-map-image" src="/assets/map-new.png" alt="复旦大学校园地图" draggable={false} />
-                {visibleSpots.map((spot, index) => {
+                {markerSpots.map((spot, index) => {
                   const position = mapPositions[spot.spot_id] ?? { x: 50, y: 50 };
+                  const guidedIndex = guidedSpots.findIndex((item) => item.spot_id === spot.spot_id);
+                  const isActive = activeSpot?.spot_id === spot.spot_id;
                   return (
                     <button
                       key={spot.spot_id}
                       type="button"
-                      className={`map-marker ${index === activeIndex ? "active" : ""}`}
+                      className={`map-marker ${isActive ? "active" : ""} ${tourMode === "guided" && guidedIndex < 0 ? "off-route" : ""}`}
                       style={{ left: `${position.x}%`, top: `${position.y}%` }}
-                      onClick={() => {
-                        setActiveIndex(index);
-                        setRouteFinished(false);
-                        setGuideSheet("open");
-                        setVisualContext(null);
-                      }}
+                      onClick={() => selectMapSpot(spot)}
                       aria-label={spot.name}
                     >
-                      <span>{index + 1}</span>
+                      <span>{tourMode === "guided" && guidedIndex >= 0 ? guidedIndex + 1 : index + 1}</span>
                     </button>
                   );
                 })}
