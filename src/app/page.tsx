@@ -458,11 +458,11 @@ export default function Home() {
             <div className="home-actions">
               <button type="button" className="home-card primary" onClick={enterFreeMode}>
                 <strong>自由参观</strong>
-                <span>不用填写资料，直接进入校园地图。点开任意坐标，就能查看这里的介绍和追问。</span>
+                <span>不用填写资料，直接进入校园地图。点击任意图标就能查看对应的介绍，并发起追问。</span>
               </button>
               <button type="button" className="home-card" onClick={startGuideSetup}>
                 <strong>导览模式</strong>
-                <span>回答几个问题，系统会匹配路线、导览员和讲解风格，适合第一次来或想省心游览。</span>
+                <span>回答几个问题，系统会匹配路线、导览员和讲解风格，适合第一次来或想省心游览的访客。</span>
               </button>
             </div>
           </div>
@@ -472,7 +472,7 @@ export default function Home() {
           <form className="paper-form" onSubmit={submitProfile}>
             <div className="profile-heading">
               <p>导览模式</p>
-              <h1>先让小A了解你一下</h1>
+              <h1>先让导览团队了解一下你</h1>
             </div>
             <div className="torn-paper">
               <label className="check-row">
@@ -489,7 +489,7 @@ export default function Home() {
                 <input value={profile.age} onChange={(event) => setProfile({ ...profile, age: event.target.value })} placeholder="例如 18 / 32" />
               </label>
               <div>
-                <span>来复旦校园，你的主要目的是</span>
+                <span>来复旦校园，你的身份是</span>
                 <div className="chip-grid">
                   {profileOptions.identities.map((identity) => (
                     <button
