@@ -143,7 +143,7 @@ export default function Home() {
   );
   const freeSpots = useMemo(() => bootstrap?.spots.filter((spot) => mapPositions[spot.spot_id]) ?? [], [bootstrap?.spots]);
   const visibleSpots = tourMode === "free" ? freeSpots : guidedSpots;
-  const markerSpots = freeSpots;
+  const markerSpots = tourMode === "free" ? freeSpots : guidedSpots;
   const activeStop = tourMode === "guided" ? route?.stops[activeIndex] : undefined;
   const activeSpot = visibleSpots[activeIndex] ?? visibleSpots[0];
   const isFinalGuidedStop = tourMode === "guided" && activeIndex >= visibleSpots.length - 1;
@@ -647,18 +647,17 @@ export default function Home() {
                 <img className="campus-map-image" src="/assets/map-new.png" alt="复旦大学校园地图" draggable={false} />
                 {markerSpots.map((spot, index) => {
                   const position = mapPositions[spot.spot_id] ?? { x: 50, y: 50 };
-                  const guidedIndex = guidedSpots.findIndex((item) => item.spot_id === spot.spot_id);
                   const isActive = activeSpot?.spot_id === spot.spot_id;
                   return (
                     <button
                       key={spot.spot_id}
                       type="button"
-                      className={`map-marker ${isActive ? "active" : ""} ${tourMode === "guided" && guidedIndex < 0 ? "off-route" : ""}`}
+                      className={`map-marker ${isActive ? "active" : ""} ${tourMode === "free" ? "free-hit-area" : ""}`}
                       style={{ left: `${position.x}%`, top: `${position.y}%` }}
                       onClick={() => selectMapSpot(spot)}
                       aria-label={spot.name}
                     >
-                      <span>{tourMode === "guided" && guidedIndex >= 0 ? guidedIndex + 1 : index + 1}</span>
+                      {tourMode === "guided" && <span>{index + 1}</span>}
                     </button>
                   );
                 })}

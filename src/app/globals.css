@@ -551,6 +551,18 @@ button {
   box-shadow: 0 0 0 6px rgba(120, 189, 227, 0.24), 0 12px 22px rgba(48, 64, 72, 0.28);
 }
 
+.map-marker.free-hit-area {
+  border-color: transparent;
+  background: transparent;
+  box-shadow: none;
+  backdrop-filter: none;
+}
+
+.map-marker.free-hit-area.active {
+  background: transparent;
+  box-shadow: none;
+}
+
 .guide-panel {
   position: absolute;
   z-index: 6;
