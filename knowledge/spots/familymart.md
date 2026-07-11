@@ -1,5 +1,5 @@
 ---
-spot_id:FamilyMart
+spot_id:familymart
 name: 全家便利店（复旦教学楼店）
 aliases:
   - 二教三教全家
