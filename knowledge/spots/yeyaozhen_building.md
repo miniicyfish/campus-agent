@@ -1,5 +1,5 @@
 ---
-spot_id: yeyazhen_building
+spot_id: yeyaozhen_building
 name: 叶耀珍楼
 aliases:
   - 叶楼
