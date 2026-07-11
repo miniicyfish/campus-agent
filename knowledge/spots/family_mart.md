@@ -1,17 +1,17 @@
 ---
-spot_id:familymart
-name: 全家便利店（复旦教学楼店）
+spot_id: family_mart
+name: 二三教全家便利店
 aliases:
-  - 二教三教全家
+  - 二三教全家
+  - 三教全家
   - 复旦全家
-  - 三教久留补给站
-type: 校园生活服务设施
+type: 校园生活设施
 campus: 邯郸校区
 tags:
   - 便利店
-  - 生活服务
-  - 自习补给
-  - 校园地标
+  - 自习
+  - 夜宵
+  - 校园生活
 recommended_audiences:
   - 新生
   - 在校生
