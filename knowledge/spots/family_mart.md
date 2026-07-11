@@ -1,6 +1,6 @@
 ---
 spot_id: family_mart
-name: 二三教全家便利店
+name: 全家便利店
 aliases:
   - 二三教全家
   - 三教全家
