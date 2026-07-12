@@ -17,6 +17,23 @@
     ]
   },
   {
+    "guide_script_id": "third_teaching_building_academic_60s_extreme",
+    "spot_id": "fudan_third_teaching_building",
+    "route_id": "academic_route_30min",
+    "agent_id": "history_association",
+    "audience": "访客",
+    "style": "严谨",
+    "language": "zh",
+    "duration_seconds": 75,
+    "title": "第三教学楼与学术思想史考证",
+    "content": "各位好，目前天气不太理想，三教本身就是遮风避雨的场所，请大家随我进入教学楼门厅或走廊暂避。我们现在面对的四层红砖建筑是复旦大学第三教学楼，简称‘三教’，于1980年前后竣工。由于当时恢复高考后学生人数剧增，学校在生物系的一片实验田上兴建了这栋教学楼。这里的一楼坐落着一间能容纳200多人的大型平面教室——3108。1984年4月30日，美国时任总统罗纳德·里根在谢希德校长的陪同下走进这间教室与学生展开对话。在80年代中后期，由学生自发组织的‘哲学系列讲座’等在此处掀起思想风暴，使3108教室成为思想解放浪潮中的文化标本。时至今日，教室内仍保留着略显笨重的老式木质固定桌椅，楼前则矗立着可手动旋转的金属雕塑‘硕果’。如果大家需要补充水分或购买热食，二三教之间的全家便利店步行仅需1分钟。",
+    "follow_up_suggestions": [
+      "里根总统在3108教室和学生的问答中有什么意外的小插曲？",
+      "80年代‘思想春运’期间讲座的火爆盛况有何记录？",
+      "二三教之间的全家便利店具体在什么位置？"
+    ]
+  },
+  {
     "guide_script_id": "third_teaching_building_dream_school_30s",
     "spot_id": "fudan_third_teaching_building",
     "route_id": "dream_school_30min",
@@ -30,6 +47,22 @@
     "follow_up_suggestions": [
       "三教是什么时候建的？",
       "3108教室里发生过什么有趣的事？"
+    ]
+  },
+  {
+    "guide_script_id": "third_teaching_building_dream_school_30s_extreme",
+    "spot_id": "fudan_third_teaching_building",
+    "route_id": "dream_school_30min",
+    "agent_id": "student_guide",
+    "audience": "高中生",
+    "style": "轻松",
+    "language": "zh",
+    "duration_seconds": 45,
+    "title": "三教：复旦人的期末修罗场",
+    "content": "现在外面天气不太好，三教本身就是绝佳的室内避险场所，大家快跟我进入门厅或走廊暂避一下。面前这栋红砖楼是我们复旦人最熟悉的“三教”。它建在以前生物系的实验田上。到了期末季，这里就是疯狂占座的“修罗场”，而且通宵开放，大家经常开玩笑说“三教久留”。一楼还有个非常传奇的3108大教室，1984年美国总统里根就是在那里面和复旦学生交流的哦！如果需要补充能量，二三教之间的全家便利店走路只要1分钟。",
+    "follow_up_suggestions": [
+      "三教是什么时候建的？",
+      "二三教之间的全家便利店有什么好吃的推荐？"
     ]
   },
   {
@@ -47,6 +80,23 @@
       "期末季的三教是什么样的？",
       "外面的金属雕塑叫什么名字？",
       "里根总统当年是在哪个教室演讲的？"
+    ]
+  },
+  {
+    "guide_script_id": "third_teaching_building_dream_school_60s_extreme",
+    "spot_id": "fudan_third_teaching_building",
+    "route_id": "dream_school_60min",
+    "agent_id": "student_guide",
+    "audience": "高中生",
+    "style": "轻松",
+    "language": "zh",
+    "duration_seconds": 75,
+    "title": "三教：大学最真实的自习日常",
+    "content": "现在外面天气不太理想，三教本身是遮风避雨的好地方，大家快跟我进教学楼里避一避，我们在走廊里边躲避边参观。我们现在来到了复旦的第三教学楼，大家一般简称“三教”。它大约是1980年建成的。这里绝对是复旦校园里最有“学霸气息”的地方，尤其是到了期末季，一楼到四楼全是埋头复习的同学，甚至要定闹钟来抢座位，因为这里通宵亮灯，所以有了“三教久留”的传说。里面有个3108大教室特别值得一提，它是复旦的“思想高地”，不仅80年代办过很多火爆的讲座，1984年美国总统里根来复旦的时候，也是在3108里和同学们对话的。门外那个可以转动的金属雕塑叫“硕果”，平时上完课路过，大家都喜欢去拨弄一下。如果大家需要热饮或零食，二三教之间的全家便利店走路1分钟就到了。",
+    "follow_up_suggestions": [
+      "期末季的三教是什么样的？",
+      "外面的金属雕塑叫什么名字？",
+      "二三教之间的全家便利店可以买到什么？"
     ]
   }
 ]
