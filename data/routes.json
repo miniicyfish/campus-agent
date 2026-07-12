@@ -16,7 +16,8 @@
         "order": 1,
         "estimated_stay_minutes": 3,
         "trigger_radius_meters": 60,
-        "guide_script_id": "main_gate_academic",
+        "guide_script_id": "main_gate_academic_30s",
+        "extreme_guide_script_id": "main_gate_academic_30s_extreme",
         "reason": "作为复旦的标志性入口与历史变迁的见证者，适合作为严肃历史叙事的起点。"
       },
       {
@@ -24,7 +25,8 @@
         "order": 2,
         "estimated_stay_minutes": 3,
         "trigger_radius_meters": 60,
-        "guide_script_id": "mao_statue_academic",
+        "guide_script_id": "mao_statue_academic_30s",
+        "extreme_guide_script_id": "mao_statue_academic_30s_extreme",
         "reason": "探讨特定历史时期的校园政治与文化遗存，观察其独特的‘三数模式’与建筑技法。"
       },
       {
@@ -32,7 +34,8 @@
         "order": 3,
         "estimated_stay_minutes": 5,
         "trigger_radius_meters": 60,
-        "guide_script_id": "third_teaching_building_academic",
+        "guide_script_id": "third_teaching_building_academic_60s",
+        "extreme_guide_script_id": "third_teaching_building_academic_60s_extreme",
         "reason": "途径‘精神高地’3108教室，回顾80年代思想解放浪潮与复旦自由开放的学术氛围。"
       },
       {
@@ -40,7 +43,8 @@
         "order": 4,
         "estimated_stay_minutes": 5,
         "trigger_radius_meters": 60,
-        "guide_script_id": "zibin_hall_academic",
+        "guide_script_id": "zibin_hall_academic_30s",
+        "extreme_guide_script_id": "zibin_hall_academic_30s_extreme",
         "reason": "考察复旦早期学科建设的辉煌，从‘远东第一心理学院’到中国南方数学重镇的空间演变。"
       },
       {
@@ -48,7 +52,8 @@
         "order": 5,
         "estimated_stay_minutes": 6,
         "trigger_radius_meters": 60,
-        "guide_script_id": "xianghui_hall_academic",
+        "guide_script_id": "xianghui_hall_academic_30s",
+        "extreme_guide_script_id": "xianghui_hall_academic_30s_extreme",
         "reason": "追寻‘团结、服务、牺牲’复旦精神的凝结点，感受核心仪式空间的厚重历史。"
       },
       {
@@ -56,7 +61,8 @@
         "order": 6,
         "estimated_stay_minutes": 3,
         "trigger_radius_meters": 60,
-        "guide_script_id": "old_gate_academic",
+        "guide_script_id": "old_gate_academic_30s",
+        "extreme_guide_script_id": "old_gate_academic_30s_extreme",
         "reason": "追溯1921年江湾办学的起点，为整条历史轴线的巡礼进行物理空间上的收束。"
       }
     ],
@@ -79,7 +85,8 @@
         "order": 1,
         "estimated_stay_minutes": 3,
         "trigger_radius_meters": 60,
-        "guide_script_id": "main_gate_academic",
+        "guide_script_id": "main_gate_academic_60s",
+        "extreme_guide_script_id": "main_gate_academic_60s_extreme",
         "reason": "解读毛泽东题字与陈望道捐资建门的史料档案，确立整条路线的宏观历史基调。"
       },
       {
@@ -87,7 +94,8 @@
         "order": 2,
         "estimated_stay_minutes": 3,
         "trigger_radius_meters": 60,
-        "guide_script_id": "mao_statue_academic",
+        "guide_script_id": "mao_statue_academic_60s",
+        "extreme_guide_script_id": "mao_statue_academic_60s_extreme",
         "reason": "作为中轴线的重要节点，客观审视复旦师生在特殊年代留下的雕塑遗存。"
       },
       {
@@ -95,7 +103,8 @@
         "order": 3,
         "estimated_stay_minutes": 7,
         "trigger_radius_meters": 60,
-        "guide_script_id": "science_library_academic",
+        "guide_script_id": "science_library_academic_60s",
+        "extreme_guide_script_id": "science_library_academic_60s_extreme",
         "reason": "溯源百年阅读史，重温‘四千人搬书’的时代记忆与破除借书陈规的质朴学风。"
       },
       {
@@ -103,7 +112,8 @@
         "order": 4,
         "estimated_stay_minutes": 7,
         "trigger_radius_meters": 60,
-        "guide_script_id": "zibin_hall_academic",
+        "guide_script_id": "zibin_hall_academic_60s",
+        "extreme_guide_script_id": "zibin_hall_academic_60s_extreme",
         "reason": "深入剖析‘小白宫’的建筑形制与结构巧思，梳理其在复旦理科发展史上的奠基地位。"
       },
       {
@@ -111,7 +121,8 @@
         "order": 5,
         "estimated_stay_minutes": 10,
         "trigger_radius_meters": 60,
-        "guide_script_id": "xianghui_hall_academic",
+        "guide_script_id": "xianghui_hall_academic_60s",
+        "extreme_guide_script_id": "xianghui_hall_academic_60s_extreme",
         "reason": "全面考证登辉堂的建设始末，以及其作为校园精神殿堂在历次重大历史事件中的作用。"
       },
       {
@@ -119,7 +130,8 @@
         "order": 6,
         "estimated_stay_minutes": 20,
         "trigger_radius_meters": 60,
-        "guide_script_id": "history_museum_academic",
+        "guide_script_id": "history_museum_academic_120s",
+        "extreme_guide_script_id": "history_museum_academic_120s_extreme",
         "reason": "沉浸式体验新馆现代化展陈系统，系统研读8大展区串联的百廿办学历程，并近距离考证1909年最早文凭、毛主席手书校名等核心馆藏文献。"
       },
       {
@@ -127,7 +139,8 @@
         "order": 7,
         "estimated_stay_minutes": 5,
         "trigger_radius_meters": 60,
-        "guide_script_id": "old_gate_academic",
+        "guide_script_id": "old_gate_academic_60s",
+        "extreme_guide_script_id": "old_gate_academic_60s_extreme",
         "reason": "以1921年初代校门复建景观作为路线终点，呼应首站，完成跨越百年的时空对话。"
       }
     ],
@@ -151,6 +164,7 @@
         "estimated_stay_minutes": 3,
         "trigger_radius_meters": 60,
         "guide_script_id": "main_gate_dream_school_30s",
+        "extreme_guide_script_id": "main_gate_dream_school_30s_extreme",
         "reason": "作为进入校园的第一印象，适合建立来到复旦的入学仪式感。"
       },
       {
@@ -159,6 +173,7 @@
         "estimated_stay_minutes": 3,
         "trigger_radius_meters": 60,
         "guide_script_id": "mao_statue_dream_school_30s",
+        "extreme_guide_script_id": "mao_statue_dream_school_30s_extreme",
         "reason": "复旦人最经典的碰头集合点，感受日常的社交属性。"
       },
       {
@@ -167,6 +182,7 @@
         "estimated_stay_minutes": 5,
         "trigger_radius_meters": 60,
         "guide_script_id": "third_teaching_building_dream_school_30s",
+        "extreme_guide_script_id": "third_teaching_building_dream_school_30s_extreme",
         "reason": "步入核心教学区，体验大学真实的课堂与日常自习氛围。"
       },
       {
@@ -175,6 +191,7 @@
         "estimated_stay_minutes": 5,
         "trigger_radius_meters": 60,
         "guide_script_id": "guanghua_lawn_dream_school_30s",
+        "extreme_guide_script_id": "guanghua_lawn_dream_school_30s_extreme",
         "reason": "在校园最自由的公共空间，感受课后晒太阳、弹吉他的松弛感。"
       },
       {
@@ -183,6 +200,7 @@
         "estimated_stay_minutes": 6,
         "trigger_radius_meters": 60,
         "guide_script_id": "guanghua_tower_dream_school_30s",
+        "extreme_guide_script_id": "guanghua_tower_dream_school_30s_extreme",
         "reason": "打卡绝对地标，了解大学丰富的讲座资源与现代化的硬件设施。"
       },
       {
@@ -191,6 +209,7 @@
         "estimated_stay_minutes": 8,
         "trigger_radius_meters": 60,
         "guide_script_id": "danyuan_canteen_dream_school_30s",
+        "extreme_guide_script_id": "danyuan_canteen_dream_school_30s_extreme",
         "reason": "用一杯双皮奶和食堂的人声鼎沸，完成最接地气的干饭体验收尾。"
       }
     ],
@@ -214,6 +233,7 @@
         "estimated_stay_minutes": 4,
         "trigger_radius_meters": 60,
         "guide_script_id": "main_gate_dream_school_60s",
+        "extreme_guide_script_id": "main_gate_dream_school_60s_extreme",
         "reason": "开启‘复旦一天’的序幕，迎新仪式感的最佳起点。"
       },
       {
@@ -222,6 +242,7 @@
         "estimated_stay_minutes": 4,
         "trigger_radius_meters": 60,
         "guide_script_id": "mao_statue_dream_school_60s",
+        "extreme_guide_script_id": "mao_statue_dream_school_60s_extreme",
         "reason": "在校园宇宙中心碰头，讲述‘毛像下面见’的日常故事。"
       },
       {
@@ -230,6 +251,7 @@
         "estimated_stay_minutes": 6,
         "trigger_radius_meters": 60,
         "guide_script_id": "science_library_dream_school_60s",
+        "extreme_guide_script_id": "science_library_dream_school_60s_extreme",
         "reason": "途径静谧的阅读区，感受大学里专注的自习与学术时光。"
       },
       {
@@ -238,6 +260,7 @@
         "estimated_stay_minutes": 8,
         "trigger_radius_meters": 60,
         "guide_script_id": "fourth_teaching_building_dream_school_60s",
+        "extreme_guide_script_id": "fourth_teaching_building_dream_school_60s_extreme",
         "reason": "体验修缮后的智慧教室与色彩导视，满足对现代大学课堂的憧憬。"
       },
       {
@@ -246,6 +269,7 @@
         "estimated_stay_minutes": 8,
         "trigger_radius_meters": 60,
         "guide_script_id": "guanghua_lawn_dream_school_60s",
+        "extreme_guide_script_id": "guanghua_lawn_dream_school_60s_extreme",
         "reason": "作为课间放松的缓冲地带，体会大学独有的自由与浪漫。"
       },
       {
@@ -254,6 +278,7 @@
         "estimated_stay_minutes": 10,
         "trigger_radius_meters": 60,
         "guide_script_id": "guanghua_tower_dream_school_60s",
+        "extreme_guide_script_id": "guanghua_tower_dream_school_60s_extreme",
         "reason": "深入第一高楼，仰望学术资源并体验高空咖啡馆的课余社交。"
       },
       {
@@ -262,6 +287,7 @@
         "estimated_stay_minutes": 10,
         "trigger_radius_meters": 60,
         "guide_script_id": "danyuan_canteen_dream_school_60s",
+        "extreme_guide_script_id": "danyuan_canteen_dream_school_60s_extreme",
         "reason": "汇入最大的干饭人潮，在烟火气中完成一天的能量补给。"
       },
       {
@@ -270,6 +296,7 @@
         "estimated_stay_minutes": 10,
         "trigger_radius_meters": 60,
         "guide_script_id": "third_teaching_building_dream_school_60s",
+        "extreme_guide_script_id": "third_teaching_building_dream_school_60s_extreme",
         "reason": "以‘三教久留’的通宵灯火作为尾声，并方便就近离开校园。"
       }
     ],
@@ -293,6 +320,7 @@
         "estimated_stay_minutes": 4,
         "trigger_radius_meters": 60,
         "guide_script_id": "yanyuan_park_30s",
+        "extreme_guide_script_id": "yanyuan_park_30s_extreme",
         "reason": "作为游园起点，快速感受复旦最早的园林景观与古典气息。"
       },
       {
@@ -301,6 +329,7 @@
         "estimated_stay_minutes": 4,
         "trigger_radius_meters": 60,
         "guide_script_id": "old_gate_park_30s",
+        "extreme_guide_script_id": "old_gate_park_30s_extreme",
         "reason": "欣赏古典牌楼的飞檐翘角，完成经典地标的视觉打卡。"
       },
       {
@@ -309,6 +338,7 @@
         "estimated_stay_minutes": 5,
         "trigger_radius_meters": 60,
         "guide_script_id": "zibin_hall_park_30s",
+        "extreme_guide_script_id": "zibin_hall_park_30s_extreme",
         "reason": "途径‘小白宫’，欣赏欧式罗马柱与弧形阳台的建筑美学。"
       },
       {
@@ -317,6 +347,7 @@
         "estimated_stay_minutes": 10,
         "trigger_radius_meters": 60,
         "guide_script_id": "guanghua_lawn_park_30s",
+        "extreme_guide_script_id": "guanghua_lawn_park_30s_extreme",
         "reason": "在校园最大的公共绿地稍作停留，感受开阔的视觉与松弛的氛围。"
       },
       {
@@ -325,6 +356,7 @@
         "estimated_stay_minutes": 7,
         "trigger_radius_meters": 60,
         "guide_script_id": "xiyuan_park_30s",
+        "extreme_guide_script_id": "xiyuan_park_30s_extreme",
         "reason": "以幽静的假山池沼收尾，并方便就近从侧门离开校园。"
       }
     ],
@@ -348,6 +380,7 @@
         "estimated_stay_minutes": 10,
         "trigger_radius_meters": 60,
         "guide_script_id": "yanyuan_park_60s",
+        "extreme_guide_script_id": "yanyuan_park_60s_extreme",
         "reason": "留出充裕时间在世纪钟亭与密林间驻足，开启放松感官的旅程。"
       },
       {
@@ -356,6 +389,7 @@
         "estimated_stay_minutes": 8,
         "trigger_radius_meters": 60,
         "guide_script_id": "old_gate_park_60s",
+        "extreme_guide_script_id": "old_gate_park_60s_extreme",
         "reason": "仔细端详古典牌楼的雕花与脊饰，体会建筑带来的宁静。"
       },
       {
@@ -364,6 +398,7 @@
         "estimated_stay_minutes": 10,
         "trigger_radius_meters": 60,
         "guide_script_id": "zibin_hall_park_60s",
+        "extreme_guide_script_id": "zibin_hall_park_60s_extreme",
         "reason": "在草坪前漫步，沉浸感受这座异国风情建筑与周围植物的光影互动。"
       },
       {
@@ -372,6 +407,7 @@
         "estimated_stay_minutes": 20,
         "trigger_radius_meters": 60,
         "guide_script_id": "guanghua_lawn_park_60s",
+        "extreme_guide_script_id": "guanghua_lawn_park_60s_extreme",
         "reason": "路线的核心休憩点，鼓励用户坐下或躺平，静享校园微风与白云。"
       },
       {
@@ -380,6 +416,7 @@
         "estimated_stay_minutes": 12,
         "trigger_radius_meters": 60,
         "guide_script_id": "xiyuan_park_60s",
+        "extreme_guide_script_id": "xiyuan_park_60s_extreme",
         "reason": "在园林的假山与回廊中慢慢游走，为这段疗愈之旅画上舒缓的句号。"
       }
     ],
