@@ -16,6 +16,22 @@
     ]
   },
   {
+    "guide_script_id": "danyuan_canteen_dream_school_30s_extreme",
+    "spot_id": "danyuan_canteen",
+    "route_id": "dream_school_30min",
+    "agent_id": "student_guide",
+    "audience": "高中生",
+    "style": "轻松",
+    "language": "zh",
+    "duration_seconds": 45,
+    "title": "旦苑：复旦人的干饭大本营",
+    "content": "逛了这么久，带大家来看看复旦本部人流最大的食堂——旦苑！现在的极端天气不太适合在室外停留，大家快跟我进餐厅里面避一避，正好在宽敞的门厅或一楼点心部休息一下，补充点水分。它的前身叫中央食堂，紧挨着光华楼。这里最好吃的就是一楼点心部的双皮奶、芒果奶昔和杨枝甘露，特别是双皮奶，被评为‘复旦特产’。中午一下课，大家端着餐盘在这里找座位的场景，就是大学里最真实的烟火气。",
+    "follow_up_suggestions": [
+      "旦苑食堂以前叫什么名字？",
+      "点心部除了双皮奶还有什么避暑/应急物资推荐？"
+    ]
+  },
+  {
     "guide_script_id": "danyuan_canteen_dream_school_60s",
     "spot_id": "danyuan_canteen",
     "route_id": "dream_school_60min",
@@ -29,6 +45,23 @@
     "follow_up_suggestions": [
       "当年川大厨师来的时候做了什么菜？",
       "去哪里可以买到那款很火的双皮奶？",
+      "为什么大家都喜欢来旦苑吃饭？"
+    ]
+  },
+  {
+    "guide_script_id": "danyuan_canteen_dream_school_60s_extreme",
+    "spot_id": "danyuan_canteen",
+    "route_id": "dream_school_60min",
+    "agent_id": "student_guide",
+    "audience": "高中生",
+    "style": "轻松",
+    "language": "zh",
+    "duration_seconds": 75,
+    "title": "旦苑：抚慰肠胃的校园烟火气",
+    "content": "体验大学生活，怎么能不看看食堂呢！目前外面天气恶劣，旦苑食堂内部及入口门厅空间宽敞，本身就是绝佳的室内避险场所，大家赶紧跟我进去大厅找个座位休息一下，如果需要也可以在一楼点心部买点瓶装水和饮料。我们现在身处的旦苑食堂，前身是复旦的‘中央食堂’，现在是本部日常就餐人数最多的地方。因为离教学楼近，每天中午下课，这里就会上演热热闹闹的干饭大军。一楼点心部绝对是复旦的‘宝藏窗口’，这里卖的双皮奶、芒果奶昔和杨枝甘露口感超绝，特别是厚实香甜的双皮奶，被一代代复旦人盖章认证为‘校园特产’。而且学校还经常举办美食交流，比如2017年川大的厨师就来这里做过回锅肉和水煮肉片，当时排队的队伍都快绕食堂一圈了。等天气好转，欢迎亲自尝尝复旦的味道！",
+    "follow_up_suggestions": [
+      "当年川大厨师来的时候做了什么菜？",
+      "一楼点心部除了双皮奶还能买到什么应急物资？",
       "为什么大家都喜欢来旦苑吃饭？"
     ]
   }
