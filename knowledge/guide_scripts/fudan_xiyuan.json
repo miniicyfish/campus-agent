@@ -16,6 +16,22 @@
     ]
   },
   {
+    "guide_script_id": "xiyuan_park_30s_extreme",
+    "spot_id": "fudan_xiyuan",
+    "route_id": "park_route_30min",
+    "agent_id": "littleredbook_curator",
+    "audience": "访客",
+    "style": "亲切",
+    "language": "zh",
+    "duration_seconds": 45,
+    "title": "曦园：江南水乡般的收尾",
+    "content": "目前天气不太理想，曦园是开放式庭院不便久留，大家先在园门口附近有檐处暂避，我们边躲避边简单看看。我们这趟游园的最后一站是曦园。这里是一处非常精致的古典小园林。大家可以看看回廊和假山之间的布局，感受一下移步换景的园林趣味。天气好转之前，建议大家稍后前往紧邻的本部学生超市避一避，那里空间开阔有顶棚，也可以顺便买点东西。",
+    "follow_up_suggestions": [
+      "曦园里有什么特别的植物吗？",
+      "本部学生超市离这里远吗？"
+    ]
+  },
+  {
     "guide_script_id": "xiyuan_park_60s",
     "spot_id": "fudan_xiyuan",
     "route_id": "park_route_60min",
@@ -29,6 +45,23 @@
     "follow_up_suggestions": [
       "曦园的设计有什么传统园林的讲究？",
       "园子里的长廊有什么名字吗？",
+      "这里的池塘有连接外面的水系吗？"
+    ]
+  },
+  {
+    "guide_script_id": "xiyuan_park_60s_extreme",
+    "spot_id": "fudan_xiyuan",
+    "route_id": "park_route_60min",
+    "agent_id": "littleredbook_curator",
+    "audience": "访客",
+    "style": "亲切",
+    "language": "zh",
+    "duration_seconds": 75,
+    "title": "曦园：园林中的岁月静好",
+    "content": "现在天气不太好，曦园是开放式露天庭院不宜久留，大家先在园门口附近有遮蔽处暂避，我们边躲避边介绍。慢慢走到我们今天漫步的最后一站——曦园。走进这里，就像是步入了一幅传统的江南水墨画。你可以看看小巧的假山和蜿蜒的回廊布局，感受一下风吹过树梢和池沼水面泛起的细微声响。这座小小的园林把自然的美浓缩在了方寸之间，希望这最后一段时光能让你感受到园林的意趣。天气如果持续不佳，建议大家随后前往紧邻的本部学生超市避一避，那里空间开阔有顶棚，也可以顺便买点水和零食。",
+    "follow_up_suggestions": [
+      "曦园的设计有什么传统园林的讲究？",
+      "本部学生超市里可以买到什么应急物资？",
       "这里的池塘有连接外面的水系吗？"
     ]
   }
