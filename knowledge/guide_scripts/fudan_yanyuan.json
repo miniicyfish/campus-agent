@@ -16,6 +16,22 @@
     ]
   },
   {
+    "guide_script_id": "yanyuan_park_30s_extreme",
+    "spot_id": "fudan_yanyuan",
+    "route_id": "park_route_30min",
+    "agent_id": "littleredbook_curator",
+    "audience": "访客",
+    "style": "亲切",
+    "language": "zh",
+    "duration_seconds": 45,
+    "title": "燕园：绿意盎然的古典园林",
+    "content": "哈喽，目前天气不太理想，燕园是户外园林，大家先在园门口附近有檐处暂避，我们边躲避边看看。我们这场校园漫步的第一站，是复旦非常有名的古典园林——燕园。这里的绿植非常茂密，沿着这条小径往里走，你能看到一座很有年代感的世纪钟亭。这里的空气很清新，光影透过树叶打下来的时候视觉效果特别好，很适合作为我们放松心情的起点。天气好转之前，建议大家稍后前往紧邻的档案馆或相辉堂门厅暂避休整。",
+    "follow_up_suggestions": [
+      "世纪钟亭是在什么背景下建的？",
+      "档案馆或相辉堂离这里有多远？"
+    ]
+  },
+  {
     "guide_script_id": "yanyuan_park_60s",
     "spot_id": "fudan_yanyuan",
     "route_id": "park_route_60min",
@@ -29,6 +45,23 @@
     "follow_up_suggestions": [
       "世纪钟亭有什么特殊的历史意义？",
       "燕园这个名字是怎么来的？",
+      "这里一年四季的景观有什么不同？"
+    ]
+  },
+  {
+    "guide_script_id": "yanyuan_park_60s_extreme",
+    "spot_id": "fudan_yanyuan",
+    "route_id": "park_route_60min",
+    "agent_id": "littleredbook_curator",
+    "audience": "访客",
+    "style": "亲切",
+    "language": "zh",
+    "duration_seconds": 75,
+    "title": "燕园：在植物的呼吸间放慢脚步",
+    "content": "哈喽，欢迎开启这场不被时间追赶的复旦之旅。不过现在天气不太理想，燕园是户外园林，大家先在园门口附近有檐处暂避，我们边躲避边介绍。我们的第一站是燕园。既然今天时间充裕，你可以往林子的方向看一看，看看那座藏在绿意里的世纪钟亭。站在这里，试着深呼吸，去感受周围草木散发出的那种湿润、清新的植物气息。这座古典园林就像是一个天然的隔音层，把校门外的车水马龙都挡在了外面。天气如果持续不佳，建议大家随后前往紧邻的档案馆或相辉堂门厅暂避休整，等天气好转再慢慢逛园子。",
+    "follow_up_suggestions": [
+      "世纪钟亭有什么特殊的历史意义？",
+      "档案馆或相辉堂门厅平时开放吗？",
       "这里一年四季的景观有什么不同？"
     ]
   }
