@@ -1,0 +1,18 @@
+{
+  "spot_id": "wangdao_garden",
+  "name": "望道园",
+  "aliases": [
+    "望道园",
+    "陈望道纪念园",
+    "复旦望道园"
+  ],
+  "campus": "邯郸校区",
+  "type": "校园景观",
+  "lat": 31.302400,
+  "lng": 121.510000,
+  "default_trigger_radius_meters": 40,
+  "map_icon": "park",
+  "summary": "位于复旦大学邯郸校区核心区，为纪念老校长陈望道先生而设的校园园林景观，环境清幽，常有师生驻足休憩。",
+  "available": true,
+  "source_status": "待核验"
+}

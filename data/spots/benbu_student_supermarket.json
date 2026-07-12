@@ -1,0 +1,19 @@
+{
+  "spot_id": "benbu_student_supermarket",
+  "name": "复旦大学本部学生超市",
+  "aliases": [
+    "复旦超市",
+    "本部超市",
+    "学生生活超市",
+    "零号楼超市"
+  ],
+  "campus": "邯郸校区",
+  "type": "生活服务",
+  "lat": 31.303245,
+  "lng": 121.511840,
+  "default_trigger_radius_meters": 30,
+  "map_icon": "shop",
+  "summary": "位于本部零号楼附近，是邯郸校区核心生活区的主要超市，提供食品、日用品及学习用品，满足师生日常采购需求。",
+  "available": true,
+  "source_status": "待核验"
+}

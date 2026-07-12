@@ -1,0 +1,18 @@
+{
+  "spot_id": "motto_wall",
+  "name": "校训墙",
+  "aliases": [
+    "校训石刻",
+    "复旦校训墙",
+    "博学笃志墙"
+  ],
+  "campus": "邯郸校区",
+  "type": "文化景观",
+  "lat": 31.303256,
+  "lng": 121.508810,
+  "default_trigger_radius_meters": 30,
+  "map_icon": "landmark",
+  "summary": "位于复旦大学邯郸校区核心区域，镌刻着‘博学而笃志，切问而近思’的校训，是复旦精神的象征性文化地标。",
+  "available": true,
+  "source_status": "待核验"
+}

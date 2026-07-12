@@ -1,0 +1,18 @@
+{
+  "spot_id": "courier_station_main",
+  "name": "本部菜鸟驿站",
+  "aliases": [
+    "菜鸟驿站",
+    "本部快递站",
+    "复旦菜鸟驿站"
+  ],
+  "campus": "邯郸校区",
+  "type": "生活服务",
+  "lat": 31.304611,
+  "lng": 121.513791,
+  "default_trigger_radius_meters": 30,
+  "map_icon": "shop",
+  "summary": "位于复旦大学邯郸校区本部，提供快递代收、寄件等综合物流服务，是师生日常取寄包裹的主要站点。",
+  "available": true,
+  "source_status": "待核验"
+}

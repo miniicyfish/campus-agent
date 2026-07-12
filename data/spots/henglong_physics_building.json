@@ -1,0 +1,18 @@
+{
+  "spot_id": "henglong_physics_building",
+  "name": "恒隆物理楼",
+  "aliases": [
+    "物理楼",
+    "恒隆楼",
+    "复旦物理楼"
+  ],
+  "campus": "邯郸校区",
+  "type": "教学楼",
+  "lat": 31.304631,
+  "lng": 121.509714,
+  "default_trigger_radius_meters": 50,
+  "map_icon": "school",
+  "summary": "位于复旦大学邯郸校区，是物理学系主要教学与科研场所，由恒隆集团捐资兴建，承载物理学科研与实验教学任务。",
+  "available": true,
+  "source_status": "待核验"
+}

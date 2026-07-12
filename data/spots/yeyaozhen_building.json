@@ -1,0 +1,18 @@
+{
+  "spot_id": "yeyaozhen_building",
+  "name": "叶耀珍楼",
+  "aliases": [
+    "叶楼",
+    "耀珍楼",
+    "复旦叶耀珍楼"
+  ],
+  "campus": "邯郸校区",
+  "type": "教学楼",
+  "lat": 31.303064,
+  "lng": 121.511992,
+  "default_trigger_radius_meters": 50,
+  "map_icon": "school",
+  "summary": "位于复旦大学邯郸校区，以叶耀珍女士命名，为校内主要教学与科研楼宇之一，环境安静，适合学习与办公。",
+  "available": true,
+  "source_status": "待核验"
+}

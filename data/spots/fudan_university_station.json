@@ -1,0 +1,18 @@
+{
+  "spot_id": "fudan_university_station",
+  "name": "复旦大学地铁站",
+  "aliases": [
+    "复旦地铁站",
+    "18号线复旦大学站",
+    "复旦站"
+  ],
+  "campus": "邯郸校区",
+  "type": "交通设施",
+  "lat": 31.301401,
+  "lng": 121.507115,
+  "default_trigger_radius_meters": 80,
+  "map_icon": "subway",
+  "summary": "位于复旦大学邯郸校区东门外，上海地铁18号线站点，便捷连接校区与城市各主要区域。",
+  "available": true,
+  "source_status": "待核验"
+}

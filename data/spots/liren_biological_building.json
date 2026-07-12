@@ -1,0 +1,18 @@
+{
+  "spot_id": "liren_biological_building",
+  "name": "立人生物楼",
+  "aliases": [
+    "立人楼",
+    "生物楼",
+    "复旦立人生物楼"
+  ],
+  "campus": "邯郸校区",
+  "type": "教学楼",
+  "lat": 31.304263,
+  "lng": 121.510247,
+  "default_trigger_radius_meters": 50,
+  "map_icon": "science",
+  "summary": "位于复旦大学邯郸校区，生命科学学院主要教学科研楼之一，承载生物学相关实验与学术交流。",
+  "available": true,
+  "source_status": "待核验"
+}

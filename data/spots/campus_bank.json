@@ -1,0 +1,19 @@
+{
+  "spot_id": "campus_bank",
+  "name": "复旦大学本部银行服务点",
+  "aliases": [
+    "中国银行复旦大学支行",
+    "中国农业银行复旦支行",
+    "光华楼银行网点",
+    "复旦校内银行"
+  ],
+  "campus": "邯郸校区",
+  "type": "金融服务",
+  "lat": 31.302683,
+  "lng": 121.510759,
+  "default_trigger_radius_meters": 60,
+  "map_icon": "bank",
+  "summary": "位于邯郸校区内，包括光华楼1层的中国农业银行ATM及中国银行复旦大学支行等网点，为师生提供存取款、转账等基础金融服务[citation:3][citation:6]。",
+  "available": true,
+  "source_status": "待核验"
+}

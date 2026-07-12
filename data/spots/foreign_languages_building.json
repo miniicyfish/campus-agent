@@ -1,0 +1,18 @@
+{
+  "spot_id": "foreign_languages_building",
+  "name": "外文楼",
+  "aliases": [
+    "文科楼",
+    "外文学院楼",
+    "复旦外文楼"
+  ],
+  "campus": "邯郸校区",
+  "type": "教学楼",
+  "lat": 31.303445,
+  "lng": 121.505248,
+  "default_trigger_radius_meters": 50,
+  "map_icon": "school",
+  "summary": "位于复旦大学邯郸校区核心区域，外文学院主要教学办公场所，承担多语种教学与学术交流活动。",
+  "available": true,
+  "source_status": "待核验"
+}

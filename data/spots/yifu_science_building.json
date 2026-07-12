@@ -1,0 +1,18 @@
+{
+  "spot_id": "yifu_science_building",
+  "name": "逸夫科技楼",
+  "aliases": [
+    "逸夫楼",
+    "科技楼",
+    "复旦逸夫科技楼"
+  ],
+  "campus": "邯郸校区",
+  "type": "教学科研楼",
+  "lat": 31.303796,
+  "lng": 121.507282,
+  "default_trigger_radius_meters": 50,
+  "map_icon": "school",
+  "summary": "位于复旦大学邯郸校区核心区域，由邵逸夫先生捐资兴建，为校内重要的理工科教学与科研实验大楼。",
+  "available": true,
+  "source_status": "待核验"
+}

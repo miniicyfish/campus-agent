@@ -1,0 +1,18 @@
+{
+  "spot_id": "family_mart",
+  "name": "全家便利店",
+  "aliases": [
+    "全家",
+    "复旦全家",
+    "本部全家"
+  ],
+  "campus": "邯郸校区",
+  "type": "便利店",
+  "lat": 31.303555,
+  "lng": 121.510741,
+  "default_trigger_radius_meters": 30,
+  "map_icon": "shop",
+  "summary": "位于复旦大学邯郸校区本部，提供各类零食、饮品、鲜食便当及日用百货，24小时营业，是师生便捷生活的重要补给站。",
+  "available": true,
+  "source_status": "待核验"
+}

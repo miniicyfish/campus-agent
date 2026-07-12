@@ -1,0 +1,18 @@
+{
+  "spot_id": "yuanchuang_center",
+  "name": "元·创中心",
+  "aliases": [
+    "元创中心",
+    "复旦元创",
+    "创新创业中心"
+  ],
+  "campus": "邯郸校区",
+  "type": "创新创业空间",
+  "lat": 31.306227,
+  "lng": 121.511588,
+  "default_trigger_radius_meters": 50,
+  "map_icon": "community",
+  "summary": "位于复旦大学邯郸校区，致力于支持学生创新创业活动，提供交流、孵化与展示空间的新型平台。",
+  "available": true,
+  "source_status": "待核验"
+}
