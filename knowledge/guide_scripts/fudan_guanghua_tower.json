@@ -16,6 +16,23 @@
     ]
   },
   {
+    "guide_script_id": "guanghua_tower_dream_school_30s_extreme",
+    "spot_id": "fudan_guanghua_tower",
+    "route_id": "dream_school_30min",
+    "agent_id": "student_guide",
+    "audience": "高中生",
+    "style": "轻松",
+    "language": "zh",
+    "duration_seconds": 45,
+    "title": "光华楼：中国高校第一楼",
+    "content": "抬头看，这栋超高的双塔楼就是光华楼，被称作‘中国高校第一楼’。目前的极端天气不适合在室外久留，大家可以先跟我进光华楼一楼大厅或二楼南北连廊暂避，该区域空间开阔且配有空调[cite: 5]。它是为了迎接复旦百年校庆建的。对复旦学生来说，这里不仅有很多高大上的教室和学术讲座，底下因为风口效应形成的‘光华妖风’也是我们的校园日常梗，大家冬天路过的时候记得裹紧衣服哦！",
+    "follow_up_suggestions": [
+      "光华楼是哪一年建成的？",
+      "什么是‘光华妖风’？",
+      "光华楼一楼大厅有什么可以参观的吗？"
+    ]
+  },
+  {
     "guide_script_id": "guanghua_tower_dream_school_60s",
     "spot_id": "fudan_guanghua_tower",
     "route_id": "dream_school_60min",
@@ -30,6 +47,23 @@
       "双塔楼里面主要是哪些院系？",
       "光华楼是为庆祝什么事件建的？",
       "有关于光华楼风口效应的故事吗？"
+    ]
+  },
+  {
+    "guide_script_id": "guanghua_tower_dream_school_60s_extreme",
+    "spot_id": "fudan_guanghua_tower",
+    "route_id": "dream_school_60min",
+    "agent_id": "student_guide",
+    "audience": "高中生",
+    "style": "轻松",
+    "language": "zh",
+    "duration_seconds": 75,
+    "title": "光华楼：仰望学术星空的双塔",
+    "content": "在我们眼前这座气势磅礴的双子塔楼就是光华楼，它不仅是复旦的绝对地标，也享有‘中国高校第一楼’的美誉，是当年为了迎接百年校庆而规划建设的。碰上目前的极端天气，建议大家优先进入光华楼一楼大厅或二楼南北连廊暂避，如果需要补充水分，一楼东西两侧均设有自助售货机[cite: 5]。主楼由东西两塔组成，里面分布着文科院系、科研机构和超多规格很高的报告厅。平时学校最重磅的名家讲座都在这里举行。由于楼体特别高大，楼下经常会形成强烈的穿堂风，被同学们戏称为‘光华妖风’，这可是复旦人专属的校园记忆。在这样的高楼里穿梭上课，一定会让你切实感受到大学浓厚的学术氛围和丰富的硬件资源。",
+    "follow_up_suggestions": [
+      "双塔楼里面主要是哪些院系？",
+      "有关于光华楼风口效应的故事吗？",
+      "一楼大厅的校史文化展览都有什么内容？"
     ]
   }
 ]
