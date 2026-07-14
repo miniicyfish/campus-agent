@@ -1,9 +1,25 @@
 "use client";
 
-import { Camera, ChevronRight, Home as HomeIcon, Map, MessageCircle, Navigation, Route, Send, Sparkles } from "lucide-react";
+import {
+  Camera,
+  ChevronRight,
+  CloudRain,
+  Crosshair,
+  Home as HomeIcon,
+  Map,
+  MapPin,
+  MessageCircle,
+  Navigation,
+  Route,
+  Send,
+  Snowflake,
+  Sparkles,
+  Sun,
+  ThermometerSun,
+} from "lucide-react";
 import type { PointerEvent as ReactPointerEvent, WheelEvent as ReactWheelEvent } from "react";
 import { FormEvent, useEffect, useMemo, useRef, useState } from "react";
-import type { Agent, CampusRoute, GuideScript, Profile, RouteMatch, Spot } from "@/lib/types";
+import type { Agent, CampusRoute, GuideScript, Profile, RouteMatch, Spot, WeatherKind, WeatherState } from "@/lib/types";
 
 type Bootstrap = {
   spots: Spot[];
@@ -16,12 +32,40 @@ type ChatMessage = {
   text: string;
 };
 
+type UserLocation = {
+  lat: number;
+  lng: number;
+  source: "real" | "mock";
+};
+
+type TourPhase = "route_preview" | "navigating" | "arrived" | "detour_prompt" | "completed";
+
+const defaultWeatherState: WeatherState = {
+  kind: "clear",
+  label: "晴朗",
+  description: "适合按原路线步行游览。",
+  isExtreme: false,
+  updatedAt: "",
+  source: "mock",
+};
+
 const mapPositions: Record<string, { x: number; y: number }> = {
+  foreign_languages_building: { x: 14.3, y: 24.4 },
+  fudan_university_station: { x: 14.6, y: 39.4 },
   fudan_history_museum: { x: 10.6, y: 46.7 },
+  fudan_alumni_hall: { x: 19.8, y: 73.0 },
   xianghui_hall: { x: 18.7, y: 38.9 },
+  yifu_science_building: { x: 31.5, y: 37.5 },
   fudan_zibin_hall: { x: 26.5, y: 53.0 },
   fourth_teaching_building: { x: 39.7, y: 40.7 },
-  fudan_guanghua_tower: { x: 77.2, y: 34.7 },
+  motto_wall: { x: 43.4, y: 61.6 },
+  fudan_guanghua_tower: { x: 78.1, y: 34.0 },
+  yuanchuang_center: { x: 76.3, y: 17.7 },
+  henglong_physics_building: { x: 55.2, y: 41.0 },
+  liren_biological_building: { x: 60.0, y: 54.5 },
+  courier_station_main: { x: 89.1, y: 65.2 },
+  family_mart: { x: 60.6, y: 73.5 },
+  benbu_student_supermarket: { x: 74.0, y: 82.5 },
   danyuan_canteen: { x: 90.3, y: 22.4 },
   guanghua_lawn: { x: 76.8, y: 50.2 },
   fudan_third_teaching_building: { x: 62.4, y: 64.4 },
@@ -31,6 +75,8 @@ const mapPositions: Record<string, { x: number; y: number }> = {
   fudan_old_gate: { x: 25.8, y: 82.6 },
   fudan_main_gate: { x: 54.6, y: 87.9 },
   fudan_xiyuan: { x: 63.7, y: 85.9 },
+  campus_bank: { x: 57.0, y: 88.2 },
+  wangdao_garden: { x: 47.0, y: 90.2 },
 };
 
 const mapBounds = {
@@ -44,6 +90,24 @@ const mapBounds = {
 
 function clamp(value: number, min: number, max: number) {
   return Math.max(min, Math.min(max, value));
+}
+
+function distanceMeters(left: { lat?: number; lng?: number }, right: { lat?: number; lng?: number }) {
+  if (left.lat == null || left.lng == null || right.lat == null || right.lng == null) return Number.POSITIVE_INFINITY;
+
+  const earthRadius = 6371000;
+  const toRad = (value: number) => (value * Math.PI) / 180;
+  const deltaLat = toRad(right.lat - left.lat);
+  const deltaLng = toRad(right.lng - left.lng);
+  const a =
+    Math.sin(deltaLat / 2) * Math.sin(deltaLat / 2) +
+    Math.cos(toRad(left.lat)) * Math.cos(toRad(right.lat)) * Math.sin(deltaLng / 2) * Math.sin(deltaLng / 2);
+
+  return earthRadius * 2 * Math.atan2(Math.sqrt(a), Math.sqrt(1 - a));
+}
+
+function getSpotRadius(spot?: Spot, routeRadius?: number) {
+  return routeRadius ?? spot?.default_trigger_radius_meters ?? 60;
 }
 
 const agentAssets: Record<string, string> = {
@@ -76,7 +140,17 @@ export default function Home() {
   const [activeIndex, setActiveIndex] = useState(0);
   const [activeGuide, setActiveGuide] = useState<GuideScript | null>(null);
   const [guideSheet, setGuideSheet] = useState<"peek" | "open" | "full">("peek");
+  const [tourPhase, setTourPhase] = useState<TourPhase>("route_preview");
   const [routeFinished, setRouteFinished] = useState(false);
+  const [weatherState, setWeatherState] = useState<WeatherState>(defaultWeatherState);
+  const [weatherOverride, setWeatherOverride] = useState<WeatherKind | "random">("random");
+  const [locationMode, setLocationMode] = useState<"off" | "real" | "mock">("off");
+  const [locationError, setLocationError] = useState<string | null>(null);
+  const [userLocation, setUserLocation] = useState<UserLocation | null>(null);
+  const [demoMode, setDemoMode] = useState(false);
+  const [showDemoPanel, setShowDemoPanel] = useState(false);
+  const [nearbyDetourSpot, setNearbyDetourSpot] = useState<Spot | null>(null);
+  const [chatSpot, setChatSpot] = useState<Spot | null>(null);
   const [mapPan, setMapPan] = useState({ x: 0, y: 0 });
   const [mapScale, setMapScale] = useState(1);
   const [drawerOpen, setDrawerOpen] = useState(false);
@@ -88,11 +162,11 @@ export default function Home() {
     { role: "agent", text: "你可以问我当前点位、下一站、拍照对象或者讲解风格。" },
   ]);
   const fileInputRef = useRef<HTMLInputElement>(null);
-  const sheetDragRef = useRef<{ y: number; moved: boolean } | null>(null);
   const mapDragRef = useRef<{ x: number; y: number; startX: number; startY: number; moved: boolean } | null>(null);
   const mapPointersRef = useRef(new globalThis.Map<number, { x: number; y: number }>());
   const mapPinchRef = useRef<{ distance: number; startScale: number } | null>(null);
   const mapFrameRef = useRef<HTMLDivElement>(null);
+  const lastInsideStopRef = useRef<string | null>(null);
 
   useEffect(() => {
     fetch("/api/bootstrap")
@@ -104,7 +178,12 @@ export default function Home() {
     if (!bootstrap || typeof window === "undefined") return;
     const params = new URLSearchParams(window.location.search);
     const demo = params.get("demo");
-    if (!["map", "peek", "free"].includes(demo ?? "") || match) return;
+    if (demo === "control") {
+      setShowDemoPanel(true);
+      setDemoMode(true);
+      setLocationMode("mock");
+    }
+    if (!["map", "peek", "free", "control"].includes(demo ?? "") || match) return;
 
     if (demo === "free") {
       setStep("map");
@@ -123,7 +202,7 @@ export default function Home() {
         setMatch(result);
         setStep("map");
         setTourMode("guided");
-        setGuideSheet(demo === "peek" ? "peek" : "open");
+        setGuideSheet(demo === "peek" || demo === "control" ? "peek" : "open");
       });
   }, [bootstrap, match, profile]);
 
@@ -146,15 +225,39 @@ export default function Home() {
   const markerSpots = tourMode === "free" ? freeSpots : guidedSpots;
   const activeStop = tourMode === "guided" ? route?.stops[activeIndex] : undefined;
   const activeSpot = visibleSpots[activeIndex] ?? visibleSpots[0];
+  const currentChatSpot = chatSpot ?? activeSpot;
+  const nearestLocationPosition = useMemo(() => {
+    if (!userLocation || !bootstrap) return undefined;
+
+    const nearestSpot = bootstrap.spots
+      .filter((spot) => spot.lat != null && spot.lng != null && mapPositions[spot.spot_id])
+      .map((spot) => ({ spot, distance: distanceMeters(userLocation, spot) }))
+      .sort((a, b) => a.distance - b.distance)[0]?.spot;
+
+    return nearestSpot ? mapPositions[nearestSpot.spot_id] : undefined;
+  }, [bootstrap, userLocation]);
+  const activeScriptId =
+    tourMode === "guided" ? (weatherState.isExtreme ? activeStop?.extreme_guide_script_id ?? activeStop?.guide_script_id : activeStop?.guide_script_id) : undefined;
   const isFinalGuidedStop = tourMode === "guided" && activeIndex >= visibleSpots.length - 1;
 
   useEffect(() => {
     if (!activeSpot) return;
     const routeId = tourMode === "guided" ? route?.route_id ?? "" : "";
-    fetch(`/api/guide?spotId=${activeSpot.spot_id}&routeId=${routeId}&agentId=${agent?.agent_id ?? ""}`)
+    const params = new URLSearchParams({
+      spotId: activeSpot.spot_id,
+      routeId,
+      agentId: agent?.agent_id ?? "",
+    });
+    if (activeScriptId) params.set("scriptId", activeScriptId);
+
+    fetch(`/api/guide?${params.toString()}`)
       .then((response) => response.json())
       .then((payload) => setActiveGuide(payload.script));
-  }, [activeSpot, agent?.agent_id, route?.route_id, tourMode]);
+  }, [activeScriptId, activeSpot, agent?.agent_id, route?.route_id, tourMode]);
+
+  useEffect(() => {
+    setChatSpot(null);
+  }, [activeSpot?.spot_id]);
 
   useEffect(() => {
     if (step !== "map" || !activeSpot) return;
@@ -174,9 +277,88 @@ export default function Home() {
     });
   }, [activeSpot, guideSheet, step]);
 
+  useEffect(() => {
+    if (step !== "map" || locationMode !== "real" || typeof navigator === "undefined" || !navigator.geolocation) return;
+
+    const watchId = navigator.geolocation.watchPosition(
+      (position) => {
+        setLocationError(null);
+        setUserLocation({
+          lat: position.coords.latitude,
+          lng: position.coords.longitude,
+          source: "real",
+        });
+      },
+      () => {
+        setLocationError("还没能确认你的位置。你也可以直接点击地图上的地点听讲解。");
+        setLocationMode("off");
+      },
+      {
+        enableHighAccuracy: true,
+        maximumAge: 8000,
+        timeout: 10000,
+      },
+    );
+
+    return () => navigator.geolocation.clearWatch(watchId);
+  }, [locationMode, step]);
+
+  useEffect(() => {
+    if (step !== "map" || locationMode !== "mock" || !activeSpot?.lat || !activeSpot?.lng || userLocation) return;
+    setUserLocation({ lat: activeSpot.lat, lng: activeSpot.lng, source: "mock" });
+  }, [activeSpot, locationMode, step, userLocation]);
+
+  useEffect(() => {
+    if (step !== "map" || tourMode !== "guided" || routeFinished || !userLocation || !activeSpot || !bootstrap) return;
+
+    const routeSpotIds = new Set(guidedSpots.map((spot) => spot.spot_id));
+    const activeDistance = distanceMeters(userLocation, activeSpot);
+    const activeRadius = getSpotRadius(activeSpot, activeStop?.trigger_radius_meters);
+    const insideActiveStop = activeDistance <= activeRadius;
+
+    if (insideActiveStop) {
+      setNearbyDetourSpot(null);
+      setTourPhase("arrived");
+      if (lastInsideStopRef.current !== activeSpot.spot_id) {
+        lastInsideStopRef.current = activeSpot.spot_id;
+        refreshWeatherForSpot(activeSpot.spot_id);
+      }
+      setGuideSheet("open");
+      return;
+    }
+
+    if (lastInsideStopRef.current === activeSpot.spot_id) {
+      lastInsideStopRef.current = null;
+    }
+    setGuideSheet("peek");
+
+    const nearestDetour = bootstrap.spots
+      .filter((spot) => !routeSpotIds.has(spot.spot_id) && mapPositions[spot.spot_id] && spot.lat != null && spot.lng != null)
+      .map((spot) => ({
+        spot,
+        distance: distanceMeters(userLocation, spot),
+        radius: getSpotRadius(spot),
+      }))
+      .filter((item) => item.distance <= Math.max(item.radius, 55))
+      .sort((a, b) => a.distance - b.distance)[0]?.spot;
+
+    setNearbyDetourSpot(nearestDetour ?? null);
+    setTourPhase(nearestDetour ? "detour_prompt" : "navigating");
+  }, [activeSpot, activeStop?.trigger_radius_meters, bootstrap, guidedSpots, routeFinished, step, tourMode, userLocation, weatherOverride]);
+
   async function submitProfile(event: FormEvent) {
     event.preventDefault();
     matchProfile();
+  }
+
+  async function refreshWeatherForSpot(spotId: string) {
+    const params = new URLSearchParams({ spotId });
+    if (weatherOverride !== "random") params.set("kind", weatherOverride);
+
+    const response = await fetch(`/api/weather?${params.toString()}`);
+    const nextWeather = (await response.json()) as WeatherState;
+    setWeatherState((current) => (current.kind === nextWeather.kind ? current : nextWeather));
+    return nextWeather;
   }
 
   async function matchProfile() {
@@ -193,11 +375,15 @@ export default function Home() {
       setTourMode("guided");
       setActiveIndex(0);
       setRouteFinished(false);
+      setTourPhase("route_preview");
       setMapPan({ x: 0, y: 0 });
       setMapScale(1);
       setGuideSheet("peek");
       setDrawerOpen(false);
       setVisualContext(null);
+      setChatSpot(null);
+      setNearbyDetourSpot(null);
+      lastInsideStopRef.current = null;
       setStep("agent");
     } finally {
       setProfilePending(false);
@@ -206,7 +392,7 @@ export default function Home() {
 
   async function sendMessage(text = chatInput) {
     const trimmed = text.trim();
-    if (!trimmed || !activeSpot || chatPending) return;
+    if (!trimmed || !currentChatSpot || chatPending) return;
     setMessages((current) => [...current, { role: "user", text: trimmed }]);
     setChatInput("");
     setChatPending(true);
@@ -216,10 +402,12 @@ export default function Home() {
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({
         message: trimmed,
-        spotId: activeSpot.spot_id,
+        spotId: currentChatSpot.spot_id,
         routeId: tourMode === "guided" ? route?.route_id : undefined,
         agentId: agent?.agent_id,
+        scriptId: chatSpot ? undefined : activeScriptId,
         visualContext,
+        weather: weatherState,
       }),
     });
       const payload = await response.json();
@@ -232,10 +420,10 @@ export default function Home() {
   }
 
   async function submitPhoto(file?: File) {
-    if (!activeSpot || !file) return;
+    if (!currentChatSpot || !file) return;
     const formData = new FormData();
     formData.set("photo", file);
-    formData.set("spotId", activeSpot.spot_id);
+    formData.set("spotId", currentChatSpot.spot_id);
     formData.set("routeId", tourMode === "guided" ? route?.route_id ?? "" : "");
     setDrawerOpen(true);
     setMessages((current) => [...current, { role: "user", text: "我拍了一张照片，帮我看看。" }]);
@@ -260,38 +448,6 @@ export default function Home() {
         ? current.interests.filter((item) => item !== interest)
         : [...current.interests, interest],
     }));
-  }
-
-  function collapseGuideSheet() {
-    if (guideSheet !== "peek") setGuideSheet("peek");
-  }
-
-  function beginSheetDrag(event: ReactPointerEvent<HTMLButtonElement>) {
-    sheetDragRef.current = { y: event.clientY, moved: false };
-    event.currentTarget.setPointerCapture(event.pointerId);
-  }
-
-  function moveSheetDrag(event: ReactPointerEvent<HTMLButtonElement>) {
-    const drag = sheetDragRef.current;
-    if (!drag) return;
-    const delta = event.clientY - drag.y;
-    if (Math.abs(delta) < 28) return;
-    drag.moved = true;
-    if (delta < 0) {
-      setGuideSheet((current) => (current === "peek" ? "open" : "full"));
-    } else {
-      setGuideSheet((current) => (current === "full" ? "open" : "peek"));
-    }
-    drag.y = event.clientY;
-  }
-
-  function endSheetDrag(event: ReactPointerEvent<HTMLButtonElement>) {
-    const drag = sheetDragRef.current;
-    sheetDragRef.current = null;
-    event.currentTarget.releasePointerCapture(event.pointerId);
-    if (!drag?.moved) {
-      setGuideSheet((current) => (current === "peek" ? "open" : "peek"));
-    }
   }
 
   function getPinchDistance() {
@@ -347,9 +503,9 @@ export default function Home() {
     mapDragRef.current = null;
     if (event.currentTarget.hasPointerCapture(event.pointerId)) event.currentTarget.releasePointerCapture(event.pointerId);
 
-    if (!drag) return;
-    const moved = drag.moved;
-    if (!moved) collapseGuideSheet();
+    if (!drag?.moved && guideSheet !== "peek") {
+      setGuideSheet("peek");
+    }
   }
 
   function zoomMapWithWheel(event: ReactWheelEvent<HTMLDivElement>) {
@@ -363,10 +519,17 @@ export default function Home() {
     setTourMode("guided");
     setActiveIndex(0);
     setRouteFinished(false);
+    setTourPhase("navigating");
     setMapPan({ x: 0, y: 0 });
     setMapScale(1);
     setGuideSheet("peek");
     setVisualContext(null);
+    setChatSpot(null);
+    setNearbyDetourSpot(null);
+    setLocationError(null);
+    setUserLocation(null);
+    setLocationMode(demoMode ? "mock" : "real");
+    lastInsideStopRef.current = null;
     setStep("map");
   }
 
@@ -374,12 +537,55 @@ export default function Home() {
     setTourMode("free");
     setActiveIndex(0);
     setRouteFinished(false);
+    setTourPhase("navigating");
     setMapPan({ x: 0, y: 0 });
     setMapScale(1);
     setGuideSheet("peek");
     setDrawerOpen(false);
     setVisualContext(null);
+    setChatSpot(null);
+    setNearbyDetourSpot(null);
+    setLocationMode("off");
+    setLocationError(null);
+    setUserLocation(null);
+    setDemoMode(false);
+    setShowDemoPanel(false);
+    lastInsideStopRef.current = null;
     setStep("map");
+  }
+
+  async function enterDemoMode() {
+    if (profilePending) return;
+    setProfilePending(true);
+    try {
+      const response = await fetch("/api/match-route", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(profile),
+      });
+      const result = (await response.json()) as RouteMatch;
+      setMatch(result);
+      setDemoMode(true);
+      setShowDemoPanel(true);
+      setTourMode("guided");
+      setActiveIndex(0);
+      setRouteFinished(false);
+      setTourPhase("navigating");
+      setMapPan({ x: 0, y: 0 });
+      setMapScale(1);
+      setGuideSheet("peek");
+      setDrawerOpen(false);
+      setVisualContext(null);
+      setChatSpot(null);
+      setNearbyDetourSpot(null);
+      setLocationMode("mock");
+      setLocationError(null);
+      setUserLocation(null);
+      lastInsideStopRef.current = null;
+      setStep("map");
+    } finally {
+      setProfilePending(false);
+    }
   }
 
   function selectMapSpot(spot: Spot) {
@@ -387,26 +593,46 @@ export default function Home() {
 
     if (tourMode === "guided" && guidedIndex >= 0) {
       setActiveIndex(guidedIndex);
+      setTourPhase("arrived");
     } else {
       const freeIndex = freeSpots.findIndex((item) => item.spot_id === spot.spot_id);
       setTourMode("free");
       setActiveIndex(Math.max(0, freeIndex));
+      setTourPhase("navigating");
     }
 
     setRouteFinished(false);
     setGuideSheet("open");
     setVisualContext(null);
+    setChatSpot(null);
+    setNearbyDetourSpot(null);
+    if (locationMode === "mock" && spot.lat != null && spot.lng != null) {
+      setUserLocation({ lat: spot.lat, lng: spot.lng, source: "mock" });
+    }
+    if (tourMode === "guided" && guidedIndex >= 0) {
+      refreshWeatherForSpot(spot.spot_id);
+      lastInsideStopRef.current = spot.spot_id;
+    }
   }
 
   function startGuideSetup() {
     setTourMode("guided");
     setActiveIndex(0);
     setRouteFinished(false);
+    setTourPhase("route_preview");
     setMapPan({ x: 0, y: 0 });
     setMapScale(1);
     setGuideSheet("peek");
     setDrawerOpen(false);
     setVisualContext(null);
+    setChatSpot(null);
+    setNearbyDetourSpot(null);
+    setDemoMode(false);
+    setShowDemoPanel(false);
+    setLocationMode("off");
+    setLocationError(null);
+    setUserLocation(null);
+    lastInsideStopRef.current = null;
     setStep("profile");
   }
 
@@ -425,11 +651,20 @@ export default function Home() {
   function returnHome() {
     setActiveIndex(0);
     setRouteFinished(false);
+    setTourPhase("route_preview");
     setMapPan({ x: 0, y: 0 });
     setMapScale(1);
     setGuideSheet("peek");
     setDrawerOpen(false);
     setVisualContext(null);
+    setChatSpot(null);
+    setNearbyDetourSpot(null);
+    setDemoMode(false);
+    setShowDemoPanel(false);
+    setLocationMode("off");
+    setLocationError(null);
+    setUserLocation(null);
+    lastInsideStopRef.current = null;
     setStep("home");
   }
 
@@ -441,13 +676,55 @@ export default function Home() {
 
     if (isFinalGuidedStop) {
       setRouteFinished(true);
+      setTourPhase("completed");
       setGuideSheet("open");
       return;
     }
 
     setRouteFinished(false);
     setActiveIndex((index) => index + 1);
-    setGuideSheet("open");
+    setTourPhase("navigating");
+    setGuideSheet("peek");
+    setNearbyDetourSpot(null);
+    setChatSpot(null);
+    lastInsideStopRef.current = null;
+  }
+
+  function openRouteChat() {
+    setChatSpot(null);
+    setDrawerOpen(true);
+  }
+
+  async function openNearbySpotChat(spot: Spot) {
+    setChatSpot(spot);
+    setDrawerOpen(true);
+    setChatPending(true);
+    try {
+      const response = await fetch(`/api/guide?spotId=${spot.spot_id}`);
+      const payload = await response.json();
+      const nextStopName = activeSpot?.name ?? "推荐路线";
+      setMessages((current) => [
+        ...current,
+        {
+          role: "agent",
+          text: `${payload.script?.content ?? spot.summary ?? `附近是${spot.name}。`} 闲逛结束后，我们可以回到导览路线，继续前往“${nextStopName}”。`,
+        },
+      ]);
+    } catch {
+      setMessages((current) => [
+        ...current,
+        { role: "agent", text: `附近是${spot.name}。我暂时没有拿到完整讲解，闲逛结束后我们可以回到当前导览路线。` },
+      ]);
+    } finally {
+      setChatPending(false);
+    }
+  }
+
+  function moveMockLocationToSpot(spotId: string) {
+    const spot = bootstrap?.spots.find((item) => item.spot_id === spotId);
+    if (!spot?.lat || !spot.lng) return;
+    setLocationMode("mock");
+    setUserLocation({ lat: spot.lat, lng: spot.lng, source: "mock" });
   }
 
   if (!bootstrap) {
@@ -459,9 +736,9 @@ export default function Home() {
   }
 
   return (
-    <main className="app-shell">
+    <main className={`app-shell ${demoMode && step === "map" ? "demo-shell" : ""}`}>
       <section
-        className={`phone-frame ${
+        className={`phone-frame weather-${weatherState.kind} ${
           step === "home" ? "home-screen" : step === "profile" ? "profile-screen" : step === "agent" || step === "mode" ? "agent-screen" : "map-screen"
         }`}
       >
@@ -469,16 +746,20 @@ export default function Home() {
           <div className="home-entry">
             <div className="home-hero">
               <p>FUDAN CAMPUS AGENT</p>
-              <h1>今天想怎么逛复旦？</h1>
+              <h1>选择你的校园导览方式</h1>
             </div>
             <div className="home-actions">
-              <button type="button" className="home-card primary" onClick={enterFreeMode}>
-                <strong>自由参观</strong>
-                <span>不用填写资料，直接进入校园地图。点击任意图标就能查看对应的介绍，并发起追问。</span>
+              <button type="button" className="home-card primary" onClick={startGuideSetup}>
+                <strong>推荐路线导览</strong>
+                <span>告诉我你是谁、想看什么，我会安排一条适合你的校园路线。</span>
               </button>
-              <button type="button" className="home-card" onClick={startGuideSetup}>
-                <strong>导览模式</strong>
-                <span>回答几个问题，系统会匹配路线、导览员和讲解风格，适合第一次来或想省心游览的访客。</span>
+              <button type="button" className="home-card" onClick={enterFreeMode}>
+                <strong>自由探索</strong>
+                <span>想逛哪就点哪。看到感兴趣的建筑，也可以随时追问或拍照。</span>
+              </button>
+              <button type="button" className="home-card demo" disabled={profilePending} onClick={enterDemoMode}>
+                <strong>路演演示模式</strong>
+                <span>打开模拟 GPS 和模拟天气控制面板，用于录屏、答辩和现场演示。</span>
               </button>
             </div>
           </div>
@@ -574,20 +855,31 @@ export default function Home() {
         {step === "agent" && route && (
           <div className="agent-confirm">
             <div className="tower-hero" />
-            <p>经激烈讨论</p>
-            <h1>本次带你一起逛校园的是：</h1>
+            <p>路线已匹配</p>
+            <h1>{route.name}</h1>
             <img className="avatar-large" src={agentAvatar} alt="" />
-            <h2>{agent?.name ?? "校史馆小A"}</h2>
-            <p className="agent-tone">{agent?.tone ?? match?.style ?? "校园导览"}</p>
+            <h2>{agent?.name ?? "校园导览员"}</h2>
+            <p className="agent-tone">{agent?.tone ?? match?.style ?? "校园导览"} · {route.duration_minutes} 分钟 · {route.stops.length} 站</p>
             <p className="muted">{match?.reason}</p>
             <div className="route-card">
-              <strong>{route.name}</strong>
+              <strong>今天这样逛</strong>
               <span>{route.description}</span>
-              <em>{route.duration_minutes} 分钟 · {route.stops.length} 站 · {match?.style ?? route.style ?? "自适应"}风格</em>
+              <em>出发时会请你允许使用当前位置。走到每一站附近，我会自然开始讲解；天气不好时，也会优先提醒你避雨、补水或转入室内。</em>
             </div>
-            <button className="primary-button oversized" type="button" onClick={enterGuidedMode}>
-              开始游览
-            </button>
+            <div className="route-preview-list">
+              {guidedSpots.slice(0, 5).map((spot, index) => (
+                <span key={spot.spot_id}>{index + 1}. {spot.name}</span>
+              ))}
+              {guidedSpots.length > 5 && <span>… 共 {guidedSpots.length} 站</span>}
+            </div>
+            <div className="route-preview-actions">
+              <button className="primary-button oversized" type="button" onClick={enterGuidedMode}>
+                {demoMode ? "开始演示导览" : "开始导览"}
+              </button>
+              <button className="secondary-button" type="button" onClick={enterFreeMode}>
+                先手动看地图
+              </button>
+            </div>
           </div>
         )}
 
@@ -628,10 +920,23 @@ export default function Home() {
                 {tourMode === "free" ? <Route size={17} /> : <Map size={17} />}
                 <span>{tourMode === "free" ? "选模式" : "切自由"}</span>
               </button>
-              <button type="button" className="arrival-pill" onClick={() => setGuideSheet("open")}>
+              <button type="button" className="arrival-pill" disabled={tourMode === "guided"} onClick={tourMode === "free" ? () => setGuideSheet("open") : undefined}>
                 {tourMode === "free" ? activeSpot.name : `${activeIndex + 1}/${visibleSpots.length} 站`}
               </button>
               <img src={agentAvatar} alt="" />
+            </div>
+            <div className="weather-pill">
+              {weatherState.kind === "rain" ? (
+                <CloudRain size={16} />
+              ) : weatherState.kind === "hot" ? (
+                <ThermometerSun size={16} />
+              ) : weatherState.kind === "snow" ? (
+                <Snowflake size={16} />
+              ) : (
+                <Sun size={16} />
+              )}
+              <span>{weatherState.label}</span>
+              <em>{demoMode ? "演示模式" : weatherState.isExtreme ? "注意天气" : "适合游览"}</em>
             </div>
 
             <div
@@ -661,24 +966,31 @@ export default function Home() {
                     </button>
                   );
                 })}
+                {nearestLocationPosition && (
+                  <span
+                    className="user-location-dot"
+                    style={{
+                      left: `${nearestLocationPosition.x}%`,
+                      top: `${nearestLocationPosition.y}%`,
+                    }}
+                    aria-label="当前位置"
+                  />
+                )}
               </div>
             </div>
 
             <section className={`guide-panel ${guideSheet}`}>
-              <button
-                type="button"
-                className="sheet-grip"
-                onPointerDown={beginSheetDrag}
-                onPointerMove={moveSheetDrag}
-                onPointerUp={endSheetDrag}
-                aria-label={guideSheet !== "peek" ? "收起讲解半层" : "拉起讲解半层"}
-              />
+              <div className="sheet-grip" aria-hidden="true" />
 
               {guideSheet === "peek" ? (
                 <div className="peek-content">
                   <img src={agentAvatar} alt="" />
-                  <button type="button" className="peek-prompt" onClick={() => setDrawerOpen(true)}>
-                    {tourMode === "guided" ? `你正在${activeSpot.name}附近，想听听这里的故事吗？` : `你在${activeSpot.name}附近，有什么想了解的吗？`}
+                  <button type="button" className="peek-prompt" onClick={() => (nearbyDetourSpot ? openNearbySpotChat(nearbyDetourSpot) : openRouteChat())}>
+                    {nearbyDetourSpot
+                      ? `附近就是${nearbyDetourSpot.name}，想顺路看看吗？`
+                      : tourMode === "guided"
+                        ? `你正在${activeSpot.name}附近，想听听这里的故事吗？`
+                        : `你在${activeSpot.name}附近，有什么想了解的吗？`}
                   </button>
                 </div>
               ) : (
@@ -716,7 +1028,7 @@ export default function Home() {
                         <p>{activeGuide?.content ?? activeSpot.summary}</p>
                       </article>
                       <div className="panel-actions">
-                        <button type="button" onClick={() => setDrawerOpen(true)}>
+                        <button type="button" onClick={openRouteChat}>
                           <MessageCircle size={18} /> 追问
                         </button>
                         <button type="button" onClick={() => fileInputRef.current?.click()}>
@@ -741,12 +1053,20 @@ export default function Home() {
             </section>
 
             <section className={`chat-drawer ${drawerOpen ? "open" : ""}`}>
-              <button className="drawer-backdrop" type="button" onClick={() => setDrawerOpen(false)} aria-label="关闭聊天" />
+              <button
+                className="drawer-backdrop"
+                type="button"
+                onClick={() => {
+                  setDrawerOpen(false);
+                  setChatSpot(null);
+                }}
+                aria-label="关闭聊天"
+              />
               <div className="drawer-body">
                 <div className="drag-handle" />
                 <header>
                   <Sparkles size={18} />
-                  <strong>你在{activeSpot.name}附近，有什么想了解的吗？</strong>
+                  <strong>你在{currentChatSpot?.name ?? activeSpot.name}附近，有什么想了解的吗？</strong>
                 </header>
                 <div className="messages">
                   {messages.map((message, index) => (
@@ -763,7 +1083,7 @@ export default function Home() {
                   )}
                 </div>
                 <div className="quick-prompts">
-                  {(activeGuide?.follow_up_suggestions ?? ["这里有什么历史？", "附近还有什么值得看？"]).slice(0, 2).map((suggestion) => (
+                  {(chatSpot ? ["这里有什么值得看？", "怎么回到路线？"] : activeGuide?.follow_up_suggestions ?? ["这里有什么历史？", "附近还有什么值得看？"]).slice(0, 2).map((suggestion) => (
                     <button key={suggestion} type="button" disabled={chatPending} onClick={() => sendMessage(suggestion)}>
                       {suggestion}
                     </button>
@@ -786,9 +1106,72 @@ export default function Home() {
                 </form>
               </div>
             </section>
+
           </>
         )}
       </section>
+      {showDemoPanel && demoMode && step === "map" && activeSpot && (
+        <section className="demo-panel">
+          <header>
+            <Crosshair size={15} />
+            <strong>演示控制台</strong>
+            <button type="button" onClick={() => setShowDemoPanel(false)}>
+              收起
+            </button>
+          </header>
+          <p>手机画面保持为用户视角；这里用于路演时控制位置和天气。</p>
+          <label>
+            <span>定位来源</span>
+            <select value={locationMode} onChange={(event) => setLocationMode(event.target.value as "off" | "real" | "mock")}>
+              <option value="off">关闭定位</option>
+              <option value="mock">模拟定位</option>
+              <option value="real">真实 GPS</option>
+            </select>
+          </label>
+          <label>
+            <span>移动到点位</span>
+            <select value="" onChange={(event) => moveMockLocationToSpot(event.target.value)}>
+              <option value="">选择点位</option>
+              {bootstrap.spots
+                .filter((spot) => spot.lat != null && spot.lng != null && mapPositions[spot.spot_id])
+                .map((spot) => (
+                  <option key={spot.spot_id} value={spot.spot_id}>
+                    {spot.name}
+                  </option>
+                ))}
+            </select>
+          </label>
+          <div className="coordinate-row">
+            <label>
+              <span>纬度</span>
+              <input
+                value={userLocation?.lat ?? ""}
+                onChange={(event) => setUserLocation({ lat: Number(event.target.value), lng: userLocation?.lng ?? activeSpot.lng ?? 0, source: "mock" })}
+              />
+            </label>
+            <label>
+              <span>经度</span>
+              <input
+                value={userLocation?.lng ?? ""}
+                onChange={(event) => setUserLocation({ lat: userLocation?.lat ?? activeSpot.lat ?? 0, lng: Number(event.target.value), source: "mock" })}
+              />
+            </label>
+          </div>
+          <label>
+            <span>天气</span>
+            <select value={weatherOverride} onChange={(event) => setWeatherOverride(event.target.value as WeatherKind | "random")}>
+              <option value="random">自然变化</option>
+              <option value="clear">晴朗</option>
+              <option value="rain">雨天</option>
+              <option value="hot">高温</option>
+              <option value="snow">降雪</option>
+            </select>
+          </label>
+          <button type="button" className="demo-action" onClick={() => refreshWeatherForSpot(activeSpot.spot_id)}>
+            <MapPin size={15} /> 刷新当前点位天气
+          </button>
+        </section>
+      )}
     </main>
   );
 }

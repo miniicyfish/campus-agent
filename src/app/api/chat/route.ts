@@ -1,6 +1,7 @@
 import { NextResponse } from "next/server";
-import { findGuideScript, getAgents, getSpots, retrieveChunks } from "@/lib/content";
+import { findGuideScript, findGuideScriptById, getAgents, getSpots, retrieveChunks } from "@/lib/content";
 import { requestChatCompletion } from "@/lib/model";
+import type { WeatherState } from "@/lib/types";
 
 export async function POST(request: Request) {
   const payload = (await request.json()) as {
@@ -8,12 +9,15 @@ export async function POST(request: Request) {
     spotId?: string;
     routeId?: string;
     agentId?: string;
+    scriptId?: string;
     visualContext?: string | null;
+    weather?: WeatherState | null;
   };
 
-  const chunks = retrieveChunks(payload.message, payload.spotId);
+  const weatherQueryBoost = payload.weather?.isExtreme ? " 极端天气 避雨 遮阴 买水 买伞 室内活动 安全提醒" : "";
+  const chunks = retrieveChunks(`${payload.message}${weatherQueryBoost}`, payload.spotId);
   const spot = getSpots().find((item) => item.spot_id === payload.spotId);
-  const script = payload.spotId ? findGuideScript(payload.spotId, payload.routeId, payload.agentId) : undefined;
+  const script = findGuideScriptById(payload.scriptId) ?? (payload.spotId ? findGuideScript(payload.spotId, payload.routeId, payload.agentId) : undefined);
   const agent = getAgents().find((item) => item.agent_id === payload.agentId);
   const sourceText = chunks
     .map((chunk) => `${chunk.spot_name} - ${chunk.title}：${chunk.content}`)
@@ -33,7 +37,7 @@ export async function POST(request: Request) {
           },
           {
             role: "user",
-            content: `当前点位：${spot?.name ?? "未知点位"}\n当前点位简介：${spot?.summary ?? "暂无"}\n当前讲解：${fallback}\n\n上一张图片的视觉上下文：\n${payload.visualContext || "暂无。"}\n\n检索到的知识片段：\n${sourceText || "没有检索到更精确的知识片段。"}\n\n游客问题：${payload.message}\n\n请用中文回答，控制在 120-260 字；如果用户的问题是在追问上一张图片，请优先结合“视觉上下文”和当前点位回答；如果视觉上下文不足以判断，要说明需要再看一张更清楚的图片。`,
+            content: `当前点位：${spot?.name ?? "未知点位"}\n当前点位简介：${spot?.summary ?? "暂无"}\n当前天气：${payload.weather ? `${payload.weather.label}，${payload.weather.description}` : "暂无天气上下文"}\nis_extreme_weather=${payload.weather?.isExtreme ? "true" : "false"}\n当前讲解：${fallback}\n\n上一张图片的视觉上下文：\n${payload.visualContext || "暂无。"}\n\n检索到的知识片段：\n${sourceText || "没有检索到更精确的知识片段。"}\n\n游客问题：${payload.message}\n\n请用中文回答，控制在 120-260 字；如果用户的问题是在追问上一张图片，请优先结合“视觉上下文”和当前点位回答；如果视觉上下文不足以判断，要说明需要再看一张更清楚的图片。若 is_extreme_weather=true 且问题涉及天气应对、安全移动、避雨遮阴、补水买伞或室内活动，必须优先依据“极端天气实用指南”相关片段回答；资料不足时直接说明不足，不要编造。`,
           },
         ],
         maxTokens: 520,

@@ -209,6 +209,13 @@ export function findGuideScript(spotId: string, routeId?: string, agentId?: stri
   );
 }
 
+export function findGuideScriptById(scriptId?: string) {
+  const normalizedScriptId = scriptId?.trim();
+  if (!normalizedScriptId) return undefined;
+
+  return [...getGuideScripts(), ...getBasicScripts()].find((script) => script.guide_script_id === normalizedScriptId);
+}
+
 export function retrieveChunks(query: string, spotId?: string) {
   const terms = query
     .toLowerCase()
