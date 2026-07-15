@@ -46,6 +46,13 @@ button {
   padding: 18px;
 }
 
+.app-shell.demo-shell {
+  grid-template-columns: minmax(320px, 430px) 320px;
+  align-items: center;
+  justify-content: center;
+  gap: 18px;
+}
+
 .phone-frame {
   position: relative;
   width: min(100vw, 430px);
@@ -102,15 +109,15 @@ button {
 
 .home-actions {
   display: grid;
-  gap: 14px;
-  margin-top: 24px;
+  gap: 12px;
+  margin-top: 20px;
 }
 
 .home-card {
   display: grid;
   gap: 8px;
-  min-height: 108px;
-  padding: 18px 20px;
+  min-height: 98px;
+  padding: 16px 18px;
   border: 1px solid rgba(255, 255, 255, 0.78);
   border-radius: 8px;
   background: rgba(255, 255, 255, 0.6);
@@ -124,14 +131,19 @@ button {
   border-color: rgba(142, 174, 129, 0.55);
 }
 
+.home-card.demo {
+  background: rgba(255, 253, 245, 0.72);
+  border-color: rgba(143, 126, 91, 0.34);
+}
+
 .home-card strong {
-  font-size: 24px;
+  font-size: 23px;
   font-weight: 500;
 }
 
 .home-card span {
   color: #60695d;
-  font-size: 15px;
+  font-size: 14px;
   line-height: 1.48;
 }
 
@@ -273,7 +285,7 @@ button {
 
 .agent-confirm {
   height: 100%;
-  padding: 28px 34px 46px;
+  padding: 26px 32px 34px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -281,7 +293,7 @@ button {
 }
 
 .tower-hero {
-  height: 140px;
+  height: 98px;
 }
 
 .agent-confirm p,
@@ -301,10 +313,10 @@ button {
 }
 
 .avatar-large {
-  width: 118px;
-  height: 118px;
+  width: 104px;
+  height: 104px;
   object-fit: contain;
-  margin: 28px 0 8px;
+  margin: 20px 0 8px;
 }
 
 .agent-confirm h2 {
@@ -329,8 +341,8 @@ button {
   width: 100%;
   display: grid;
   gap: 8px;
-  margin-top: 22px;
-  padding: 18px;
+  margin-top: 18px;
+  padding: 16px;
   border: 1px solid rgba(255, 255, 255, 0.76);
   border-radius: 8px;
   background: rgba(255, 255, 255, 0.42);
@@ -344,16 +356,43 @@ button {
 .route-card span,
 .route-card em {
   color: #666d61;
-  font-size: 15px;
+  font-size: 14px;
   font-style: normal;
   line-height: 1.5;
 }
 
-.oversized {
+.route-preview-list {
+  width: 100%;
+  max-height: 116px;
+  overflow: auto;
+  display: grid;
+  gap: 6px;
+  margin-top: 14px;
+  padding: 12px 14px;
+  border: 1px solid rgba(118, 135, 108, 0.18);
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.42);
+  text-align: left;
+}
+
+.route-preview-list span {
+  color: #555d51;
+  font-size: 14px;
+}
+
+.route-preview-actions {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr auto;
+  align-items: center;
+  gap: 10px;
   margin-top: auto;
-  min-width: 230px;
-  min-height: 86px;
-  font-size: 30px;
+}
+
+.oversized {
+  min-width: 0;
+  min-height: 68px;
+  font-size: 25px;
 }
 
 .mode-select {
@@ -433,6 +472,24 @@ button {
     #eef0d7;
 }
 
+.weather-rain.map-screen {
+  background:
+    linear-gradient(rgba(209, 225, 229, 0.54), rgba(192, 211, 218, 0.72)),
+    #d9e4e6;
+}
+
+.weather-hot.map-screen {
+  background:
+    linear-gradient(rgba(250, 229, 194, 0.55), rgba(241, 214, 173, 0.76)),
+    #f2ddb4;
+}
+
+.weather-snow.map-screen {
+  background:
+    linear-gradient(rgba(244, 248, 246, 0.72), rgba(218, 231, 231, 0.78)),
+    #e9f0ef;
+}
+
 .top-hud {
   position: absolute;
   z-index: 5;
@@ -481,6 +538,59 @@ button {
   line-height: 1.1;
   text-overflow: ellipsis;
   white-space: nowrap;
+}
+
+.arrival-pill:disabled {
+  opacity: 1;
+}
+
+.weather-pill {
+  position: absolute;
+  z-index: 5;
+  left: 26px;
+  top: 76px;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  min-height: 34px;
+  max-width: calc(100% - 52px);
+  padding: 0 11px;
+  border: 1px solid rgba(116, 180, 218, 0.35);
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.58);
+  box-shadow: 0 10px 24px rgba(54, 61, 47, 0.08);
+  backdrop-filter: blur(10px);
+  color: #454940;
+}
+
+.weather-pill span {
+  font-size: 15px;
+  white-space: nowrap;
+}
+
+.weather-pill em {
+  color: #677064;
+  font-size: 13px;
+  font-style: normal;
+  white-space: nowrap;
+}
+
+.weather-rain .weather-pill {
+  border-color: rgba(76, 122, 146, 0.34);
+  background: rgba(236, 246, 249, 0.72);
+  color: #365967;
+}
+
+.weather-hot .weather-pill {
+  border-color: rgba(194, 122, 58, 0.32);
+  background: rgba(255, 244, 220, 0.76);
+  color: #745024;
+}
+
+.weather-snow .weather-pill {
+  border-color: rgba(129, 161, 174, 0.32);
+  background: rgba(249, 253, 252, 0.78);
+  color: #4c6770;
 }
 
 .mode-switch {
@@ -551,6 +661,40 @@ button {
   box-shadow: 0 0 0 6px rgba(120, 189, 227, 0.24), 0 12px 22px rgba(48, 64, 72, 0.28);
 }
 
+.user-location-dot {
+  position: absolute;
+  z-index: 3;
+  width: 18px;
+  height: 18px;
+  border: 3px solid rgba(255, 255, 255, 0.9);
+  border-radius: 999px;
+  background: #e65e42;
+  box-shadow: 0 0 0 8px rgba(230, 94, 66, 0.18), 0 7px 18px rgba(81, 50, 40, 0.28);
+  transform: translate(-50%, -50%);
+  pointer-events: none;
+}
+
+.user-location-dot::after {
+  content: "";
+  position: absolute;
+  inset: -12px;
+  border: 1px solid rgba(230, 94, 66, 0.4);
+  border-radius: inherit;
+  animation: location-pulse 1.8s ease-out infinite;
+}
+
+@keyframes location-pulse {
+  0% {
+    opacity: 0.85;
+    transform: scale(0.45);
+  }
+
+  100% {
+    opacity: 0;
+    transform: scale(1.2);
+  }
+}
+
 .map-marker.free-hit-area {
   border-color: transparent;
   background: transparent;
@@ -615,6 +759,11 @@ button {
   background: rgba(255, 255, 255, 0.78);
   cursor: grab;
   touch-action: none;
+}
+
+.guide-panel .sheet-grip {
+  cursor: default;
+  pointer-events: none;
 }
 
 .sheet-grip:active {
@@ -912,9 +1061,86 @@ button {
   padding: 0 16px;
 }
 
+.demo-panel {
+  position: relative;
+  z-index: 2;
+  width: min(320px, calc(100vw - 32px));
+  display: grid;
+  gap: 11px;
+  padding: 16px;
+  border: 1px solid rgba(113, 128, 102, 0.28);
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.84);
+  box-shadow: 0 18px 44px rgba(54, 61, 47, 0.18);
+  backdrop-filter: blur(16px);
+}
+
+.demo-panel header {
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  align-items: center;
+  gap: 7px;
+}
+
+.demo-panel p {
+  margin: 0;
+  color: #626a5c;
+  font-size: 14px;
+  line-height: 1.45;
+}
+
+.demo-panel header button,
+.demo-action {
+  min-height: 30px;
+  border: 1px solid rgba(117, 135, 108, 0.24);
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.72);
+}
+
+.demo-panel label {
+  display: grid;
+  gap: 4px;
+}
+
+.demo-panel span {
+  color: #626a5c;
+  font-size: 13px;
+}
+
+.demo-panel select,
+.demo-panel input {
+  min-width: 0;
+  min-height: 34px;
+  border: 1px solid rgba(117, 135, 108, 0.22);
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.78);
+  padding: 0 9px;
+}
+
+.coordinate-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 8px;
+}
+
+.demo-action {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+}
+
 @media (max-width: 470px) {
   .app-shell {
     padding: 0;
+  }
+
+  .app-shell.demo-shell {
+    min-height: 100vh;
+    display: grid;
+    grid-template-columns: 1fr;
+    align-items: stretch;
+    gap: 0;
   }
 
   .phone-frame {
@@ -955,5 +1181,16 @@ button {
   .primary-button {
     min-height: 52px;
     font-size: 20px;
+  }
+
+  .demo-panel {
+    position: fixed;
+    z-index: 20;
+    left: 12px;
+    right: 12px;
+    bottom: 12px;
+    width: auto;
+    max-height: 45vh;
+    overflow: auto;
   }
 }

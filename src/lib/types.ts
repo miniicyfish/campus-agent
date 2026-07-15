@@ -29,6 +29,7 @@ export type RouteStop = {
   estimated_stay_minutes?: number;
   trigger_radius_meters?: number;
   guide_script_id?: string;
+  extreme_guide_script_id?: string;
   reason?: string;
 };
 
@@ -82,4 +83,15 @@ export type KnowledgeChunk = {
   spot_name: string;
   title: string;
   content: string;
+};
+
+export type WeatherKind = "clear" | "rain" | "hot" | "snow";
+
+export type WeatherState = {
+  kind: WeatherKind;
+  label: string;
+  description: string;
+  isExtreme: boolean;
+  updatedAt: string;
+  source: "mock" | "override";
 };
