@@ -167,6 +167,7 @@ export default function Home() {
   const mapPinchRef = useRef<{ distance: number; startScale: number } | null>(null);
   const mapFrameRef = useRef<HTMLDivElement>(null);
   const lastInsideStopRef = useRef<string | null>(null);
+  const manuallyOpenedGuideRef = useRef<string | null>(null);
 
   useEffect(() => {
     fetch("/api/bootstrap")
@@ -330,6 +331,13 @@ export default function Home() {
     if (lastInsideStopRef.current === activeSpot.spot_id) {
       lastInsideStopRef.current = null;
     }
+
+    if (manuallyOpenedGuideRef.current === activeSpot.spot_id) {
+      setNearbyDetourSpot(null);
+      setTourPhase("arrived");
+      return;
+    }
+
     setGuideSheet("peek");
 
     const nearestDetour = bootstrap.spots
@@ -384,6 +392,7 @@ export default function Home() {
       setChatSpot(null);
       setNearbyDetourSpot(null);
       lastInsideStopRef.current = null;
+      manuallyOpenedGuideRef.current = null;
       setStep("agent");
     } finally {
       setProfilePending(false);
@@ -504,6 +513,7 @@ export default function Home() {
     if (event.currentTarget.hasPointerCapture(event.pointerId)) event.currentTarget.releasePointerCapture(event.pointerId);
 
     if (!drag?.moved && guideSheet !== "peek") {
+      manuallyOpenedGuideRef.current = null;
       setGuideSheet("peek");
     }
   }
@@ -530,6 +540,7 @@ export default function Home() {
     setUserLocation(null);
     setLocationMode(demoMode ? "mock" : "real");
     lastInsideStopRef.current = null;
+    manuallyOpenedGuideRef.current = null;
     setStep("map");
   }
 
@@ -551,6 +562,7 @@ export default function Home() {
     setDemoMode(false);
     setShowDemoPanel(false);
     lastInsideStopRef.current = null;
+    manuallyOpenedGuideRef.current = null;
     setStep("map");
   }
 
@@ -582,6 +594,7 @@ export default function Home() {
       setLocationError(null);
       setUserLocation(null);
       lastInsideStopRef.current = null;
+      manuallyOpenedGuideRef.current = null;
       setStep("map");
     } finally {
       setProfilePending(false);
@@ -592,9 +605,11 @@ export default function Home() {
     const guidedIndex = guidedSpots.findIndex((item) => item.spot_id === spot.spot_id);
 
     if (tourMode === "guided" && guidedIndex >= 0) {
+      manuallyOpenedGuideRef.current = spot.spot_id;
       setActiveIndex(guidedIndex);
       setTourPhase("arrived");
     } else {
+      manuallyOpenedGuideRef.current = null;
       const freeIndex = freeSpots.findIndex((item) => item.spot_id === spot.spot_id);
       setTourMode("free");
       setActiveIndex(Math.max(0, freeIndex));
@@ -633,6 +648,7 @@ export default function Home() {
     setLocationError(null);
     setUserLocation(null);
     lastInsideStopRef.current = null;
+    manuallyOpenedGuideRef.current = null;
     setStep("profile");
   }
 
@@ -641,6 +657,7 @@ export default function Home() {
       setDrawerOpen(false);
       setRouteFinished(false);
       setGuideSheet("peek");
+      manuallyOpenedGuideRef.current = null;
       setStep("mode");
       return;
     }
@@ -665,6 +682,7 @@ export default function Home() {
     setLocationError(null);
     setUserLocation(null);
     lastInsideStopRef.current = null;
+    manuallyOpenedGuideRef.current = null;
     setStep("home");
   }
 
@@ -678,6 +696,7 @@ export default function Home() {
       setRouteFinished(true);
       setTourPhase("completed");
       setGuideSheet("open");
+      manuallyOpenedGuideRef.current = null;
       return;
     }
 
@@ -688,6 +707,7 @@ export default function Home() {
     setNearbyDetourSpot(null);
     setChatSpot(null);
     lastInsideStopRef.current = null;
+    manuallyOpenedGuideRef.current = null;
   }
 
   function openRouteChat() {
@@ -915,10 +935,10 @@ export default function Home() {
                 type="button"
                 className="hud-action mode-switch"
                 onClick={tourMode === "free" ? openModeSelection : enterFreeMode}
-                aria-label={tourMode === "free" ? "返回模式选择" : "切换到自由导览"}
+                aria-label={tourMode === "free" ? (match ? "回到已匹配导览" : "返回模式选择") : "切换到自由导览"}
               >
                 {tourMode === "free" ? <Route size={17} /> : <Map size={17} />}
-                <span>{tourMode === "free" ? "选模式" : "切自由"}</span>
+                <span>{tourMode === "free" ? (match ? "回到导览" : "选模式") : "切自由"}</span>
               </button>
               <button type="button" className="arrival-pill" disabled={tourMode === "guided"} onClick={tourMode === "free" ? () => setGuideSheet("open") : undefined}>
                 {tourMode === "free" ? activeSpot.name : `${activeIndex + 1}/${visibleSpots.length} 站`}
