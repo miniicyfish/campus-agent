@@ -17,7 +17,7 @@ import {
   Sun,
   ThermometerSun,
 } from "lucide-react";
-import type { PointerEvent as ReactPointerEvent, WheelEvent as ReactWheelEvent } from "react";
+import type { CSSProperties, PointerEvent as ReactPointerEvent, WheelEvent as ReactWheelEvent } from "react";
 import { FormEvent, useEffect, useMemo, useRef, useState } from "react";
 import type { Agent, CampusRoute, GuideScript, Profile, RouteMatch, Spot, WeatherKind, WeatherState } from "@/lib/types";
 
@@ -50,34 +50,56 @@ const defaultWeatherState: WeatherState = {
 };
 
 const mapPositions: Record<string, { x: number; y: number }> = {
-  foreign_languages_building: { x: 14.3, y: 24.4 },
-  fudan_university_station: { x: 14.6, y: 39.4 },
-  fudan_history_museum: { x: 10.6, y: 46.7 },
-  fudan_alumni_hall: { x: 19.8, y: 73.0 },
-  xianghui_hall: { x: 18.7, y: 38.9 },
-  yifu_science_building: { x: 31.5, y: 37.5 },
-  fudan_zibin_hall: { x: 26.5, y: 53.0 },
-  fourth_teaching_building: { x: 39.7, y: 40.7 },
+  foreign_languages_building: { x: 14.6, y: 28.7 },
+  fudan_university_station: { x: 10.5, y: 42.3 },
+  fudan_history_museum: { x: 14.2, y: 54.1 },
+  fudan_alumni_hall: { x: 21.9, y: 73.2 },
+  xianghui_hall: { x: 18.1, y: 39.2 },
+  yifu_science_building: { x: 31.2, y: 38.1 },
+  fudan_zibin_hall: { x: 26.4, y: 51.8 },
+  fourth_teaching_building: { x: 38.8, y: 40.8 },
   motto_wall: { x: 43.4, y: 61.6 },
-  fudan_guanghua_tower: { x: 78.1, y: 34.0 },
-  yuanchuang_center: { x: 76.3, y: 17.7 },
-  henglong_physics_building: { x: 55.2, y: 41.0 },
-  liren_biological_building: { x: 60.0, y: 54.5 },
-  courier_station_main: { x: 89.1, y: 65.2 },
+  fudan_guanghua_tower: { x: 77.1, y: 34.2 },
+  yuanchuang_center: { x: 77.0, y: 17.5 },
+  henglong_physics_building: { x: 54.8, y: 41.1 },
+  liren_biological_building: { x: 59.5, y: 54.9 },
+  courier_station_main: { x: 88.4, y: 65.3 },
   family_mart: { x: 60.6, y: 73.5 },
-  benbu_student_supermarket: { x: 74.0, y: 82.5 },
-  danyuan_canteen: { x: 90.3, y: 22.4 },
-  guanghua_lawn: { x: 76.8, y: 50.2 },
+  benbu_student_supermarket: { x: 75.3, y: 77.1 },
+  yeyaozhen_building: { x: 73.1, y: 82.8 },
+  danyuan_canteen: { x: 91.0, y: 21.8 },
+  guanghua_lawn: { x: 77.3, y: 52.7 },
   fudan_third_teaching_building: { x: 62.4, y: 64.4 },
   mao_statue: { x: 55.2, y: 70.3 },
-  fudan_science_library: { x: 46.8, y: 74.0 },
-  fudan_yanyuan: { x: 35.8, y: 85.9 },
-  fudan_old_gate: { x: 25.8, y: 82.6 },
+  fudan_science_library: { x: 47.2, y: 75.0 },
+  fudan_yanyuan: { x: 35.5, y: 83.3 },
+  fudan_old_gate: { x: 25.9, y: 84.5 },
   fudan_main_gate: { x: 54.6, y: 87.9 },
-  fudan_xiyuan: { x: 63.7, y: 85.9 },
-  campus_bank: { x: 57.0, y: 88.2 },
-  wangdao_garden: { x: 47.0, y: 90.2 },
+  fudan_xiyuan: { x: 63.8, y: 84.4 },
+  campus_bank: { x: 60.8, y: 85.3 },
+  wangdao_garden: { x: 47.0, y: 87.4 },
 };
+
+const mapHitAreas: Record<string, { width: number; height: number }> = {
+  benbu_student_supermarket: { width: 150, height: 44 },
+  campus_bank: { width: 90, height: 52 },
+  courier_station_main: { width: 78, height: 70 },
+  danyuan_canteen: { width: 118, height: 86 },
+  foreign_languages_building: { width: 116, height: 104 },
+  fudan_alumni_hall: { width: 130, height: 72 },
+  fudan_guanghua_tower: { width: 172, height: 122 },
+  fudan_history_museum: { width: 132, height: 76 },
+  fudan_science_library: { width: 132, height: 86 },
+  fudan_university_station: { width: 134, height: 48 },
+  guanghua_lawn: { width: 130, height: 92 },
+  xianghui_hall: { width: 136, height: 70 },
+  yeyaozhen_building: { width: 112, height: 66 },
+  yuanchuang_center: { width: 162, height: 62 },
+};
+
+const mapExtraHitAreas: Array<{ spotId: string; x: number; y: number; width: number; height: number; label: string }> = [
+  { spotId: "fudan_university_station", x: 10.4, y: 80.9, width: 134, height: 48, label: "复旦大学地铁站 2 号口" },
+];
 
 const mapBounds = {
   aspectRatio: 1704 / 923,
@@ -972,13 +994,19 @@ export default function Home() {
                 <img className="campus-map-image" src="/assets/map-new.png" alt="复旦大学校园地图" draggable={false} />
                 {markerSpots.map((spot, index) => {
                   const position = mapPositions[spot.spot_id] ?? { x: 50, y: 50 };
+                  const hitArea = mapHitAreas[spot.spot_id];
                   const isActive = activeSpot?.spot_id === spot.spot_id;
+                  const markerStyle: CSSProperties = {
+                    left: `${position.x}%`,
+                    top: `${position.y}%`,
+                    ...(tourMode === "free" && hitArea ? { width: hitArea.width, height: hitArea.height } : {}),
+                  };
                   return (
                     <button
                       key={spot.spot_id}
                       type="button"
                       className={`map-marker ${isActive ? "active" : ""} ${tourMode === "free" ? "free-hit-area" : ""}`}
-                      style={{ left: `${position.x}%`, top: `${position.y}%` }}
+                      style={markerStyle}
                       onClick={() => selectMapSpot(spot)}
                       aria-label={spot.name}
                     >
@@ -986,6 +1014,27 @@ export default function Home() {
                     </button>
                   );
                 })}
+                {tourMode === "free" &&
+                  mapExtraHitAreas.map((area) => {
+                    const spot = freeSpots.find((item) => item.spot_id === area.spotId);
+                    if (!spot) return null;
+
+                    return (
+                      <button
+                        key={`${area.spotId}-${area.label}`}
+                        type="button"
+                        className="map-marker free-hit-area"
+                        style={{
+                          left: `${area.x}%`,
+                          top: `${area.y}%`,
+                          width: area.width,
+                          height: area.height,
+                        }}
+                        onClick={() => selectMapSpot(spot)}
+                        aria-label={area.label}
+                      />
+                    );
+                  })}
                 {nearestLocationPosition && (
                   <span
                     className="user-location-dot"
